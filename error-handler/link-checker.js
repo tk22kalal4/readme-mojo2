@@ -35,9 +35,18 @@
     
     // Calculate correct path to error handler based on current location
     const currentPath = window.location.pathname;
-    const depth = (currentPath.match(/\//g) || []).length - 1;
-    const prefix = '../'.repeat(depth);
+    const pathSegments = currentPath.split('/').filter(segment => segment !== '');
+    let prefix = '';
     
+    // If we're in root directory, no prefix needed
+    if (pathSegments.length <= 1) {
+      prefix = './';
+    } else {
+      // For subdirectories, go up the required levels
+      prefix = '../'.repeat(pathSegments.length - 1);
+    }
+    
+    console.log('Redirecting to not-updated page from:', originalUrl);
     window.location.href = prefix + 'error-handler/not-updated.html';
   }
 
@@ -61,8 +70,10 @@
       return;
     }
 
-    // Check if the URL exists
+    // Always prevent default navigation for internal links
     event.preventDefault();
+    
+    // Check if the URL exists
     const exists = await urlExists(link.href);
     
     if (exists) {
