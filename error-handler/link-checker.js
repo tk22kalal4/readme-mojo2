@@ -5,7 +5,7 @@
   'use strict';
 
   // Configuration
-  const ERROR_HANDLER_PATH = '../error-handler/not-updated.html';
+  const ERROR_HANDLER_PATH = 'error-handler/not-updated.html';
   
   // Function to check if a URL exists
   async function urlExists(url) {
