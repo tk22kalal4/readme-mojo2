@@ -29,8 +29,8 @@
 
     <div id="quiz-container" class="quiz-container" style="display: none;">
       <div class="question-container">
-        <!-- Question progress in top left corner -->
-        <div class="quiz-progress">
+        <!-- Question progress in top left corner - clickable -->
+        <div class="quiz-progress" onclick="showQuestionNavigation()" style="cursor: pointer; user-select: none;" title="Click to navigate to specific question">
           <span id="current-question">1</span> / <span id="total-questions">1</span>
         </div>
         
@@ -64,6 +64,22 @@
         <h3>No Questions Available</h3>
         <p id="error-message">No questions found for this combination.</p>
         <button onclick="goBack()" class="action-btn">Go Back</button>
+      </div>
+    </div>
+
+    <!-- Question Navigation Popup -->
+    <div id="questionNavPopup" class="question-nav-popup" style="display: none;">
+      <div class="popup-overlay" onclick="closeQuestionNavigation()"></div>
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>Navigate to Question</h3>
+          <button onclick="closeQuestionNavigation()" class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="question-nav-grid" id="questionNavGrid">
+          <!-- Question numbers will be populated here -->
+        </div>
       </div>
     </div>
   </main>
@@ -277,9 +293,13 @@
     }
 
     function showQuizResults() {
-      const percentage = Math.round((score / currentQuiz.length) * 100);
-      alert(`Quiz completed!\nScore: ${score}/${currentQuiz.length} (${percentage}%)`);
-      goBack();
+      const urlParams = new URLSearchParams(window.location.search);
+      const platform = urlParams.get('platform');
+      const subject = urlParams.get('subject');
+      const chapter = urlParams.get('chapter');
+      
+      // Navigate to results page with data
+      window.location.href = `results.html?platform=${platform}&subject=${subject}&chapter=${chapter}&score=${score}&total=${currentQuiz.length}`;
     }
 
     function toggleBookmark() {
@@ -410,6 +430,52 @@
       }
       
       return false;
+    }
+
+    function showQuestionNavigation() {
+      if (!currentQuiz || currentQuiz.length === 0) return;
+      
+      const popup = document.getElementById('questionNavPopup');
+      const grid = document.getElementById('questionNavGrid');
+      
+      grid.innerHTML = '';
+      
+      // Create question number buttons
+      for (let i = 0; i < currentQuiz.length; i++) {
+        const questionBtn = document.createElement('button');
+        questionBtn.className = 'question-nav-btn';
+        questionBtn.textContent = i + 1;
+        
+        // Highlight current question
+        if (i === currentQuestionIndex) {
+          questionBtn.classList.add('current');
+        }
+        
+        // Mark answered questions
+        if (userAnswers[i] !== null) {
+          questionBtn.classList.add('answered');
+        }
+        
+        questionBtn.onclick = () => {
+          navigateToQuestion(i);
+          closeQuestionNavigation();
+        };
+        
+        grid.appendChild(questionBtn);
+      }
+      
+      popup.style.display = 'flex';
+    }
+
+    function closeQuestionNavigation() {
+      document.getElementById('questionNavPopup').style.display = 'none';
+    }
+
+    function navigateToQuestion(questionIndex) {
+      if (questionIndex >= 0 && questionIndex < currentQuiz.length) {
+        currentQuestionIndex = questionIndex;
+        loadQuestion();
+      }
     }
 
     window.addEventListener('load', () => {
