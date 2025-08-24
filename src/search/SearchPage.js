@@ -57,102 +57,50 @@ export class SearchPage {
       ? '/web-app3/platforms'
       : './platforms';
     
-    // Define platform structure with their subfolders
-    const platformStructure = {
-      'dams': ['damsb2beng', 'damsb2bhinglish', 'damsultlive'],
-      'cerebellum': [''], // Direct JSON files in cerebellum folder
-      'prepladder5': [''], // Direct JSON files in prepladder5 folder
-      'prepladder6': [''],
-      'prepladder6x': [''],
-      'marrow': [''],
-      'e-gurukul': [''],
-      'physics-wala': ['']
-    };
-    
-    for (const [platform, subfolders] of Object.entries(platformStructure)) {
-      for (const subfolder of subfolders) {
-        try {
-          // Construct the correct path
-          const folderPath = subfolder ? `${platform}/${subfolder}` : platform;
-          
-          // Get all JSON files in this folder
-          const jsonFiles = await this.getJsonFiles(baseUrl, folderPath);
-          
-          for (const jsonFile of jsonFiles) {
-            try {
-              const response = await fetch(`${baseUrl}/${folderPath}/${jsonFile}`);
-              if (response.ok) {
-                const data = await response.json();
-                if (data.lectures && Array.isArray(data.lectures)) {
-                  data.lectures.forEach(lecture => {
-                    lectures.push({
-                      ...lecture,
-                      subject: data.subjectName || jsonFile.replace('.json', ''),
-                      platform: platform.charAt(0).toUpperCase() + platform.slice(1),
-                      subfolder: subfolder || platform
-                    });
+    try {
+      // Fetch manifest.json to get the actual platform structure
+      const manifestResponse = await fetch(`${baseUrl}/manifest.json`);
+      if (!manifestResponse.ok) {
+        console.error('Could not load manifest.json');
+        return lectures;
+      }
+      
+      const manifest = await manifestResponse.json();
+      
+      // Iterate through each platform configuration in manifest
+      for (const platformConfig of manifest) {
+        const { platform, subfolder, files } = platformConfig;
+        
+        // Construct the correct path based on subfolder
+        const folderPath = subfolder === 'non' ? platform : `${platform}/${subfolder}`;
+        
+        // Fetch each JSON file specified in the manifest
+        for (const jsonFile of files) {
+          try {
+            const response = await fetch(`${baseUrl}/${folderPath}/${jsonFile}`);
+            if (response.ok) {
+              const data = await response.json();
+              if (data.lectures && Array.isArray(data.lectures)) {
+                data.lectures.forEach(lecture => {
+                  lectures.push({
+                    ...lecture,
+                    subject: data.subjectName || jsonFile.replace('.json', ''),
+                    platform: platform.charAt(0).toUpperCase() + platform.slice(1),
+                    subfolder: subfolder
                   });
-                }
+                });
               }
-            } catch (error) {
-              console.log(`Could not load ${folderPath}/${jsonFile}:`, error);
             }
+          } catch (error) {
+            console.log(`Could not load ${folderPath}/${jsonFile}:`, error);
           }
-        } catch (error) {
-          console.log(`Error scanning ${platform}:`, error);
         }
       }
+    } catch (error) {
+      console.error('Error loading manifest or lecture data:', error);
     }
     
     return lectures;
-  }
-
-  async getJsonFiles(baseUrl, folderPath) {
-    // Since we can't list directory contents directly, we'll use known patterns
-    const commonJsonFiles = [
-      'anatomy.json', 'physiology.json', 'biochemistry.json', 'pathology.json',
-      'pharmacology.json', 'microbiology.json', 'fmt.json', 'psm.json',
-      'medicine.json', 'surgery.json', 'obgy.json', 'pediatrics.json',
-      'ophthalmology.json', 'ent.json', 'orthopedics.json', 'anesthesia.json',
-      'radiology.json', 'dermatology.json', 'psychiatry.json', 'clinicals.json',
-      // Prepladder5 specific files
-      'p5anatomy.json', 'p5physiology.json', 'p5biochemistry.json', 'p5pathology.json',
-      'p5pharmacology.json', 'p5microbiology.json', 'p5fmt.json', 'p5psm.json',
-      'p5clinicals.json', 'p5surgery.json', 'p5obgy.json', 'p5pediatrics.json',
-      'p5ophthalmology.json', 'p5ent.json', 'p5orthopedics.json', 'p5anesthesia.json',
-      'p5radiology.json', 'p5dermatology.json', 'p5pschiatry.json', 'p5rapidrevision.json',
-      // Cerebellum files
-      'cbanatomy.json', 'cbanesthesia.json', 'cbpediatrics.json', 'cbpharmacology.json', 'cbradiology.json',
-      // DAMS specific files (based on actual structure seen)
-      'anatomy dr sandeep.json', 'biochemsitry dr sonam.json', 'ent dr deepak arrora.json',
-      'fmt dr mohit.json', 'medicine dr archin.json', 'medicine dr arvind.json', 'medicine dr bharat.json',
-      'medicine dr rahul.json', 'medicine dr shrinath.json', 'micro dr suria.json', 'obgy dr deepti.json',
-      'ophth dr sourab.json', 'ophthalm dr manish.json', 'optho dr tushar.json', 'patho dr gourav.json',
-      'patho dr sanjeev.json', 'patho dr shagun.json', 'pedia dr sidharth.json', 'pediatric dr manoj.json',
-      'pharma dr j thiru.json', 'pharmacology dr dinesh.json', 'physiology dr kamal.json',
-      'psm dr kashish.json', 'psm dr sidharth.json', 'psych.json', 'radio.json', 'surgery deepak.json',
-      'surgery dr dhruv.json', 'surgery dr gaurav.json', 'surgery dr kenny.json', 'surgery dr rajeev.json',
-      'surgery dr sujoy.json', 'derma.json',
-      // DAMS ultlive files
-      'dulanatomy.json', 'dulfmt.json',
-      // DAMS hinglish files  
-      'dhradiology.json'
-    ];
-    
-    const existingFiles = [];
-    
-    for (const file of commonJsonFiles) {
-      try {
-        const response = await fetch(`${baseUrl}/${folderPath}/${file}`);
-        if (response.ok) {
-          existingFiles.push(file);
-        }
-      } catch (error) {
-        // File doesn't exist, continue
-      }
-    }
-    
-    return existingFiles;
   }
 
   render() {
