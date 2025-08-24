@@ -1,65 +1,14 @@
 export class SearchPage {
   constructor() {
     this.currentView = 'search';
-    this.platforms = ['marrow', 'dams', 'prepladder'];
-    this.subjects = ['anatomy', 'physiology'];
-  }
-
-  async getAllTeachers() {
-    const teachers = [];
-    
-    // Import all platform subject lists
-    const marrowList = await import('../platforms/marrow/MarrowSubjectList.js');
-    const damsList = await import('../platforms/dams/DamsSubjectList.js');
-    const prepladderList = await import('../platforms/prepladder/PrepladderSubjectList.js');
-    
-    const marrowTeachers = new marrowList.MarrowSubjectList().subjects;
-    const damsTeachers = new damsList.DamsSubjectList().subjects;
-    const prepladderTeachers = new prepladderList.PrepladderSubjectList().subjects;
-    
-    // Format teacher data from each platform
-    marrowTeachers.forEach(subject => {
-      if (subject.teacher) {
-        teachers.push({
-          name: subject.teacher,
-          subject: subject.name,
-          platform: 'Marrow'
-        });
-      }
-    });
-
-    damsTeachers.forEach(subject => {
-      if (subject.teacher) {
-        teachers.push({
-          name: subject.teacher,
-          subject: subject.name,
-          platform: 'DAMS'
-        });
-      }
-    });
-
-    prepladderTeachers.forEach(subject => {
-      if (subject.teacher) {
-        teachers.push({
-          name: subject.teacher,
-          subject: subject.name,
-          platform: 'Prepladder'
-        });
-      }
-    });
-
-    return teachers;
   }
 
   async getAllLectures() {
     const lectures = [];
-    const baseUrl = window.location.hostname === 'tk22kalal2.github.io' 
-      ? '/web-app3/platforms'
-      : './platforms';
     
     try {
       // Fetch manifest.json to get the actual platform structure
-      const manifestResponse = await fetch(`${baseUrl}/manifest.json`);
+      const manifestResponse = await fetch('platforms/manifest.json');
       if (!manifestResponse.ok) {
         console.error('Could not load manifest.json');
         return lectures;
@@ -77,7 +26,7 @@ export class SearchPage {
         // Fetch each JSON file specified in the manifest
         for (const jsonFile of files) {
           try {
-            const response = await fetch(`${baseUrl}/${folderPath}/${jsonFile}`);
+            const response = await fetch(`platforms/${folderPath}/${jsonFile}`);
             if (response.ok) {
               const data = await response.json();
               if (data.lectures && Array.isArray(data.lectures)) {
@@ -118,18 +67,11 @@ export class SearchPage {
     searchInput.placeholder = 'Search...';
     searchInput.className = 'search-input';
 
-    const searchTypeSelect = document.createElement('select');
-    searchTypeSelect.className = 'search-type-select';
-    searchTypeSelect.innerHTML = `
-      <option value="teacher">Search by Teacher</option>
-      <option value="lecture">Search by Lecture</option>
-    `;
 
     const resultsContainer = document.createElement('div');
     resultsContainer.className = 'search-results';
 
     searchInput.addEventListener('input', async (e) => {
-      const searchType = searchTypeSelect.value;
       const query = e.target.value.toLowerCase();
       
       if (query.length < 2) {
@@ -137,30 +79,15 @@ export class SearchPage {
         return;
       }
 
-      if (searchType === 'teacher') {
-        const teachers = await this.getAllTeachers();
-        const results = teachers.filter(teacher => 
-          teacher.name.toLowerCase().includes(query) ||
-          teacher.subject.toLowerCase().includes(query)
-        );
-        this.displayTeacherResults(results, resultsContainer);
-      } else {
-        const lectures = await this.getAllLectures();
-        const results = lectures.filter(lecture =>
-          lecture.title.toLowerCase().includes(query) ||
-          lecture.subject.toLowerCase().includes(query)
-        );
-        this.displayLectureResults(results, resultsContainer);
-      }
-    });
-
-    searchTypeSelect.addEventListener('change', () => {
-      searchInput.value = '';
-      resultsContainer.innerHTML = '';
+      const lectures = await this.getAllLectures();
+      const results = lectures.filter(lecture =>
+        lecture.title.toLowerCase().includes(query) ||
+        lecture.subject.toLowerCase().includes(query)
+      );
+      this.displayLectureResults(results, resultsContainer);
     });
 
     searchBar.appendChild(searchInput);
-    searchBar.appendChild(searchTypeSelect);
     searchContainer.appendChild(searchBar);
     container.appendChild(searchContainer);
     container.appendChild(resultsContainer);
@@ -168,25 +95,6 @@ export class SearchPage {
     return container;
   }
 
-  displayTeacherResults(results, container) {
-    if (results.length === 0) {
-      container.innerHTML = '<p class="no-results">No teachers found</p>';
-      return;
-    }
-
-    container.innerHTML = results.map(teacher => `
-      <div class="search-result-card" onclick="document.dispatchEvent(new CustomEvent('platformSelect', { detail: '${teacher.platform.toLowerCase()}' }))">
-        <div class="result-header">
-          <i class="fas fa-user-md"></i>
-          <h3>${teacher.name}</h3>
-        </div>
-        <div class="result-details">
-          <span><i class="fas fa-book-medical"></i> ${teacher.subject}</span>
-          <span><i class="fas fa-building"></i> ${teacher.platform}</span>
-        </div>
-      </div>
-    `).join('');
-  }
   displayLectureResults(results, container) {
     if (results.length === 0) {
       container.innerHTML = '<p class="no-results">No lectures found</p>';
