@@ -237,6 +237,7 @@
         }
         // If unanswered, no class is added (no color - same as background)
         
+        // Fix: Pass the specific question index to the review function
         questionBtn.onclick = () => reviewSpecificQuestion(i);
         questionGrid.appendChild(questionBtn);
       }
@@ -251,8 +252,8 @@
       // Store the specific question index for review
       localStorage.setItem('reviewQuestionIndex', questionIndex.toString());
       
-      // Navigate back to quiz in review mode with correct question index
-      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex}&startFrom=${questionIndex}`;
+      // Fix: Navigate back to quiz in review mode with the specific question index
+      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=true&question=${questionIndex}`;
     }
 
     function restartQuiz() {
