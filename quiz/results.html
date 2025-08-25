@@ -187,7 +187,7 @@
       document.getElementById('correctAnswers').textContent = score;
       document.getElementById('totalQuestions').textContent = total;
       
-      // Update score circle color based on performance
+      // Update score circle color based on performance (using app primary theme)
       const scoreCircle = document.getElementById('scoreCircle');
       if (percentage >= 80) {
         scoreCircle.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
@@ -205,14 +205,37 @@
       const questionGrid = document.getElementById('questionGrid');
       questionGrid.innerHTML = '';
       
+      // Get user answers from localStorage or URL params
+      const userAnswersData = localStorage.getItem('quizUserAnswers');
+      const questionsData = localStorage.getItem('quizQuestions');
+      let userAnswers = [];
+      let questions = [];
+      
+      try {
+        if (userAnswersData) userAnswers = JSON.parse(userAnswersData);
+        if (questionsData) questions = JSON.parse(questionsData);
+      } catch (e) {
+        console.log('Could not parse stored quiz data');
+      }
+      
       // Create question number buttons
       for (let i = 0; i < total; i++) {
         const questionBtn = document.createElement('button');
         questionBtn.className = 'question-number-btn';
         questionBtn.textContent = i + 1;
         
-        // For now, we'll just show all as answered (you can enhance this with actual answer data)
-        questionBtn.classList.add(Math.random() > 0.5 ? 'correct' : 'incorrect');
+        // Color coding: right - green, wrong - red, unanswered - no color
+        if (userAnswers[i] !== undefined && questions[i]) {
+          const userAnswer = userAnswers[i];
+          const correctAnswer = questions[i].correct_answer;
+          
+          if (userAnswer === correctAnswer) {
+            questionBtn.classList.add('correct');
+          } else {
+            questionBtn.classList.add('incorrect');
+          }
+        }
+        // If unanswered, no class is added (no color - same as background)
         
         questionBtn.onclick = () => reviewSpecificQuestion(i);
         questionGrid.appendChild(questionBtn);
@@ -225,8 +248,11 @@
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
-      // Navigate back to quiz in review mode
-      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex}`;
+      // Store the specific question index for review
+      localStorage.setItem('reviewQuestionIndex', questionIndex.toString());
+      
+      // Navigate back to quiz in review mode with correct question index
+      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex}&startFrom=${questionIndex}`;
     }
 
     function restartQuiz() {

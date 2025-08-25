@@ -96,6 +96,7 @@
     let currentQuestionIndex = 0;
     let userAnswers = [];
     let score = 0;
+    let isReviewMode = false;
 
     function goBack() {
       const urlParams = new URLSearchParams(window.location.search);
@@ -126,6 +127,22 @@
 
       document.getElementById('pageTitle').textContent = `${subject.charAt(0).toUpperCase() + subject.slice(1)} Quiz`;
       document.getElementById('quizInfo').textContent = `${platform.charAt(0).toUpperCase() + platform.slice(1)} - ${subject.charAt(0).toUpperCase() + subject.slice(1)}`;
+
+      // Check if we're in review mode
+      const reviewParam = urlParams.get('review');
+      const startFromParam = urlParams.get('startFrom');
+      if (reviewParam !== null) {
+        isReviewMode = true;
+        // Use startFrom parameter if available, otherwise use review parameter
+        currentQuestionIndex = parseInt(startFromParam) || parseInt(reviewParam) || 0;
+      }
+      
+      // Also check localStorage for review question index
+      const storedReviewIndex = localStorage.getItem('reviewQuestionIndex');
+      if (storedReviewIndex && isReviewMode) {
+        currentQuestionIndex = parseInt(storedReviewIndex);
+        localStorage.removeItem('reviewQuestionIndex'); // Clean up
+      }
 
       await loadQuestionsFromJSON(platform, subject, chapter);
     }
@@ -297,6 +314,10 @@
       const platform = urlParams.get('platform');
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
+      
+      // Store quiz data for results analysis
+      localStorage.setItem('quizUserAnswers', JSON.stringify(userAnswers));
+      localStorage.setItem('quizQuestions', JSON.stringify(currentQuiz));
       
       // Navigate to results page with data
       window.location.href = `results.html?platform=${platform}&subject=${subject}&chapter=${chapter}&score=${score}&total=${currentQuiz.length}`;
