@@ -23,7 +23,7 @@
       align-items: center;
       justify-content: center;
       margin: 2rem auto;
-      background: linear-gradient(135deg, #2c5282, #1a365d);
+      background: linear-gradient(135deg, #16a34a, #15803d);
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
     
@@ -59,11 +59,11 @@
       gap: 0.5rem;
     }
     
-    .btn-primary { background: #2c5282; color: white; }
-    .btn-primary:hover { background: #1a365d; }
+    .btn-primary { background: #3b82f6; color: white; }
+    .btn-primary:hover { background: #2563eb; }
     
-    .btn-success { background: #2c5282; color: white; }
-    .btn-success:hover { background: #1a365d; }
+    .btn-success { background: #16a34a; color: white; }
+    .btn-success:hover { background: #15803d; }
     
     .btn-secondary { background: #6b7280; color: white; }
     .btn-secondary:hover { background: #4b5563; }
@@ -96,12 +96,12 @@
     }
     
     .question-number-btn.correct {
-      background: #2c5282;
+      background: #16a34a;
       color: white;
     }
     
     .question-number-btn.incorrect {
-      background: #4a5568;
+      background: #ef4444;
       color: white;
     }
     
@@ -190,11 +190,11 @@
       // Update score circle color based on performance
       const scoreCircle = document.getElementById('scoreCircle');
       if (percentage >= 80) {
-        scoreCircle.style.background = 'linear-gradient(135deg, #2c5282, #1a365d)';
+        scoreCircle.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
       } else if (percentage >= 60) {
-        scoreCircle.style.background = 'linear-gradient(135deg, #4a5568, #2d3748)';
+        scoreCircle.style.background = 'linear-gradient(135deg, #eab308, #ca8a04)';
       } else {
-        scoreCircle.style.background = 'linear-gradient(135deg, #6b7280, #4b5563)';
+        scoreCircle.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
       }
       
       // Load question analysis if data is available
