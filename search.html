@@ -8,6 +8,7 @@
   <meta name="keywords" content="search medical lectures, NEET PG search, find medical content, lecture search">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="src/search/search.css">
+  <link rel="stylesheet" href="css/video-popup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="./access-control.js"></script>
   <script src="./error-handler/link-checker.js"></script>
@@ -130,7 +131,7 @@
       }
 
       container.innerHTML = results.map(lecture => `
-        <div class="search-result-card" onclick="document.dispatchEvent(new CustomEvent('subjectSelect', { detail: { platform: '${lecture.platform.toLowerCase()}', subject: '${lecture.subject}' } }))">
+        <div class="search-result-card" onclick="openVideo('${lecture.title}', '${lecture.streamingUrl || lecture.streamUrl || ''}')">
           <div class="result-header">
             <i class="fas fa-play-circle"></i>
             <h3>${lecture.title}</h3>
@@ -154,6 +155,39 @@
       enhancedInput.value = e.target.value;
       handleSearch(e.target.value);
     });
+
+    // Video popup functions
+    function openVideo(title, url) {
+      if (!url) {
+        alert('Video URL not available for this lecture');
+        return;
+      }
+      
+      const popup = document.createElement('div');
+      popup.className = 'video-popup';
+      popup.innerHTML = `
+        <div class="video-popup-content">
+          <button class="close-popup" onclick="closeVideo(this)">&times;</button>
+          <h2 class="video-title">${title}</h2>
+          <div class="iframe-container">
+            <iframe src="${url}" allowfullscreen></iframe>
+          </div>
+        </div>
+      `;
+      
+      popup.onclick = function(e) {
+        if (e.target === popup) {
+          closeVideo(popup.querySelector('.close-popup'));
+        }
+      };
+      
+      document.body.appendChild(popup);
+    }
+
+    function closeVideo(button) {
+      const popup = button.closest('.video-popup');
+      document.body.removeChild(popup);
+    }
 
     // Initialize data on page load
     document.addEventListener('DOMContentLoaded', function() {
