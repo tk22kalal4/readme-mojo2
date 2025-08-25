@@ -237,23 +237,23 @@
         }
         // If unanswered, no class is added (no color - same as background)
         
-        // Fix: Pass the specific question index to the review function
-        questionBtn.onclick = () => reviewSpecificQuestion(i);
+        // Fix: Use the same navigation logic as quiz.html
+        questionBtn.onclick = () => navigateToQuestion(i);
         questionGrid.appendChild(questionBtn);
       }
     }
 
-    function reviewSpecificQuestion(questionIndex) {
+    function navigateToQuestion(questionIndex) {
       const urlParams = new URLSearchParams(window.location.search);
       const platform = urlParams.get('platform');
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
-      // Store the specific question index for review
-      localStorage.setItem('reviewQuestionIndex', questionIndex.toString());
+      // Store the specific question index in sessionStorage for immediate access
+      sessionStorage.setItem('reviewQuestionIndex', questionIndex.toString());
       
-      // Fix: Navigate back to quiz in review mode with the specific question index
-      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=true&question=${questionIndex}`;
+      // Use the same navigation approach as quiz.html but with direct question parameter
+      window.location.href = `../quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=true&question=${questionIndex}`;
     }
 
     function restartQuiz() {
@@ -262,12 +262,12 @@
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
-      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}`;
+      window.location.href = `../quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}`;
     }
 
     function reviewQuestions() {
       // Start review from first question
-      reviewSpecificQuestion(0);
+      navigateToQuestion(0);
     }
 
     function exitToMenu() {
@@ -276,9 +276,9 @@
       const subject = urlParams.get('subject');
       
       if (platform && subject) {
-        window.location.href = `chapters.html?platform=${platform}&subject=${subject}`;
+        window.location.href = `../chapters.html?platform=${platform}&subject=${subject}`;
       } else {
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
       }
     }
 
