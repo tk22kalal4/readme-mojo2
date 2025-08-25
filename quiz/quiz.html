@@ -149,6 +149,13 @@
         currentQuestionIndex = 0;
         userAnswers = new Array(currentQuiz.length).fill(null);
         score = 0;
+        
+        // Check if we need to start from a specific question (review mode)
+        if (window.reviewQuestionIndex !== undefined) {
+          currentQuestionIndex = Math.min(window.reviewQuestionIndex, currentQuiz.length - 1);
+          delete window.reviewQuestionIndex; // Clean up
+        }
+        
         loadQuestion();
 
       } catch (error) {
@@ -427,6 +434,15 @@
         // Load the bookmarked question
         loadQuestion();
         return true;
+      }
+      
+      // Check for regular quiz review mode (from results page)
+      const reviewIndex = urlParams.get('review');
+      if (reviewIndex !== null && !bookmarkMode) {
+        // This means we're coming from the results page to review a specific question
+        // currentQuestionIndex will be set after quiz data loads
+        window.reviewQuestionIndex = parseInt(reviewIndex);
+        return false; // Continue with normal quiz loading but set starting question
       }
       
       return false;
