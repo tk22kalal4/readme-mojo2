@@ -237,23 +237,22 @@
         }
         // If unanswered, no class is added (no color - same as background)
         
-        // Fix: Use the same navigation logic as quiz.html
-        questionBtn.onclick = () => navigateToQuestion(i);
+        questionBtn.onclick = () => reviewSpecificQuestion(i);
         questionGrid.appendChild(questionBtn);
       }
     }
 
-    function navigateToQuestion(questionIndex) {
+    function reviewSpecificQuestion(questionIndex) {
       const urlParams = new URLSearchParams(window.location.search);
       const platform = urlParams.get('platform');
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
-      // Store the specific question index in sessionStorage for immediate access
-      sessionStorage.setItem('reviewQuestionIndex', questionIndex.toString());
+      // Store the specific question index for review
+      localStorage.setItem('reviewQuestionIndex', questionIndex.toString());
       
-      // Use the same navigation approach as quiz.html but with direct question parameter
-      window.location.href = `../quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=true&question=${questionIndex}`;
+      // Navigate back to quiz in review mode with correct question index
+      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex}&startFrom=${questionIndex}`;
     }
 
     function restartQuiz() {
@@ -262,12 +261,12 @@
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
-      window.location.href = `../quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}`;
+      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}`;
     }
 
     function reviewQuestions() {
       // Start review from first question
-      navigateToQuestion(0);
+      reviewSpecificQuestion(0);
     }
 
     function exitToMenu() {
@@ -276,9 +275,9 @@
       const subject = urlParams.get('subject');
       
       if (platform && subject) {
-        window.location.href = `../chapters.html?platform=${platform}&subject=${subject}`;
+        window.location.href = `chapters.html?platform=${platform}&subject=${subject}`;
       } else {
-        window.location.href = '../index.html';
+        window.location.href = 'index.html';
       }
     }
 
