@@ -224,8 +224,8 @@
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
-      // Navigate back to quiz in review mode
-      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex}`;
+      // Navigate back to quiz in review mode - add 1 because quiz expects 1-based indexing
+      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex + 1}`;
     }
 
     function restartQuiz() {
