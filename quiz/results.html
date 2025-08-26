@@ -59,8 +59,8 @@
       gap: 0.5rem;
     }
     
-    .btn-primary { background: #3b82f6; color: white; }
-    .btn-primary:hover { background: #2563eb; }
+    .btn-primary { background: #2c5282; color: white; }
+    .btn-primary:hover { background: #2a4e7f; }
     
     .btn-success { background: #16a34a; color: white; }
     .btn-success:hover { background: #15803d; }
@@ -103,6 +103,11 @@
     .question-number-btn.incorrect {
       background: #ef4444;
       color: white;
+    }
+    
+    .question-number-btn:not(.correct):not(.incorrect) {
+      background: rgba(0,0,0,0.05);
+      color: #666;
     }
     
     .question-number-btn:hover {
@@ -190,7 +195,7 @@
       // Update score circle color based on performance (using app primary theme)
       const scoreCircle = document.getElementById('scoreCircle');
       if (percentage >= 80) {
-        scoreCircle.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
+        scoreCircle.style.background = 'linear-gradient(135deg, #2c5282, #2a4e7f)';
       } else if (percentage >= 60) {
         scoreCircle.style.background = 'linear-gradient(135deg, #eab308, #ca8a04)';
       } else {
@@ -251,8 +256,8 @@
       // Store the specific question index for review
       localStorage.setItem('reviewQuestionIndex', questionIndex.toString());
       
-      // Navigate back to quiz in review mode with correct question index
-      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex}&startFrom=${questionIndex}`;
+        // Navigate back to quiz in review mode with correct question index
+        window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=true&startFrom=${questionIndex}`;
     }
 
     function restartQuiz() {
