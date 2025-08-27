@@ -1,9 +1,15 @@
 import { fetchFromAPI } from './api.js';
 
-export async function generateQuestion(subject, difficulty, topic = '') {
+export async function generateQuestion(subject, difficulty, topic = '', askedQuestions = []) {
     const difficultyContext = getDifficultyContext(difficulty);
     const topicContext = topic ? ` specifically about ${topic}` : '';
-    const prompt = `Generate a ${difficulty.toLowerCase()} level multiple choice question about ${subject}${topicContext}. ${difficultyContext}
+
+    let askedQuestionsContext = '';
+    if (askedQuestions.length > 0) {
+        askedQuestionsContext = ` Avoid generating questions about the following topics or questions similar to these:\n${askedQuestions.map(q => `- ${q.question}`).join('\\n')}`;
+    }
+
+    const prompt = `Generate a ${difficulty.toLowerCase()} level multiple choice question about ${subject}${topicContext}. ${difficultyContext}${askedQuestionsContext}
         Format the response exactly as follows:
         {
             "question": "The question text here",
