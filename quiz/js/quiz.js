@@ -205,6 +205,20 @@ const QuizManager = {
     }
   }
 };
+// Add initialization logic to check for review mode
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const reviewQuestionIndex = urlParams.get('review');
+
+  if (reviewQuestionIndex !== null) {
+    const index = parseInt(reviewQuestionIndex, 10);
+    if (!isNaN(index) && index > 0) {
+      QuizState.currentQuestionIndex = index - 1; // Adjust for 0-based index
+      QuizState.isReviewMode = true;
+    }
+  }
+  // Initial load is handled by the script that fetches and sets QuizState.questions
+});
 
 // Export for global access
 window.QuizManager = QuizManager;
