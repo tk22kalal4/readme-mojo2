@@ -15,6 +15,7 @@ export class QuizUI {
             setupContainer: document.getElementById('setup-container'),
             subjectSelect: document.getElementById('subject-select'),
             subtopicSelect: document.getElementById('subtopic-select'),
+            topicInput: document.getElementById('topic-input'),
             difficultySelect: document.getElementById('difficulty-select'),
             questionsSelect: document.getElementById('questions-select'),
             timeSelect: document.getElementById('time-select'),
@@ -64,9 +65,11 @@ export class QuizUI {
     handleSubjectChange() {
         const subject = this.elements.subjectSelect.value;
         this.elements.subtopicSelect.innerHTML = '<option value="">Choose a sub-topic...</option>';
+        this.elements.topicInput.value = '';
         
         if (subject && SUBJECTS[subject]) {
             this.elements.subtopicSelect.disabled = false;
+            this.elements.topicInput.disabled = false;
             SUBJECTS[subject].forEach(subtopic => {
                 const option = document.createElement('option');
                 option.value = subtopic;
@@ -75,6 +78,7 @@ export class QuizUI {
             });
         } else {
             this.elements.subtopicSelect.disabled = true;
+            this.elements.topicInput.disabled = true;
         }
     }
 
@@ -92,15 +96,20 @@ export class QuizUI {
 
     startQuiz() {
         const subject = this.elements.subjectSelect.value;
+        const subtopic = this.elements.subtopicSelect.value;
+        const topic = this.elements.topicInput.value.trim();
         const difficulty = this.elements.difficultySelect.value;
         const questionLimit = parseInt(this.elements.questionsSelect.value);
         const timeLimit = parseInt(this.elements.timeSelect.value);
 
-        if (!subject || !difficulty) {
-            alert('Please select both subject and difficulty level.');
+        if (!subject || !subtopic || !difficulty) {
+            alert('Please select subject, sub-topic and difficulty level.');
             return;
         }
 
+        this.quiz.subject = subject;
+        this.quiz.subtopic = subtopic;
+        this.quiz.topic = topic;
         this.quiz.difficulty = difficulty;
         this.quiz.questionLimit = questionLimit;
         this.quiz.timeLimit = timeLimit;
@@ -137,8 +146,7 @@ export class QuizUI {
         this.elements.nextBtnContainer.classList.add('hidden');
         this.showSkeletonLoading();
         
-        const subject = this.elements.subtopicSelect.value || this.elements.subjectSelect.value;
-        const question = await this.quiz.generateQuestion(subject);
+        const question = await this.quiz.generateQuestion();
         
         if (!question) {
             this.showResults();
@@ -150,7 +158,6 @@ export class QuizUI {
         let questionContent = `
             <div id="question-container">
                 <p id="question-text">${question.question}</p>
-                ${question.imageUrl ? `<img src="${question.imageUrl}" alt="Medical image" class="question-image">` : ''}
             </div>
             <div id="options-container"></div>
             <div class="collapsible-sections">
@@ -257,11 +264,6 @@ export class QuizUI {
         explanationDiv.innerHTML = `
             <div class="explanation-content">
                 <pre>${explanation.text.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')}</pre>
-                ${explanation.imageUrl ? `
-                    <div class="explanation-image">
-                        <img src="${explanation.imageUrl}" alt="Explanation diagram" class="medical-diagram">
-                    </div>
-                ` : ''}
             </div>
             <div class="doubt-section">
                 <h4><b>Have a doubt?</b></h4>
@@ -282,11 +284,6 @@ export class QuizUI {
         learningObjectivesDiv.innerHTML = `
             <div class="learning-objectives-content">
                 ${learningObjectives.content}
-                ${learningObjectives.imageUrl ? `
-                    <div class="learning-objectives-image">
-                        <img src="${learningObjectives.imageUrl}" alt="Learning diagram" class="medical-diagram">
-                    </div>
-                ` : ''}
             </div>
         `;
 
@@ -319,11 +316,6 @@ export class QuizUI {
                 
                 doubtAnswer.innerHTML = `
                     <div class="doubt-text">${answer.text.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')}</div>
-                    ${answer.imageUrl ? `
-                        <div class="doubt-image">
-                            <img src="${answer.imageUrl}" alt="Explanation diagram" class="medical-diagram">
-                        </div>
-                    ` : ''}
                 `;
                 doubtAnswer.classList.remove('hidden');
             } catch (error) {

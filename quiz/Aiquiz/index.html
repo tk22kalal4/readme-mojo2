@@ -13,14 +13,10 @@
         <div id="api-key-container" class="api-key-container">
             <div class="api-key-form">
                 <div class="form-group">
-                    <label for="gemini-api-key">Google Gemini API Key:</label>
-                    <input type="text" id="gemini-api-key" placeholder="Enter your Gemini API key" />
+                    <label for="groq-api-key">Groq API Key:</label>
+                    <input type="text" id="groq-api-key" placeholder="Enter your Groq API key" />
                 </div>
-                <div class="form-group">
-                    <label for="google-api-key">Google Cloud Vision API Key:</label>
-                    <input type="text" id="google-api-key" placeholder="Enter your Google Cloud Vision API key" />
-                </div>
-                <button id="save-api-keys" class="save-api-keys-btn">Save API Keys</button>
+                <button id="save-api-keys" class="save-api-keys-btn">Save API Key</button>
             </div>
         </div>
         <div class="setup-form">
@@ -35,6 +31,10 @@
                 <select id="subtopic-select" required disabled>
                     <option value="">Choose a sub-topic...</option>
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="topic-input">Specific Topic (Optional):</label>
+                <input type="text" id="topic-input" placeholder="Enter specific topic within the sub-topic..." disabled />
             </div>
             <div class="form-group">
                 <label for="difficulty-select">Select Difficulty:</label>

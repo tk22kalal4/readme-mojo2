@@ -6,6 +6,7 @@ export class QuizSetup {
         this.container = document.getElementById('setup-container');
         this.subjectSelect = document.getElementById('subject-select');
         this.subtopicSelect = document.getElementById('subtopic-select');
+        this.topicInput = document.getElementById('topic-input');
         this.difficultySelect = document.getElementById('difficulty-select');
         this.questionsSelect = document.getElementById('questions-select');
         this.timeSelect = document.getElementById('time-select');
@@ -40,11 +41,13 @@ export class QuizSetup {
     }
 
     handleSubjectChange() {
-        if (!this.subjectSelect || !this.subtopicSelect) return;
+        if (!this.subjectSelect || !this.subtopicSelect || !this.topicInput) return;
 
         const selectedSubject = this.subjectSelect.value;
         this.subtopicSelect.innerHTML = '<option value="">Choose a sub-topic...</option>';
         this.subtopicSelect.disabled = !selectedSubject;
+        this.topicInput.disabled = !selectedSubject;
+        this.topicInput.value = '';
 
         if (selectedSubject && SUBJECTS[selectedSubject]) {
             SUBJECTS[selectedSubject].forEach(subtopic => {
@@ -69,6 +72,7 @@ export class QuizSetup {
         const settings = {
             subject: this.subjectSelect.value,
             subtopic: this.subtopicSelect.value,
+            topic: this.topicInput.value.trim(),
             difficulty: this.difficultySelect.value,
             questionLimit: parseInt(this.questionsSelect.value),
             timeLimit: parseInt(this.timeSelect.value)

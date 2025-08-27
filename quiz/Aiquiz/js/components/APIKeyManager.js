@@ -1,44 +1,37 @@
 export class APIKeyManager {
     constructor() {
         this.container = document.getElementById('api-key-container');
-        this.geminiInput = document.getElementById('gemini-api-key');
-        this.googleInput = document.getElementById('google-api-key');
+        this.groqInput = document.getElementById('groq-api-key');
         this.saveButton = document.getElementById('save-api-keys');
         
         this.setupEventListeners();
-        this.loadSavedKeys();
+        this.loadSavedKey();
     }
 
     setupEventListeners() {
         if (this.saveButton) {
-            this.saveButton.addEventListener('click', () => this.saveKeys());
+            this.saveButton.addEventListener('click', () => this.saveKey());
         }
     }
 
-    loadSavedKeys() {
-        const savedGeminiKey = localStorage.getItem('geminiApiKey');
-        const savedGoogleKey = localStorage.getItem('googleApiKey');
+    loadSavedKey() {
+        const savedGroqKey = localStorage.getItem('groqApiKey');
         
-        if (this.geminiInput && savedGeminiKey) {
-            this.geminiInput.value = savedGeminiKey;
-        }
-        if (this.googleInput && savedGoogleKey) {
-            this.googleInput.value = savedGoogleKey;
+        if (this.groqInput && savedGroqKey) {
+            this.groqInput.value = savedGroqKey;
         }
     }
 
-    saveKeys() {
-        if (!this.geminiInput || !this.googleInput) return;
+    saveKey() {
+        if (!this.groqInput) return;
 
-        const geminiKey = this.geminiInput.value.trim();
-        const googleKey = this.googleInput.value.trim();
+        const groqKey = this.groqInput.value.trim();
         
-        if (geminiKey && googleKey) {
-            localStorage.setItem('geminiApiKey', geminiKey);
-            localStorage.setItem('googleApiKey', googleKey);
-            alert('API keys saved successfully!');
+        if (groqKey) {
+            localStorage.setItem('groqApiKey', groqKey);
+            alert('Groq API key saved successfully!');
         } else {
-            alert('Please enter both API keys.');
+            alert('Please enter your Groq API key.');
         }
     }
 }

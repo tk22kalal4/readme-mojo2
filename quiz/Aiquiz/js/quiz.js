@@ -1,7 +1,5 @@
 import { generateQuestion } from './questionGenerator.js';
 import { fetchFromAPI } from './api.js';
-import { fetchExplanationImage } from './explanationImageService.js';
-import { generateLearningObjectives } from './learningObjectivesService.js';
 
 export class Quiz {
     constructor() {
@@ -15,15 +13,16 @@ export class Quiz {
         this.difficulty = '';
         this.subject = '';
         this.subtopic = '';
+        this.topic = '';
     }
 
-    async generateQuestion(subject) {
+    async generateQuestion() {
         if (this.questionLimit && this.questionsAnswered >= this.questionLimit) {
             return null;
         }
 
         try {
-            const question = await generateQuestion(subject, this.difficulty);
+            const question = await generateQuestion(this.subtopic, this.difficulty, this.topic);
             this.currentQuestion = question;
             return question;
         } catch (error) {
@@ -56,29 +55,57 @@ export class Quiz {
             `;
 
             const explanation = await fetchFromAPI(prompt);
-            const imageUrl = await fetchExplanationImage(question);
 
             return {
-                text: explanation || 'Explanation not available.',
-                imageUrl: imageUrl
+                text: explanation || 'Explanation not available.'
             };
         } catch (error) {
             console.error('Error getting explanation:', error);
             return {
-                text: 'Failed to load explanation. Please check your API keys and try again.',
-                imageUrl: null
+                text: 'Failed to load explanation. Please check your API keys and try again.'
             };
         }
     }
 
     async getLearningObjectives(question, options, correctIndex) {
         try {
-            return await generateLearningObjectives(question, options[correctIndex], 
-                await this.getExplanation(question, options, correctIndex));
+            const prompt = `
+                Based on this medical question and its correct answer:
+                Question: "${question}"
+                Correct Answer: ${options[correctIndex]}
+                
+                Generate 3-5 key learning objectives that students should achieve after understanding this question. Format as bullet points.
+            `;
+            
+            const objectives = await fetchFromAPI(prompt);
+            return {
+                content: `<div class="learning-objectives-list">${objectives}</div>`
+            };
         } catch (error) {
             console.error('Error getting learning objectives:', error);
             return {
                 content: '<p>Failed to load learning objectives. Please check your API keys and try again.</p>'
+            };
+        }
+    }
+
+    async askDoubt(doubt, questionContext) {
+        try {
+            const prompt = `
+                A student has a doubt about this medical question: "${questionContext}"
+                Their doubt is: "${doubt}"
+                
+                Please provide a clear and educational answer to address their doubt.
+            `;
+            
+            const answer = await fetchFromAPI(prompt);
+            return {
+                text: answer || 'Unable to answer your doubt at this time.'
+            };
+        } catch (error) {
+            console.error('Error answering doubt:', error);
+            return {
+                text: 'Failed to get answer. Please check your API keys and try again.'
             };
         }
     }

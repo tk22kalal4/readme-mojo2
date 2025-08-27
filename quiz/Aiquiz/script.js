@@ -1,5 +1,5 @@
 import { QuizUI } from './js/ui.js';
-import { updateAPIKeys } from './js/config.js';
+import { updateAPIKey } from './js/config.js';
 
 // Initialize the quiz application
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,19 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Handle API key setup
     const saveApiKeysBtn = document.getElementById('save-api-keys');
-    const geminiApiKeyInput = document.getElementById('gemini-api-key');
-    const googleApiKeyInput = document.getElementById('google-api-key');
+    const groqApiKeyInput = document.getElementById('groq-api-key');
+
+    // Load saved API key on page load
+    const savedGroqKey = localStorage.getItem('groqApiKey');
+    if (groqApiKeyInput && savedGroqKey) {
+        groqApiKeyInput.value = savedGroqKey;
+    }
 
     if (saveApiKeysBtn) {
         saveApiKeysBtn.addEventListener('click', () => {
-            const geminiKey = geminiApiKeyInput.value.trim();
-            const googleKey = googleApiKeyInput.value.trim();
+            const groqKey = groqApiKeyInput.value.trim();
             
-            if (geminiKey && googleKey) {
-                updateAPIKeys(geminiKey, googleKey);
-                alert('API keys saved successfully!');
+            if (groqKey) {
+                updateAPIKey(groqKey);
+                alert('Groq API key saved successfully!');
             } else {
-                alert('Please enter both API keys.');
+                alert('Please enter your Groq API key.');
             }
         });
     }

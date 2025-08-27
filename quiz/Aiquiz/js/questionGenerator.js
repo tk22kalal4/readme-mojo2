@@ -1,16 +1,12 @@
 import { fetchFromAPI } from './api.js';
-import { fetchImageForQuestion } from './imageService.js';
 
-export async function generateQuestion(subject, difficulty) {
-    const shouldIncludeImage = Math.random() < 0.4; // 40% chance for image questions
-    
+export async function generateQuestion(subject, difficulty, topic = '') {
     const difficultyContext = getDifficultyContext(difficulty);
-    const prompt = `Generate a ${difficulty.toLowerCase()} level ${shouldIncludeImage ? 'image-based' : ''} multiple choice question about ${subject}. ${difficultyContext}
-        ${shouldIncludeImage ? 'Include a brief description of the medical image that should accompany this question.' : ''}
+    const topicContext = topic ? ` specifically about ${topic}` : '';
+    const prompt = `Generate a ${difficulty.toLowerCase()} level multiple choice question about ${subject}${topicContext}. ${difficultyContext}
         Format the response exactly as follows:
         {
             "question": "The question text here",
-            ${shouldIncludeImage ? '"imageDescription": "Description of the medical image needed",' : ''}
             "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
             "correctIndex": correct_option_index_here
         }`;
@@ -18,16 +14,6 @@ export async function generateQuestion(subject, difficulty) {
     try {
         const response = await fetchFromAPI(prompt);
         const questionData = JSON.parse(response);
-
-        if (shouldIncludeImage && questionData.imageDescription) {
-            const imageUrl = await fetchImageForQuestion(
-                `medical ${questionData.imageDescription} ${subject}`
-            );
-            if (imageUrl) {
-                questionData.imageUrl = imageUrl;
-            }
-        }
-
         return questionData;
     } catch (error) {
         console.error('Question Generation Error:', error);
