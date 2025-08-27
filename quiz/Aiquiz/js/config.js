@@ -1,8 +1,7 @@
 // API Configuration
-export let GROQ_API_KEY = localStorage.getItem('groqApiKey') || "";
+export const getGroqAPIKey = () => localStorage.getItem('groqApiKey') || "";
 
 export const updateAPIKey = (groqKey) => {
-    GROQ_API_KEY = groqKey;
     localStorage.setItem('groqApiKey', groqKey);
 };
 

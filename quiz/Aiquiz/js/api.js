@@ -1,13 +1,19 @@
-import { getAPIUrl, GROQ_API_KEY } from './config.js';
+import { getAPIUrl, getGroqAPIKey } from './config.js';
 
 export async function fetchFromAPI(prompt) {
     const apiUrl = getAPIUrl();
+    const apiKey = getGroqAPIKey();
+    
+    if (!apiKey) {
+        throw new Error('Groq API key not found. Please set your API key first.');
+    }
+    
     try {
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${GROQ_API_KEY}`
+                'Authorization': `Bearer ${apiKey}`
             },
             body: JSON.stringify({
                 model: 'llama3-8b-8192',

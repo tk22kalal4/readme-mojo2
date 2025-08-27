@@ -1,5 +1,5 @@
 import { QuizUI } from './js/ui.js';
-import { updateAPIKey } from './js/config.js';
+import { updateAPIKey, getGroqAPIKey } from './js/config.js';
 
 // Initialize the quiz application
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const groqApiKeyInput = document.getElementById('groq-api-key');
 
     // Load saved API key on page load
-    const savedGroqKey = localStorage.getItem('groqApiKey');
+    const savedGroqKey = getGroqAPIKey();
     if (groqApiKeyInput && savedGroqKey) {
         groqApiKeyInput.value = savedGroqKey;
     }
