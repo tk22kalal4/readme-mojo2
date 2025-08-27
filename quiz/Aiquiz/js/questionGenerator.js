@@ -13,7 +13,16 @@ export async function generateQuestion(subject, difficulty, topic = '') {
 
     try {
         const response = await fetchFromAPI(prompt);
-        const questionData = JSON.parse(response);
+        // Attempt to extract the JSON string from the response
+        const jsonStartIndex = response.indexOf('{');
+        const jsonEndIndex = response.lastIndexOf('}');
+        let jsonString = response;
+        if (jsonStartIndex !== -1 && jsonEndIndex !== -1 && jsonEndIndex > jsonStartIndex) {
+            jsonString = response.substring(jsonStartIndex, jsonEndIndex + 1);
+        } else {
+            throw new Error("Could not find valid JSON in API response.");
+        }
+        const questionData = JSON.parse(jsonString);
         return questionData;
     } catch (error) {
         console.error('Question Generation Error:', error);
