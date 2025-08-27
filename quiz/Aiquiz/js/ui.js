@@ -165,10 +165,6 @@ export class QuizUI {
                     <summary>Explanation</summary>
                     <div id="explanation-container"></div>
                 </details>
-                <details class="learning-objectives-details">
-                    <summary>Learning Objectives</summary>
-                    <div id="learning-objectives-container"></div>
-                </details>
             </div>
         `;
 
@@ -177,8 +173,7 @@ export class QuizUI {
         // Update references after recreation
         this.elements.questionText = document.getElementById('question-text');
         this.elements.optionsContainer = document.getElementById('options-container');
-        this.elements.explanationContainer = document.getElementById('explanation-container');
-        this.elements.learningObjectivesContainer = document.getElementById('learning-objectives-container');
+ this.elements.explanationContainer = document.getElementById('explanation-container');
         
         this.elements.currentQuestion.textContent = this.quiz.questionsAnswered + 1;
         
@@ -340,3 +335,4 @@ export class QuizUI {
         this.elements.scorePercentage.textContent = `${results.percentage}%`;
     }
 }
+
