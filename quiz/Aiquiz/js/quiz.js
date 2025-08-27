@@ -69,28 +69,6 @@ export class Quiz {
         }
     }
 
-    async getLearningObjectives(question, options, correctIndex) {
-        try {
-            const prompt = `
-                Based on this medical question and its correct answer:
-                Question: "${question}"
-                Correct Answer: ${options[correctIndex]}
-                
-                Generate 3-5 key learning objectives that students should achieve after understanding this question. Format as bullet points.
-            `;
-            
-            const objectives = await fetchFromAPI(prompt);
-            return {
-                content: `<div class="learning-objectives-list">${objectives}</div>`
-            };
-        } catch (error) {
-            console.error('Error getting learning objectives:', error);
-            return {
-                content: '<p>Failed to load learning objectives. Please check your API keys and try again.</p>'
-            };
-        }
-    }
-
     async askDoubt(doubt, questionContext) {
         try {
             const prompt = `
