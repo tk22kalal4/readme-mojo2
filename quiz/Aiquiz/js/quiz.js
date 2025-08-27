@@ -14,6 +14,7 @@ export class Quiz {
         this.subject = '';
         this.subtopic = '';
         this.topic = '';
+        this.askedQuestions = [];
     }
 
     async generateQuestion() {
@@ -22,8 +23,9 @@ export class Quiz {
         }
 
         try {
-            const question = await generateQuestion(this.subtopic, this.difficulty, this.topic);
+            const question = await generateQuestion(this.subtopic, this.difficulty, this.topic, this.askedQuestions);
             this.currentQuestion = question;
+            this.askedQuestions.push(question.question); // Add the question text to the list
             return question;
         } catch (error) {
             console.error('Error generating question:', error);
