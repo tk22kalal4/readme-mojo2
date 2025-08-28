@@ -173,7 +173,7 @@ export class QuizUI {
         // Update references after recreation
         this.elements.questionText = document.getElementById('question-text');
         this.elements.optionsContainer = document.getElementById('options-container');
- this.elements.explanationContainer = document.getElementById('explanation-container');
+        this.elements.explanationContainer = document.getElementById('explanation-container');
         
         this.elements.currentQuestion.textContent = this.quiz.questionsAnswered + 1;
         
