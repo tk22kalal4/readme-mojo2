@@ -8,8 +8,8 @@ export const updateAPIKey = (groqKey) => {
 export const getAPIUrl = () => 'https://api.groq.com/openai/v1/chat/completions';
 
 export const DIFFICULTY_LEVELS = {
-    'Easy': 'Questions based on standard textbooks like BD Chaurasia, Guyton, Harper, etc.',
-    'Medium': 'NEET PG level questions covering both clinical and non-clinical topics',
+    'Easy': 'NEET PG basic non-clinical easy level Questions',
+    'Medium': 'NEET PG level questions covering both non-clinical and clinical topics',
     'Hard': 'Advanced NEET PG and INICET level clinical questions'
 };
 
@@ -60,7 +60,7 @@ export const SUBJECTS = {
     'Protein Energy Malnutrition',
     'Solid Neoplasms Of Childhood',
     'Surgical Gi Disorders'
-],       
+    ],       
     'Radiology': [
         'Radiology'
     ],
