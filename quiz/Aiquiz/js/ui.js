@@ -247,13 +247,7 @@ export class QuizUI {
             currentQuestion.correctIndex
         );
 
-        const learningObjectives = await this.quiz.getLearningObjectives(
-            currentQuestion.question,
-            currentQuestion.options,
-            currentQuestion.correctIndex
-        );
-
-        // Set up explanation section
+        // Only explanation section
         const explanationDiv = document.createElement('div');
         explanationDiv.className = 'explanation';
         explanationDiv.innerHTML = `
@@ -273,21 +267,11 @@ export class QuizUI {
             </div>
         `;
 
-        // Set up learning objectives section
-        const learningObjectivesDiv = document.createElement('div');
-        learningObjectivesDiv.className = 'learning-objectives';
-        learningObjectivesDiv.innerHTML = `
-            <div class="learning-objectives-content">
-                ${learningObjectives.content}
-            </div>
-        `;
-
         this.elements.explanationContainer.innerHTML = '';
         this.elements.explanationContainer.appendChild(explanationDiv);
-        
-        this.elements.learningObjectivesContainer.innerHTML = '';
-        this.elements.learningObjectivesContainer.appendChild(learningObjectivesDiv);
-        
+
+        // No learning objectives section
+
         this.setupDoubtHandling(explanationDiv);
     }
 
