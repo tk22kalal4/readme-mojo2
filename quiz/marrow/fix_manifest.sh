@@ -7,7 +7,7 @@
 cp manifest.json manifest.json.backup
 
 # Define all subject directories
-subjects=("anatomy" "biochemistry" "physiology" "pathology" "pharmacology" "microbiology" "fmt" "psm" "ophthalmology" "ent" "medicine" "surgery" "pediatrics" "obgy" "psychiatry" "radiology" "orthopedics" "anesthesia" "dermatology")
+subjects=("anatomy" "biochemistry" "physiology" "pathology" "pharmacology" "microbiology" "fmt" "psm" "ophthalmology" "ent" "medicine" "surgery" "pediatrics" "obgy" "psychiatry" "radiology" "orthopedics" "anaesthesia" "dermatology")
 
 # Process each subject
 for subject in "${subjects[@]}"; do
