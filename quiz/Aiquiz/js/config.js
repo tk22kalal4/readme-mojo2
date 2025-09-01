@@ -8,8 +8,8 @@ export const updateAPIKey = (groqKey) => {
 export const getAPIUrl = () => 'https://api.groq.com/openai/v1/chat/completions';
 
 export const DIFFICULTY_LEVELS = {
-    'Easy': 'NEET PG diverse non-clinical easy level Questions from surface level to deep into the topic',
-    'Medium': 'NEET PG level diverse questions covering both non-clinical and clinical topics',
+    'Easy': 'NEET PG basic non-clinical easy level Questions',
+    'Medium': 'NEET PG level questions covering both non-clinical and clinical topics',
     'Hard': 'Advanced NEET PG and INICET level clinical questions'
 };
 
