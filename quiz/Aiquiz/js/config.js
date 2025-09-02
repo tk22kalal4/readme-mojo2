@@ -111,7 +111,7 @@ export const SUBJECTS = {
         'Immunology',
     ],
     'ENT': [
-        'ENT'
+        'ENT',
         'Ear',
         'Nose and Paranasal Sinuses',
         'Pharynx',
@@ -196,7 +196,7 @@ export const SUBJECTS = {
         'Radiotherapy'
     ],
     'Surgery': [
-        'Surgery'
+        'Surgery',
         'Introduction',
         'High Yield Topics',
         'Endocrine Surgery',
