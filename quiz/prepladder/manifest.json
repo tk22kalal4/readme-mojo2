@@ -249,375 +249,101 @@
   { "name": "Post Mortem Techniques Postmortem Autopsy And Torture", "file": "Post_Mortem_Techniques-Postmortem_Autopsy_And_Torture.json" }
 ],
   "medicine": [
-    {
-      "name": "Ards Snakebite Aha Updates Altitude Sickness",
-      "file": "Ards_Snakebite_Aha_Updates_Altitude_Sickness.json"
-    },
-    {
-      "name": "Budd Chiari Syndrome",
-      "file": "Budd_Chiari_Syndrome.json"
-    },
-    {
-      "name": "Cardiology Ecg And Arrhythmias",
-      "file": "Cardiology-Ecg_And_Arrhythmias.json"
-    },
-    {
-      "name": "Cardiology Heart Sounds And Murmurs",
-      "file": "Cardiology-Heart_Sounds_And_Murmurs.json"
-    },
-    {
-      "name": "Cardiology Hypertension",
-      "file": "Cardiology-Hypertension.json"
-    },
-    {
-      "name": "Cardiology Ischemic Heart Disease",
-      "file": "Cardiology-Ischemic_Heart_Disease.json"
-    },
-    {
-      "name": "Cardiology Valvular Heart Disease",
-      "file": "Cardiology-Valvular_Heart_Disease.json"
-    },
-    {
-      "name": "Cardiomyopathies",
-      "file": "Cardiomyopathies.json"
-    },
-    {
-      "name": "Cardiovascular Emergencies Previous Year Questions",
-      "file": "Cardiovascular_Emergencies-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Causes Of Pulseless Electrical Activity",
-      "file": "Causes_Of_Pulseless_Electrical_Activity.json"
-    },
-    {
-      "name": "Channelopathies And Sah",
-      "file": "Channelopathies_And_Sah.json"
-    },
-    {
-      "name": "Clinical Essentials Previous Year Questions",
-      "file": "Clinical_Essentials-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Complications",
-      "file": "Complications.json"
-    },
-    {
-      "name": "Cushing Syndrome",
-      "file": "Cushing_Syndrome.json"
-    },
-    {
-      "name": "Disease I",
-      "file": "Disease-I.json"
-    },
-    {
-      "name": "Disease Ii",
-      "file": "Disease-Ii.json"
-    },
-    {
-      "name": "Disease",
-      "file": "Disease.json"
-    },
-    {
-      "name": "Diseases In Medicine",
-      "file": "Diseases_In_Medicine.json"
-    },
-    {
-      "name": "Embolism",
-      "file": "Embolism.json"
-    },
-    {
-      "name": "Emergency Medicine Previous Year Questions",
-      "file": "Emergency_Medicine-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Endocrinology Diabetes Mellitus I",
-      "file": "Endocrinology-Diabetes_Mellitus-I.json"
-    },
-    {
-      "name": "Endocrinology Diabetes Mellitus Ii",
-      "file": "Endocrinology-Diabetes_Mellitus-Ii.json"
-    },
-    {
-      "name": "Endocrinology Diseases Of Anterior Pituitary",
-      "file": "Endocrinology-Diseases_Of_Anterior_Pituitary.json"
-    },
-    {
-      "name": "Endocrinology Diseases Of Thyroid",
-      "file": "Endocrinology-Diseases_Of_Thyroid.json"
-    },
-    {
-      "name": "Endocrinology Previous Year Questions",
-      "file": "Endocrinology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gastrointestinal Bleeding",
-      "file": "Gastrointestinal_Bleeding.json"
-    },
-    {
-      "name": "Gastrointestinal System Irritable Bowel Syndrome",
-      "file": "Gastrointestinal_System-Irritable_Bowel_Syndrome.json"
-    },
-    {
-      "name": "Gastrointestinal System Malabsorption Syndromes",
-      "file": "Gastrointestinal_System-Malabsorption_Syndromes.json"
-    },
-    {
-      "name": "Gastrointestinal System Previous Year Questions",
-      "file": "Gastrointestinal_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gastrointestinal System Zollinger Ellison Syndrome",
-      "file": "Gastrointestinal_System-Zollinger_Ellison_Syndrome.json"
-    },
-    {
-      "name": "Heart Block",
-      "file": "Heart_Block.json"
-    },
-    {
-      "name": "Hematology Acute Lymphocytic Leukemia",
-      "file": "Hematology-Acute_Lymphocytic_Leukemia.json"
-    },
-    {
-      "name": "Hematology Acute Myeloid Leukemia",
-      "file": "Hematology-Acute_Myeloid_Leukemia.json"
-    },
-    {
-      "name": "Hematology Chronic Lymphocytic Leukemia",
-      "file": "Hematology-Chronic_Lymphocytic_Leukemia.json"
-    },
-    {
-      "name": "Hematology Chronic Myeloid Leukemia",
-      "file": "Hematology-Chronic_Myeloid_Leukemia.json"
-    },
-    {
-      "name": "Hematology Multiple Myeloma",
-      "file": "Hematology-Multiple_Myeloma.json"
-    },
-    {
-      "name": "Hematology Previous Year Questions",
-      "file": "Hematology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hemochromatosis",
-      "file": "Hemochromatosis.json"
-    },
-    {
-      "name": "Hepatobiliary System Previous Year Questions",
-      "file": "Hepatobiliary_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hepatobiliary System Viral Hepatitis Nafld Ali",
-      "file": "Hepatobiliary_System-Viral_Hepatitis_Nafld_Ali.json"
-    },
-    {
-      "name": "Hepatopulmonary Syndrome And Alcoholic Hepatitits",
-      "file": "Hepatopulmonary_Syndrome_And_Alcoholic_Hepatitits.json"
-    },
-    {
-      "name": "Images",
-      "file": "Images.json"
-    },
-    {
-      "name": "Infections Aspergillosis Aids And Covid 19",
-      "file": "Infections-Aspergillosis_Aids_And_Covid-19.json"
-    },
-    {
-      "name": "Infections Previous Year Questions",
-      "file": "Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Infective Endocarditis",
-      "file": "Infective_Endocarditis.json"
-    },
-    {
-      "name": "Jirovecii",
-      "file": "Jirovecii.json"
-    },
-    {
-      "name": "Lymphoma",
-      "file": "Lymphoma.json"
-    },
-    {
-      "name": "Men Syndromes",
-      "file": "Men_Syndromes.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous Topics Previous Year Questions",
-      "file": "Miscellaneous_Topics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nephrology Aki Diabetic Nephropathy Renal Stones",
-      "file": "Nephrology-Aki_Diabetic_Nephropathy_Renal_Stones.json"
-    },
-    {
-      "name": "Nephrology Chronic Kidney Disease",
-      "file": "Nephrology-Chronic_Kidney_Disease.json"
-    },
-    {
-      "name": "Nephrology Ciliopathies Pkd Ttp",
-      "file": "Nephrology-Ciliopathies_Pkd_Ttp.json"
-    },
-    {
-      "name": "Nephrology Disorders Of Electrolyte Imbalance",
-      "file": "Nephrology-Disorders_Of_Electrolyte_Imbalance.json"
-    },
-    {
-      "name": "Nephrology Electrolyte Imbalance",
-      "file": "Nephrology-Electrolyte_Imbalance.json"
-    },
-    {
-      "name": "Nephrology Kidney Urine Analysis",
-      "file": "Nephrology-Kidney_Urine_Analysis.json"
-    },
-    {
-      "name": "Nephrology Nephrotic And Nephritic Syndromes",
-      "file": "Nephrology-Nephrotic_And_Nephritic_Syndromes.json"
-    },
-    {
-      "name": "Nephrology Previous Year Questions",
-      "file": "Nephrology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Neurology Cns Hemorrhage Headaches And Migraine",
-      "file": "Neurology-Cns_Hemorrhage_Headaches_And_Migraine.json"
-    },
-    {
-      "name": "Neurology Epilepsy And Eeg",
-      "file": "Neurology-Epilepsy_And_Eeg.json"
-    },
-    {
-      "name": "Neurology Meningitis And Cns Infections",
-      "file": "Neurology-Meningitis_And_Cns_Infections.json"
-    },
-    {
-      "name": "Neurology Myasthenia Gravis",
-      "file": "Neurology-Myasthenia_Gravis.json"
-    },
-    {
-      "name": "Neurology Parkinsonism And Parkinson S Disease",
-      "file": "Neurology-Parkinsonism_And_Parkinson_S_Disease.json"
-    },
-    {
-      "name": "Neurology Previous Year Questions",
-      "file": "Neurology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Neurology Stroke Tia And Image Based Questions",
-      "file": "Neurology-Stroke_Tia_And_Image_Based_Questions.json"
-    },
-    {
-      "name": "Of Blood Transfusion",
-      "file": "Of_Blood_Transfusion.json"
-    },
-    {
-      "name": "Oncology Previous Year Questions",
-      "file": "Oncology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Other Hemolytic Anemias",
-      "file": "Other_Hemolytic_Anemias.json"
-    },
-    {
-      "name": "Pancreatic Neuroendocrine Tumors",
-      "file": "Pancreatic_Neuroendocrine_Tumors.json"
-    },
-    {
-      "name": "Paracetamol Toxicity",
-      "file": "Paracetamol_Toxicity.json"
-    },
-    {
-      "name": "Pulmonary Alveolar Proteinosis",
-      "file": "Pulmonary_Alveolar_Proteinosis.json"
-    },
-    {
-      "name": "Pulmonology Abg Analysis",
-      "file": "Pulmonology-Abg_Analysis.json"
-    },
-    {
-      "name": "Pulmonology Bronchial Asthma And Copd",
-      "file": "Pulmonology-Bronchial_Asthma_And_Copd.json"
-    },
-    {
-      "name": "Pulmonology Bronchiectasis Pneumonia",
-      "file": "Pulmonology-Bronchiectasis_Pneumonia.json"
-    },
-    {
-      "name": "Pulmonology Cystic Fibrosis Obstructive Sleep Apnea",
-      "file": "Pulmonology-Cystic_Fibrosis_Obstructive_Sleep_Apnea.json"
-    },
-    {
-      "name": "Pulmonology Images In Pulmonology",
-      "file": "Pulmonology-Images_In_Pulmonology.json"
-    },
-    {
-      "name": "Pulmonology Pleural Effusion And Pneumothorax",
-      "file": "Pulmonology-Pleural_Effusion_And_Pneumothorax.json"
-    },
-    {
-      "name": "Pulmonology Previous Year Questions",
-      "file": "Pulmonology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pulmonology Respiratory Physiology And Failure",
-      "file": "Pulmonology-Respiratory_Physiology_And_Failure.json"
-    },
-    {
-      "name": "Pulmonology Tuberculosis",
-      "file": "Pulmonology-Tuberculosis.json"
-    },
-    {
-      "name": "Respiratory System Previous Year Questions",
-      "file": "Respiratory_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Rheumatology Crystal Arthropathy",
-      "file": "Rheumatology-Crystal_Arthropathy.json"
-    },
-    {
-      "name": "Rheumatology Previous Year Questions",
-      "file": "Rheumatology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Rheumatology Rheumatoid Arthritis",
-      "file": "Rheumatology-Rheumatoid_Arthritis.json"
-    },
-    {
-      "name": "Rheumatology Scleroderma And Sjogren Syndrome",
-      "file": "Rheumatology-Scleroderma_And_Sjogren_Syndrome.json"
-    },
-    {
-      "name": "Rheumatology Sle Anti Phospholipid Syndrome",
-      "file": "Rheumatology-Sle_Anti_Phospholipid_Syndrome.json"
-    },
-    {
-      "name": "Rheumatology Vasculitis Syndromes",
-      "file": "Rheumatology-Vasculitis_Syndromes.json"
-    },
-    {
-      "name": "Spectrum Disorder And Als",
-      "file": "Spectrum_Disorder_And_Als.json"
-    },
-    {
-      "name": "Spherocytosis",
-      "file": "Spherocytosis.json"
-    },
-    {
-      "name": "Stenosis",
-      "file": "Stenosis.json"
-    },
-    {
-      "name": "Thrombectomy Stroke",
-      "file": "Thrombectomy_Stroke.json"
-    },
-    {
-      "name": "Tumors And Neurocysticercosis",
-      "file": "Tumors_And_Neurocysticercosis.json"
-    }
-  ],
+  { "name": "Cardiovascular Emergencies Previous Year Questions", "file": "Cardiovascular_Emergencies-Previous_Year_Questions.json" },
+  { "name": "Cardiology Valvular Heart Disease", "file": "Cardiology-Valvular_Heart_Disease.json" },
+  { "name": "Cardiology Heart Sounds And Murmurs", "file": "Cardiology-Heart_Sounds_And_Murmurs.json" },
+  { "name": "Cardiology Takotsubo Brugada Syndrome Rhd And Infective Endocarditis", "file": "Cardiology-Takotsubo_Brugada_Syndrome_Rhd_And_Infective_Endocarditis.json" },
+  { "name": "Cardiology Ecg And Arrhythmias", "file": "Cardiology-Ecg_And_Arrhythmias.json" },
+  { "name": "Cardiology Ischemic Heart Disease", "file": "Cardiology-Ischemic_Heart_Disease.json" },
+  { "name": "Cardiology Hypertension", "file": "Cardiology-Hypertension.json" },
+  { "name": "Cardiology Chf Bbb Tachycardia Bradycardia And Heart Block", "file": "Cardiology-Chf_Bbb_Tachycardia_Bradycardia_And_Heart_Block.json" },
+  { "name": "Cardiology Diseases Of The Pericardium And Cardiomyopathies", "file": "Cardiology-Diseases_Of_The_Pericardium_And_Cardiomyopathies.json" },
+  { "name": "Emergency Medicine Emergency Cardiovascular Care Protocols Bcls Acls", "file": "Emergency_Medicine-Emergency_Cardiovascular_Care_Protocols_Bcls_Acls.json" },
+  { "name": "Mechanical Ventilation And Causes Of Pulseless Electrical Activity", "file": "Mechanical_Ventilation_And_Causes_Of_Pulseless_Electrical_Activity.json" },
+  { "name": "Emergency Medicine Massive Transfusion Protocol Ards Snakebite Aha Updates Altitude Sickness", "file": "Emergency_Medicine-Massive_Transfusion_Protocol_Ards_Snakebite_Aha_Updates_Altitude_Sickness.json" },
+  { "name": "Emergency Medicine Previous Year Questions", "file": "Emergency_Medicine-Previous_Year_Questions.json" },
+  { "name": "Endocrinology Diabetes Mellitus I", "file": "Endocrinology-Diabetes_Mellitus-I.json" },
+  { "name": "Endocrinology Diabetes Mellitus Ii", "file": "Endocrinology-Diabetes_Mellitus-Ii.json" },
+  { "name": "Endocrinology Disorders Of Adrenal Gland And Cushing Syndrome", "file": "Endocrinology-Disorders_Of_Adrenal_Gland_And_Cushing_Syndrome.json" },
+  { "name": "Endocrinology Diseases Of Thyroid", "file": "Endocrinology-Diseases_Of_Thyroid.json" },
+  { "name": "Endocrinology Dka And Hyperosmolar Coma Pancreatic Neuroendocrine Tumors", "file": "Endocrinology-Dka_And_Hyperosmolar_Coma_Pancreatic_Neuroendocrine_Tumors.json" },
+  { "name": "Endocrinology Disorders Of Parathyroid Gland And Men Syndromes", "file": "Endocrinology-Disorders_Of_Parathyroid_Gland_And_Men_Syndromes.json" },
+  { "name": "Endocrinology Diseases Of Anterior Pituitary", "file": "Endocrinology-Diseases_Of_Anterior_Pituitary.json" },
+  { "name": "Endocrinology Previous Year Questions", "file": "Endocrinology-Previous_Year_Questions.json" },
+  { "name": "Nephrology Disorders Of Electrolyte Imbalance", "file": "Nephrology-Disorders_Of_Electrolyte_Imbalance.json" },
+  { "name": "Nephrology Electrolyte Imbalance", "file": "Nephrology-Electrolyte_Imbalance.json" },
+  { "name": "Nephrology Ciliopathies Pkd Ttp", "file": "Nephrology-Ciliopathies_Pkd_Ttp.json" },
+  { "name": "Nephrology Kidney Urine Analysis", "file": "Nephrology-Kidney_Urine_Analysis.json" },
+  { "name": "Nephrology Aki Diabetic Nephropathy Renal Stones", "file": "Nephrology-Aki_Diabetic_Nephropathy_Renal_Stones.json" },
+  { "name": "Nephrology Chronic Kidney Disease", "file": "Nephrology-Chronic_Kidney_Disease.json" },
+  { "name": "Nephrology Renal Tubular Acidosis And Renal Artery Stenosis", "file": "Nephrology-Renal_Tubular_Acidosis_And_Renal_Artery_Stenosis.json" },
+  { "name": "Nephrology Nephrotic And Nephritic Syndromes", "file": "Nephrology-Nephrotic_And_Nephritic_Syndromes.json" },
+  { "name": "Nephrology Previous Year Questions", "file": "Nephrology-Previous_Year_Questions.json" },
+  { "name": "Gastrointestinal System Zollinger Ellison Syndrome", "file": "Gastrointestinal_System-Zollinger_Ellison_Syndrome.json" },
+  { "name": "Gastrointestinal System Inflammatory Bowel Disease I", "file": "Gastrointestinal_System-Inflammatory_Bowel_Disease-I.json" },
+  { "name": "Gastrointestinal System Inflammatory Bowel Disease Ii", "file": "Gastrointestinal_System-Inflammatory_Bowel_Disease-Ii.json" },
+  { "name": "Gastrointestinal System Irritable Bowel Syndrome", "file": "Gastrointestinal_System-Irritable_Bowel_Syndrome.json" },
+  { "name": "Gastrointestinal System Peptic Ulcer And Gastrointestinal Bleeding", "file": "Gastrointestinal_System-Peptic_Ulcer_And_Gastrointestinal_Bleeding.json" },
+  { "name": "Gastrointestinal System Malabsorption Syndromes", "file": "Gastrointestinal_System-Malabsorption_Syndromes.json" },
+  { "name": "Gastrointestinal System Previous Year Questions", "file": "Gastrointestinal_System-Previous_Year_Questions.json" },
+  { "name": "Hematology Chronic Lymphocytic Leukemia", "file": "Hematology-Chronic_Lymphocytic_Leukemia.json" },
+  { "name": "Hematology Chronic Myeloid Leukemia", "file": "Hematology-Chronic_Myeloid_Leukemia.json" },
+  { "name": "Hematology Acute Myeloid Leukemia", "file": "Hematology-Acute_Myeloid_Leukemia.json" },
+  { "name": "Hematology Acute Lymphocytic Leukemia", "file": "Hematology-Acute_Lymphocytic_Leukemia.json" },
+  { "name": "Hematology Blood Components And Complications Of Blood Transfusion", "file": "Hematology-Blood_Components_And_Complications_Of_Blood_Transfusion.json" },
+  { "name": "Hematology Multiple Myeloma", "file": "Hematology-Multiple_Myeloma.json" },
+  { "name": "Hematology Hodgkin S And Non Hodgkin S Lymphoma", "file": "Hematology-Hodgkin_S_And_Non-Hodgkin_S_Lymphoma.json" },
+  { "name": "Hematology Thalassemia And Hereditary Spherocytosis", "file": "Hematology-Thalassemia_And_Hereditary_Spherocytosis.json" },
+  { "name": "Hematology Sickle Cell Disease G6Pd Deficiency And Other Hemolytic Anemias", "file": "Hematology-Sickle_Cell_Disease_G6Pd_Deficiency_And_Other_Hemolytic_Anemias.json" },
+  { "name": "Hematology Platelet Disorders And Hematology Images", "file": "Hematology-Platelet_Disorders_And_Hematology_Images.json" },
+  { "name": "Hematology Previous Year Questions", "file": "Hematology-Previous_Year_Questions.json" },
+  { "name": "Neurology Basics Of Cranial Nerves Mechanical Thrombectomy Stroke", "file": "Neurology-Basics_Of_Cranial_Nerves_Mechanical_Thrombectomy_Stroke.json" },
+  { "name": "Neurology Stroke Tia And Image Based Questions", "file": "Neurology-Stroke_Tia_And_Image_Based_Questions.json" },
+  { "name": "Neurology Syringomelia Conus Medullaris Channelopathies And Sah", "file": "Neurology-Syringomelia_Conus_Medullaris_Channelopathies_And_Sah.json" },
+  { "name": "Neurology Cns Hemorrhage Headaches And Migraine", "file": "Neurology-Cns_Hemorrhage_Headaches_And_Migraine.json" },
+  { "name": "Neurology Epilepsy And Eeg", "file": "Neurology-Epilepsy_And_Eeg.json" },
+  { "name": "Neurology Intracranial Pathologies Icp Brain Death Tumors And Neurocysticercosis", "file": "Neurology-Intracranial_Pathologies_Icp_Brain_Death_Tumors_And_Neurocysticercosis.json" },
+  { "name": "Neurology Meningitis And Cns Infections", "file": "Neurology-Meningitis_And_Cns_Infections.json" },
+  { "name": "Neurology Parkinsonism And Parkinson S Disease", "file": "Neurology-Parkinsonism_And_Parkinson_S_Disease.json" },
+  { "name": "Neurology Myasthenia Gravis", "file": "Neurology-Myasthenia_Gravis.json" },
+  { "name": "Neurology Guillian Barre Syndrome And Alzheimer S Disease", "file": "Neurology-Guillian_Barre_Syndrome_And_Alzheimer_S_Disease.json" },
+  { "name": "Neurology Multiple Sclerosis Neuromyelitis Optica Spectrum Disorder And Als", "file": "Neurology-Multiple_Sclerosis_Neuromyelitis_Optica_Spectrum_Disorder_And_Als.json" },
+  { "name": "Neurology Previous Year Questions", "file": "Neurology-Previous_Year_Questions.json" },
+  { "name": "Rheumatology Sle Anti Phospholipid Syndrome", "file": "Rheumatology-Sle_Anti_Phospholipid_Syndrome.json" },
+  { "name": "Rheumatology Rheumatoid Arthritis", "file": "Rheumatology-Rheumatoid_Arthritis.json" },
+  { "name": "Rheumatology Crystal Arthropathy", "file": "Rheumatology-Crystal_Arthropathy.json" },
+  { "name": "Rheumatology Vasculitis Syndromes", "file": "Rheumatology-Vasculitis_Syndromes.json" },
+  { "name": "Rheumatology Scleroderma And Sjogren Syndrome", "file": "Rheumatology-Scleroderma_And_Sjogren_Syndrome.json" },
+  { "name": "Rheumatology Autoimmune And Inflammatory Diseases In Medicine", "file": "Rheumatology-Autoimmune_And_Inflammatory_Diseases_In_Medicine.json" },
+  { "name": "Rheumatology Previous Year Questions", "file": "Rheumatology-Previous_Year_Questions.json" },
+  { "name": "Hepatobiliary System Viral Hepatitis Nafld Ali", "file": "Hepatobiliary_System-Viral_Hepatitis_Nafld_Ali.json" },
+  { "name": "Hepatobiliary System Hepatorenal And Hepatopulmonary Syndrome And Alcoholic Hepatitits", "file": "Hepatobiliary_System-Hepatorenal_And_Hepatopulmonary_Syndrome_And_Alcoholic_Hepatitits.json" },
+  { "name": "Hepatobiliary System Autoimmune Hepatitis Primary Biliary Cirrhosis Primary Sclerosing Cholangitis And Paracetamol Toxicity", "file": "Hepatobiliary_System-Autoimmune_Hepatitis_Primary_Biliary_Cirrhosis_Primary_Sclerosing_Cholangitis_And_Paracetamol_Toxicity.json" },
+  { "name": "Hepatobiliary System Liver Cirrhosis And Its Complications", "file": "Hepatobiliary_System-Liver_Cirrhosis_And_Its_Complications.json" },
+  { "name": "Hepatobiliary System Wilson Disease And Hemochromatosis", "file": "Hepatobiliary_System-Wilson_Disease_And_Hemochromatosis.json" },
+  { "name": "Hepatobiliary System Hereditary Hyperbilirubinemia Budd Chiari Syndrome", "file": "Hepatobiliary_System-Hereditary_Hyperbilirubinemia_Budd_Chiari_Syndrome.json" },
+  { "name": "Hepatobiliary System Previous Year Questions", "file": "Hepatobiliary_System-Previous_Year_Questions.json" },
+  { "name": "Pulmonology Cystic Fibrosis Obstructive Sleep Apnea", "file": "Pulmonology-Cystic_Fibrosis_Obstructive_Sleep_Apnea.json" },
+  { "name": "Pulmonology Pulmonary Embolism And Fat Embolism", "file": "Pulmonology-Pulmonary_Embolism_And_Fat_Embolism.json" },
+  { "name": "Pulmonology Bronchiectasis Pneumonia", "file": "Pulmonology-Bronchiectasis_Pneumonia.json" },
+  { "name": "Pulmonology Bronchial Asthma And Copd", "file": "Pulmonology-Bronchial_Asthma_And_Copd.json" },
+  { "name": "Pulmonology Tuberculosis", "file": "Pulmonology-Tuberculosis.json" },
+  { "name": "Pulmonology Respiratory Physiology And Failure", "file": "Pulmonology-Respiratory_Physiology_And_Failure.json" },
+  { "name": "Pulmonology Interstitial Lung Disease And Pulmonary Alveolar Proteinosis", "file": "Pulmonology-Interstitial_Lung_Disease_And_Pulmonary_Alveolar_Proteinosis.json" },
+  { "name": "Pulmonology Pleural Effusion And Pneumothorax", "file": "Pulmonology-Pleural_Effusion_And_Pneumothorax.json" },
+  { "name": "Pulmonology Abg Analysis", "file": "Pulmonology-Abg_Analysis.json" },
+  { "name": "Pulmonology Images In Pulmonology", "file": "Pulmonology-Images_In_Pulmonology.json" },
+  { "name": "Pulmonology Previous Year Questions", "file": "Pulmonology-Previous_Year_Questions.json" },
+  { "name": "Infections Puo Dengue Nipah Zika And Pneumocystis Jirovecii", "file": "Infections-Puo_Dengue_Nipah_Zika_And_Pneumocystis_Jirovecii.json" },
+  { "name": "Infections Aspergillosis Aids And Covid-19", "file": "Infections-Aspergillosis_Aids_And_Covid-19.json" },
+  { "name": "Infections Previous Year Questions", "file": "Infections-Previous_Year_Questions.json" },
+  { "name": "Oncology Previous Year Questions", "file": "Oncology-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Topics Previous Year Questions", "file": "Miscellaneous_Topics-Previous_Year_Questions.json" },
+  { "name": "Clinical Essentials Previous Year Questions", "file": "Clinical_Essentials-Previous_Year_Questions.json" },
+  { "name": "Respiratory System Previous Year Questions", "file": "Respiratory_System-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "Cardiovascular Emergencies Previous Year Questions", "file": "Cardiovascular_Emergencies-Previous_Year_Questions.json" }
+],
   "microbiology": [
     {
       "name": "And Neisseria",
