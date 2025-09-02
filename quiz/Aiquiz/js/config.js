@@ -20,60 +20,46 @@ export const SUBJECTS = {
         'Lower Limb',
         'Histology'
     ],
-    'Pediatrics': [
-        'Acyanotic Congenital Heart Diseases',
-        'Apgar Score And Neonatal Resuscitation',
-        'Basics Of Neonatology And Routine Newborn Care',
-        'Childhood Respiratory Disorders',
-        'Chromosomal Disorders',
-        'Congenital Adrenal Hyperplasia And Related Diso',
-        'Cyanotic Congenital Heart Diseases',
-        'Deficiency Of Fat Soluble Vitamins',
-        'Deficiency Of Water Soluble Vitamins Trace El',
-        'Developmental Milestones',
-        'Diseases In Neonates Requiring Special Care',
-        'Disorders Of Newborn',
-        'Disorders Of Puberty',
-        'Disorders Of Thyroid',
-        'Disorders Of The Liver',
-        'Disorders Of The Nervous System',
-        'Disorders Of The Pituitary Gland',
-        'Facets Of Growth And Development',
-        'Fetal Circulation',
-        'Fluid And Electrolyte Disorders',
-        'Measles Mumps Rubella And Other Viral Infections',
-        'Medical Gi Disorders',
-        'Mendelian And Non Mendelian Disorders',
-        'Metabolic Disorders Of Amino Acids',
-        'Metabolic Disorders Of Urea Cycle Complex Mole',
-        'Musculoskeletal Disorders',
-        'Neonatal Respiratory Disorders',
-        'Nutrition And Breastfeeding',
-        'Paediatric Hemato Oncology',
-        'Paediatric Rheumatology',
-        'Pediatric Anemias',
-        'Pediatric Bacterial And Parasitic Infections',
-        'Pediatric Hematology Introduction Bleeding',
-        'Pediatric Nephrology',
-        'Pediatric Urology',
-        'Polio And Aids',
-        'Protein Energy Malnutrition',
-        'Solid Neoplasms Of Childhood',
-        'Surgical Gi Disorders'
-    ],       
-    'Radiology': [
-        'Radiology'
+export const SUBJECTS = {
+    'Anatomy': [
+        'Introduction',
+        'General Embryology',
+        'Histology',
+        'Osteology and Arthrology',
+        'Neuro Anatomy',
+        'Head and Neck',
+        'Back Region',
+        'Thorax',
+        'Upper Limb',
+        'Abdomen',
+        'Pelvis and Perineum',
+        'Lower Limb'
     ],
     'Biochemistry': [
-        'Complete Biochemistry'
+        'Introduction',
+        'Carbohydrate Chemistry',
+        'Carbohydrate Metabolism',
+        'Oxidative Phosphorylation',
+        'Lipid Chemistry',
+        'Lipid Metabolism',
+        'Amino Acids and Proteins Chemistry',
+        'Amino Acid and Protein Metabolism',
+        'Genetics',
+        'Enzymes',
+        'Heme Synthesis',
+        'Vitamins'
     ],
-    'Pathology': [
-        'Complete Pathology'
-    ],
-    'Pharmacology': [
-        'Complete Pharmacology'
-    ],
-    'Microbiology': [
-        'Complete Microbiology'
+    'Physiology': [
+        'General Physiology',
+        'Nerve Muscle Physiology',
+        'Cardiovascular System',
+        'Blood Physiology',
+        'Excretory System',
+        'Respiratory System',
+        'Gastrointestinal System',
+        'The Nervous System',
+        'Endocrine and Reproductive System'
     ]
+}
+    
 };
