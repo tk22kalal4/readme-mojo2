@@ -209,155 +209,45 @@
   { "name": "Ent Surgeries Previous Year Questions", "file": "Ent_Surgeries-Previous_Year_Questions.json" }
 ],
   "fmt": [
-    {
-      "name": "Asphyxial Deaths Asphyxial Death",
-      "file": "Asphyxial_Deaths-Asphyxial_Death.json"
-    },
-    {
-      "name": "Asphyxial Deaths Previous Year Questions",
-      "file": "Asphyxial_Deaths-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ballistics Forensic Ballistics",
-      "file": "Ballistics-Forensic_Ballistics.json"
-    },
-    {
-      "name": "Ballistics Previous Year Questions",
-      "file": "Ballistics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Court Of Law Previous Year Questions",
-      "file": "Court_Of_Law-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Forensic Identification Forensic Identification",
-      "file": "Forensic_Identification-Forensic_Identification.json"
-    },
-    {
-      "name": "Forensic Identification Previous Year Questions",
-      "file": "Forensic_Identification-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Forensic Psychiatry Forensic Psychiatry",
-      "file": "Forensic_Psychiatry-Forensic_Psychiatry.json"
-    },
-    {
-      "name": "Forensic Psychiatry Previous Year Questions",
-      "file": "Forensic_Psychiatry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Forensic Thanatology Previous Year Questions",
-      "file": "Forensic_Thanatology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Forensic Thanatology Thanatology",
-      "file": "Forensic_Thanatology-Thanatology.json"
-    },
-    {
-      "name": "Forensic Toxicology Forensic Toxicology 1",
-      "file": "Forensic_Toxicology-Forensic_Toxicology_1.json"
-    },
-    {
-      "name": "Forensic Toxicology Forensic Toxicology 2",
-      "file": "Forensic_Toxicology-Forensic_Toxicology_2.json"
-    },
-    {
-      "name": "Forensic Toxicology Previous Year Questions",
-      "file": "Forensic_Toxicology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Forensic Traumatology Mechanical Injuries",
-      "file": "Forensic_Traumatology-Mechanical_Injuries.json"
-    },
-    {
-      "name": "Forensic Traumatology Previous Year Questions",
-      "file": "Forensic_Traumatology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Forensic Traumatology Regional Injuries",
-      "file": "Forensic_Traumatology-Regional_Injuries.json"
-    },
-    {
-      "name": "Forensic Traumatology Thermal Injuries And Rta",
-      "file": "Forensic_Traumatology-Thermal_Injuries_And_Rta.json"
-    },
-    {
-      "name": "Infanticide Infanticide",
-      "file": "Infanticide-Infanticide.json"
-    },
-    {
-      "name": "Infanticide Previous Year Questions",
-      "file": "Infanticide-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ipc Sections Bns Sections",
-      "file": "Ipc_Sections-Bns_Sections.json"
-    },
-    {
-      "name": "Ipc Sections Previous Year Questions",
-      "file": "Ipc_Sections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Medical Jurisprudence Medical Jurisprudence",
-      "file": "Medical_Jurisprudence-Medical_Jurisprudence.json"
-    },
-    {
-      "name": "Medical Jurisprudence Previous Year Questions",
-      "file": "Medical_Jurisprudence-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Offences",
-      "file": "Offences.json"
-    },
-    {
-      "name": "Post Mortem Techniques Previous Year Questions",
-      "file": "Post_Mortem_Techniques-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Previous Year Questions 13",
-      "file": "Previous_Year_Questions_13.json"
-    },
-    {
-      "name": "Previous Year Questions 6",
-      "file": "Previous_Year_Questions_6.json"
-    },
-    {
-      "name": "Sexual Jurisprudence Previous Year Questions",
-      "file": "Sexual_Jurisprudence-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Sexual Jurisprudence Sexual Jurisprudence",
-      "file": "Sexual_Jurisprudence-Sexual_Jurisprudence.json"
-    },
-    {
-      "name": "Torture",
-      "file": "Torture.json"
-    },
-    {
-      "name": "Toxicology General General Toxicology",
-      "file": "Toxicology_-_General-General_Toxicology.json"
-    },
-    {
-      "name": "Toxicology General Previous Year Questions",
-      "file": "Toxicology_-_General-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Traces Of Evidences Previous Year Questions",
-      "file": "Traces_Of_Evidences-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Violent Asphyxia Deaths Previous Year Questions",
-      "file": "Violent_Asphyxia_Deaths-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Year Questions",
-      "file": "Year_Questions.json"
-    }
-  ],
+  { "name": "Post Mortem Techniques Postmortem Autopsy And Torture", "file": "Post_Mortem_Techniques-Postmortem_Autopsy_And_Torture.json" },
+  { "name": "Post Mortem Techniques Previous Year Questions", "file": "Post_Mortem_Techniques-Previous_Year_Questions.json" },
+  { "name": "Indian Legal System Medical Jurisprudence Previous Year Questions", "file": "Indian_Legal_System_Medical_Jurisprudence-Previous_Year_Questions.json" },
+  { "name": "Ipc Sections Bns Sections", "file": "Ipc_Sections-Bns_Sections.json" },
+  { "name": "Ipc Sections Previous Year Questions", "file": "Ipc_Sections-Previous_Year_Questions.json" },
+  { "name": "Court Of Law Previous Year Questions", "file": "Court_Of_Law-Previous_Year_Questions.json" },
+  { "name": "Traces Of Evidences Traces Of Evidence Sexual Offences", "file": "Traces_Of_Evidences-Traces_Of_Evidence_Sexual_Offences.json" },
+  { "name": "Traces Of Evidences Previous Year Questions", "file": "Traces_Of_Evidences-Previous_Year_Questions.json" },
+  { "name": "Sexual Jurisprudence Sexual Jurisprudence", "file": "Sexual_Jurisprudence-Sexual_Jurisprudence.json" },
+  { "name": "Sexual Jurisprudence Previous Year Questions", "file": "Sexual_Jurisprudence-Previous_Year_Questions.json" },
+  { "name": "Previous Year Questions 6", "file": "Previous_Year_Questions_6.json" },
+  { "name": "Medical Jurisprudence Medical Jurisprudence", "file": "Medical_Jurisprudence-Medical_Jurisprudence.json" },
+  { "name": "Medical Jurisprudence Previous Year Questions", "file": "Medical_Jurisprudence-Previous_Year_Questions.json" },
+  { "name": "Infanticide Infanticide", "file": "Infanticide-Infanticide.json" },
+  { "name": "Asphyxial Deaths Asphyxial Death", "file": "Asphyxial_Deaths-Asphyxial_Death.json" },
+  { "name": "Asphyxial Deaths Previous Year Questions", "file": "Asphyxial_Deaths-Previous_Year_Questions.json" },
+  { "name": "Violent Asphyxia Deaths Previous Year Questions", "file": "Violent_Asphyxia_Deaths-Previous_Year_Questions.json" },
+  { "name": "Forensic Traumatology Mechanical Injuries", "file": "Forensic_Traumatology-Mechanical_Injuries.json" },
+  { "name": "Forensic Traumatology Regional Injuries", "file": "Forensic_Traumatology-Regional_Injuries.json" },
+  { "name": "Forensic Traumatology Thermal Injuries And Rta", "file": "Forensic_Traumatology-Thermal_Injuries_And_Rta.json" },
+  { "name": "Forensic Traumatology Previous Year Questions", "file": "Forensic_Traumatology-Previous_Year_Questions.json" },
+  { "name": "Ballistics Forensic Ballistics", "file": "Ballistics-Forensic_Ballistics.json" },
+  { "name": "Ballistics Previous Year Questions", "file": "Ballistics-Previous_Year_Questions.json" },
+  { "name": "Forensic Identification Forensic Identification", "file": "Forensic_Identification-Forensic_Identification.json" },
+  { "name": "Forensic Identification Previous Year Questions", "file": "Forensic_Identification-Previous_Year_Questions.json" },
+  { "name": "Previous Year Questions 13", "file": "Previous_Year_Questions_13.json" },
+  { "name": "Toxicology General General Toxicology", "file": "Toxicology_-_General-General_Toxicology.json" },
+  { "name": "Toxicology General Previous Year Questions", "file": "Toxicology_-_General-Previous_Year_Questions.json" },
+  { "name": "Forensic Toxicology Forensic Toxicology 1", "file": "Forensic_Toxicology-Forensic_Toxicology_1.json" },
+  { "name": "Forensic Toxicology Forensic Toxicology 2", "file": "Forensic_Toxicology-Forensic_Toxicology_2.json" },
+  { "name": "Forensic Toxicology Previous Year Questions", "file": "Forensic_Toxicology-Previous_Year_Questions.json" },
+  { "name": "Forensic Thanatology Thanatology", "file": "Forensic_Thanatology-Thanatology.json" },
+  { "name": "Forensic Thanatology Previous Year Questions", "file": "Forensic_Thanatology-Previous_Year_Questions.json" },
+  { "name": "Forensic Psychiatry Forensic Psychiatry", "file": "Forensic_Psychiatry-Forensic_Psychiatry.json" },
+  { "name": "Forensic Psychiatry Previous Year Questions", "file": "Forensic_Psychiatry-Previous_Year_Questions.json" },
+  { "name": "Infanticide Previous Year Questions", "file": "Infanticide-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "Post Mortem Techniques Postmortem Autopsy And Torture", "file": "Post_Mortem_Techniques-Postmortem_Autopsy_And_Torture.json" }
+],
   "medicine": [
     {
       "name": "Ards Snakebite Aha Updates Altitude Sickness",
