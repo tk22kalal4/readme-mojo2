@@ -15,6 +15,7 @@ export const DIFFICULTY_LEVELS = {
 
 export const SUBJECTS = {
     'Anatomy': [
+        'Anatomy',
         'Introduction',
         'General Embryology',
         'Histology',
@@ -29,6 +30,7 @@ export const SUBJECTS = {
         'Lower Limb'
     ],
     'Biochemistry': [
+        'Biochemistry',
         'Introduction',
         'Carbohydrate Chemistry',
         'Carbohydrate Metabolism',
@@ -43,6 +45,7 @@ export const SUBJECTS = {
         'Vitamins'
     ],
     'Physiology': [
+        'Physiology',
         'General Physiology',
         'Nerve Muscle Physiology',
         'Cardiovascular System',
@@ -54,6 +57,7 @@ export const SUBJECTS = {
         'Endocrine and Reproductive System'
     ],
     'Pharmacology': [
+        'Pharmacology',
         'Introduction to Pharmacology',
         'General Pharmacology',
         'ANS Pharmacology',
@@ -73,6 +77,7 @@ export const SUBJECTS = {
         'Special Topics'
     ],
     'Pathology': [
+        'Pathology',
         'Cell Injury',
         'Inflammation',
         'Genetics',
@@ -95,18 +100,18 @@ export const SUBJECTS = {
         'Platelets',
         'Blood',
         'Tissue Processing',
-        'Notes'
     ],
     'Microbiology': [
+        'Microbiology',
         'General Microbiology',
         'Systemic Bacteriology',
         'Virology',
         'Mycology',
         'Parasitology',
         'Immunology',
-        'Notes'
     ],
     'ENT': [
+        'ENT'
         'Ear',
         'Nose and Paranasal Sinuses',
         'Pharynx',
@@ -114,6 +119,7 @@ export const SUBJECTS = {
         'Miscellaneous Topics'
     ],
     'PSM': [
+        'PSM',
         'Epidemiology',
         'Concept of Health and Disease',
         'Vaccines and Cold Chain',
@@ -134,6 +140,7 @@ export const SUBJECTS = {
         'Biostatistics'
     ],
     'Forensic Medicine': [
+        'Forensic Medicine',
         'Post Mortem Techniques',
         'IPC Sections',
         'Torture and its Types',
@@ -151,6 +158,7 @@ export const SUBJECTS = {
         'Forensic Psychiatry'
     ],
     'Pediatrics': [
+        'Pediatrics',
         'Growth',
         'Normal Development',
         'Development and Behavioral Disorder',
@@ -175,6 +183,7 @@ export const SUBJECTS = {
         'Clinical Essentials'
     ],
     'Radiology': [
+        'Radiology',
         'Basics of Radiology',
         'Thoracic Radiology',
         'Head & Neck Imaging',
@@ -187,6 +196,7 @@ export const SUBJECTS = {
         'Radiotherapy'
     ],
     'Surgery': [
+        'Surgery'
         'Introduction',
         'High Yield Topics',
         'Endocrine Surgery',
@@ -202,6 +212,7 @@ export const SUBJECTS = {
         'Clinical Essentials'
     ],
     'Anesthesia': [
+        'Anesthesia',
         'Introduction & History of Anesthesia',
         'Pre-Anaesthetic Evaluation',
         'Oxygen Therapy and Airway',
@@ -219,6 +230,7 @@ export const SUBJECTS = {
         'Brain Death'
     ],
     'Medicine': [
+        'Medicine',
         'Cardiology',
         'Emergency Medicine',
         'Endocrine',
@@ -232,6 +244,7 @@ export const SUBJECTS = {
         'Clinical Essential'
     ],
     'Psychiatry': [
+        'Psychiatry',
         'Basics of Psychiatry',
         'Schizophrenia Spectrum and Other Psychotic Disorder',
         'Mood Disorders',
@@ -248,6 +261,7 @@ export const SUBJECTS = {
         'Miscellaneous'
     ],
     'Orthopedics': [
+        'Orthopedics',
         'Bone and Imaging',
         'Bone and Joint Infections',
         'Tuberculosis of Bone and Joints',
@@ -263,6 +277,7 @@ export const SUBJECTS = {
         'Miscellaneous'
     ],
     'Dermatology': [
+        'Dermatology',
         'Introduction to Dermatology',
         'Cutaneous Infection',
         'Mycobacterial Infections',
