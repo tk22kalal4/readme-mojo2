@@ -80,15 +80,14 @@
       window.location.href = `../subjects.html?platform=${platform}`;
     }
 
-    // Function to normalize filenames for matching
+    // Function to normalize filenames for matching - ENHANCED
     function normalizeFilename(name) {
       return name.toLowerCase()
-        .replace(/[^a-z0-9]/g, '') // Remove non-alphanumeric characters
-        .replace(/_/g, '')         // Remove underscores
+        .replace(/[^a-z0-9]/g, '') // Remove all non-alphanumeric characters
         .replace(/\s+/g, '');      // Remove spaces
     }
 
-    // Function to find the best matching file
+    // Function to find the best matching file - ENHANCED
     function findBestMatchingFile(expectedFile, availableFiles) {
       const normalizedExpected = normalizeFilename(expectedFile);
       
@@ -96,9 +95,24 @@
       const exactMatch = availableFiles.find(file => file === expectedFile);
       if (exactMatch) return exactMatch;
       
-      // Then try normalized match
+      // Then try case-insensitive match
+      const caseInsensitiveMatch = availableFiles.find(file => 
+        file.toLowerCase() === expectedFile.toLowerCase()
+      );
+      if (caseInsensitiveMatch) return caseInsensitiveMatch;
+      
+      // Then try normalized match (ignore all special characters)
       for (const file of availableFiles) {
         if (normalizeFilename(file) === normalizedExpected) {
+          return file;
+        }
+      }
+      
+      // Try match without file extension
+      const expectedWithoutExt = expectedFile.replace('.json', '');
+      for (const file of availableFiles) {
+        const fileWithoutExt = file.replace('.json', '');
+        if (normalizeFilename(fileWithoutExt) === normalizeFilename(expectedWithoutExt)) {
           return file;
         }
       }
@@ -156,7 +170,10 @@
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(await dirResponse.text(), 'text/html');
             const links = htmlDoc.querySelectorAll('a[href$=".json"]');
-            availableFiles = Array.from(links).map(link => link.href.split('/').pop());
+            availableFiles = Array.from(links).map(link => {
+              const href = link.getAttribute('href');
+              return href.substring(href.lastIndexOf('/') + 1);
+            });
           }
         } catch (e) {
           console.log('Could not get directory listing, falling back to individual checks');
@@ -166,6 +183,7 @@
         for (const chapter of chapters) {
           try {
             let fileToLoad = chapter.file;
+            let data = null;
             
             // If we have a list of available files, try to find the best match
             if (availableFiles.length > 0) {
@@ -177,34 +195,52 @@
             
             const fileResponse = await fetch(`./${subject}/${fileToLoad}`);
             if (fileResponse.ok) {
-              const data = await fileResponse.json();
+              data = await fileResponse.json();
               if (data.questions && data.questions.length > 0) {
                 availableChapters.push({
                   name: chapter.name,
                   filename: fileToLoad,
                   questionCount: data.questions.length
                 });
+                continue; // Successfully loaded, move to next chapter
               }
             }
           } catch (error) {
             console.error(`Error loading ${chapter.file}:`, error);
-            // Try with a slightly different name pattern as fallback
-            try {
-              const altFile = chapter.file.replace(/_/g, ' ');
-              const fileResponse = await fetch(`./${subject}/${altFile}`);
-              if (fileResponse.ok) {
-                const data = await fileResponse.json();
-                if (data.questions && data.questions.length > 0) {
-                  availableChapters.push({
-                    name: chapter.name,
-                    filename: altFile,
-                    questionCount: data.questions.length
-                  });
+          }
+          
+          // If initial load failed, try alternative patterns
+          try {
+            const alternatives = [
+              chapter.file,
+              chapter.file.replace(/_/g, ' '),
+              chapter.file.replace(/ /g, '_'),
+              chapter.file.replace(/-/g, ' '),
+              chapter.file.replace(/ /g, '-'),
+              chapter.file.toLowerCase(),
+              chapter.file.toUpperCase()
+            ];
+            
+            for (const altFile of alternatives) {
+              try {
+                const fileResponse = await fetch(`./${subject}/${altFile}`);
+                if (fileResponse.ok) {
+                  const data = await fileResponse.json();
+                  if (data.questions && data.questions.length > 0) {
+                    availableChapters.push({
+                      name: chapter.name,
+                      filename: altFile,
+                      questionCount: data.questions.length
+                    });
+                    break; // Found a working alternative
+                  }
                 }
+              } catch (e) {
+                // Ignore and try next alternative
               }
-            } catch (fallbackError) {
-              console.error(`Also failed to load with alternative name: ${altFile}`, fallbackError);
             }
+          } catch (fallbackError) {
+            console.error(`Failed to load with alternative names for: ${chapter.file}`, fallbackError);
           }
         }
 
