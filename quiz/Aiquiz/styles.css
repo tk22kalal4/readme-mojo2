@@ -98,6 +98,20 @@ h1 {
     gap: 0.5rem;
 }
 
+/* Add this below the select styles for uniformity */
+.setup-form input[type="text"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.setup-form input[type="text"]:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
 label {
     font-weight: 500;
     color: #2c3e50;
