@@ -92,159 +92,46 @@
   { "name": "Back Region Previous Year Questions", "file": "Back_Region-Previous_Year_Questions.json" }
 ],
   "biochemistry": [
-    {
-      "name": "Amino Acids Metabolism Previous Year Questions",
-      "file": "Amino_Acids_Metabolism-Previous_Year_Questions.json"
-    },
-    {
-      "name": "And Alcohol Impact",
-      "file": "And_Alcohol_Impact.json"
-    },
-    {
-      "name": "Biochemistry Previous Year Questions",
-      "file": "Biochemistry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Carbohydrate Chemistry Carbohydrates",
-      "file": "Carbohydrate_Chemistry-Carbohydrates.json"
-    },
-    {
-      "name": "Carbohydrate Chemistry Previous Year Questions",
-      "file": "Carbohydrate_Chemistry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Carbohydrate Metabolism Previous Year Questions",
-      "file": "Carbohydrate_Metabolism-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Catabolism Urea Cycle And Hyperammonemia",
-      "file": "Catabolism_Urea_Cycle_And_Hyperammonemia.json"
-    },
-    {
-      "name": "Chromatography",
-      "file": "Chromatography.json"
-    },
-    {
-      "name": "Clinical Biochemistry Previous Year Questions",
-      "file": "Clinical_Biochemistry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Complex Electron Transport Chain",
-      "file": "Complex_Electron_Transport_Chain.json"
-    },
-    {
-      "name": "Concepts Previous Year Questions",
-      "file": "Concepts-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Enzymes Enzymes",
-      "file": "Enzymes-Enzymes.json"
-    },
-    {
-      "name": "Enzymes Previous Year Questions",
-      "file": "Enzymes-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Genetics Pcr",
-      "file": "Genetics-Pcr.json"
-    },
-    {
-      "name": "Genetics Previous Year Questions",
-      "file": "Genetics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gluconeogenesis",
-      "file": "Gluconeogenesis.json"
-    },
-    {
-      "name": "Glycogen Storage Disorders",
-      "file": "Glycogen_Storage_Disorders.json"
-    },
-    {
-      "name": "Glycolysis",
-      "file": "Glycolysis.json"
-    },
-    {
-      "name": "Heme Metabolism Previous Year Questions",
-      "file": "Heme_Metabolism-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Heme Synthesis Heme Synthesis And Porphyrias",
-      "file": "Heme_Synthesis-Heme_Synthesis_And_Porphyrias.json"
-    },
-    {
-      "name": "Heme Synthesis Previous Year Questions",
-      "file": "Heme_Synthesis-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hypercholesterolemia",
-      "file": "Hypercholesterolemia.json"
-    },
-    {
-      "name": "Introduction Previous Year Questions",
-      "file": "Introduction-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Lipid Chemistry Fatty Acid Synthesis And Oxidation",
-      "file": "Lipid_Chemistry-Fatty_Acid_Synthesis_And_Oxidation.json"
-    },
-    {
-      "name": "Lipid Chemistry Lipid Chemistry",
-      "file": "Lipid_Chemistry-Lipid_Chemistry.json"
-    },
-    {
-      "name": "Lipid Chemistry Previous Year Questions",
-      "file": "Lipid_Chemistry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Lipid Metabolism Previous Year Questions",
-      "file": "Lipid_Metabolism-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Metabolism Hmp Pathway",
-      "file": "Metabolism_Hmp_Pathway.json"
-    },
-    {
-      "name": "Minerals Previous Year Questions",
-      "file": "Minerals-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Operon",
-      "file": "Operon.json"
-    },
-    {
-      "name": "Oxidative Phosphorylation Previous Year Questions",
-      "file": "Oxidative_Phosphorylation-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Structure Replication And Repair",
-      "file": "Structure_Replication_And_Repair.json"
-    },
-    {
-      "name": "Translation Inhibitors",
-      "file": "Translation_Inhibitors.json"
-    },
-    {
-      "name": "Tyrosine Amino Acid Metabolism Disorders",
-      "file": "Tyrosine_Amino_Acid_Metabolism_Disorders.json"
-    },
-    {
-      "name": "Vitamins Fat Soluble Vitamins",
-      "file": "Vitamins-Fat-Soluble_Vitamins.json"
-    },
-    {
-      "name": "Vitamins Previous Year Questions",
-      "file": "Vitamins-Previous_Year_Questions.json"
-    }
-  ],
+  { "name": "Introduction Previous Year Questions", "file": "Introduction-Previous_Year_Questions.json" },
+  { "name": "Carbohydrate Chemistry Carbohydrates", "file": "Carbohydrate_Chemistry-Carbohydrates.json" },
+  { "name": "Carbohydrate Chemistry Fructose And Galactose Metabolism Hmp Pathway", "file": "Carbohydrate_Chemistry-Fructose_And_Galactose_Metabolism_Hmp_Pathway.json" },
+  { "name": "Carbohydrate Chemistry Fates Of Pyruvate Pdh Complex Electron Transport Chain", "file": "Carbohydrate_Chemistry-Fates_Of_Pyruvate_Pdh_Complex_Electron_Transport_Chain.json" },
+  { "name": "Carbohydrate Chemistry Glut Transporters And Glycolysis", "file": "Carbohydrate_Chemistry-Glut_Transporters_And_Glycolysis.json" },
+  { "name": "Carbohydrate Chemistry Glycogen Metabolism And Glycogen Storage Disorders", "file": "Carbohydrate_Chemistry-Glycogen_Metabolism_And_Glycogen_Storage_Disorders.json" },
+  { "name": "Carbohydrate Chemistry Citric Acid Cycle And Gluconeogenesis", "file": "Carbohydrate_Chemistry-Citric_Acid_Cycle_And_Gluconeogenesis.json" },
+  { "name": "Carbohydrate Chemistry Previous Year Questions", "file": "Carbohydrate_Chemistry-Previous_Year_Questions.json" },
+  { "name": "Carbohydrate Metabolism Previous Year Questions", "file": "Carbohydrate_Metabolism-Previous_Year_Questions.json" },
+  { "name": "Oxidative Phosphorylation Previous Year Questions", "file": "Oxidative_Phosphorylation-Previous_Year_Questions.json" },
+  { "name": "Lipid Chemistry Lipid Chemistry", "file": "Lipid_Chemistry-Lipid_Chemistry.json" },
+  { "name": "Lipid Chemistry Fatty Acid Synthesis And Oxidation", "file": "Lipid_Chemistry-Fatty_Acid_Synthesis_And_Oxidation.json" },
+  { "name": "Lipid Chemistry Cholesterol Lipoproteins And Hypercholesterolemia", "file": "Lipid_Chemistry-Cholesterol_Lipoproteins_And_Hypercholesterolemia.json" },
+  { "name": "Lipid Chemistry Previous Year Questions", "file": "Lipid_Chemistry-Previous_Year_Questions.json" },
+  { "name": "Lipid Metabolism Previous Year Questions", "file": "Lipid_Metabolism-Previous_Year_Questions.json" },
+  { "name": "Amino Acids And Proteins Chemistry Protein Chemistry Hemoglobin Myoglobin Epp Chromatography", "file": "Amino_Acids_And_Proteins_Chemistry-Protein_Chemistry_Hemoglobin_Myoglobin_Epp_Chromatography.json" },
+  { "name": "Amino Acids And Proteins Chemistry Amino Acid Catabolism Urea Cycle And Hyperammonemia", "file": "Amino_Acids_And_Proteins_Chemistry-Amino_Acid_Catabolism_Urea_Cycle_And_Hyperammonemia.json" },
+  { "name": "Amino Acids And Proteins Chemistry Phenylalanine Tyrosine Amino Acid Metabolism Disorders", "file": "Amino_Acids_And_Proteins_Chemistry-Phenylalanine_Tyrosine_Amino_Acid_Metabolism_Disorders.json" },
+  { "name": "Amino Acids And Proteins Chemistry Previous Year Questions", "file": "Amino_Acids_And_Proteins_Chemistry-Previous_Year_Questions.json" },
+  { "name": "Amino Acids Metabolism Previous Year Questions", "file": "Amino_Acids_Metabolism-Previous_Year_Questions.json" },
+  { "name": "Amino Acid And Protein Metabolism Previous Year Questions", "file": "Amino_Acid_And_Protein_Metabolism-Previous_Year_Questions.json" },
+  { "name": "Genetics Dna And Chromosome Biochemistry Structure Replication And Repair", "file": "Genetics-Dna_And_Chromosome_Biochemistry_Structure_Replication_And_Repair.json" },
+  { "name": "Genetics Rna Transcription Genetic Code Mutation Translation Inhibitors", "file": "Genetics-Rna_Transcription_Genetic_Code_Mutation_Translation_Inhibitors.json" },
+  { "name": "Genetics Pcr", "file": "Genetics-Pcr.json" },
+  { "name": "Genetics Advanced Molecular Techniques Recombinant Dna Technology Microarray Crispr Lac Operon", "file": "Genetics-Advanced_Molecular_Techniques_Recombinant_Dna_Technology_Microarray_Crispr_Lac_Operon.json" },
+  { "name": "Genetics Previous Year Questions", "file": "Genetics-Previous_Year_Questions.json" },
+  { "name": "Heme Metabolism Previous Year Questions", "file": "Heme_Metabolism-Previous_Year_Questions.json" },
+  { "name": "Enzymes Enzymes", "file": "Enzymes-Enzymes.json" },
+  { "name": "Enzymes Previous Year Questions", "file": "Enzymes-Previous_Year_Questions.json" },
+  { "name": "Heme Synthesis Heme Synthesis And Porphyrias", "file": "Heme_Synthesis-Heme_Synthesis_And_Porphyrias.json" },
+  { "name": "Heme Synthesis Previous Year Questions", "file": "Heme_Synthesis-Previous_Year_Questions.json" },
+  { "name": "Vitamins Fat-Soluble Vitamins", "file": "Vitamins-Fat-Soluble_Vitamins.json" },
+  { "name": "Vitamins Water-Soluble Vitamins Roles Deficiencies And Alcohol Impact", "file": "Vitamins-Water-Soluble_Vitamins_Roles_Deficiencies_And_Alcohol_Impact.json" },
+  { "name": "Vitamins Previous Year Questions", "file": "Vitamins-Previous_Year_Questions.json" },
+  { "name": "Clinical Biochemistry Previous Year Questions", "file": "Clinical_Biochemistry-Previous_Year_Questions.json" },
+  { "name": "Biochemistry Previous Year Questions", "file": "Biochemistry-Previous_Year_Questions.json" },
+  { "name": "Concepts Previous Year Questions", "file": "Concepts-Previous_Year_Questions.json" },
+  { "name": "Minerals Previous Year Questions", "file": "Minerals-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" }
+],
   "dermatology": [
     {
       "name": "And Std Discharge",
