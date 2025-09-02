@@ -19,6 +19,12 @@ export async function generateQuestion(subject, difficulty, topic = '', askedQue
 
     try {
         const response = await fetchFromAPI(prompt);
+
+        // Check if response contains an error property
+        if (response && typeof response === 'object' && response.error) {
+            throw new Error(`API Error: ${JSON.stringify(response.error)}`);
+        }
+
         // Attempt to extract the JSON string from the response
         const jsonStartIndex = response.indexOf('{');
         const jsonEndIndex = response.lastIndexOf('}');
@@ -33,7 +39,7 @@ export async function generateQuestion(subject, difficulty, topic = '', askedQue
     } catch (error) {
         console.error('Question Generation Error:', error);
         return {
-            question: 'Failed to load question. Please try again.',
+            question: `Failed to load question. API Error: ${error.message}`,
             options: ['Error', 'Error', 'Error', 'Error'],
             correctIndex: 0
         };
