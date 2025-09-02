@@ -133,147 +133,46 @@
   { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" }
 ],
   "dermatology": [
-    {
-      "name": "And Std Discharge",
-      "file": "And_Std_Discharge.json"
-    },
-    {
-      "name": "Bacterial Infections Bacterial Infections",
-      "file": "Bacterial_Infections-Bacterial_Infections.json"
-    },
-    {
-      "name": "Bacterial Infections Previous Year Questions",
-      "file": "Bacterial_Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Blistering Disorders Previous Year Questions",
-      "file": "Blistering_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Connective Tissue Disorders Previous Year Questions",
-      "file": "Connective_Tissue_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cutaneous Infections Previous Year Questions",
-      "file": "Cutaneous_Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Dermatology",
-      "file": "Dermatology.json"
-    },
-    {
-      "name": "Disorders",
-      "file": "Disorders.json"
-    },
-    {
-      "name": "Eczema Eczema",
-      "file": "Eczema-Eczema.json"
-    },
-    {
-      "name": "Eczema Previous Year Questions",
-      "file": "Eczema-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Fungal Infections Fungal Infections",
-      "file": "Fungal_Infections-Fungal_Infections.json"
-    },
-    {
-      "name": "Fungal Infections Previous Year Questions",
-      "file": "Fungal_Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Glands",
-      "file": "Glands.json"
-    },
-    {
-      "name": "Immunobullous Disorders Immunobullous Disorders",
-      "file": "Immunobullous_Disorders-Immunobullous_Disorders.json"
-    },
-    {
-      "name": "Immunobullous Disorders Previous Year Questions",
-      "file": "Immunobullous_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Introduction To Dermatology Basics Of Dermatology",
-      "file": "Introduction_To_Dermatology-Basics_Of_Dermatology.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous Disorders Previous Year Questions",
-      "file": "Miscellaneous_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Mycobacterial Infections Cutaneous Tuberculosis",
-      "file": "Mycobacterial_Infections-Cutaneous_Tuberculosis.json"
-    },
-    {
-      "name": "Mycobacterial Infections Leprosy",
-      "file": "Mycobacterial_Infections-Leprosy.json"
-    },
-    {
-      "name": "Mycobacterial Infections Previous Year Questions",
-      "file": "Mycobacterial_Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Papulosquamous Disorders Previous Year Questions",
-      "file": "Papulosquamous_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Parasitic Infection Parasitic Infestations Of Skin",
-      "file": "Parasitic_Infection-Parasitic_Infestations_Of_Skin.json"
-    },
-    {
-      "name": "Parasitic Infection Previous Year Questions",
-      "file": "Parasitic_Infection-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pediatric Dermatoses Urticaria And Angioedema",
-      "file": "Pediatric_Dermatoses_Urticaria_And_Angioedema.json"
-    },
-    {
-      "name": "Pigmentary Disorders Pigmentary Disorders",
-      "file": "Pigmentary_Disorders-Pigmentary_Disorders.json"
-    },
-    {
-      "name": "Pigmentary Disorders Previous Year Questions",
-      "file": "Pigmentary_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Skin",
-      "file": "Skin.json"
-    },
-    {
-      "name": "Skin Tumors Previous Year Questions",
-      "file": "Skin_Tumors-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Skin Tumours Skin Tumors",
-      "file": "Skin_Tumours-Skin_Tumors.json"
-    },
-    {
-      "name": "Systemic Diseases And Skin Previous Year Questions",
-      "file": "Systemic_Diseases_And_Skin-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Vector Borne Diseases Bedside Tests In Dermatology",
-      "file": "Vector-Borne_Diseases_Bedside_Tests_In_Dermatology.json"
-    },
-    {
-      "name": "Viral Infections Previous Year Questions",
-      "file": "Viral_Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Viral Infections Viral Infections",
-      "file": "Viral_Infections-Viral_Infections.json"
-    }
-  ],
+  { "name": "Introduction To Dermatology Basics Of Dermatology", "file": "Introduction_To_Dermatology-Basics_Of_Dermatology.json" },
+  { "name": "Introduction To Dermatology Skin Lesions In Dermatology", "file": "Introduction_To_Dermatology-Skin_Lesions_In_Dermatology.json" },
+  { "name": "Introduction To Dermatology Previous Year Questions", "file": "Introduction_To_Dermatology-Previous_Year_Questions.json" },
+  { "name": "Cutaneous Infections Previous Year Questions", "file": "Cutaneous_Infections-Previous_Year_Questions.json" },
+  { "name": "Mycobacterial Infections Cutaneous Tuberculosis", "file": "Mycobacterial_Infections-Cutaneous_Tuberculosis.json" },
+  { "name": "Mycobacterial Infections Leprosy", "file": "Mycobacterial_Infections-Leprosy.json" },
+  { "name": "Mycobacterial Infections Previous Year Questions", "file": "Mycobacterial_Infections-Previous_Year_Questions.json" },
+  { "name": "Immunobullous Disorders Immunobullous Disorders", "file": "Immunobullous_Disorders-Immunobullous_Disorders.json" },
+  { "name": "Immunobullous Disorders Previous Year Questions", "file": "Immunobullous_Disorders-Previous_Year_Questions.json" },
+  { "name": "Papulosquamous Disorders Papulosquamous Disorders", "file": "Papulosquamous_Disorders-Papulosquamous_Disorders.json" },
+  { "name": "Papulosquamous Disorders Previous Year Questions", "file": "Papulosquamous_Disorders-Previous_Year_Questions.json" },
+  { "name": "Skin Appendages And Their Disorders Hair And Nail Disorders", "file": "Skin_Appendages_And_Their_Disorders-Hair_And_Nail_Disorders.json" },
+  { "name": "Skin Appendages And Their Disorders Disorders Of Glands", "file": "Skin_Appendages_And_Their_Disorders-Disorders_Of_Glands.json" },
+  { "name": "Skin Appendages And Their Disorders Previous Year Questions", "file": "Skin_Appendages_And_Their_Disorders-Previous_Year_Questions.json" },
+  { "name": "Sexually Transmitted Infections Genital Ulcer Disease And Std Discharge", "file": "Sexually_Transmitted_Infections-Genital_Ulcer_Disease_And_Std_Discharge.json" },
+  { "name": "Sexually Transmitted Infections Previous Year Questions", "file": "Sexually_Transmitted_Infections-Previous_Year_Questions.json" },
+  { "name": "Eczema Eczema", "file": "Eczema-Eczema.json" },
+  { "name": "Eczema Previous Year Questions", "file": "Eczema-Previous_Year_Questions.json" },
+  { "name": "Pigmentary Disorders Pigmentary Disorders", "file": "Pigmentary_Disorders-Pigmentary_Disorders.json" },
+  { "name": "Pigmentary Disorders Previous Year Questions", "file": "Pigmentary_Disorders-Previous_Year_Questions.json" },
+  { "name": "Connective Tissue Disorders Connective Tissue Disorders", "file": "Connective_Tissue_Disorders-Connective_Tissue_Disorders.json" },
+  { "name": "Connective Tissue Disorders Previous Year Questions", "file": "Connective_Tissue_Disorders-Previous_Year_Questions.json" },
+  { "name": "Skin Tumors Previous Year Questions", "file": "Skin_Tumors-Previous_Year_Questions.json" },
+  { "name": "Systemic Diseases And Skin Systemic Diseases And Skin", "file": "Systemic_Diseases_And_Skin-Systemic_Diseases_And_Skin.json" },
+  { "name": "Systemic Diseases And Skin Previous Year Questions", "file": "Systemic_Diseases_And_Skin-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Disorders Adverse Drug Reactions Pediatric Dermatoses Urticaria And Angioedema", "file": "Miscellaneous_Disorders-Adverse_Drug_Reactions_Pediatric_Dermatoses_Urticaria_And_Angioedema.json" },
+  { "name": "Miscellaneous Disorders Genodermatoses Vector-Borne Diseases Bedside Tests In Dermatology", "file": "Miscellaneous_Disorders-Genodermatoses_Vector-Borne_Diseases_Bedside_Tests_In_Dermatology.json" },
+  { "name": "Miscellaneous Disorders Previous Year Questions", "file": "Miscellaneous_Disorders-Previous_Year_Questions.json" },
+  { "name": "Skin Tumours Skin Tumors", "file": "Skin_Tumours-Skin_Tumors.json" },
+  { "name": "Bacterial Infections Bacterial Infections", "file": "Bacterial_Infections-Bacterial_Infections.json" },
+  { "name": "Bacterial Infections Previous Year Questions", "file": "Bacterial_Infections-Previous_Year_Questions.json" },
+  { "name": "Fungal Infections Fungal Infections", "file": "Fungal_Infections-Fungal_Infections.json" },
+  { "name": "Fungal Infections Previous Year Questions", "file": "Fungal_Infections-Previous_Year_Questions.json" },
+  { "name": "Blistering Disorders Previous Year Questions", "file": "Blistering_Disorders-Previous_Year_Questions.json" },
+  { "name": "Parasitic Infection Parasitic Infestations Of Skin", "file": "Parasitic_Infection-Parasitic_Infestations_Of_Skin.json" },
+  { "name": "Parasitic Infection Previous Year Questions", "file": "Parasitic_Infection-Previous_Year_Questions.json" },
+  { "name": "Viral Infections Viral Infections", "file": "Viral_Infections-Viral_Infections.json" },
+  { "name": "Viral Infections Previous Year Questions", "file": "Viral_Infections-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" }
+],
   "ent": [
     {
       "name": "Abscess Related To Pharynx",
