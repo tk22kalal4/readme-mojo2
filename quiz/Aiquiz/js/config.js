@@ -9,8 +9,8 @@ export const getAPIUrl = () => 'https://api.groq.com/openai/v1/chat/completions'
 
 export const DIFFICULTY_LEVELS = {
     'Easy': 'Diverse non-clinical NEET PG questions ranging from simple recall, definitions, and surface-level facts to slightly deeper concepts, ensuring variety (non-repetitive) while testing broad coverage of fundamentals',
-    'Medium': 'NEET PG level questions covering both non-clinical and clinical topics',
-    'Hard': 'Advanced NEET PG and INICET level clinical questions'
+    'Medium': 'Diverse NEET PG level questions covering both clinical and non-clinical topics, ensuring variety (non-repetitive) with a balance of case-based, applied, and concept-testing questions across multiple subjects for broad coverage',
+    'Hard': 'Diverse advanced NEET PG and INICET level clinical questions, ensuring variety (non-repetitive) with challenging, case-based, integrative, and multi-step reasoning questions that cover broad and complex topics across specialties'
 };
 
 export const SUBJECTS = {
