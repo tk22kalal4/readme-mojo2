@@ -345,2487 +345,678 @@
   { "name": "Cardiovascular Emergencies Previous Year Questions", "file": "Cardiovascular_Emergencies-Previous_Year_Questions.json" }
 ],
   "microbiology": [
-    {
-      "name": "And Neisseria",
-      "file": "And_Neisseria.json"
-    },
-    {
-      "name": "Bacterium",
-      "file": "Bacterium.json"
-    },
-    {
-      "name": "Brucella",
-      "file": "Brucella.json"
-    },
-    {
-      "name": "Classification",
-      "file": "Classification.json"
-    },
-    {
-      "name": "Clinical Microbiology Previous Year Questions",
-      "file": "Clinical_Microbiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Covid 19 Previous Year Questions",
-      "file": "Covid-19-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Dimorphic Fungi",
-      "file": "Dimorphic_Fungi.json"
-    },
-    {
-      "name": "General Microbiology Bacterial Anatomy",
-      "file": "General_Microbiology-Bacterial_Anatomy.json"
-    },
-    {
-      "name": "General Microbiology Bacterial Genetics",
-      "file": "General_Microbiology-Bacterial_Genetics.json"
-    },
-    {
-      "name": "General Microbiology Culture Media",
-      "file": "General_Microbiology-Culture_Media.json"
-    },
-    {
-      "name": "General Microbiology Previous Year Questions",
-      "file": "General_Microbiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "General Microbiology Sterilization And Disinfection",
-      "file": "General_Microbiology-Sterilization_And_Disinfection.json"
-    },
-    {
-      "name": "Helminthology Previous Year Questions",
-      "file": "Helminthology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Immunology Antigen Antibody And Their Reactions",
-      "file": "Immunology-Antigen_Antibody_And_Their_Reactions.json"
-    },
-    {
-      "name": "Immunology Hypersensitivity Reactions",
-      "file": "Immunology-Hypersensitivity_Reactions.json"
-    },
-    {
-      "name": "Immunology Immunity",
-      "file": "Immunology-Immunity.json"
-    },
-    {
-      "name": "Immunology Previous Year Questions",
-      "file": "Immunology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Immunology Transplant Immunology",
-      "file": "Immunology-Transplant_Immunology.json"
-    },
-    {
-      "name": "Introduction Previous Year Questions",
-      "file": "Introduction-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Microbiology Previous Year Questions",
-      "file": "Microbiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Microscopes",
-      "file": "Microscopes.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Mycology Opportunistic Infections",
-      "file": "Mycology-Opportunistic_Infections.json"
-    },
-    {
-      "name": "Mycology Previous Year Questions",
-      "file": "Mycology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Parasitology Cestodes",
-      "file": "Parasitology-Cestodes.json"
-    },
-    {
-      "name": "Parasitology Coccidian Parasites Plasmodium Babesia",
-      "file": "Parasitology-Coccidian_Parasites_Plasmodium_Babesia.json"
-    },
-    {
-      "name": "Parasitology Flagellates Hemoflagellates",
-      "file": "Parasitology-Flagellates_Hemoflagellates.json"
-    },
-    {
-      "name": "Parasitology Nematodes",
-      "file": "Parasitology-Nematodes.json"
-    },
-    {
-      "name": "Parasitology Parasitology Classification Amoeba",
-      "file": "Parasitology-Parasitology_-_Classification_Amoeba.json"
-    },
-    {
-      "name": "Parasitology Previous Year Questions",
-      "file": "Parasitology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Parasitology Trematodes",
-      "file": "Parasitology-Trematodes.json"
-    },
-    {
-      "name": "Rickettsiae",
-      "file": "Rickettsiae.json"
-    },
-    {
-      "name": "Salmonella",
-      "file": "Salmonella.json"
-    },
-    {
-      "name": "Systemic Bacteriology E Coli And Shigella",
-      "file": "Systemic_Bacteriology-E_Coli_And_Shigella.json"
-    },
-    {
-      "name": "Systemic Bacteriology Miscellaneous Bacteria",
-      "file": "Systemic_Bacteriology-Miscellaneous_Bacteria.json"
-    },
-    {
-      "name": "Systemic Bacteriology Mycobacterium",
-      "file": "Systemic_Bacteriology-Mycobacterium.json"
-    },
-    {
-      "name": "Systemic Bacteriology Previous Year Questions",
-      "file": "Systemic_Bacteriology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Systemic Bacteriology Spore Forming Bacteria",
-      "file": "Systemic_Bacteriology-Spore_Forming_Bacteria.json"
-    },
-    {
-      "name": "Systemic Bacteriology Vibrio And Non Fermenters",
-      "file": "Systemic_Bacteriology-Vibrio_And_Non-Fermenters.json"
-    },
-    {
-      "name": "Virology Hepatitis Virus",
-      "file": "Virology-Hepatitis_Virus.json"
-    },
-    {
-      "name": "Virology Herpesviridae",
-      "file": "Virology-Herpesviridae.json"
-    },
-    {
-      "name": "Virology Myxovirus",
-      "file": "Virology-Myxovirus.json"
-    },
-    {
-      "name": "Virology Other Rna Viruses And Covid 19",
-      "file": "Virology-Other_Rna_Viruses_And_Covid-19.json"
-    },
-    {
-      "name": "Virology Parvoviridae Poxviridae Adenovirus",
-      "file": "Virology-Parvoviridae_Poxviridae_Adenovirus.json"
-    },
-    {
-      "name": "Virology Picornaviridae And Rhabdoviridae",
-      "file": "Virology-Picornaviridae_And_Rhabdoviridae.json"
-    },
-    {
-      "name": "Virology Previous Year Questions",
-      "file": "Virology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Virology Rna Virology Arboviridae And Retroviridae",
-      "file": "Virology-Rna_Virology-_Arboviridae_And_Retroviridae.json"
-    },
-    {
-      "name": "Virology Virology General Properties",
-      "file": "Virology-Virology_-_General_Properties.json"
-    }
-  ],
+  { "name": "General Microbiology Scientists Stains And Microscopes", "file": "General_Microbiology-Scientists_Stains_And_Microscopes.json" },
+  { "name": "General Microbiology Bacterial Anatomy", "file": "General_Microbiology-Bacterial_Anatomy.json" },
+  { "name": "General Microbiology Bacterial Genetics", "file": "General_Microbiology-Bacterial_Genetics.json" },
+  { "name": "General Microbiology Culture Media", "file": "General_Microbiology-Culture_Media.json" },
+  { "name": "General Microbiology Sterilization And Disinfection", "file": "General_Microbiology-Sterilization_And_Disinfection.json" },
+  { "name": "General Microbiology Previous Year Questions", "file": "General_Microbiology-Previous_Year_Questions.json" },
+  { "name": "Introduction Previous Year Questions", "file": "Introduction-Previous_Year_Questions.json" },
+  { "name": "Systemic Bacteriology Staphylococcus Streptococcus And Neisseria", "file": "Systemic_Bacteriology-Staphylococcus_Streptococcus_And_Neisseria.json" },
+  { "name": "Systemic Bacteriology Corynebacterium Filamentous Bacterium", "file": "Systemic_Bacteriology-Corynebacterium_Filamentous_Bacterium.json" },
+  { "name": "Systemic Bacteriology Spore Forming Bacteria", "file": "Systemic_Bacteriology-Spore_Forming_Bacteria.json" },
+  { "name": "Systemic Bacteriology Mycobacterium", "file": "Systemic_Bacteriology-Mycobacterium.json" },
+  { "name": "Systemic Bacteriology E Coli And Shigella", "file": "Systemic_Bacteriology-E_Coli_And_Shigella.json" },
+  { "name": "Systemic Bacteriology Klebsiella Proteus Yersinia Salmonella", "file": "Systemic_Bacteriology-Klebsiella_Proteus_Yersinia_Salmonella.json" },
+  { "name": "Systemic Bacteriology Vibrio And Non-Fermenters", "file": "Systemic_Bacteriology-Vibrio_And_Non-Fermenters.json" },
+  { "name": "Systemic Bacteriology Hemophillus Bordatella And Brucella", "file": "Systemic_Bacteriology-Hemophillus_Bordatella_And_Brucella.json" },
+  { "name": "Systemic Bacteriology Syphilis Chlamydia And Rickettsiae", "file": "Systemic_Bacteriology-Syphilis_Chlamydia_And_Rickettsiae.json" },
+  { "name": "Systemic Bacteriology Miscellaneous Bacteria", "file": "Systemic_Bacteriology-Miscellaneous_Bacteria.json" },
+  { "name": "Virology Virology General Properties", "file": "Virology-Virology_-_General_Properties.json" },
+  { "name": "Systemic Bacteriology Previous Year Questions", "file": "Systemic_Bacteriology-Previous_Year_Questions.json" },
+  { "name": "Virology Herpesviridae", "file": "Virology-Herpesviridae.json" },
+  { "name": "Virology Parvoviridae Poxviridae Adenovirus", "file": "Virology-Parvoviridae_Poxviridae_Adenovirus.json" },
+  { "name": "Virology Hepatitis Virus", "file": "Virology-Hepatitis_Virus.json" },
+  { "name": "Virology Myxovirus", "file": "Virology-Myxovirus.json" },
+  { "name": "Virology Picornaviridae And Rhabdoviridae", "file": "Virology-Picornaviridae_And_Rhabdoviridae.json" },
+  { "name": "Virology Rna Virology Arboviridae And Retroviridae", "file": "Virology-Rna_Virology-_Arboviridae_And_Retroviridae.json" },
+  { "name": "Virology Other Rna Viruses And Covid 19", "file": "Virology-Other_Rna_Viruses_And_Covid-19.json" },
+  { "name": "Virology Previous Year Questions", "file": "Virology-Previous_Year_Questions.json" },
+  { "name": "Mycology Introduction To Mycology And Its Classification", "file": "Mycology-Introduction_To_Mycology_And_Its_Classification.json" },
+  { "name": "Mycology Superficial And Subcutaneous Mycosis And Dimorphic Fungi", "file": "Mycology-Superficial_And_Subcutaneous_Mycosis_And_Dimorphic_Fungi.json" },
+  { "name": "Mycology Opportunistic Infections", "file": "Mycology-Opportunistic_Infections.json" },
+  { "name": "Mycology Previous Year Questions", "file": "Mycology-Previous_Year_Questions.json" },
+  { "name": "Parasitology Parasitology Classification Amoeba", "file": "Parasitology-Parasitology_-_Classification_Amoeba.json" },
+  { "name": "Parasitology Flagellates Hemoflagellates", "file": "Parasitology-Flagellates_Hemoflagellates.json" },
+  { "name": "Parasitology Coccidian Parasites Plasmodium Babesia", "file": "Parasitology-Coccidian_Parasites_Plasmodium_Babesia.json" },
+  { "name": "Parasitology Cestodes", "file": "Parasitology-Cestodes.json" },
+  { "name": "Parasitology Trematodes", "file": "Parasitology-Trematodes.json" },
+  { "name": "Parasitology Nematodes", "file": "Parasitology-Nematodes.json" },
+  { "name": "Parasitology Previous Year Questions", "file": "Parasitology-Previous_Year_Questions.json" },
+  { "name": "Immunology Immunity", "file": "Immunology-Immunity.json" },
+  { "name": "Immunology Hypersensitivity Reactions", "file": "Immunology-Hypersensitivity_Reactions.json" },
+  { "name": "Immunology Transplant Immunology", "file": "Immunology-Transplant_Immunology.json" },
+  { "name": "Immunology Antigen Antibody And Their Reactions", "file": "Immunology-Antigen_Antibody_And_Their_Reactions.json" },
+  { "name": "Immunology Previous Year Questions", "file": "Immunology-Previous_Year_Questions.json" },
+  { "name": "Helminthology Previous Year Questions", "file": "Helminthology-Previous_Year_Questions.json" },
+  { "name": "Microbiology Previous Year Questions", "file": "Microbiology-Previous_Year_Questions.json" },
+  { "name": "Clinical Microbiology Previous Year Questions", "file": "Clinical_Microbiology-Previous_Year_Questions.json" },
+  { "name": "Covid 19 Previous Year Questions", "file": "Covid-19-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "General Microbiology Scientists Stains And", "file": "General_Microbiology-Scientists_Stains_And.json" },
+  { "name": "Microscopes", "file": "Microscopes.json" }
+],
   "obgy": [
-    {
-      "name": "Abnormalities Of Labor Previous Year Questions",
-      "file": "Abnormalities_Of_Labor-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Adenomyosis Previous Year Questions",
-      "file": "Adenomyosis-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Age Group Previous Year Questions",
-      "file": "Age_Group-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Basics Of Obstetrics Previous Year Questions",
-      "file": "Basics_Of_Obstetrics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Care",
-      "file": "Care.json"
-    },
-    {
-      "name": "Contraception Contraception",
-      "file": "Contraception-Contraception.json"
-    },
-    {
-      "name": "Contraception Previous Year Questions",
-      "file": "Contraception-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cord",
-      "file": "Cord.json"
-    },
-    {
-      "name": "Disorders Previous Year Questions",
-      "file": "Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Emergencies Previous Year Questions",
-      "file": "Emergencies-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Endometriosis Previous Year Questions",
-      "file": "Endometriosis-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Fibroids Previous Year Questions",
-      "file": "Fibroids-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Genital Infections Previous Year Questions",
-      "file": "Genital_Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gyne Oncology Previous Year Questions",
-      "file": "Gyne_Oncology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gynecology Aub Hirsutism And Adnexal Mass",
-      "file": "Gynecology-Aub_Hirsutism_And_Adnexal_Mass.json"
-    },
-    {
-      "name": "Gynecology Cervical Carcinoma",
-      "file": "Gynecology-Cervical_Carcinoma.json"
-    },
-    {
-      "name": "Gynecology Clinical Anatomy Of Female",
-      "file": "Gynecology-Clinical_Anatomy_Of_Female.json"
-    },
-    {
-      "name": "Gynecology Embryology And Associated Disorders",
-      "file": "Gynecology-Embryology_And_Associated_Disorders.json"
-    },
-    {
-      "name": "Gynecology Endometrial Carcinoma",
-      "file": "Gynecology-Endometrial_Carcinoma.json"
-    },
-    {
-      "name": "Gynecology Endometriosis Adenomyosis",
-      "file": "Gynecology-Endometriosis_Adenomyosis.json"
-    },
-    {
-      "name": "Gynecology Fibroids And Polyps",
-      "file": "Gynecology-Fibroids_And_Polyps.json"
-    },
-    {
-      "name": "Gynecology Infertility",
-      "file": "Gynecology-Infertility.json"
-    },
-    {
-      "name": "Gynecology Menstrual Physiology",
-      "file": "Gynecology-Menstrual_Physiology.json"
-    },
-    {
-      "name": "Gynecology Ovarian Tumors",
-      "file": "Gynecology-Ovarian_Tumors.json"
-    },
-    {
-      "name": "Gynecology Pelvic Inflammatory Disease",
-      "file": "Gynecology-Pelvic_Inflammatory_Disease.json"
-    },
-    {
-      "name": "Gynecology Pelvic Organ Prolapse",
-      "file": "Gynecology-Pelvic_Organ_Prolapse.json"
-    },
-    {
-      "name": "Gynecology Pelvis Perineum And Pelvic Diaphragm",
-      "file": "Gynecology-Pelvis_Perineum_And_Pelvic_Diaphragm.json"
-    },
-    {
-      "name": "Gynecology Polycystic Ovarian Syndrome",
-      "file": "Gynecology-Polycystic_Ovarian_Syndrome.json"
-    },
-    {
-      "name": "Gynecology Previous Year Questions",
-      "file": "Gynecology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gynecology Urinary Incontinence And Fistulas",
-      "file": "Gynecology-Urinary_Incontinence_And_Fistulas.json"
-    },
-    {
-      "name": "Gynecology Vulval And Vaginal Malignancy",
-      "file": "Gynecology-Vulval_And_Vaginal_Malignancy.json"
-    },
-    {
-      "name": "Gynecology Vulval Infections And Genital Tb",
-      "file": "Gynecology-Vulval_Infections_And_Genital_Tb.json"
-    },
-    {
-      "name": "High Risk Pregnancy Previous Year Questions",
-      "file": "High_Risk_Pregnancy-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Image Based Discussion Previous Year Questions",
-      "file": "Image_Based_Discussion-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Infertility Previous Year Questions",
-      "file": "Infertility-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Instruments Previous Year Questions",
-      "file": "Instruments-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Labor",
-      "file": "Labor.json"
-    },
-    {
-      "name": "Menopause Previous Year Questions",
-      "file": "Menopause-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Menopause",
-      "file": "Menopause.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Molar Pregnancy",
-      "file": "Molar_Pregnancy.json"
-    },
-    {
-      "name": "Molar Pregnancy Gtn Previous Year Questions",
-      "file": "Molar_Pregnancy_Gtn-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Normal Labor Previous Year Questions",
-      "file": "Normal_Labor-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Obstetrics Abnormalities In Labor",
-      "file": "Obstetrics-Abnormalities_In_Labor.json"
-    },
-    {
-      "name": "Obstetrics Abortions",
-      "file": "Obstetrics-Abortions.json"
-    },
-    {
-      "name": "Obstetrics Amniotic Fluid Abnormalities",
-      "file": "Obstetrics-Amniotic_Fluid_Abnormalities.json"
-    },
-    {
-      "name": "Obstetrics Anemia In Pregnancy",
-      "file": "Obstetrics-Anemia_In_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Antepartum Haemorrhage",
-      "file": "Obstetrics-Antepartum_Haemorrhage.json"
-    },
-    {
-      "name": "Obstetrics Cesarean Delivery",
-      "file": "Obstetrics-Cesarean_Delivery.json"
-    },
-    {
-      "name": "Obstetrics Ectopic Pregnancy",
-      "file": "Obstetrics-Ectopic_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Gestational Diabetes Mellitus",
-      "file": "Obstetrics-Gestational_Diabetes_Mellitus.json"
-    },
-    {
-      "name": "Obstetrics Heart Diseases In Pregnancy",
-      "file": "Obstetrics-Heart_Diseases_In_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Hepatic Disorders In Pregnancy",
-      "file": "Obstetrics-Hepatic_Disorders_In_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Hypertension In Pregnancy",
-      "file": "Obstetrics-Hypertension_In_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Multifetal Pregnancy",
-      "file": "Obstetrics-Multifetal_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Physiological Changes In Pregnancy",
-      "file": "Obstetrics-Physiological_Changes_In_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Post Partum Hemorrhage",
-      "file": "Obstetrics-Post-Partum_Hemorrhage.json"
-    },
-    {
-      "name": "Obstetrics Preterm Labor And Post Dated Pregnancy",
-      "file": "Obstetrics-Preterm_Labor_And_Post-Dated_Pregnancy.json"
-    },
-    {
-      "name": "Obstetrics Previous Year Questions",
-      "file": "Obstetrics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Obstetrics Puerperium",
-      "file": "Obstetrics-Puerperium.json"
-    },
-    {
-      "name": "Obstetrics Rh Isoimmunization",
-      "file": "Obstetrics-Rh_Isoimmunization.json"
-    },
-    {
-      "name": "Obstetrics Stages Of Labour",
-      "file": "Obstetrics-Stages_Of_Labour.json"
-    },
-    {
-      "name": "Previous Year Questions 5",
-      "file": "Previous_Year_Questions_5.json"
-    },
-    {
-      "name": "Puerperium Previous Year Questions",
-      "file": "Puerperium-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Relevant Clinical Anatomy Previous Year Questions",
-      "file": "Relevant_Clinical_Anatomy-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Reproductive Physiology Previous Year Questions",
-      "file": "Reproductive_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Special Topics In Obstetrics Previous Year Questions",
-      "file": "Special_Topics_In_Obstetrics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Twin Pregnancy Previous Year Questions",
-      "file": "Twin_Pregnancy-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Urogynecology Previous Year Questions",
-      "file": "Urogynecology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Vaginal Discharge",
-      "file": "Vaginal_Discharge.json"
-    },
-    {
-      "name": "Year Questions",
-      "file": "Year_Questions.json"
-    }
-  ],
-  "ophthalmology": [
-    {
-      "name": "Community Ophthalmology Previous Year Questions",
-      "file": "Community_Ophthalmology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Conjunctiva Conjunctiva",
-      "file": "Conjunctiva-Conjunctiva.json"
-    },
-    {
-      "name": "Conjunctiva Previous Year Questions",
-      "file": "Conjunctiva-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cornea Cornea",
-      "file": "Cornea-Cornea.json"
-    },
-    {
-      "name": "Cornea Previous Year Questions",
-      "file": "Cornea-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Detachment And Retinoblastoma",
-      "file": "Detachment_And_Retinoblastoma.json"
-    },
-    {
-      "name": "Diseases Of Lens Lens And Disorders",
-      "file": "Diseases_Of_Lens-Lens_And_Disorders.json"
-    },
-    {
-      "name": "Diseases Of Lens Previous Year Questions",
-      "file": "Diseases_Of_Lens-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Embryology Previous Year Questions",
-      "file": "Embryology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Glaucoma Glaucoma Poag Tonometry Perimetry",
-      "file": "Glaucoma-Glaucoma_-_Poag_Tonometry_Perimetry.json"
-    },
-    {
-      "name": "Glaucoma Previous Year Questions",
-      "file": "Glaucoma-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Glaucoma",
-      "file": "Glaucoma.json"
-    },
-    {
-      "name": "Imaging In Ophthalmology Previous Year Questions",
-      "file": "Imaging_In_Ophthalmology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Instruments Previous Year Questions",
-      "file": "Instruments-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Lacrimal Drainage System Lacrimal Drainage System",
-      "file": "Lacrimal_Drainage_System-Lacrimal_Drainage_System.json"
-    },
-    {
-      "name": "Lacrimal Drainage System Previous Year Questions",
-      "file": "Lacrimal_Drainage_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Lasers In Eye Previous Year Questions",
-      "file": "Lasers_In_Eye-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Neuro Ophthalmology Neuro Ophthalmology",
-      "file": "Neuro_Ophthalmology-Neuro_Ophthalmology.json"
-    },
-    {
-      "name": "Neuro Ophthalmology Previous Year Questions",
-      "file": "Neuro_Ophthalmology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ocular Adnexa Lids And Disorders",
-      "file": "Ocular_Adnexa-Lids_And_Disorders.json"
-    },
-    {
-      "name": "Ocular Adnexa Previous Year Questions",
-      "file": "Ocular_Adnexa-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ocular Injuries Ocular Injuries",
-      "file": "Ocular_Injuries-Ocular_Injuries.json"
-    },
-    {
-      "name": "Ocular Injuries Previous Year Questions",
-      "file": "Ocular_Injuries-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ophthalmology",
-      "file": "Ophthalmology.json"
-    },
-    {
-      "name": "Optics Optics I",
-      "file": "Optics-Optics-I.json"
-    },
-    {
-      "name": "Optics Optics Ii",
-      "file": "Optics-Optics-Ii.json"
-    },
-    {
-      "name": "Optics Previous Year Questions",
-      "file": "Optics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Orbit Orbit",
-      "file": "Orbit-Orbit.json"
-    },
-    {
-      "name": "Orbit Previous Year Questions",
-      "file": "Orbit-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Retina Previous Year Questions",
-      "file": "Retina-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Retina Retinal Investigations And Vascular Disorders",
-      "file": "Retina-Retinal_Investigations_And_Vascular_Disorders.json"
-    },
-    {
-      "name": "Sclera Previous Year Questions",
-      "file": "Sclera-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Sclera Sclera",
-      "file": "Sclera-Sclera.json"
-    },
-    {
-      "name": "Squint Strabismus Previous Year Questions",
-      "file": "Squint_Strabismus-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Squint Strabismus Squint",
-      "file": "Squint_Strabismus-Squint.json"
-    },
-    {
-      "name": "Uveitis Previous Year Questions",
-      "file": "Uveitis-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Uveitis Uvea",
-      "file": "Uveitis-Uvea.json"
-    },
-    {
-      "name": "Vitreous Previous Year Questions",
-      "file": "Vitreous-Previous_Year_Questions.json"
-    }
-  ],
+  { "name": "Relevant Clinical Anatomy Previous Year Questions", "file": "Relevant_Clinical_Anatomy-Previous_Year_Questions.json" },
+  { "name": "Reproductive Physiology Previous Year Questions", "file": "Reproductive_Physiology-Previous_Year_Questions.json" },
+  { "name": "Genital Infections Previous Year Questions", "file": "Genital_Infections-Previous_Year_Questions.json" },
+  { "name": "Pathologies Of Reproductive Age Group Previous Year Questions", "file": "Pathologies_Of_Reproductive_Age_Group-Previous_Year_Questions.json" },
+  { "name": "Clinical Approaches To Conditions In Reproductive Age Group Previous Year Questions", "file": "Clinical_Approaches_To_Conditions_In_Reproductive_Age_Group-Previous_Year_Questions.json" },
+  { "name": "Previous Year Questions 5", "file": "Previous_Year_Questions_5.json" },
+  { "name": "Relevant Embryology And Associated Disorders Previous Year Questions", "file": "Relevant_Embryology_And_Associated_Disorders-Previous_Year_Questions.json" },
+  { "name": "Disorders Of Puberty And Amenorrheas Previous Year Questions", "file": "Disorders_Of_Puberty_And_Amenorrheas-Previous_Year_Questions.json" },
+  { "name": "Infertility Previous Year Questions", "file": "Infertility-Previous_Year_Questions.json" },
+  { "name": "Menopause Previous Year Questions", "file": "Menopause-Previous_Year_Questions.json" },
+  { "name": "Gyne Oncology Previous Year Questions", "file": "Gyne_Oncology-Previous_Year_Questions.json" },
+  { "name": "Urogynecology Previous Year Questions", "file": "Urogynecology-Previous_Year_Questions.json" },
+  { "name": "Contraception Contraception", "file": "Contraception-Contraception.json" },
+  { "name": "Contraception Previous Year Questions", "file": "Contraception-Previous_Year_Questions.json" },
+  { "name": "Basics Of Obstetrics Previous Year Questions", "file": "Basics_Of_Obstetrics-Previous_Year_Questions.json" },
+  { "name": "Early Pregnancy Complications Previous Year Questions", "file": "Early_Pregnancy_Complications-Previous_Year_Questions.json" },
+  { "name": "Molar Pregnancy Gtn Previous Year Questions", "file": "Molar_Pregnancy_Gtn-Previous_Year_Questions.json" },
+  { "name": "Normal Labor Previous Year Questions", "file": "Normal_Labor-Previous_Year_Questions.json" },
+  { "name": "Abnormalities Of Labor Previous Year Questions", "file": "Abnormalities_Of_Labor-Previous_Year_Questions.json" },
+  { "name": "Obstetric Hemorrhage Obstetric Emergencies Previous Year Questions", "file": "Obstetric_Hemorrhage_Obstetric_Emergencies-Previous_Year_Questions.json" },
+  { "name": "High Risk Pregnancy Previous Year Questions", "file": "High_Risk_Pregnancy-Previous_Year_Questions.json" },
+  { "name": "Puerperium Previous Year Questions", "file": "Puerperium-Previous_Year_Questions.json" },
+  { "name": "Special Topics In Obstetrics Previous Year Questions", "file": "Special_Topics_In_Obstetrics-Previous_Year_Questions.json" },
+  { "name": "Instrumental Vaginal Delivery Previous Year Questions", "file": "Instrumental_Vaginal_Delivery-Previous_Year_Questions.json" },
+  { "name": "Hypertensive Disorders Of Pregnancy Previous Year Questions", "file": "Hypertensive_Disorders_Of_Pregnancy-Previous_Year_Questions.json" },
+  { "name": "Twin Pregnancy Previous Year Questions", "file": "Twin_Pregnancy-Previous_Year_Questions.json" },
+  { "name": "Early Pregnancy Complications - Abortions Previous Year Questions", "file": "Early_Pregnancy_Complications_-_Abortions-Previous_Year_Questions.json" },
+  { "name": "Fibroids Previous Year Questions", "file": "Fibroids-Previous_Year_Questions.json" },
+  { "name": "Adenomyosis Previous Year Questions", "file": "Adenomyosis-Previous_Year_Questions.json" },
+  { "name": "Endometriosis Previous Year Questions", "file": "Endometriosis-Previous_Year_Questions.json" },
+  { "name": "Endometrial Hyperplasia Polyps Previous Year Questions", "file": "Endometrial_Hyperplasia_Polyps-Previous_Year_Questions.json" },
+  { "name": "Gynecology Clinical Anatomy Of Female", "file": "Gynecology-Clinical_Anatomy_Of_Female.json" },
+  { "name": "Gynecology Pelvis Perineum And Pelvic Diaphragm", "file": "Gynecology-Pelvis_Perineum_And_Pelvic_Diaphragm.json" },
+  { "name": "Gynecology Menstrual Physiology", "file": "Gynecology-Menstrual_Physiology.json" },
+  { "name": "Gynecology Vaginitis And Syndromic Approach For Vaginal Discharge", "file": "Gynecology-Vaginitis_And_Syndromic_Approach_For_Vaginal_Discharge.json" },
+  { "name": "Gynecology Vulval Infections And Genital Tb", "file": "Gynecology-Vulval_Infections_And_Genital_Tb.json" },
+  { "name": "Gynecology Pelvic Inflammatory Disease", "file": "Gynecology-Pelvic_Inflammatory_Disease.json" },
+  { "name": "Gynecology Polycystic Ovarian Syndrome", "file": "Gynecology-Polycystic_Ovarian_Syndrome.json" },
+  { "name": "Gynecology Fibroids And Polyps", "file": "Gynecology-Fibroids_And_Polyps.json" },
+  { "name": "Gynecology Endometriosis Adenomyosis", "file": "Gynecology-Endometriosis_Adenomyosis.json" },
+  { "name": "Gynecology Aub Hirsutism And Adnexal Mass", "file": "Gynecology-Aub_Hirsutism_And_Adnexal_Mass.json" },
+  { "name": "Gynecology Embryology And Associated Disorders", "file": "Gynecology-Embryology_And_Associated_Disorders.json" },
+  { "name": "Gynecology Disorders Of Puberty Amenorrhea Menopause", "file": "Gynecology-Disorders_Of_Puberty_Amenorrhea_Menopause.json" },
+  { "name": "Gynecology Infertility", "file": "Gynecology-Infertility.json" },
+  { "name": "Gynecology Vulval And Vaginal Malignancy", "file": "Gynecology-Vulval_And_Vaginal_Malignancy.json" },
+  { "name": "Gynecology Endometrial Carcinoma", "file": "Gynecology-Endometrial_Carcinoma.json" },
+  { "name": "Gynecology Ovarian Tumors", "file": "Gynecology-Ovarian_Tumors.json" },
+  { "name": "Gynecology Cervical Carcinoma", "file": "Gynecology-Cervical_Carcinoma.json" },
+  { "name": "Gynecology Pelvic Organ Prolapse", "file": "Gynecology-Pelvic_Organ_Prolapse.json" },
+  { "name": "Gynecology Urinary Incontinence And Fistulas", "file": "Gynecology-Urinary_Incontinence_And_Fistulas.json" },
+  { "name": "Gynecology Previous Year Questions", "file": "Gynecology-Previous_Year_Questions.json" },
+  { "name": "Obstetrics Physiological Changes In Pregnancy", "file": "Obstetrics-Physiological_Changes_In_Pregnancy.json" },
+  { "name": "Obstetrics Diagnosis Of Pregnancy And Antenatal Care", "file": "Obstetrics-Diagnosis_Of_Pregnancy_And_Antenatal_Care.json" },
+  { "name": "Obstetrics Abortions", "file": "Obstetrics-Abortions.json" },
+  { "name": "Obstetrics Ectopic Pregnancy", "file": "Obstetrics-Ectopic_Pregnancy.json" },
+  { "name": "Obstetrics Gestational Trophoblastic Diseases And Molar Pregnancy", "file": "Obstetrics-Gestational_Trophoblastic_Diseases_And_Molar_Pregnancy.json" },
+  { "name": "Obstetrics Stages Of Labour", "file": "Obstetrics-Stages_Of_Labour.json" },
+  { "name": "Obstetrics Abnormalities In Labor", "file": "Obstetrics-Abnormalities_In_Labor.json" },
+  { "name": "Obstetrics Instrumental Delivery And Induction Of Labor", "file": "Obstetrics-Instrumental_Delivery_And_Induction_Of_Labor.json" },
+  { "name": "Obstetrics Antepartum Haemorrhage", "file": "Obstetrics-Antepartum_Haemorrhage.json" },
+  { "name": "Obstetrics Post Partum Hemorrhage", "file": "Obstetrics-Post-Partum_Hemorrhage.json" },
+  { "name": "Obstetrics Hypertension In Pregnancy", "file": "Obstetrics-Hypertension_In_Pregnancy.json" },
+  { "name": "Obstetrics Anemia In Pregnancy", "file": "Obstetrics-Anemia_In_Pregnancy.json" },
+  { "name": "Obstetrics Multifetal Pregnancy", "file": "Obstetrics-Multifetal_Pregnancy.json" },
+  { "name": "Obstetrics Gestational Diabetes Mellitus", "file": "Obstetrics-Gestational_Diabetes_Mellitus.json" },
+  { "name": "Obstetrics Abnormalities Of Placenta And Umbilical Cord", "file": "Obstetrics-Abnormalities_Of_Placenta_And_Umbilical_Cord.json" },
+  { "name": "Obstetrics Heart Diseases In Pregnancy", "file": "Obstetrics-Heart_Diseases_In_Pregnancy.json" },
+  { "name": "Obstetrics Amniotic Fluid Abnormalities", "file": "Obstetrics-Amniotic_Fluid_Abnormalities.json" },
+  { "name": "Obstetrics Preterm Labor And Post Dated Pregnancy", "file": "Obstetrics-Preterm_Labor_And_Post-Dated_Pregnancy.json" },
+  { "name": "Obstetrics Hepatic Disorders In Pregnancy", "file": "Obstetrics-Hepatic_Disorders_In_Pregnancy.json" },
+  { "name": "Obstetrics Puerperium", "file": "Obstetrics-Puerperium.json" },
+  { "name": "Obstetrics Rh Isoimmunization", "file": "Obstetrics-Rh_Isoimmunization.json" },
+  { "name": "Obstetrics Cesarean Delivery", "file": "Obstetrics-Cesarean_Delivery.json" },
+  { "name": "Obstetrics Previous Year Questions", "file": "Obstetrics-Previous_Year_Questions.json" },
+  { "name": "Drugs Used In Obstetrics And Gynaecology Previous Year Questions", "file": "Drugs_Used_In_Obstetrics_And_Gynaecology-Previous_Year_Questions.json" },
+  { "name": "Instruments Previous Year Questions", "file": "Instruments-Previous_Year_Questions.json" },
+  { "name": "Image Based Discussion Previous Year Questions", "file": "Image_Based_Discussion-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" }
+],
+ "ophthalmology": [
+  { "name": "Introduction To Ophthalmology Introduction To Ophthalmology", "file": "Introduction_To_Ophthalmology-Introduction_To_Ophthalmology.json" },
+  { "name": "Introduction To Ophthalmology Previous Year Questions", "file": "Introduction_To_Ophthalmology-Previous_Year_Questions.json" },
+  { "name": "Diseases Of Lens Lens And Disorders", "file": "Diseases_Of_Lens-Lens_And_Disorders.json" },
+  { "name": "Diseases Of Lens Previous Year Questions", "file": "Diseases_Of_Lens-Previous_Year_Questions.json" },
+  { "name": "Lasers In Eye Previous Year Questions", "file": "Lasers_In_Eye-Previous_Year_Questions.json" },
+  { "name": "Glaucoma Glaucoma Pacg Treatment Congenital Glaucoma", "file": "Glaucoma-Glaucoma-Pacg_Treatment_Congenital_Glaucoma.json" },
+  { "name": "Glaucoma Glaucoma Poag Tonometry Perimetry", "file": "Glaucoma-Glaucoma_-_Poag_Tonometry_Perimetry.json" },
+  { "name": "Glaucoma Previous Year Questions", "file": "Glaucoma-Previous_Year_Questions.json" },
+  { "name": "Cornea Cornea", "file": "Cornea-Cornea.json" },
+  { "name": "Cornea Previous Year Questions", "file": "Cornea-Previous_Year_Questions.json" },
+  { "name": "Sclera Sclera", "file": "Sclera-Sclera.json" },
+  { "name": "Sclera Previous Year Questions", "file": "Sclera-Previous_Year_Questions.json" },
+  { "name": "Uveitis Uvea", "file": "Uveitis-Uvea.json" },
+  { "name": "Uveitis Previous Year Questions", "file": "Uveitis-Previous_Year_Questions.json" },
+  { "name": "Neuro Ophthalmology Neuro Ophthalmology", "file": "Neuro_Ophthalmology-Neuro_Ophthalmology.json" },
+  { "name": "Neuro Ophthalmology Previous Year Questions", "file": "Neuro_Ophthalmology-Previous_Year_Questions.json" },
+  { "name": "Conjunctiva Conjunctiva", "file": "Conjunctiva-Conjunctiva.json" },
+  { "name": "Conjunctiva Previous Year Questions", "file": "Conjunctiva-Previous_Year_Questions.json" },
+  { "name": "Lacrimal Drainage System Lacrimal Drainage System", "file": "Lacrimal_Drainage_System-Lacrimal_Drainage_System.json" },
+  { "name": "Lacrimal Drainage System Previous Year Questions", "file": "Lacrimal_Drainage_System-Previous_Year_Questions.json" },
+  { "name": "Orbit Orbit", "file": "Orbit-Orbit.json" },
+  { "name": "Orbit Previous Year Questions", "file": "Orbit-Previous_Year_Questions.json" },
+  { "name": "Ocular Injuries Ocular Injuries", "file": "Ocular_Injuries-Ocular_Injuries.json" },
+  { "name": "Ocular Injuries Previous Year Questions", "file": "Ocular_Injuries-Previous_Year_Questions.json" },
+  { "name": "Ocular Adnexa Lids And Disorders", "file": "Ocular_Adnexa-Lids_And_Disorders.json" },
+  { "name": "Ocular Adnexa Previous Year Questions", "file": "Ocular_Adnexa-Previous_Year_Questions.json" },
+  { "name": "Optics Optics Ii", "file": "Optics-Optics-Ii.json" },
+  { "name": "Optics Optics I", "file": "Optics-Optics-I.json" },
+  { "name": "Optics Previous Year Questions", "file": "Optics-Previous_Year_Questions.json" },
+  { "name": "Squint Strabismus Squint", "file": "Squint_Strabismus-Squint.json" },
+  { "name": "Squint Strabismus Previous Year Questions", "file": "Squint_Strabismus-Previous_Year_Questions.json" },
+  { "name": "Retina Retinal Investigations And Vascular Disorders", "file": "Retina-Retinal_Investigations_And_Vascular_Disorders.json" },
+  { "name": "Retina Macular And Fundus Disorders Retinal Detachment And Retinoblastoma", "file": "Retina-Macular_And_Fundus_Disorders_Retinal_Detachment_And_Retinoblastoma.json" },
+  { "name": "Retina Previous Year Questions", "file": "Retina-Previous_Year_Questions.json" },
+  { "name": "Vitreous Previous Year Questions", "file": "Vitreous-Previous_Year_Questions.json" },
+  { "name": "Embryology Previous Year Questions", "file": "Embryology-Previous_Year_Questions.json" },
+  { "name": "Community Ophthalmology Previous Year Questions", "file": "Community_Ophthalmology-Previous_Year_Questions.json" },
+  { "name": "Instruments Previous Year Questions", "file": "Instruments-Previous_Year_Questions.json" },
+  { "name": "Imaging In Ophthalmology Previous Year Questions", "file": "Imaging_In_Ophthalmology-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "Introduction To Ophthalmology Introduction To Ophthalmology", "file": "Introduction_To_Ophthalmology-Introduction_To_Ophthalmology.json" }
+], 
   "orthopedics": [
-    {
-      "name": "Arthritis Arthritis",
-      "file": "Arthritis-Arthritis.json"
-    },
-    {
-      "name": "Arthritis Previous Year Questions",
-      "file": "Arthritis-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Bone And Imaging Bone And Imaging I",
-      "file": "Bone_And_Imaging-Bone_And_Imaging-I.json"
-    },
-    {
-      "name": "Bone And Imaging Bone And Imaging Ii",
-      "file": "Bone_And_Imaging-Bone_And_Imaging-Ii.json"
-    },
-    {
-      "name": "Bone And Imaging Previous Year Questions",
-      "file": "Bone_And_Imaging-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Bone Infections Bone And Joint Infections",
-      "file": "Bone_Infections-Bone_And_Joint_Infections.json"
-    },
-    {
-      "name": "Bone Infections Previous Year Questions",
-      "file": "Bone_Infections-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Bone Tumors Bone Tumours",
-      "file": "Bone_Tumors-Bone_Tumours.json"
-    },
-    {
-      "name": "Bone Tumors Previous Year Questions",
-      "file": "Bone_Tumors-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Complications Of Fractures Previous Year Questions",
-      "file": "Complications_Of_Fractures-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Congenital Torticollis",
-      "file": "Congenital_Torticollis.json"
-    },
-    {
-      "name": "General Miscellaneous Topics In Orthopedics",
-      "file": "General-Miscellaneous_Topics_In_Orthopedics.json"
-    },
-    {
-      "name": "General Previous Year Questions",
-      "file": "General-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Images And Instruments Previous Year Questions",
-      "file": "Images_And_Instruments-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Instruments",
-      "file": "Instruments.json"
-    },
-    {
-      "name": "Limb Traumatology I",
-      "file": "Limb_Traumatology-I.json"
-    },
-    {
-      "name": "Limb Traumatology Ii",
-      "file": "Limb_Traumatology-Ii.json"
-    },
-    {
-      "name": "Lower Limb Traumatology Previous Year Questions",
-      "file": "Lower_Limb_Traumatology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Metabolic Bone Diseases Previous Year Questions",
-      "file": "Metabolic_Bone_Diseases-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nerve Injuries Peripheral Nerve Injuries",
-      "file": "Nerve_Injuries-Peripheral_Nerve_Injuries.json"
-    },
-    {
-      "name": "Nerve Injuries Previous Year Questions",
-      "file": "Nerve_Injuries-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Orthopedics",
-      "file": "Orthopedics.json"
-    },
-    {
-      "name": "Pediatric Orthopedics Pediatric Orthopedics",
-      "file": "Pediatric_Orthopedics-Pediatric_Orthopedics.json"
-    },
-    {
-      "name": "Pediatric Orthopedics Previous Year Questions",
-      "file": "Pediatric_Orthopedics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Regional Conditions Previous Year Questions",
-      "file": "Regional_Conditions-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Spine Previous Year Questions",
-      "file": "Spine-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Sports Injuries Previous Year Questions",
-      "file": "Sports_Injuries-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Sports Injuries Sports Injuries",
-      "file": "Sports_Injuries-Sports_Injuries.json"
-    },
-    {
-      "name": "Tuberculosis Of Bone And Joints Tb Of Bone",
-      "file": "Tuberculosis_Of_Bone_And_Joints-Tb_Of_Bone.json"
-    },
-    {
-      "name": "Upper Limb Traumatology Previous Year Questions",
-      "file": "Upper_Limb_Traumatology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Upper Limb Traumatology Upper Limb Trauma I",
-      "file": "Upper_Limb_Traumatology-Upper_Limb_Trauma-I.json"
-    }
-  ],
-  "pathology": [
-    {
-      "name": "Adaptations",
-      "file": "Adaptations.json"
-    },
-    {
-      "name": "And Pancreas",
-      "file": "And_Pancreas.json"
-    },
-    {
-      "name": "Anemia",
-      "file": "Anemia.json"
-    },
-    {
-      "name": "Banking And Transfusion Pathology",
-      "file": "Banking_And_Transfusion_Pathology.json"
-    },
-    {
-      "name": "Bone Disorders Bone And Soft Tissue Pathology",
-      "file": "Bone_Disorders-Bone_And_Soft_Tissue_Pathology.json"
-    },
-    {
-      "name": "Bone Disorders Previous Year Questions",
-      "file": "Bone_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Breast Pathology Benign Breast Lesions",
-      "file": "Breast_Pathology-Benign_Breast_Lesions.json"
-    },
-    {
-      "name": "Breast Pathology Malignant Breast Lesions",
-      "file": "Breast_Pathology-Malignant_Breast_Lesions.json"
-    },
-    {
-      "name": "Breast Pathology Previous Year Questions",
-      "file": "Breast_Pathology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Carcinoma",
-      "file": "Carcinoma.json"
-    },
-    {
-      "name": "Cardiac Tumors",
-      "file": "Cardiac_Tumors.json"
-    },
-    {
-      "name": "Celiac Disease And Ibd",
-      "file": "Celiac_Disease_And_Ibd.json"
-    },
-    {
-      "name": "Cell Injury Cell Death",
-      "file": "Cell_Injury-Cell_Death.json"
-    },
-    {
-      "name": "Cell Injury Intracellular Accumulations",
-      "file": "Cell_Injury-Intracellular_Accumulations.json"
-    },
-    {
-      "name": "Cell Injury Previous Year Questions",
-      "file": "Cell_Injury-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Central Nervous System Cns Pathology",
-      "file": "Central_Nervous_System-Cns_Pathology.json"
-    },
-    {
-      "name": "Central Nervous System Previous Year Questions",
-      "file": "Central_Nervous_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cvs Blood Vessels And Vasculitis Vasculitis",
-      "file": "Cvs_Blood_Vessels_And_Vasculitis-Vasculitis.json"
-    },
-    {
-      "name": "Disease",
-      "file": "Disease.json"
-    },
-    {
-      "name": "Disease And Myocardial Infarction",
-      "file": "Disease_And_Myocardial_Infarction.json"
-    },
-    {
-      "name": "Endocarditis",
-      "file": "Endocarditis.json"
-    },
-    {
-      "name": "Endocrinology Previous Year Questions",
-      "file": "Endocrinology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Endocrinology Thyroid Gland",
-      "file": "Endocrinology-Thyroid_Gland.json"
-    },
-    {
-      "name": "Gastrointestinal Tract Basics Of Git And Esophagus",
-      "file": "Gastrointestinal_Tract-Basics_Of_Git_And_Esophagus.json"
-    },
-    {
-      "name": "Gastrointestinal Tract Previous Year Questions",
-      "file": "Gastrointestinal_Tract-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Genetics Genetics Introduction Mendelian Disorders",
-      "file": "Genetics-Genetics-_Introduction_Mendelian_Disorders.json"
-    },
-    {
-      "name": "Genetics Non Mendelian Disorders",
-      "file": "Genetics-Non-Mendelian_Disorders.json"
-    },
-    {
-      "name": "Genetics Previous Year Questions",
-      "file": "Genetics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Genital System Pathology Of Female Genital Tract I",
-      "file": "Genital_System-Pathology_Of_Female_Genital_Tract-I.json"
-    },
-    {
-      "name": "Genital System Pathology Of Female Genital Tract Ii",
-      "file": "Genital_System-Pathology_Of_Female_Genital_Tract-Ii.json"
-    },
-    {
-      "name": "Genital System Pathology Of Male Genital Tract",
-      "file": "Genital_System-Pathology_Of_Male_Genital_Tract.json"
-    },
-    {
-      "name": "Genital System Previous Year Questions",
-      "file": "Genital_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Glands",
-      "file": "Glands.json"
-    },
-    {
-      "name": "Hematology",
-      "file": "Hematology.json"
-    },
-    {
-      "name": "Hematology Red Blood Cells Hemolytic Anemia I",
-      "file": "Hematology_Red_Blood_Cells-Hemolytic_Anemia-I.json"
-    },
-    {
-      "name": "Hematology Red Blood Cells Hemolytic Anemia Ii",
-      "file": "Hematology_Red_Blood_Cells-Hemolytic_Anemia-Ii.json"
-    },
-    {
-      "name": "Hematology Red Blood Cells Previous Year Questions",
-      "file": "Hematology_Red_Blood_Cells-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hematology White Blood Cells All And Aml",
-      "file": "Hematology_White_Blood_Cells-All_And_Aml.json"
-    },
-    {
-      "name": "Hematology White Blood Cells Cml And Cll",
-      "file": "Hematology_White_Blood_Cells-Cml_And_Cll.json"
-    },
-    {
-      "name": "Hematology White Blood Cells Myeloid Disorders",
-      "file": "Hematology_White_Blood_Cells-Myeloid_Disorders.json"
-    },
-    {
-      "name": "Hematology White Blood Cells Plasma Cell Disorders",
-      "file": "Hematology_White_Blood_Cells-Plasma_Cell_Disorders.json"
-    },
-    {
-      "name": "Hemostasis Disorders",
-      "file": "Hemostasis_Disorders.json"
-    },
-    {
-      "name": "Hypochromic Anemia",
-      "file": "Hypochromic_Anemia.json"
-    },
-    {
-      "name": "Immunity Amyloidosis",
-      "file": "Immunity-Amyloidosis.json"
-    },
-    {
-      "name": "Immunity Immunodeficiency Disorders",
-      "file": "Immunity-Immunodeficiency_Disorders.json"
-    },
-    {
-      "name": "Immunity Previous Year Questions",
-      "file": "Immunity-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Immunity Transplant Immunity",
-      "file": "Immunity-Transplant_Immunity.json"
-    },
-    {
-      "name": "Immunity Types Of Hypersensitivity Reactions",
-      "file": "Immunity-Types_Of_Hypersensitivity_Reactions.json"
-    },
-    {
-      "name": "Immunity Types Of Immunity",
-      "file": "Immunity-Types_Of_Immunity.json"
-    },
-    {
-      "name": "Infections",
-      "file": "Infections.json"
-    },
-    {
-      "name": "Inflammation Acute Inflammation",
-      "file": "Inflammation-Acute_Inflammation.json"
-    },
-    {
-      "name": "Inflammation Chronic Inflammation",
-      "file": "Inflammation-Chronic_Inflammation.json"
-    },
-    {
-      "name": "Inflammation Mediators Of Inflammation",
-      "file": "Inflammation-Mediators_Of_Inflammation.json"
-    },
-    {
-      "name": "Inflammation Previous Year Questions",
-      "file": "Inflammation-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Instruments",
-      "file": "Instruments.json"
-    },
-    {
-      "name": "Lung Diseases",
-      "file": "Lung_Diseases.json"
-    },
-    {
-      "name": "Lung Tumors",
-      "file": "Lung_Tumors.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous",
-      "file": "Miscellaneous.json"
-    },
-    {
-      "name": "Musculoskeletal Disorders Previous Year Questions",
-      "file": "Musculoskeletal_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Neoplasia Classification And Features Of Neoplasia",
-      "file": "Neoplasia-Classification_And_Features_Of_Neoplasia.json"
-    },
-    {
-      "name": "Neoplasia Etiology Of Neoplasia",
-      "file": "Neoplasia-Etiology_Of_Neoplasia.json"
-    },
-    {
-      "name": "Neoplasia Fundamentals Of Neoplasia",
-      "file": "Neoplasia-Fundamentals_Of_Neoplasia.json"
-    },
-    {
-      "name": "Neoplasia Previous Year Questions",
-      "file": "Neoplasia-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Non Hodgkin S Lymphoma",
-      "file": "Non-Hodgkin_S_Lymphoma.json"
-    },
-    {
-      "name": "Pathology I",
-      "file": "Pathology-I.json"
-    },
-    {
-      "name": "Pathology Ii",
-      "file": "Pathology-Ii.json"
-    },
-    {
-      "name": "Polyps And Tumors",
-      "file": "Polyps_And_Tumors.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Rapid Revision With Images Previous Year Questions",
-      "file": "Rapid_Revision_With_Images-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Renal System Basics Of Renal Pathology",
-      "file": "Renal_System-Basics_Of_Renal_Pathology.json"
-    },
-    {
-      "name": "Renal System Nephritic And Nephrotic Syndromes",
-      "file": "Renal_System-Nephritic_And_Nephrotic_Syndromes.json"
-    },
-    {
-      "name": "Renal System Previous Year Questions",
-      "file": "Renal_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Renal System Renal Tumors",
-      "file": "Renal_System-Renal_Tumors.json"
-    },
-    {
-      "name": "Respiratory System Obstructive Lung Disease",
-      "file": "Respiratory_System-Obstructive_Lung_Disease.json"
-    },
-    {
-      "name": "Respiratory System Previous Year Questions",
-      "file": "Respiratory_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Salivary Glands Previous Year Questions",
-      "file": "Salivary_Glands-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Salivary Glands Salivary Gland Pathology",
-      "file": "Salivary_Glands-Salivary_Gland_Pathology.json"
-    },
-    {
-      "name": "Skin And Musculoskeletal Previous Year Questions",
-      "file": "Skin_And_Musculoskeletal-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Skin Pathology Skin Pathology",
-      "file": "Skin_Pathology-Skin_Pathology.json"
-    },
-    {
-      "name": "Stress Related",
-      "file": "Stress_Related.json"
-    },
-    {
-      "name": "Syndromes",
-      "file": "Syndromes.json"
-    },
-    {
-      "name": "Techniques In Pathology Previous Year Questions",
-      "file": "Techniques_In_Pathology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Thromoboembolic Disorders Previous Year Questions",
-      "file": "Thromoboembolic_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Vascular Tumors",
-      "file": "Vascular_Tumors.json"
-    },
-    {
-      "name": "Year Questions",
-      "file": "Year_Questions.json"
-    }
-  ],
+  { "name": "General Miscellaneous Topics In Orthopedics", "file": "General-Miscellaneous_Topics_In_Orthopedics.json" },
+  { "name": "General Previous Year Questions", "file": "General-Previous_Year_Questions.json" },
+  { "name": "Upper Limb Traumatology Upper Limb Trauma I", "file": "Upper_Limb_Traumatology-Upper_Limb_Trauma-I.json" },
+  { "name": "Upper Limb Traumatology Upper Limb Trauma Ii Congenital Torticollis", "file": "Upper_Limb_Traumatology-Upper_Limb_Trauma-Ii_Congenital_Torticollis.json" },
+  { "name": "Upper Limb Traumatology Previous Year Questions", "file": "Upper_Limb_Traumatology-Previous_Year_Questions.json" },
+  { "name": "Lower Limb Traumatology Spine Pelvis And Lower Limb Traumatology I", "file": "Lower_Limb_Traumatology-Spine_Pelvis_And_Lower_Limb_Traumatology-I.json" },
+  { "name": "Lower Limb Traumatology Spine Pelvis And Lower Limb Traumatology Ii", "file": "Lower_Limb_Traumatology-Spine_Pelvis_And_Lower_Limb_Traumatology-Ii.json" },
+  { "name": "Lower Limb Traumatology Previous Year Questions", "file": "Lower_Limb_Traumatology-Previous_Year_Questions.json" },
+  { "name": "Complications Of Fractures Complications In Orthopedics", "file": "Complications_Of_Fractures-Complications_In_Orthopedics.json" },
+  { "name": "Complications Of Fractures Previous Year Questions", "file": "Complications_Of_Fractures-Previous_Year_Questions.json" },
+  { "name": "Sports Injuries Sports Injuries", "file": "Sports_Injuries-Sports_Injuries.json" },
+  { "name": "Sports Injuries Previous Year Questions", "file": "Sports_Injuries-Previous_Year_Questions.json" },
+  { "name": "Nerve Injuries Peripheral Nerve Injuries", "file": "Nerve_Injuries-Peripheral_Nerve_Injuries.json" },
+  { "name": "Nerve Injuries Previous Year Questions", "file": "Nerve_Injuries-Previous_Year_Questions.json" },
+  { "name": "Pediatric Orthopedics Pediatric Orthopedics", "file": "Pediatric_Orthopedics-Pediatric_Orthopedics.json" },
+  { "name": "Pediatric Orthopedics Previous Year Questions", "file": "Pediatric_Orthopedics-Previous_Year_Questions.json" },
+  { "name": "Bone Infections Bone And Joint Infections", "file": "Bone_Infections-Bone_And_Joint_Infections.json" },
+  { "name": "Bone Infections Previous Year Questions", "file": "Bone_Infections-Previous_Year_Questions.json" },
+  { "name": "Bone Tumors Bone Tumours", "file": "Bone_Tumors-Bone_Tumours.json" },
+  { "name": "Bone Tumors Previous Year Questions", "file": "Bone_Tumors-Previous_Year_Questions.json" },
+  { "name": "Metabolic Bone Diseases Metabolic Disorders In Orthopedics", "file": "Metabolic_Bone_Diseases-Metabolic_Disorders_In_Orthopedics.json" },
+  { "name": "Metabolic Bone Diseases Previous Year Questions", "file": "Metabolic_Bone_Diseases-Previous_Year_Questions.json" },
+  { "name": "Arthritis Arthritis", "file": "Arthritis-Arthritis.json" },
+  { "name": "Arthritis Previous Year Questions", "file": "Arthritis-Previous_Year_Questions.json" },
+  { "name": "Spine Previous Year Questions", "file": "Spine-Previous_Year_Questions.json" },
+  { "name": "Regional Conditions Previous Year Questions", "file": "Regional_Conditions-Previous_Year_Questions.json" },
+  { "name": "Bone And Imaging Bone And Imaging I", "file": "Bone_And_Imaging-Bone_And_Imaging-I.json" },
+  { "name": "Bone And Imaging Bone And Imaging Ii", "file": "Bone_And_Imaging-Bone_And_Imaging-Ii.json" },
+  { "name": "Bone And Imaging Previous Year Questions", "file": "Bone_And_Imaging-Previous_Year_Questions.json" },
+  { "name": "Tuberculosis Of Bone And Joints Tb Of Bone", "file": "Tuberculosis_Of_Bone_And_Joints-Tb_Of_Bone.json" },
+  { "name": "Tuberculosis Of Bone And Joints Previous Year Questions", "file": "Tuberculosis_Of_Bone_And_Joints-Previous_Year_Questions.json" },
+  { "name": "Images And Instruments Orthopedic Disorders And Instruments", "file": "Images_And_Instruments-Orthopedic_Disorders_And_Instruments.json" },
+  { "name": "Images And Instruments Previous Year Questions", "file": "Images_And_Instruments-Previous_Year_Questions.json" },
+  { "name": "General Miscellaneous Topics In Orthopedics", "file": "General-Miscellaneous_Topics_In_Orthopedics.json" }
+],
+ "pathology": [
+  { "name": "Cell Injury Cell Injury Free Radical Injury And Er Stress Related", "file": "Cell_Injury-Cell_Injury_Free_Radical_Injury_And_Er_Stress_Related.json" },
+  { "name": "Cell Injury Cell Death", "file": "Cell_Injury-Cell_Death.json" },
+  { "name": "Cell Injury Cell Ageing Autophagy And Cellular Adaptations", "file": "Cell_Injury-Cell_Ageing_Autophagy_And_Cellular_Adaptations.json" },
+  { "name": "Cell Injury Intracellular Accumulations", "file": "Cell_Injury-Intracellular_Accumulations.json" },
+  { "name": "Cell Injury Previous Year Questions", "file": "Cell_Injury-Previous_Year_Questions.json" },
+  { "name": "Inflammation Acute Inflammation", "file": "Inflammation-Acute_Inflammation.json" },
+  { "name": "Inflammation Chronic Inflammation", "file": "Inflammation-Chronic_Inflammation.json" },
+  { "name": "Inflammation Mediators Of Inflammation", "file": "Inflammation-Mediators_Of_Inflammation.json" },
+  { "name": "Inflammation Previous Year Questions", "file": "Inflammation-Previous_Year_Questions.json" },
+  { "name": "Genetics Genetics Introduction Mendelian Disorders", "file": "Genetics-Genetics-_Introduction_Mendelian_Disorders.json" },
+  { "name": "Genetics Non Mendelian Disorders", "file": "Genetics-Non-Mendelian_Disorders.json" },
+  { "name": "Genetics Diagnosis Of Genetic Disorders And Miscellaneous", "file": "Genetics-Diagnosis_Of_Genetic_Disorders_And_Miscellaneous.json" },
+  { "name": "Genetics Previous Year Questions", "file": "Genetics-Previous_Year_Questions.json" },
+  { "name": "Neoplasia Classification And Features Of Neoplasia", "file": "Neoplasia-Classification_And_Features_Of_Neoplasia.json" },
+  { "name": "Neoplasia Etiology Of Neoplasia", "file": "Neoplasia-Etiology_Of_Neoplasia.json" },
+  { "name": "Neoplasia Diagnosis Of Tumors And Paraneoplastic Syndromes", "file": "Neoplasia-Diagnosis_Of_Tumors_And_Paraneoplastic_Syndromes.json" },
+  { "name": "Neoplasia Fundamentals Of Neoplasia", "file": "Neoplasia-Fundamentals_Of_Neoplasia.json" },
+  { "name": "Neoplasia Previous Year Questions", "file": "Neoplasia-Previous_Year_Questions.json" },
+  { "name": "Immunity Types Of Immunity", "file": "Immunity-Types_Of_Immunity.json" },
+  { "name": "Immunity Types Of Hypersensitivity Reactions", "file": "Immunity-Types_Of_Hypersensitivity_Reactions.json" },
+  { "name": "Immunity Immune Tolerance And Autoimmune Disease", "file": "Immunity-Immune_Tolerance_And_Autoimmune_Disease.json" },
+  { "name": "Immunity Immunodeficiency Disorders", "file": "Immunity-Immunodeficiency_Disorders.json" },
+  { "name": "Immunity Amyloidosis", "file": "Immunity-Amyloidosis.json" },
+  { "name": "Immunity Transplant Immunity", "file": "Immunity-Transplant_Immunity.json" },
+  { "name": "Immunity Previous Year Questions", "file": "Immunity-Previous_Year_Questions.json" },
+  { "name": "Cvs Blood Vessels And Vasculitis Sclerosis And Vascular Tumors", "file": "Cvs_Blood_Vessels_And_Vasculitis-Sclerosis_And_Vascular_Tumors.json" },
+  { "name": "Cvs Blood Vessels And Vasculitis Ischemic Heart Disease And Myocardial Infarction", "file": "Cvs_Blood_Vessels_And_Vasculitis-Ischemic_Heart_Disease_And_Myocardial_Infarction.json" },
+  { "name": "Cvs Blood Vessels And Vasculitis Rhd And Infective Endocarditis", "file": "Cvs_Blood_Vessels_And_Vasculitis-Rhd_And_Infective_Endocarditis.json" },
+  { "name": "Cvs Blood Vessels And Vasculitis Carditis And Cardiac Tumors", "file": "Cvs_Blood_Vessels_And_Vasculitis-Carditis_And_Cardiac_Tumors.json" },
+  { "name": "Cvs Blood Vessels And Vasculitis Vasculitis", "file": "Cvs_Blood_Vessels_And_Vasculitis-Vasculitis.json" },
+  { "name": "Cvs Blood Vessels And Vasculitis Previous Year Questions", "file": "Cvs_Blood_Vessels_And_Vasculitis-Previous_Year_Questions.json" },
+  { "name": "Respiratory System Obstructive Lung Disease", "file": "Respiratory_System-Obstructive_Lung_Disease.json" },
+  { "name": "Respiratory System Pulmonary Hypertension And Lung Tumors", "file": "Respiratory_System-Pulmonary_Hypertension_And_Lung_Tumors.json" },
+  { "name": "Respiratory System Congenital Anomalies And Lung Infections", "file": "Respiratory_System-Congenital_Anomalies_And_Lung_Infections.json" },
+  { "name": "Respiratory System Sarcoidosis And Occupational Lung Diseases", "file": "Respiratory_System-Sarcoidosis_And_Occupational_Lung_Diseases.json" },
+  { "name": "Respiratory System Previous Year Questions", "file": "Respiratory_System-Previous_Year_Questions.json" },
+  { "name": "Salivary Glands Salivary Gland Pathology", "file": "Salivary_Glands-Salivary_Gland_Pathology.json" },
+  { "name": "Salivary Glands Previous Year Questions", "file": "Salivary_Glands-Previous_Year_Questions.json" },
+  { "name": "Gastrointestinal Tract Basics Of Git And Esophagus", "file": "Gastrointestinal_Tract-Basics_Of_Git_And_Esophagus.json" },
+  { "name": "Gastrointestinal Tract Peptic Ulcer Disease Gastric Polyps And Tumors", "file": "Gastrointestinal_Tract-Peptic_Ulcer_Disease_Gastric_Polyps_And_Tumors.json" },
+  { "name": "Gastrointestinal Tract Intestinal Polyps And Intestinal Carcinoma", "file": "Gastrointestinal_Tract-Intestinal_Polyps_And_Intestinal_Carcinoma.json" },
+  { "name": "Gastrointestinal Tract Malabsorption Syndrome Celiac Disease And Ibd", "file": "Gastrointestinal_Tract-Malabsorption_Syndrome_Celiac_Disease_And_Ibd.json" },
+  { "name": "Gastrointestinal Tract Previous Year Questions", "file": "Gastrointestinal_Tract-Previous_Year_Questions.json" },
+  { "name": "Liver Biliary System And Pancreas Hepatobiliary Pathology I", "file": "Liver_Biliary_System_And_Pancreas-Hepatobiliary_Pathology-I.json" },
+  { "name": "Liver Biliary System And Pancreas Hepatobiliary Pathology Ii", "file": "Liver_Biliary_System_And_Pancreas-Hepatobiliary_Pathology-Ii.json" },
+  { "name": "Liver Biliary System And Pancreas Hepatic Tumors And Pancreas", "file": "Liver_Biliary_System_And_Pancreas-Hepatic_Tumors_And_Pancreas.json" },
+  { "name": "Liver Biliary System And Pancreas Previous Year Questions", "file": "Liver_Biliary_System_And_Pancreas-Previous_Year_Questions.json" },
+  { "name": "Renal System Basics Of Renal Pathology", "file": "Renal_System-Basics_Of_Renal_Pathology.json" },
+  { "name": "Renal System Nephritic And Nephrotic Syndromes", "file": "Renal_System-Nephritic_And_Nephrotic_Syndromes.json" },
+  { "name": "Renal System Renal Tumors", "file": "Renal_System-Renal_Tumors.json" },
+  { "name": "Renal System Previous Year Questions", "file": "Renal_System-Previous_Year_Questions.json" },
+  { "name": "Genital System Pathology Of Male Genital Tract", "file": "Genital_System-Pathology_Of_Male_Genital_Tract.json" },
+  { "name": "Genital System Pathology Of Female Genital Tract I", "file": "Genital_System-Pathology_Of_Female_Genital_Tract-I.json" },
+  { "name": "Genital System Pathology Of Female Genital Tract Ii", "file": "Genital_System-Pathology_Of_Female_Genital_Tract-Ii.json" },
+  { "name": "Genital System Previous Year Questions", "file": "Genital_System-Previous_Year_Questions.json" },
+  { "name": "Breast Pathology Benign Breast Lesions", "file": "Breast_Pathology-Benign_Breast_Lesions.json" },
+  { "name": "Breast Pathology Malignant Breast Lesions", "file": "Breast_Pathology-Malignant_Breast_Lesions.json" },
+  { "name": "Breast Pathology Previous Year Questions", "file": "Breast_Pathology-Previous_Year_Questions.json" },
+  { "name": "Central Nervous System Cns Pathology", "file": "Central_Nervous_System-Cns_Pathology.json" },
+  { "name": "Central Nervous System Previous Year Questions", "file": "Central_Nervous_System-Previous_Year_Questions.json" },
+  { "name": "Endocrinology Thyroid Gland", "file": "Endocrinology-Thyroid_Gland.json" },
+  { "name": "Endocrinology Parathyroid Pituitary And Adrenal Glands", "file": "Endocrinology-Parathyroid_Pituitary_And_Adrenal_Glands.json" },
+  { "name": "Endocrinology Previous Year Questions", "file": "Endocrinology-Previous_Year_Questions.json" },
+  { "name": "Musculoskeletal Disorders Previous Year Questions", "file": "Musculoskeletal_Disorders-Previous_Year_Questions.json" },
+  { "name": "Bone Disorders Bone And Soft Tissue Pathology", "file": "Bone_Disorders-Bone_And_Soft_Tissue_Pathology.json" },
+  { "name": "Bone Disorders Previous Year Questions", "file": "Bone_Disorders-Previous_Year_Questions.json" },
+  { "name": "Skin And Musculoskeletal Previous Year Questions", "file": "Skin_And_Musculoskeletal-Previous_Year_Questions.json" },
+  { "name": "Hematology Red Blood Cells Introduction To Hematology", "file": "Hematology_Red_Blood_Cells-Introduction_To_Hematology.json" },
+  { "name": "Hematology Red Blood Cells Hemolytic Anemia I", "file": "Hematology_Red_Blood_Cells-Hemolytic_Anemia-I.json" },
+  { "name": "Hematology Red Blood Cells Hemolytic Anemia Ii", "file": "Hematology_Red_Blood_Cells-Hemolytic_Anemia-Ii.json" },
+  { "name": "Hematology Red Blood Cells Microcytic Hypochromic Anemia", "file": "Hematology_Red_Blood_Cells-Microcytic_Hypochromic_Anemia.json" },
+  { "name": "Hematology Red Blood Cells Macrocytic Hypochromic Anemia", "file": "Hematology_Red_Blood_Cells-Macrocytic_Hypochromic_Anemia.json" },
+  { "name": "Hematology Red Blood Cells Previous Year Questions", "file": "Hematology_Red_Blood_Cells-Previous_Year_Questions.json" },
+  { "name": "Hematology White Blood Cells Cml And Cll", "file": "Hematology_White_Blood_Cells-Cml_And_Cll.json" },
+  { "name": "Hematology White Blood Cells Plasma Cell Disorders", "file": "Hematology_White_Blood_Cells-Plasma_Cell_Disorders.json" },
+  { "name": "Hematology White Blood Cells Wbc Basics And Instruments", "file": "Hematology_White_Blood_Cells-Wbc_Basics_And_Instruments.json" },
+  { "name": "Hematology White Blood Cells All And Aml", "file": "Hematology_White_Blood_Cells-All_And_Aml.json" },
+  { "name": "Hematology White Blood Cells Myeloid Disorders", "file": "Hematology_White_Blood_Cells-Myeloid_Disorders.json" },
+  { "name": "Hematology White Blood Cells Hodgkin S And Non Hodgkin S Lymphoma", "file": "Hematology_White_Blood_Cells-Hodgkin_S_And_Non-Hodgkin_S_Lymphoma.json" },
+  { "name": "Hematology White Blood Cells Previous Year Questions", "file": "Hematology_White_Blood_Cells-Previous_Year_Questions.json" },
+  { "name": "Platelet And Bleeding Disorders Platelet And Hemostasis Disorders", "file": "Platelet_And_Bleeding_Disorders-Platelet_And_Hemostasis_Disorders.json" },
+  { "name": "Platelet And Bleeding Disorders Previous Year Questions", "file": "Platelet_And_Bleeding_Disorders-Previous_Year_Questions.json" },
+  { "name": "Blood Banking And Transfusion Medicine Blood Banking And Transfusion Pathology", "file": "Blood_Banking_And_Transfusion_Medicine-Blood_Banking_And_Transfusion_Pathology.json" },
+  { "name": "Blood Banking And Transfusion Medicine Previous Year Questions", "file": "Blood_Banking_And_Transfusion_Medicine-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "Skin Pathology Skin Pathology", "file": "Skin_Pathology-Skin_Pathology.json" },
+  { "name": "Thromoboembolic Disorders Previous Year Questions", "file": "Thromoboembolic_Disorders-Previous_Year_Questions.json" },
+  { "name": "Techniques In Pathology Previous Year Questions", "file": "Techniques_In_Pathology-Previous_Year_Questions.json" },
+  { "name": "Rapid Revision With Images Previous Year Questions", "file": "Rapid_Revision_With_Images-Previous_Year_Questions.json" },
+  { "name": "Platelets And Blood Transfusion Previous Year Questions", "file": "Platelets_And_Blood_Transfusion-Previous_Year_Questions.json" },
+  { "name": "Cell Injury Cell Injury Free Radical Injury And Er Stress Related", "file": "Cell_Injury-Cell_Injury_Free_Radical_Injury_And_Er_Stress_Related.json" }
+], 
   "pediatrics": [
-    {
-      "name": "Adrenal Disorders",
-      "file": "Adrenal_Disorders.json"
-    },
-    {
-      "name": "And Syndromes",
-      "file": "And_Syndromes.json"
-    },
-    {
-      "name": "Bacterial Diseases In Children",
-      "file": "Bacterial_Diseases_In_Children.json"
-    },
-    {
-      "name": "Carbohydrate And Amino Acid Metabolism",
-      "file": "Carbohydrate_And_Amino_Acid_Metabolism.json"
-    },
-    {
-      "name": "Children Musculoskeletal Disorders In Children",
-      "file": "Children-Musculoskeletal_Disorders_In_Children.json"
-    },
-    {
-      "name": "Children",
-      "file": "Children.json"
-    },
-    {
-      "name": "Clinical Essentials Previous Year Questions",
-      "file": "Clinical_Essentials-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Congenital Disorders",
-      "file": "Congenital_Disorders.json"
-    },
-    {
-      "name": "Development Developmental Behavioral Disorders",
-      "file": "Development_Developmental_Behavioral_Disorders.json"
-    },
-    {
-      "name": "Diseases Of Immune System Previous Year Questions",
-      "file": "Diseases_Of_Immune_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Disorders",
-      "file": "Disorders.json"
-    },
-    {
-      "name": "Disorders In Children",
-      "file": "Disorders_In_Children.json"
-    },
-    {
-      "name": "Document",
-      "file": "Document.json"
-    },
-    {
-      "name": "Fluid And Electrolyte Disorders And Ivf",
-      "file": "Fluid_And_Electrolyte_Disorders_And_Ivf.json"
-    },
-    {
-      "name": "General Previous Year Questions",
-      "file": "General-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Growth Growth",
-      "file": "Growth-Growth.json"
-    },
-    {
-      "name": "Growth Previous Year Questions",
-      "file": "Growth-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hematology",
-      "file": "Hematology.json"
-    },
-    {
-      "name": "Hydrocephalus And Seizures In Children",
-      "file": "Hydrocephalus_And_Seizures_In_Children.json"
-    },
-    {
-      "name": "Images",
-      "file": "Images.json"
-    },
-    {
-      "name": "Immunization Immunization And Vaccines",
-      "file": "Immunization-Immunization_And_Vaccines.json"
-    },
-    {
-      "name": "Immunization Previous Year Questions",
-      "file": "Immunization-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Immunodeficiency And Vasculitis In Children",
-      "file": "Immunodeficiency_And_Vasculitis_In_Children.json"
-    },
-    {
-      "name": "Infectious Diseases Previous Year Questions",
-      "file": "Infectious_Diseases-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Metabolism",
-      "file": "Metabolism.json"
-    },
-    {
-      "name": "Micronutrients",
-      "file": "Micronutrients.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Neonatology Neonatal Resuscitation",
-      "file": "Neonatology-Neonatal_Resuscitation.json"
-    },
-    {
-      "name": "Neonatology Neonatal Terminology Reflexes",
-      "file": "Neonatology-Neonatal_Terminology_Reflexes.json"
-    },
-    {
-      "name": "Neonatology Neonatology I",
-      "file": "Neonatology-Neonatology-I.json"
-    },
-    {
-      "name": "Neonatology Neonatology Ii",
-      "file": "Neonatology-Neonatology-Ii.json"
-    },
-    {
-      "name": "Neonatology Previous Year Questions",
-      "file": "Neonatology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Normal Development Previous Year Questions",
-      "file": "Normal_Development-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nutrition And Malnutrition Malnutrition",
-      "file": "Nutrition_And_Malnutrition-Malnutrition.json"
-    },
-    {
-      "name": "Nutrition And Malnutrition Previous Year Questions",
-      "file": "Nutrition_And_Malnutrition-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pediatric Cardiology Pediatric Cardiology I",
-      "file": "Pediatric_Cardiology-Pediatric_Cardiology-I.json"
-    },
-    {
-      "name": "Pediatric Cardiology Pediatric Cardiology Ii",
-      "file": "Pediatric_Cardiology-Pediatric_Cardiology-Ii.json"
-    },
-    {
-      "name": "Pediatric Cardiology Previous Year Questions",
-      "file": "Pediatric_Cardiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pediatric Endocrinology Previous Year Questions",
-      "file": "Pediatric_Endocrinology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pediatric Gastroenterology Git Disorders In Children",
-      "file": "Pediatric_Gastroenterology-Git_Disorders_In_Children.json"
-    },
-    {
-      "name": "Pediatric Gastroenterology Previous Year Questions",
-      "file": "Pediatric_Gastroenterology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pediatric Nephrology Previous Year Questions",
-      "file": "Pediatric_Nephrology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pediatric Nephrology Renal Disorders",
-      "file": "Pediatric_Nephrology-Renal_Disorders.json"
-    },
-    {
-      "name": "Pediatric Neurology Previous Year Questions",
-      "file": "Pediatric_Neurology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Perinatal Asphyxia",
-      "file": "Perinatal_Asphyxia.json"
-    },
-    {
-      "name": "Puberty Adolescence Previous Year Questions",
-      "file": "Puberty_Adolescence-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Rapid Revision Previous Year Questions",
-      "file": "Rapid_Revision-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Year Questions",
-      "file": "Year_Questions.json"
-    }
-  ],
-  "pharmacology": [
-    {
-      "name": "Anaesthesia Anaesthetic Pharmacology",
-      "file": "Anaesthesia-Anaesthetic_Pharmacology.json"
-    },
-    {
-      "name": "Anaesthesia Previous Year Questions",
-      "file": "Anaesthesia-Previous_Year_Questions.json"
-    },
-    {
-      "name": "And Parenteral Anticoagulants",
-      "file": "And_Parenteral_Anticoagulants.json"
-    },
-    {
-      "name": "Ans Pharmacology Anticholinergic Drugs",
-      "file": "Ans_Pharmacology-Anticholinergic_Drugs.json"
-    },
-    {
-      "name": "Ans Pharmacology Previous Year Questions",
-      "file": "Ans_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ans Pharmacology Sympatholytics",
-      "file": "Ans_Pharmacology-Sympatholytics.json"
-    },
-    {
-      "name": "Ans Pharmacology Sympathomimetics",
-      "file": "Ans_Pharmacology-Sympathomimetics.json"
-    },
-    {
-      "name": "Anti Arrhythmic Drugs",
-      "file": "Anti-Arrhythmic_Drugs.json"
-    },
-    {
-      "name": "Antibodies",
-      "file": "Antibodies.json"
-    },
-    {
-      "name": "Anticancer Drugs Cytotoxic Drugs",
-      "file": "Anticancer_Drugs-Cytotoxic_Drugs.json"
-    },
-    {
-      "name": "Anticancer Drugs Previous Year Questions",
-      "file": "Anticancer_Drugs-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Antidepressants",
-      "file": "Antidepressants.json"
-    },
-    {
-      "name": "Antimicrobials Anti Mycobacterial Drugs",
-      "file": "Antimicrobials-Anti-Mycobacterial_Drugs.json"
-    },
-    {
-      "name": "Antimicrobials Antifungal Drugs",
-      "file": "Antimicrobials-Antifungal_Drugs.json"
-    },
-    {
-      "name": "Antimicrobials Antimetabolites And Fluroquinolones",
-      "file": "Antimicrobials-Antimetabolites_And_Fluroquinolones.json"
-    },
-    {
-      "name": "Antimicrobials Antiviral Drugs",
-      "file": "Antimicrobials-Antiviral_Drugs.json"
-    },
-    {
-      "name": "Antimicrobials Cell Wall Synthesis Inhibitors",
-      "file": "Antimicrobials-Cell_Wall_Synthesis_Inhibitors.json"
-    },
-    {
-      "name": "Antimicrobials Previous Year Questions",
-      "file": "Antimicrobials-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Antimicrobials Properties Of Anti Microbial Agents",
-      "file": "Antimicrobials-Properties_Of_Anti-Microbial_Agents.json"
-    },
-    {
-      "name": "Antimicrobials Protein Synthesis Inhibitors",
-      "file": "Antimicrobials-Protein_Synthesis_Inhibitors.json"
-    },
-    {
-      "name": "Autacoids Gout And Rheumatoid Arthritis",
-      "file": "Autacoids-Gout_And_Rheumatoid_Arthritis.json"
-    },
-    {
-      "name": "Autacoids Histamine Serotonin And Lipid Autocoids",
-      "file": "Autacoids-Histamine_Serotonin_And_Lipid_Autocoids.json"
-    },
-    {
-      "name": "Autacoids Non Steroidal Anti Inflammatory Drugs",
-      "file": "Autacoids-Non_Steroidal_Anti_Inflammatory_Drugs.json"
-    },
-    {
-      "name": "Autacoids Previous Year Questions",
-      "file": "Autacoids-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cns Pharmacology Anti Epileptic Drugs",
-      "file": "Cns_Pharmacology-Anti_Epileptic_Drugs.json"
-    },
-    {
-      "name": "Cns Pharmacology Opioids",
-      "file": "Cns_Pharmacology-Opioids.json"
-    },
-    {
-      "name": "Cns Pharmacology Previous Year Questions",
-      "file": "Cns_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cvs Pharmacology Anti Anginal Drugs",
-      "file": "Cvs_Pharmacology-Anti_Anginal_Drugs.json"
-    },
-    {
-      "name": "Cvs Pharmacology Antihypertensives",
-      "file": "Cvs_Pharmacology-Antihypertensives.json"
-    },
-    {
-      "name": "Cvs Pharmacology Previous Year Questions",
-      "file": "Cvs_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Disorders",
-      "file": "Disorders.json"
-    },
-    {
-      "name": "Drugs",
-      "file": "Drugs.json"
-    },
-    {
-      "name": "Endocrine Pharmacology Antithyroid Drugs",
-      "file": "Endocrine_Pharmacology-Antithyroid_Drugs.json"
-    },
-    {
-      "name": "Endocrine Pharmacology Oral Hypoglycemic Drugs",
-      "file": "Endocrine_Pharmacology-Oral_Hypoglycemic_Drugs.json"
-    },
-    {
-      "name": "Endocrine Pharmacology Previous Year Questions",
-      "file": "Endocrine_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Formation Hematinics Iron And Chelators",
-      "file": "Formation-Hematinics_Iron_And_Chelators.json"
-    },
-    {
-      "name": "General Pharmacology Pharmacodynamics",
-      "file": "General_Pharmacology-Pharmacodynamics.json"
-    },
-    {
-      "name": "General Pharmacology Pharmacokinetics",
-      "file": "General_Pharmacology-Pharmacokinetics.json"
-    },
-    {
-      "name": "General Pharmacology Previous Year Questions",
-      "file": "General_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Git Pharmacology Drugs In Acid Peptic Disease",
-      "file": "Git_Pharmacology-Drugs_In_Acid_Peptic_Disease.json"
-    },
-    {
-      "name": "Git Pharmacology Git Miscellaneous",
-      "file": "Git_Pharmacology-Git_Miscellaneous.json"
-    },
-    {
-      "name": "Git Pharmacology Previous Year Questions",
-      "file": "Git_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Heart Failure",
-      "file": "Heart_Failure.json"
-    },
-    {
-      "name": "Hormones",
-      "file": "Hormones.json"
-    },
-    {
-      "name": "Immunomodulator Drugs Previous Year Questions",
-      "file": "Immunomodulator_Drugs-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Insomnia And Alcohol",
-      "file": "Insomnia_And_Alcohol.json"
-    },
-    {
-      "name": "Miscellaneous",
-      "file": "Miscellaneous.json"
-    },
-    {
-      "name": "On Bone And Osteoporosis",
-      "file": "On_Bone_And_Osteoporosis.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Renal Pharmacology Diuretics And Antidiuretics",
-      "file": "Renal_Pharmacology-Diuretics_And_Antidiuretics.json"
-    },
-    {
-      "name": "Renal Pharmacology Previous Year Questions",
-      "file": "Renal_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Respiratory Pharmacology Previous Year Questions",
-      "file": "Respiratory_Pharmacology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Respiratory Pharmacology Respiratory Pharmacology",
-      "file": "Respiratory_Pharmacology-Respiratory_Pharmacology.json"
-    },
-    {
-      "name": "Special Topics Previous Year Questions",
-      "file": "Special_Topics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Thrombolytics",
-      "file": "Thrombolytics.json"
-    },
-    {
-      "name": "Year Questions",
-      "file": "Year_Questions.json"
-    }
-  ],
-  "physiology": [
-    {
-      "name": "Absorption Mechanisms",
-      "file": "Absorption_Mechanisms.json"
-    },
-    {
-      "name": "And Action Potentials",
-      "file": "And_Action_Potentials.json"
-    },
-    {
-      "name": "And Regional Circulation",
-      "file": "And_Regional_Circulation.json"
-    },
-    {
-      "name": "Blood Physiology Blood Physiology",
-      "file": "Blood_Physiology-Blood_Physiology.json"
-    },
-    {
-      "name": "Blood Physiology Previous Year Questions",
-      "file": "Blood_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cardiovascular Physiology Previous Year Questions",
-      "file": "Cardiovascular_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cardiovascular System Ecg",
-      "file": "Cardiovascular_System-Ecg.json"
-    },
-    {
-      "name": "Cardiovascular System Previous Year Questions",
-      "file": "Cardiovascular_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cns Physiology Basal Ganglia And Cerebellum",
-      "file": "Cns_Physiology-Basal_Ganglia_And_Cerebellum.json"
-    },
-    {
-      "name": "Cns Physiology Eeg Sleep Learning And Memory",
-      "file": "Cns_Physiology-Eeg_Sleep_Learning_And_Memory.json"
-    },
-    {
-      "name": "Cns Physiology Previous Year Questions",
-      "file": "Cns_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cns Physiology Special Senses",
-      "file": "Cns_Physiology-Special_Senses.json"
-    },
-    {
-      "name": "Cns Physiology Synapse And Synaptic Inhibition",
-      "file": "Cns_Physiology-Synapse_And_Synaptic_Inhibition.json"
-    },
-    {
-      "name": "Counter Current Mechanism Of The Kidney",
-      "file": "Counter-Current_Mechanism_Of_The_Kidney.json"
-    },
-    {
-      "name": "Endocrine Physiology Previous Year Questions",
-      "file": "Endocrine_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Endocrine System Previous Year Questions",
-      "file": "Endocrine_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Excretory Physiology Previous Year Questions",
-      "file": "Excretory_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gastrointestinal System Git Motility",
-      "file": "Gastrointestinal_System-Git_Motility.json"
-    },
-    {
-      "name": "Gastrointestinal System Previous Year Questions",
-      "file": "Gastrointestinal_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "General Physiology Previous Year Questions",
-      "file": "General_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Git Physiology Previous Year Questions",
-      "file": "Git_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hormone",
-      "file": "Hormone.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nerve Muscle Physiology Motor Unit Smooth Muscle",
-      "file": "Nerve_Muscle_Physiology-Motor_Unit_Smooth_Muscle.json"
-    },
-    {
-      "name": "Nerve Muscle Physiology Previous Year Questions",
-      "file": "Nerve_Muscle_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nervous System Previous Year Questions",
-      "file": "Nervous_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Output",
-      "file": "Output.json"
-    },
-    {
-      "name": "Pancreas",
-      "file": "Pancreas.json"
-    },
-    {
-      "name": "Potential Rmp Nerve Fibre Classification",
-      "file": "Potential_Rmp_Nerve_Fibre_Classification.json"
-    },
-    {
-      "name": "Pressures",
-      "file": "Pressures.json"
-    },
-    {
-      "name": "Previous Year Questions 10",
-      "file": "Previous_Year_Questions_10.json"
-    },
-    {
-      "name": "Proprioceptors And Reflexes",
-      "file": "Proprioceptors_And_Reflexes.json"
-    },
-    {
-      "name": "Rapid Revision Previous Year Questions",
-      "file": "Rapid_Revision-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Regulation",
-      "file": "Regulation.json"
-    },
-    {
-      "name": "Renal Physiology Previous Year Questions",
-      "file": "Renal_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Renal Physiology Renal Physiology",
-      "file": "Renal_Physiology-Renal_Physiology.json"
-    },
-    {
-      "name": "Renal Physiology Tubular Transport",
-      "file": "Renal_Physiology-Tubular_Transport.json"
-    },
-    {
-      "name": "Reproductive System Previous Year Questions",
-      "file": "Reproductive_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Reproductive System Reproductive Physiology",
-      "file": "Reproductive_System-Reproductive_Physiology.json"
-    },
-    {
-      "name": "Respiratory Physiology Previous Year Questions",
-      "file": "Respiratory_Physiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Respiratory System Previous Year Questions",
-      "file": "Respiratory_System-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Respiratory System Pulmonary Function Tests",
-      "file": "Respiratory_System-Pulmonary_Function_Tests.json"
-    },
-    {
-      "name": "Respiratory System Regulation Of Respiration",
-      "file": "Respiratory_System-Regulation_Of_Respiration.json"
-    },
-    {
-      "name": "Skeletal Muscle",
-      "file": "Skeletal_Muscle.json"
-    },
-    {
-      "name": "Special Senses Previous Year Questions",
-      "file": "Special_Senses-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Spinal Cords",
-      "file": "Spinal_Cords.json"
-    },
-    {
-      "name": "Transport",
-      "file": "Transport.json"
-    },
-    {
-      "name": "Ventilation Perfusion Compliance Of Rs",
-      "file": "Ventilation-Perfusion_Compliance_Of_Rs.json"
-    }
-  ],
-  "psm": [
-    {
-      "name": "Act And Disaster Management",
-      "file": "Act_And_Disaster_Management.json"
-    },
-    {
-      "name": "All Recent Updates 2021 Previous Year Questions",
-      "file": "All_Recent_Updates_2021-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Allied Health Disciplines Occupational Health",
-      "file": "Allied_Health_Disciplines-Occupational_Health.json"
-    },
-    {
-      "name": "Allied Health Disciplines Previous Year Questions",
-      "file": "Allied_Health_Disciplines-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Allowances And Nutritional Health Programmes",
-      "file": "Allowances_And_Nutritional_Health_Programmes.json"
-    },
-    {
-      "name": "And Contraceptives",
-      "file": "And_Contraceptives.json"
-    },
-    {
-      "name": "And Management",
-      "file": "And_Management.json"
-    },
-    {
-      "name": "Biostatistics Previous Year Questions",
-      "file": "Biostatistics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Concept Of Health And Disease Health Indicators",
-      "file": "Concept_Of_Health_And_Disease-Health_Indicators.json"
-    },
-    {
-      "name": "Demography And Health Demography And Health",
-      "file": "Demography_And_Health-Demography_And_Health.json"
-    },
-    {
-      "name": "Demography And Health Previous Year Questions",
-      "file": "Demography_And_Health-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Diseases Chicken Pox Small Pox And Diphtheria",
-      "file": "Diseases-Chicken_Pox_Small_Pox_And_Diphtheria.json"
-    },
-    {
-      "name": "Diseases Dengue Malaria And Rabies",
-      "file": "Diseases-Dengue_Malaria_And_Rabies.json"
-    },
-    {
-      "name": "Diseases Infectious Epidemiology",
-      "file": "Diseases-Infectious_Epidemiology.json"
-    },
-    {
-      "name": "Diseases Mumps Measles Rubella Pertussis",
-      "file": "Diseases-Mumps_Measles_Rubella_Pertussis.json"
-    },
-    {
-      "name": "Diseases Polio Hepatitis Diarrhoea Cholera Typhoid",
-      "file": "Diseases-Polio_Hepatitis_Diarrhoea_Cholera_Typhoid.json"
-    },
-    {
-      "name": "Diseases Previous Year Questions",
-      "file": "Diseases-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ebola Nipah And Zika Virus",
-      "file": "Ebola_Nipah_And_Zika_Virus.json"
-    },
-    {
-      "name": "Education And Communication",
-      "file": "Education_And_Communication.json"
-    },
-    {
-      "name": "Encephalitis And Helminthic Infections",
-      "file": "Encephalitis_And_Helminthic_Infections.json"
-    },
-    {
-      "name": "Environment And Health Entomology",
-      "file": "Environment_And_Health-Entomology.json"
-    },
-    {
-      "name": "Environment And Health Previous Year Questions",
-      "file": "Environment_And_Health-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Epidemiology Basics Of Epidemiology",
-      "file": "Epidemiology-Basics_Of_Epidemiology.json"
-    },
-    {
-      "name": "Epidemiology Bias And Confounders",
-      "file": "Epidemiology-Bias_And_Confounders.json"
-    },
-    {
-      "name": "Epidemiology Previous Year Questions",
-      "file": "Epidemiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Epidemiology Study Designs In Epidemology",
-      "file": "Epidemiology-Study_Designs_In_Epidemology.json"
-    },
-    {
-      "name": "Errors",
-      "file": "Errors.json"
-    },
-    {
-      "name": "Evidence Based Studies",
-      "file": "Evidence-Based_Studies.json"
-    },
-    {
-      "name": "Fortification",
-      "file": "Fortification.json"
-    },
-    {
-      "name": "Geriatrics Previous Year Questions",
-      "file": "Geriatrics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Health",
-      "file": "Health.json"
-    },
-    {
-      "name": "Health Initiatives",
-      "file": "Health_Initiatives.json"
-    },
-    {
-      "name": "International Health International Health",
-      "file": "International_Health-International_Health.json"
-    },
-    {
-      "name": "International Health Previous Year Questions",
-      "file": "International_Health-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Management And Genetics And Health",
-      "file": "Management_And_Genetics_And_Health.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Monitoring And Surveillance",
-      "file": "Monitoring_And_Surveillance.json"
-    },
-    {
-      "name": "National Health Programs Nacp Global Initiatives",
-      "file": "National_Health_Programs-Nacp_Global_Initiatives.json"
-    },
-    {
-      "name": "National Health Programs Ncds Npcds",
-      "file": "National_Health_Programs-Ncds_Npcds.json"
-    },
-    {
-      "name": "National Health Programs Nvbdcp",
-      "file": "National_Health_Programs-Nvbdcp.json"
-    },
-    {
-      "name": "National Health Programs Previous Year Questions",
-      "file": "National_Health_Programs-Previous_Year_Questions.json"
-    },
-    {
-      "name": "National Polio Surveillance Program",
-      "file": "National_Polio_Surveillance_Program.json"
-    },
-    {
-      "name": "Nlep Health Programs Misc",
-      "file": "Nlep_Health_Programs_Misc.json"
-    },
-    {
-      "name": "Nutrition And Health Macronutrients",
-      "file": "Nutrition_And_Health-Macronutrients.json"
-    },
-    {
-      "name": "Nutrition And Health Micronutrients",
-      "file": "Nutrition_And_Health-Micronutrients.json"
-    },
-    {
-      "name": "Nutrition And Health Previous Year Questions",
-      "file": "Nutrition_And_Health-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Of Community And Health Delivery Systems",
-      "file": "Of_Community_And_Health_Delivery_Systems.json"
-    },
-    {
-      "name": "Pediatrics And Geriatrics",
-      "file": "Pediatrics_And_Geriatrics.json"
-    },
-    {
-      "name": "Policy",
-      "file": "Policy.json"
-    },
-    {
-      "name": "Program Ntep",
-      "file": "Program_Ntep.json"
-    },
-    {
-      "name": "Purification",
-      "file": "Purification.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Radiation",
-      "file": "Radiation.json"
-    },
-    {
-      "name": "Schedule Delayed Immunization Cold Chain",
-      "file": "Schedule_Delayed_Immunization_Cold_Chain.json"
-    },
-    {
-      "name": "Screening Of Diseases Previous Year Questions",
-      "file": "Screening_Of_Diseases-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Screening Of Diseases Screening Of Diseases",
-      "file": "Screening_Of_Diseases-Screening_Of_Diseases.json"
-    },
-    {
-      "name": "Social Sciences And Health Previous Year Questions",
-      "file": "Social_Sciences_And_Health-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Tendency",
-      "file": "Tendency.json"
-    },
-    {
-      "name": "Tuberculosis",
-      "file": "Tuberculosis.json"
-    },
-    {
-      "name": "Vaccines And Cold Chain Previous Year Questions",
-      "file": "Vaccines_And_Cold_Chain-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Well Being",
-      "file": "Well-Being.json"
-    },
-    {
-      "name": "Year Questions",
-      "file": "Year_Questions.json"
-    }
-  ],
-  "psychiatry": [
-    {
-      "name": "Basics Of Psychiatry Basics Of Psychiatry",
-      "file": "Basics_Of_Psychiatry-Basics_Of_Psychiatry.json"
-    },
-    {
-      "name": "Basics Of Psychiatry Previous Year Questions",
-      "file": "Basics_Of_Psychiatry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Child Psychiatry Child Psychiatry",
-      "file": "Child_Psychiatry-Child_Psychiatry.json"
-    },
-    {
-      "name": "Child Psychiatry Previous Year Questions",
-      "file": "Child_Psychiatry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Compulsive And Related Disorders",
-      "file": "Compulsive_And_Related_Disorders.json"
-    },
-    {
-      "name": "Disorders Previous Year Questions",
-      "file": "Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Disorders Substance Use And Addictive Disorders",
-      "file": "Disorders-Substance_Use_And_Addictive_Disorders.json"
-    },
-    {
-      "name": "Disorders",
-      "file": "Disorders.json"
-    },
-    {
-      "name": "Eating Disorders Eating Disorders",
-      "file": "Eating_Disorders-Eating_Disorders.json"
-    },
-    {
-      "name": "Eating Disorders Previous Year Questions",
-      "file": "Eating_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Electroconvulsive Therapy Ect And Bereavement",
-      "file": "Electroconvulsive_Therapy_Ect_And_Bereavement.json"
-    },
-    {
-      "name": "Forensic Psychiatry Previous Year Questions",
-      "file": "Forensic_Psychiatry-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Mood Disorders Mood Disorders",
-      "file": "Mood_Disorders-Mood_Disorders.json"
-    },
-    {
-      "name": "Mood Disorders Previous Year Questions",
-      "file": "Mood_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Neurocognitive Disorders Neurocognitive Disorders",
-      "file": "Neurocognitive_Disorders-Neurocognitive_Disorders.json"
-    },
-    {
-      "name": "Neurocognitive Disorders Previous Year Questions",
-      "file": "Neurocognitive_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Personality Disorders Personality Disorders",
-      "file": "Personality_Disorders-Personality_Disorders.json"
-    },
-    {
-      "name": "Personality Disorders Previous Year Questions",
-      "file": "Personality_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Psychology Previous Year Questions",
-      "file": "Psychology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Psychology Psychology",
-      "file": "Psychology-Psychology.json"
-    },
-    {
-      "name": "Sexual Disorders Previous Year Questions",
-      "file": "Sexual_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Sexual Disorders Sexual Disorders",
-      "file": "Sexual_Disorders-Sexual_Disorders.json"
-    },
-    {
-      "name": "Sleep Disorders Previous Year Questions",
-      "file": "Sleep_Disorders-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Sleep Disorders Sleep Disorders",
-      "file": "Sleep_Disorders-Sleep_Disorders.json"
-    },
-    {
-      "name": "Symptom And Related Disorders",
-      "file": "Symptom_And_Related_Disorders.json"
-    },
-    {
-      "name": "Year Questions",
-      "file": "Year_Questions.json"
-    }
-  ],
-  "radiology": [
-    {
-      "name": "Basics Of Radiology Basics Of Radiology",
-      "file": "Basics_Of_Radiology-Basics_Of_Radiology.json"
-    },
-    {
-      "name": "Basics Of Radiology Previous Year Questions",
-      "file": "Basics_Of_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Cardiovascular Radiology Cvs Radiology",
-      "file": "Cardiovascular_Radiology-Cvs_Radiology.json"
-    },
-    {
-      "name": "Cardiovascular Radiology Previous Year Questions",
-      "file": "Cardiovascular_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ct Scan Previous Year Questions",
-      "file": "Ct_Scan-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gastrointestinal Radiology Git Radiology",
-      "file": "Gastrointestinal_Radiology-Git_Radiology.json"
-    },
-    {
-      "name": "Gastrointestinal Radiology Previous Year Questions",
-      "file": "Gastrointestinal_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Genitourinary Radiology Genitourinary Radiology",
-      "file": "Genitourinary_Radiology-Genitourinary_Radiology.json"
-    },
-    {
-      "name": "Genitourinary Radiology Previous Year Questions",
-      "file": "Genitourinary_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Head Neck Imaging Head And Neck Radiology",
-      "file": "Head_Neck_Imaging-Head_And_Neck_Radiology.json"
-    },
-    {
-      "name": "Head Neck Imaging Previous Year Questions",
-      "file": "Head_Neck_Imaging-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hepatobiliary Radiology Previous Year Questions",
-      "file": "Hepatobiliary_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Imaging",
-      "file": "Imaging.json"
-    },
-    {
-      "name": "Musculoskeletal Radiology Musculoskeletal Radiology",
-      "file": "Musculoskeletal_Radiology-Musculoskeletal_Radiology.json"
-    },
-    {
-      "name": "Musculoskeletal Radiology Previous Year Questions",
-      "file": "Musculoskeletal_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Neuro Radiology Neuroradiology I",
-      "file": "Neuro_Radiology-Neuroradiology-I.json"
-    },
-    {
-      "name": "Neuro Radiology Neuroradiology Ii",
-      "file": "Neuro_Radiology-Neuroradiology-Ii.json"
-    },
-    {
-      "name": "Neuro Radiology Previous Year Questions",
-      "file": "Neuro_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nuclear Medicine Previous Year Questions",
-      "file": "Nuclear_Medicine-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Obgy Imaging Previous Year Questions",
-      "file": "Obgy_Imaging-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Pancreatic Radiology",
-      "file": "Pancreatic_Radiology.json"
-    },
-    {
-      "name": "Protection Guidelines And Contrast Media",
-      "file": "Protection_Guidelines_And_Contrast_Media.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Radiology",
-      "file": "Radiology.json"
-    },
-    {
-      "name": "Radiotherapy Previous Year Questions",
-      "file": "Radiotherapy-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Radiotherapy",
-      "file": "Radiotherapy.json"
-    },
-    {
-      "name": "Reproductive Radiology Previous Year Questions",
-      "file": "Reproductive_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Thoracic Radiology Previous Year Questions",
-      "file": "Thoracic_Radiology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Thoracic Radiology Respiratory Radiology",
-      "file": "Thoracic_Radiology-Respiratory_Radiology.json"
-    }
-  ],
-  "surgery": [
-    {
-      "name": "Abnormalities",
-      "file": "Abnormalities.json"
-    },
-    {
-      "name": "And Bariatric Surgeries",
-      "file": "And_Bariatric_Surgeries.json"
-    },
-    {
-      "name": "Cardiothoracic Vascular Surgery Arterial Disorders",
-      "file": "Cardiothoracic_Vascular_Surgery-Arterial_Disorders.json"
-    },
-    {
-      "name": "Cardiothoracic Vascular Surgery Lymphatic System",
-      "file": "Cardiothoracic_Vascular_Surgery-Lymphatic_System.json"
-    },
-    {
-      "name": "Cardiothoracic Vascular Surgery Venous Disorders",
-      "file": "Cardiothoracic_Vascular_Surgery-Venous_Disorders.json"
-    },
-    {
-      "name": "Clinical Essentials Previous Year Questions",
-      "file": "Clinical_Essentials-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Endocrine Surgery Breast I",
-      "file": "Endocrine_Surgery-Breast-I.json"
-    },
-    {
-      "name": "Endocrine Surgery Breast Ii",
-      "file": "Endocrine_Surgery-Breast-Ii.json"
-    },
-    {
-      "name": "Endocrine Surgery Parathyroid And Adrenal Glands",
-      "file": "Endocrine_Surgery-Parathyroid_And_Adrenal_Glands.json"
-    },
-    {
-      "name": "Endocrine Surgery Previous Year Questions",
-      "file": "Endocrine_Surgery-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Endocrine Surgery Thyroid I",
-      "file": "Endocrine_Surgery-Thyroid-I.json"
-    },
-    {
-      "name": "Endocrine Surgery Thyroid Ii",
-      "file": "Endocrine_Surgery-Thyroid-Ii.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Appendix",
-      "file": "Gastrointestinal_Surgery-Appendix.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Esophagus",
-      "file": "Gastrointestinal_Surgery-Esophagus.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Hernia",
-      "file": "Gastrointestinal_Surgery-Hernia.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Intestinal Obstruction",
-      "file": "Gastrointestinal_Surgery-Intestinal_Obstruction.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Large Intestine I",
-      "file": "Gastrointestinal_Surgery-Large_Intestine-I.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Large Intestine Ii",
-      "file": "Gastrointestinal_Surgery-Large_Intestine-Ii.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Previous Year Questions",
-      "file": "Gastrointestinal_Surgery-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Previous Year Questions 1",
-      "file": "Gastrointestinal_Surgery-Previous_Year_Questions_1.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Rectum And Anal Canal",
-      "file": "Gastrointestinal_Surgery-Rectum_And_Anal_Canal.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Small Intestine",
-      "file": "Gastrointestinal_Surgery-Small_Intestine.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Spleen",
-      "file": "Gastrointestinal_Surgery-Spleen.json"
-    },
-    {
-      "name": "Gastrointestinal Surgery Stomach I",
-      "file": "Gastrointestinal_Surgery-Stomach-I.json"
-    },
-    {
-      "name": "General Previous Year Questions",
-      "file": "General-Previous_Year_Questions.json"
-    },
-    {
-      "name": "General Surgery Previous Year Questions",
-      "file": "General_Surgery-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Head And Neck Neck Facial Injuries Abnormalities",
-      "file": "Head_And_Neck-Neck_Facial_Injuries_Abnormalities.json"
-    },
-    {
-      "name": "Head And Neck Oral Cavity",
-      "file": "Head_And_Neck-Oral_Cavity.json"
-    },
-    {
-      "name": "Head And Neck Previous Year Questions",
-      "file": "Head_And_Neck-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Head And Neck Salivary Glands",
-      "file": "Head_And_Neck-Salivary_Glands.json"
-    },
-    {
-      "name": "Hepatobiliary Pancreatic Surgery Bile Duct",
-      "file": "Hepatobiliary_Pancreatic_Surgery-Bile_Duct.json"
-    },
-    {
-      "name": "Hepatobiliary Pancreatic Surgery Gall Bladder",
-      "file": "Hepatobiliary_Pancreatic_Surgery-Gall_Bladder.json"
-    },
-    {
-      "name": "Hepatobiliary Pancreatic Surgery Liver Tumors",
-      "file": "Hepatobiliary_Pancreatic_Surgery-Liver_Tumors.json"
-    },
-    {
-      "name": "Hepatobiliary Pancreatic Surgery Pancreatic Tumors",
-      "file": "Hepatobiliary_Pancreatic_Surgery-Pancreatic_Tumors.json"
-    },
-    {
-      "name": "High Yield Topics Previous Year Questions",
-      "file": "High_Yield_Topics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Hydronephrosis And Genitourinary Tuberculosis",
-      "file": "Hydronephrosis_And_Genitourinary_Tuberculosis.json"
-    },
-    {
-      "name": "Hypertension",
-      "file": "Hypertension.json"
-    },
-    {
-      "name": "Ibd",
-      "file": "Ibd.json"
-    },
-    {
-      "name": "Image Based Questions Previous Year Questions",
-      "file": "Image_Based_Questions-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Instruments Previous Year Questions",
-      "file": "Instruments-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Mediastinum",
-      "file": "Mediastinum.json"
-    },
-    {
-      "name": "Miscellaneous Abdominal Trauma",
-      "file": "Miscellaneous-Abdominal_Trauma.json"
-    },
-    {
-      "name": "Miscellaneous Instruments",
-      "file": "Miscellaneous-Instruments.json"
-    },
-    {
-      "name": "Miscellaneous Nutrition Sutures And Anastomosis",
-      "file": "Miscellaneous-Nutrition_Sutures_And_Anastomosis.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous Transplantation",
-      "file": "Miscellaneous-Transplantation.json"
-    },
-    {
-      "name": "Miscellaneous Trauma Atls Protocol",
-      "file": "Miscellaneous-Trauma_Atls_Protocol.json"
-    },
-    {
-      "name": "Miscellaneous Pediatric Surgery",
-      "file": "Miscellaneous-_Pediatric_Surgery.json"
-    },
-    {
-      "name": "Miscellaneous Shock",
-      "file": "Miscellaneous-_Shock.json"
-    },
-    {
-      "name": "Miscellaneous Tubes Catheters And Drains",
-      "file": "Miscellaneous-_Tubes_Catheters_And_Drains.json"
-    },
-    {
-      "name": "Neurosurgery Cerebrovascular Diseases",
-      "file": "Neurosurgery-Cerebrovascular_Diseases.json"
-    },
-    {
-      "name": "Neurosurgery Cns Tumors",
-      "file": "Neurosurgery-Cns_Tumors.json"
-    },
-    {
-      "name": "Neurosurgery Previous Year Questions",
-      "file": "Neurosurgery-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Oncology Oncology",
-      "file": "Oncology-Oncology.json"
-    },
-    {
-      "name": "Oncology Previous Year Questions",
-      "file": "Oncology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Others Previous Year Questions",
-      "file": "Others-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Plastic Surgery Burns",
-      "file": "Plastic_Surgery-Burns.json"
-    },
-    {
-      "name": "Plastic Surgery Previous Year Questions",
-      "file": "Plastic_Surgery-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Plastic Surgery Wound Healing",
-      "file": "Plastic_Surgery-Wound_Healing.json"
-    },
-    {
-      "name": "Plastic Surgery Plastic Surgery And Skin Lesions",
-      "file": "Plastic_Surgery-_Plastic_Surgery_And_Skin_Lesions.json"
-    },
-    {
-      "name": "Questions",
-      "file": "Questions.json"
-    },
-    {
-      "name": "Thorax",
-      "file": "Thorax.json"
-    },
-    {
-      "name": "Urology Previous Year Questions",
-      "file": "Urology-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Urology Prostate And Seminal Vesicles",
-      "file": "Urology-Prostate_And_Seminal_Vesicles.json"
-    },
-    {
-      "name": "Urology Testis And Scrotum",
-      "file": "Urology-Testis_And_Scrotum.json"
-    },
-    {
-      "name": "Urology Urethra And Penis",
-      "file": "Urology-Urethra_And_Penis.json"
-    },
-    {
-      "name": "Urology Urinary Bladder",
-      "file": "Urology-Urinary_Bladder.json"
-    }
-  ]
+  { "name": "Growth Growth", "file": "Growth-Growth.json" },
+  { "name": "Growth Previous Year Questions", "file": "Growth-Previous_Year_Questions.json" },
+  { "name": "Normal Development Previous Year Questions", "file": "Normal_Development-Previous_Year_Questions.json" },
+  { "name": "Puberty Adolescence Previous Year Questions", "file": "Puberty_Adolescence-Previous_Year_Questions.json" },
+  { "name": "Developmental And Behavioral Disorders Previous Year Questions", "file": "Developmental_And_Behavioral_Disorders-Previous_Year_Questions.json" },
+  { "name": "Neonatology Neonatal Terminology Reflexes", "file": "Neonatology-Neonatal_Terminology_Reflexes.json" },
+  { "name": "Neonatology Neonatal Resuscitation", "file": "Neonatology-Neonatal_Resuscitation.json" },
+  { "name": "Neonatology Neonatal Respiratory Disorders Perinatal Asphyxia", "file": "Neonatology-Neonatal_Respiratory_Disorders_Perinatal_Asphyxia.json" },
+  { "name": "Neonatology Neonatology I", "file": "Neonatology-Neonatology-I.json" },
+  { "name": "Neonatology Neonatology Ii", "file": "Neonatology-Neonatology-Ii.json" },
+  { "name": "Neonatology Previous Year Questions", "file": "Neonatology-Previous_Year_Questions.json" },
+  { "name": "Nutrition And Malnutrition Breastmilk Micronutrients", "file": "Nutrition_And_Malnutrition-Breastmilk_Micronutrients.json" },
+  { "name": "Nutrition And Malnutrition Malnutrition", "file": "Nutrition_And_Malnutrition-Malnutrition.json" },
+  { "name": "Nutrition And Malnutrition Previous Year Questions", "file": "Nutrition_And_Malnutrition-Previous_Year_Questions.json" },
+  { "name": "Developmental And Behavioural Disorders Normal Development", "file": "Developmental_And_Behavioural_Disorders-Normal_Development.json" },
+  { "name": "Developmental Behavioral Disorders", "file": "Developmental_Behavioral_Disorders.json" },
+  { "name": "Fluid And Electrolyte Disturbances Acid-Base Balance Fluid And Electrolyte", "file": "Fluid_And_Electrolyte_Disturbances-Acid-Base_Balance_Fluid_And_Electrolyte.json" },
+  { "name": "Disorders And Ivf", "file": "Disorders_And_Ivf.json" },
+  { "name": "Fluid And Electrolyte Disturbances Previous Year Questions", "file": "Fluid_And_Electrolyte_Disturbances-Previous_Year_Questions.json" },
+  { "name": "Genetics And Genetic Disorders Genetic Disorders And Syndromes", "file": "Genetics_And_Genetic_Disorders-Genetic_Disorders_And_Syndromes.json" },
+  { "name": "Genetics And Genetic Disorders Previous Year Questions", "file": "Genetics_And_Genetic_Disorders-Previous_Year_Questions.json" },
+  { "name": "Inborn Errors Of Metabolism Disorders Of Carbohydrate And Amino Acid Metabolism", "file": "Inborn_Errors_Of_Metabolism-Disorders_Of_Carbohydrate_And_Amino_Acid_Metabolism.json" },
+  { "name": "Inborn Errors Of Metabolism Lysosomal Storage Disorders", "file": "Inborn_Errors_Of_Metabolism-Lysosomal_Storage_Disorders.json" },
+  { "name": "Inborn Errors Of Metabolism Previous Year Questions", "file": "Inborn_Errors_Of_Metabolism-Previous_Year_Questions.json" },
+  { "name": "Diseases Of Immune System Primary Immunodeficiency And Vasculitis In Children", "file": "Diseases_Of_Immune_System-Primary_Immunodeficiency_And_Vasculitis_In_Children.json" },
+  { "name": "Diseases Of Immune System Previous Year Questions", "file": "Diseases_Of_Immune_System-Previous_Year_Questions.json" },
+  { "name": "Infectious Diseases Viral Diseases Covid-19 In Children", "file": "Infectious_Diseases-Viral_Diseases_Covid-19_In_Children.json" },
+  { "name": "Infectious Diseases Congenital Infections And Bacterial Diseases In Children", "file": "Infectious_Diseases-Congenital_Infections_And_Bacterial_Diseases_In_Children.json" },
+  { "name": "Infectious Diseases Previous Year Questions", "file": "Infectious_Diseases-Previous_Year_Questions.json" },
+  { "name": "Immunization Immunization And Vaccines", "file": "Immunization-Immunization_And_Vaccines.json" },
+  { "name": "Immunization Previous Year Questions", "file": "Immunization-Previous_Year_Questions.json" },
+  { "name": "Pediatric Cardiology Pediatric Cardiology I", "file": "Pediatric_Cardiology-Pediatric_Cardiology-I.json" },
+  { "name": "Pediatric Cardiology Pediatric Cardiology Ii", "file": "Pediatric_Cardiology-Pediatric_Cardiology-Ii.json" },
+  { "name": "Pediatric Cardiology Previous Year Questions", "file": "Pediatric_Cardiology-Previous_Year_Questions.json" },
+  { "name": "Pediatric Hematology And Oncology Pediatric Hematology", "file": "Pediatric_Hematology_And_Oncology-Pediatric_Hematology.json" },
+  { "name": "Pediatric Hematology And Oncology Previous Year Questions", "file": "Pediatric_Hematology_And_Oncology-Previous_Year_Questions.json" },
+  { "name": "Pediatric Gastroenterology Git Disorders In Children", "file": "Pediatric_Gastroenterology-Git_Disorders_In_Children.json" },
+  { "name": "Pediatric Gastroenterology Liver Disorders In Children", "file": "Pediatric_Gastroenterology-Liver_Disorders_In_Children.json" },
+  { "name": "Pediatric Gastroenterology Previous Year Questions", "file": "Pediatric_Gastroenterology-Previous_Year_Questions.json" },
+  { "name": "Pediatric Respiratory Disorders Respiratory Disorders In Children", "file": "Pediatric_Respiratory_Disorders-Respiratory_Disorders_In_Children.json" },
+  { "name": "Pediatric Respiratory Disorders Previous Year Questions", "file": "Pediatric_Respiratory_Disorders-Previous_Year_Questions.json" },
+  { "name": "Pediatric Nephrology Renal Development And Congenital Disorders", "file": "Pediatric_Nephrology-Renal_Development_And_Congenital_Disorders.json" },
+  { "name": "Pediatric Nephrology Renal Disorders", "file": "Pediatric_Nephrology-Renal_Disorders.json" },
+  { "name": "Pediatric Nephrology Previous Year Questions", "file": "Pediatric_Nephrology-Previous_Year_Questions.json" },
+  { "name": "Pediatric Neurology Cns Malformations Hydrocephalus And Seizures In Children", "file": "Pediatric_Neurology-Cns_Malformations_Hydrocephalus_And_Seizures_In_Children.json" },
+  { "name": "Pediatric Neurology Cns Disorders Brain Death And Images", "file": "Pediatric_Neurology-Cns_Disorders_Brain_Death_And_Images.json" },
+  { "name": "Pediatric Neurology Previous Year Questions", "file": "Pediatric_Neurology-Previous_Year_Questions.json" },
+  { "name": "Musculoskeletal Disorders In Children Musculoskeletal Disorders In Children", "file": "Musculoskeletal_Disorders_In_Children-Musculoskeletal_Disorders_In_Children.json" },
+  { "name": "Musculoskeletal Disorders In Children Previous Year Questions", "file": "Musculoskeletal_Disorders_In_Children-Previous_Year_Questions.json" },
+  { "name": "Pediatric Endocrinology Pituitary Thyroid And Adrenal Disorders", "file": "Pediatric_Endocrinology-Pituitary_Thyroid_And_Adrenal_Disorders.json" },
+  { "name": "Pediatric Endocrinology Pediatric Endocrinology And Metabolism", "file": "Pediatric_Endocrinology-Pediatric_Endocrinology_And_Metabolism.json" },
+  { "name": "Pediatric Endocrinology Previous Year Questions", "file": "Pediatric_Endocrinology-Previous_Year_Questions.json" },
+  { "name": "General Previous Year Questions", "file": "General-Previous_Year_Questions.json" },
+  { "name": "Tumors Of Infancy And Childhood Previous Year Questions", "file": "Tumors_Of_Infancy_And_Childhood-Previous_Year_Questions.json" },
+  { "name": "Disorders Of Kidney And Urinary Tract Previous Year Questions", "file": "Disorders_Of_Kidney_And_Urinary_Tract-Previous_Year_Questions.json" },
+  { "name": "Clinical Essentials Previous Year Questions", "file": "Clinical_Essentials-Previous_Year_Questions.json" },
+  { "name": "Rapid Revision Previous Year Questions", "file": "Rapid_Revision-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" }
+],
+"pharmacology": [
+  { "name": "Introduction To Pharmacology Previous Year Questions", "file": "Introduction_To_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "General Pharmacology Pharmacokinetics", "file": "General_Pharmacology-Pharmacokinetics.json" },
+  { "name": "General Pharmacology Pharmacodynamics", "file": "General_Pharmacology-Pharmacodynamics.json" },
+  { "name": "General Pharmacology Clinical Trials And Miscellaneous", "file": "General_Pharmacology-Clinical_Trials_And_Miscellaneous.json" },
+  { "name": "General Pharmacology Previous Year Questions", "file": "General_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Ans Pharmacology Ans Introduction And Cholinergic Drugs", "file": "Ans_Pharmacology-Ans_Introduction_And_Cholinergic_Drugs.json" },
+  { "name": "Ans Pharmacology Anticholinergic Drugs", "file": "Ans_Pharmacology-Anticholinergic_Drugs.json" },
+  { "name": "Ans Pharmacology Sympathomimetics", "file": "Ans_Pharmacology-Sympathomimetics.json" },
+  { "name": "Ans Pharmacology Sympatholytics", "file": "Ans_Pharmacology-Sympatholytics.json" },
+  { "name": "Ans Pharmacology Previous Year Questions", "file": "Ans_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Autacoids Non Steroidal Anti Inflammatory Drugs", "file": "Autacoids-Non_Steroidal_Anti_Inflammatory_Drugs.json" },
+  { "name": "Autacoids Histamine Serotonin And Lipid Autocoids", "file": "Autacoids-Histamine_Serotonin_And_Lipid_Autocoids.json" },
+  { "name": "Autacoids Gout And Rheumatoid Arthritis", "file": "Autacoids-Gout_And_Rheumatoid_Arthritis.json" },
+  { "name": "Autacoids Previous Year Questions", "file": "Autacoids-Previous_Year_Questions.json" },
+  { "name": "Renal Pharmacology Diuretics And Antidiuretics", "file": "Renal_Pharmacology-Diuretics_And_Antidiuretics.json" },
+  { "name": "Renal Pharmacology Previous Year Questions", "file": "Renal_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Cvs Pharmacology Antihypertensives", "file": "Cvs_Pharmacology-Antihypertensives.json" },
+  { "name": "Cvs Pharmacology Anti Anginal Drugs", "file": "Cvs_Pharmacology-Anti_Anginal_Drugs.json" },
+  { "name": "Cvs Pharmacology Myocardial Infarction Drugs For Heart Failure", "file": "Cvs_Pharmacology-Myocardial_Infarction_Drugs_For_Heart_Failure.json" },
+  { "name": "Cvs Pharmacology Hypolipidemic Drugs And Anti Arrhythmic Drugs", "file": "Cvs_Pharmacology-Hypolipidemic_Drugs_And_Anti-Arrhythmic_Drugs.json" },
+  { "name": "Cvs Pharmacology Previous Year Questions", "file": "Cvs_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Cns Pharmacology Sedatives Hypnotics Drugs For Insomnia And Alcohol", "file": "Cns_Pharmacology-Sedatives_Hypnotics_Drugs_For_Insomnia_And_Alcohol.json" },
+  { "name": "Cns Pharmacology Anti Epileptic Drugs", "file": "Cns_Pharmacology-Anti_Epileptic_Drugs.json" },
+  { "name": "Cns Pharmacology Antipsychotics And Antidepressants", "file": "Cns_Pharmacology-Antipsychotics_And_Antidepressants.json" },
+  { "name": "Cns Pharmacology Opioids", "file": "Cns_Pharmacology-Opioids.json" },
+  { "name": "Cns Pharmacology Parkinson S Disease And Other Disorders", "file": "Cns_Pharmacology-Parkinson_S_Disease_And_Other_Disorders.json" },
+  { "name": "Cns Pharmacology Previous Year Questions", "file": "Cns_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Endocrine Pharmacology Antithyroid Drugs", "file": "Endocrine_Pharmacology-Antithyroid_Drugs.json" },
+  { "name": "Endocrine Pharmacology Hpa Axis And Drugs Acting On Bone And Osteoporosis", "file": "Endocrine_Pharmacology-Hpa_Axis_And_Drugs_Acting_On_Bone_And_Osteoporosis.json" },
+  { "name": "Endocrine Pharmacology Oral Hypoglycemic Drugs", "file": "Endocrine_Pharmacology-Oral_Hypoglycemic_Drugs.json" },
+  { "name": "Endocrine Pharmacology Parenteral Hypoglycemic Drugs", "file": "Endocrine_Pharmacology-Parenteral_Hypoglycemic_Drugs.json" },
+  { "name": "Endocrine Pharmacology Corticosteroids And Sex Hormones", "file": "Endocrine_Pharmacology-Corticosteroids_And_Sex_Hormones.json" },
+  { "name": "Endocrine Pharmacology Previous Year Questions", "file": "Endocrine_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Antimicrobials Cell Wall Synthesis Inhibitors", "file": "Antimicrobials-Cell_Wall_Synthesis_Inhibitors.json" },
+  { "name": "Antimicrobials Protein Synthesis Inhibitors", "file": "Antimicrobials-Protein_Synthesis_Inhibitors.json" },
+  { "name": "Antimicrobials Antimetabolites And Fluroquinolones", "file": "Antimicrobials-Antimetabolites_And_Fluroquinolones.json" },
+  { "name": "Antimicrobials Antiviral Drugs", "file": "Antimicrobials-Antiviral_Drugs.json" },
+  { "name": "Antimicrobials Anti Parasitic And Anti Protozoal Drugs", "file": "Antimicrobials-Anti-Parasitic_And_Anti_Protozoal_Drugs.json" },
+  { "name": "Antimicrobials Antifungal Drugs", "file": "Antimicrobials-Antifungal_Drugs.json" },
+  { "name": "Antimicrobials Properties Of Anti Microbial Agents", "file": "Antimicrobials-Properties_Of_Anti-Microbial_Agents.json" },
+  { "name": "Antimicrobials Anti Mycobacterial Drugs", "file": "Antimicrobials-Anti-Mycobacterial_Drugs.json" },
+  { "name": "Antimicrobials Previous Year Questions", "file": "Antimicrobials-Previous_Year_Questions.json" },
+  { "name": "Respiratory Pharmacology Respiratory Pharmacology", "file": "Respiratory_Pharmacology-Respiratory_Pharmacology.json" },
+  { "name": "Respiratory Pharmacology Previous Year Questions", "file": "Respiratory_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Git Pharmacology Drugs In Acid Peptic Disease", "file": "Git_Pharmacology-Drugs_In_Acid_Peptic_Disease.json" },
+  { "name": "Git Pharmacology Laxatives And Anti Diarrheal Drugs", "file": "Git_Pharmacology-Laxatives_And_Anti-Diarrheal_Drugs.json" },
+  { "name": "Git Pharmacology Git Miscellaneous", "file": "Git_Pharmacology-Git_Miscellaneous.json" },
+  { "name": "Git Pharmacology Previous Year Questions", "file": "Git_Pharmacology-Previous_Year_Questions.json" },
+  { "name": "Drugs Affecting Blood And Blood Formation Anti Platelets And Pro Platelets Thrombolytics And Anti Thrombolytics", "file": "Drugs_Affecting_Blood_And_Blood_Formation-Anti_Platelets_And_Pro_Platelets_Thrombolytics_And_Anti_Thrombolytics.json" },
+  { "name": "Drugs Affecting Blood And Blood Formation Oral And Parenteral Anticoagulants", "file": "Drugs_Affecting_Blood_And_Blood_Formation-Oral_And_Parenteral_Anticoagulants.json" },
+  { "name": "Drugs Affecting Blood And Blood Formation Hematinics Iron And Chelators", "file": "Drugs_Affecting_Blood_And_Blood_Formation-Hematinics_Iron_And_Chelators.json" },
+  { "name": "Drugs Affecting Blood And Blood Formation Previous Year Questions", "file": "Drugs_Affecting_Blood_And_Blood_Formation-Previous_Year_Questions.json" },
+  { "name": "Anticancer Drugs Cytotoxic Drugs", "file": "Anticancer_Drugs-Cytotoxic_Drugs.json" },
+  { "name": "Anticancer Drugs Targeted Therapy And Monoclonal Antibodies", "file": "Anticancer_Drugs-Targeted_Therapy_And_Monoclonal_Antibodies.json" },
+  { "name": "Anticancer Drugs Previous Year Questions", "file": "Anticancer_Drugs-Previous_Year_Questions.json" },
+  { "name": "Immunomodulator Drugs Previous Year Questions", "file": "Immunomodulator_Drugs-Previous_Year_Questions.json" },
+  { "name": "Special Topics Previous Year Questions", "file": "Special_Topics-Previous_Year_Questions.json" },
+  { "name": "Anaesthesia Anaesthetic Pharmacology", "file": "Anaesthesia-Anaesthetic_Pharmacology.json" },
+  { "name": "Anaesthesia Previous Year Questions", "file": "Anaesthesia-Previous_Year_Questions.json" },
+  { "name": "Introduction To Pharmacology Previous Year Questions", "file": "Introduction_To_Pharmacology-Previous_Year_Questions.json" }
+],
+"physiology": [
+  { "name": "Cns Physiology Synapse And Synaptic Inhibition", "file": "Cns_Physiology-Synapse_And_Synaptic_Inhibition.json" },
+  { "name": "Cns Physiology Somatosensory Receptors Nociceptors Proprioceptors And Reflexes", "file": "Cns_Physiology-Somatosensory_Receptors_Nociceptors_Proprioceptors_And_Reflexes.json" },
+  { "name": "Cns Physiology Ascending And Descending Tracts Of Spinal Cords", "file": "Cns_Physiology-Ascending_And_Descending_Tracts_Of_Spinal_Cords.json" },
+  { "name": "Cns Physiology Basal Ganglia And Cerebellum", "file": "Cns_Physiology-Basal_Ganglia_And_Cerebellum.json" },
+  { "name": "Cns Physiology Special Senses", "file": "Cns_Physiology-Special_Senses.json" },
+  { "name": "Cns Physiology Eeg Sleep Learning And Memory", "file": "Cns_Physiology-Eeg_Sleep_Learning_And_Memory.json" },
+  { "name": "Cns Physiology Previous Year Questions", "file": "Cns_Physiology-Previous_Year_Questions.json" },
+  { "name": "Excretory Physiology Previous Year Questions", "file": "Excretory_Physiology-Previous_Year_Questions.json" },
+  { "name": "Respiratory Physiology Previous Year Questions", "file": "Respiratory_Physiology-Previous_Year_Questions.json" },
+  { "name": "Endocrine Physiology Previous Year Questions", "file": "Endocrine_Physiology-Previous_Year_Questions.json" },
+  { "name": "Git Physiology Previous Year Questions", "file": "Git_Physiology-Previous_Year_Questions.json" },
+  { "name": "Cardiovascular Physiology Previous Year Questions", "file": "Cardiovascular_Physiology-Previous_Year_Questions.json" },
+  { "name": "General Physiology Previous Year Questions", "file": "General_Physiology-Previous_Year_Questions.json" },
+  { "name": "Nerve Muscle Physiology Neuron And Nerve Action Potential Rmp Nerve Fibre Classification", "file": "Nerve_Muscle_Physiology-Neuron_And_Nerve_Action_Potential_Rmp_Nerve_Fibre_Classification.json" },
+  { "name": "Nerve Muscle Physiology Functional Anatomy Of Skeletal Muscle", "file": "Nerve_Muscle_Physiology-Functional_Anatomy_Of_Skeletal_Muscle.json" },
+  { "name": "Nerve Muscle Physiology Motor Unit Smooth Muscle", "file": "Nerve_Muscle_Physiology-Motor_Unit_Smooth_Muscle.json" },
+  { "name": "Nerve Muscle Physiology Previous Year Questions", "file": "Nerve_Muscle_Physiology-Previous_Year_Questions.json" },
+  { "name": "Cardiovascular System Cardiac Conducting System And Action Potentials", "file": "Cardiovascular_System-Cardiac_Conducting_System_And_Action_Potentials.json" },
+  { "name": "Cardiovascular System Ecg", "file": "Cardiovascular_System-Ecg.json" },
+  { "name": "Cardiovascular System Hemodynamics Bp Regulation And Regional Circulation", "file": "Cardiovascular_System-Hemodynamics_Bp_Regulation_And_Regional_Circulation.json" },
+  { "name": "Cardiovascular System Cardiac Cycle And Cardiac Output", "file": "Cardiovascular_System-Cardiac_Cycle_And_Cardiac_Output.json" },
+  { "name": "Cardiovascular System Previous Year Questions", "file": "Cardiovascular_System-Previous_Year_Questions.json" },
+  { "name": "Blood Physiology Blood Physiology", "file": "Blood_Physiology-Blood_Physiology.json" },
+  { "name": "Blood Physiology Previous Year Questions", "file": "Blood_Physiology-Previous_Year_Questions.json" },
+  { "name": "Previous Year Questions 10", "file": "Previous_Year_Questions_10.json" },
+  { "name": "Renal Physiology Renal Physiology", "file": "Renal_Physiology-Renal_Physiology.json" },
+  { "name": "Renal Physiology Tubular Transport", "file": "Renal_Physiology-Tubular_Transport.json" },
+  { "name": "Renal Physiology Acid Secretion And Counter-Current Mechanism Of The Kidney", "file": "Renal_Physiology-Acid_Secretion_And_Counter-Current_Mechanism_Of_The_Kidney.json" },
+  { "name": "Renal Physiology Previous Year Questions", "file": "Renal_Physiology-Previous_Year_Questions.json" },
+  { "name": "Respiratory System Functional Anatomy Mechanics Ventilation-Perfusion Compliance Of Rs", "file": "Respiratory_System-Functional_Anatomy_Mechanics_Ventilation-Perfusion_Compliance_Of_Rs.json" },
+  { "name": "Respiratory System Pulmonary Function Tests", "file": "Respiratory_System-Pulmonary_Function_Tests.json" },
+  { "name": "Respiratory System Diffusion Of Gases O2 And Co2 Transport", "file": "Respiratory_System-Diffusion_Of_Gases_O2_And_Co2_Transport.json" },
+  { "name": "Respiratory System Regulation Of Respiration", "file": "Respiratory_System-Regulation_Of_Respiration.json" },
+  { "name": "Respiratory System Hypoxia Altitude And Deep Sea Pressures", "file": "Respiratory_System-Hypoxia_Altitude_And_Deep_Sea_Pressures.json" },
+  { "name": "Respiratory System Previous Year Questions", "file": "Respiratory_System-Previous_Year_Questions.json" },
+  { "name": "Gastrointestinal System Git Hormones Secretions And Absorption Mechanisms", "file": "Gastrointestinal_System-Git_Hormones_Secretions_And_Absorption_Mechanisms.json" },
+  { "name": "Gastrointestinal System Git Motility", "file": "Gastrointestinal_System-Git_Motility.json" },
+  { "name": "Gastrointestinal System Previous Year Questions", "file": "Gastrointestinal_System-Previous_Year_Questions.json" },
+  { "name": "Special Senses Previous Year Questions", "file": "Special_Senses-Previous_Year_Questions.json" },
+  { "name": "Nervous System Previous Year Questions", "file": "Nervous_System-Previous_Year_Questions.json" },
+  { "name": "Endocrine System Hormone Mechanism Pituitary Hormone", "file": "Endocrine_System-Hormone_Mechanism_Pituitary_Hormone.json" },
+  { "name": "Endocrine System Adrenal Physiology And Calcium Regulation", "file": "Endocrine_System-Adrenal_Physiology_And_Calcium_Regulation.json" },
+  { "name": "Endocrine System Thyroid Hormones Endocrine Pancreas", "file": "Endocrine_System-Thyroid_Hormones_Endocrine_Pancreas.json" },
+  { "name": "Endocrine System Previous Year Questions", "file": "Endocrine_System-Previous_Year_Questions.json" },
+  { "name": "Rapid Revision Previous Year Questions", "file": "Rapid_Revision-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "Reproductive System Reproductive Physiology", "file": "Reproductive_System-Reproductive_Physiology.json" },
+  { "name": "Reproductive System Previous Year Questions", "file": "Reproductive_System-Previous_Year_Questions.json" }
+],
+ "psm": [
+  { "name": "Epidemiology Basics Of Epidemiology", "file": "Epidemiology-Basics_Of_Epidemiology.json" },
+  { "name": "Epidemiology Study Designs In Epidemology", "file": "Epidemiology-Study_Designs_In_Epidemology.json" },
+  { "name": "Epidemiology Bias And Confounders", "file": "Epidemiology-Bias_And_Confounders.json" },
+  { "name": "Epidemiology Systematic Review Meta-Analysis And Evidence-Based Studies", "file": "Epidemiology-Systematic_Review_Meta-Analysis_And_Evidence-Based_Studies.json" },
+  { "name": "Epidemiology Previous Year Questions", "file": "Epidemiology-Previous_Year_Questions.json" },
+  { "name": "Concept Of Health And Disease Concept Of Disease Well-Being", "file": "Concept_Of_Health_And_Disease-Concept_Of_Disease_Well-Being.json" },
+  { "name": "Concept Of Health And Disease Disease Control Monitoring And Surveillance", "file": "Concept_Of_Health_And_Disease-Disease_Control_Monitoring_And_Surveillance.json" },
+  { "name": "Concept Of Health And Disease Health Indicators", "file": "Concept_Of_Health_And_Disease-Health_Indicators.json" },
+  { "name": "Concept Of Health And Disease Previous Year Questions", "file": "Concept_Of_Health_And_Disease-Previous_Year_Questions.json" },
+  { "name": "Vaccines And Cold Chain National Immunization Schedule Delayed Immunization Cold Chain", "file": "Vaccines_And_Cold_Chain-National_Immunization_Schedule_Delayed_Immunization_Cold_Chain.json" },
+  { "name": "Vaccines And Cold Chain Vaccines And Open Vial Policy", "file": "Vaccines_And_Cold_Chain-Vaccines_And_Open_Vial_Policy.json" },
+  { "name": "Vaccines And Cold Chain Previous Year Questions", "file": "Vaccines_And_Cold_Chain-Previous_Year_Questions.json" },
+  { "name": "Screening Of Diseases Screening Of Diseases", "file": "Screening_Of_Diseases-Screening_Of_Diseases.json" },
+  { "name": "Screening Of Diseases Previous Year Questions", "file": "Screening_Of_Diseases-Previous_Year_Questions.json" },
+  { "name": "Demography And Health Demography And Health", "file": "Demography_And_Health-Demography_And_Health.json" },
+  { "name": "Demography And Health Previous Year Questions", "file": "Demography_And_Health-Previous_Year_Questions.json" },
+  { "name": "Family Planning And Contraceptives Family Planning And Contraceptives", "file": "Family_Planning_And_Contraceptives-Family_Planning_And_Contraceptives.json" },
+  { "name": "Family Planning And Contraceptives Previous Year Questions", "file": "Family_Planning_And_Contraceptives-Previous_Year_Questions.json" },
+  { "name": "Preventive Medicine In Obstetrics Pediatrics And Geriatrics Preventive Medicine In Obstetrics Pediatrics And Geriatrics", "file": "Preventive_Medicine_In_Obstetrics_Pediatrics_And_Geriatrics-Preventive_Medicine_In_Obstetrics_Pediatrics_And_Geriatrics.json" },
+  { "name": "Preventive Medicine In Obstetrics Pediatrics And Geriatrics Previous Year Questions", "file": "Preventive_Medicine_In_Obstetrics_Pediatrics_And_Geriatrics-Previous_Year_Questions.json" },
+  { "name": "Nutrition And Health Macronutrients", "file": "Nutrition_And_Health-Macronutrients.json" },
+  { "name": "Nutrition And Health Food Adulteration And Food Fortification", "file": "Nutrition_And_Health-Food_Adulteration_And_Food_Fortification.json" },
+  { "name": "Nutrition And Health Micronutrients", "file": "Nutrition_And_Health-Micronutrients.json" },
+  { "name": "Nutrition And Health Recommended Dietary Allowances And Nutritional Health Programmes", "file": "Nutrition_And_Health-Recommended_Dietary_Allowances_And_Nutritional_Health_Programmes.json" },
+  { "name": "Nutrition And Health Previous Year Questions", "file": "Nutrition_And_Health-Previous_Year_Questions.json" },
+  { "name": "Social Sciences And Health Social Sciences And Health", "file": "Social_Sciences_And_Health-Social_Sciences_And_Health.json" },
+  { "name": "Social Sciences And Health Previous Year Questions", "file": "Social_Sciences_And_Health-Previous_Year_Questions.json" },
+  { "name": "Environment And Health Water Introduction And Purification", "file": "Environment_And_Health-Water_Introduction_And_Purification.json" },
+  { "name": "Environment And Health Air Light Sound And Radiation", "file": "Environment_And_Health-Air_Light_Sound_And_Radiation.json" },
+  { "name": "Environment And Health Entomology", "file": "Environment_And_Health-Entomology.json" },
+  { "name": "Environment And Health Previous Year Questions", "file": "Environment_And_Health-Previous_Year_Questions.json" },
+  { "name": "Communicable And Non-Communicable Diseases Infectious Epidemiology", "file": "Communicable_And_Non-Communicable_Diseases-Infectious_Epidemiology.json" },
+  { "name": "Communicable And Non-Communicable Diseases Mumps Measles Rubella Pertussis", "file": "Communicable_And_Non-Communicable_Diseases-Mumps_Measles_Rubella_Pertussis.json" },
+  { "name": "Communicable And Non-Communicable Diseases Chicken Pox Small Pox And Diphtheria", "file": "Communicable_And_Non-Communicable_Diseases-Chicken_Pox_Small_Pox_And_Diphtheria.json" },
+  { "name": "Communicable And Non-Communicable Diseases Acute Respiratory Infection And Tuberculosis", "file": "Communicable_And_Non-Communicable_Diseases-Acute_Respiratory_Infection_And_Tuberculosis.json" },
+  { "name": "Communicable And Non-Communicable Diseases Polio Hepatitis Diarrhoea Cholera Typhoid", "file": "Communicable_And_Non-Communicable_Diseases-Polio_Hepatitis_Diarrhoea_Cholera_Typhoid.json" },
+  { "name": "Communicable And Non-Communicable Diseases Dengue Malaria And Rabies", "file": "Communicable_And_Non-Communicable_Diseases-Dengue_Malaria_And_Rabies.json" },
+  { "name": "Communicable And Non-Communicable Diseases Filariasis Leptospirosis Japanese Encephalitis And Helminthic Infections", "file": "Communicable_And_Non-Communicable_Diseases-Filariasis_Leptospirosis_Japanese_Encephalitis_And_Helminthic_Infections.json" },
+  { "name": "Communicable And Non-Communicable Diseases Plague Tetanus Hiv Aids Rickettsial Disease Ebola Nipah And Zika Virus", "file": "Communicable_And_Non-Communicable_Diseases-Plague_Tetanus_Hiv_Aids_Rickettsial_Disease_Ebola_Nipah_And_Zika_Virus.json" },
+  { "name": "Communicable And Non-Communicable Diseases Previous Year Questions", "file": "Communicable_And_Non-Communicable_Diseases-Previous_Year_Questions.json" },
+  { "name": "National Health Programs National Health Mission Rmnch - A Maternal Initiatives Child And Adolescents Health Initiatives", "file": "National_Health_Programs-National_Health_Mission_Rmnch-A_Maternal_Initiatives_Child_And_Adolescents_Health_Initiatives.json" },
+  { "name": "National Health Programs Nacp Global Initiatives", "file": "National_Health_Programs-Nacp_Global_Initiatives.json" },
+  { "name": "National Health Programs National Tb Elimination Program Ntep", "file": "National_Health_Programs-National_Tb_Elimination_Program_Ntep.json" },
+  { "name": "National Health Programs Nvbdcp", "file": "National_Health_Programs-Nvbdcp.json" },
+  { "name": "National Health Programs Endgame Strategy And National Polio Surveillance Program", "file": "National_Health_Programs-Endgame_Strategy_And_National_Polio_Surveillance_Program.json" },
+  { "name": "National Health Programs Ncds Npcds", "file": "National_Health_Programs-Ncds_Npcds.json" },
+  { "name": "National Health Programs Blindness Control Program Nlep Health Programs Misc", "file": "National_Health_Programs-Blindness_Control_Program_Nlep_Health_Programs_Misc.json" },
+  { "name": "National Health Programs Previous Year Questions", "file": "National_Health_Programs-Previous_Year_Questions.json" },
+  { "name": "Health Education And Communication Health Education And Communication", "file": "Health_Education_And_Communication-Health_Education_And_Communication.json" },
+  { "name": "Health Education And Communication Previous Year Questions", "file": "Health_Education_And_Communication-Previous_Year_Questions.json" },
+  { "name": "Health Planning And Management Health Planning And Management", "file": "Health_Planning_And_Management-Health_Planning_And_Management.json" },
+  { "name": "Health Planning And Management Previous Year Questions", "file": "Health_Planning_And_Management-Previous_Year_Questions.json" },
+  { "name": "Health Care Of The Community In India Healthcare Of Community And Health Delivery Systems", "file": "Health_Care_Of_The_Community_In_India-Healthcare_Of_Community_And_Health_Delivery_Systems.json" },
+  { "name": "Health Care Of The Community In India Previous Year Questions", "file": "Health_Care_Of_The_Community_In_India-Previous_Year_Questions.json" },
+  { "name": "International Health International Health", "file": "International_Health-International_Health.json" },
+  { "name": "International Health Previous Year Questions", "file": "International_Health-Previous_Year_Questions.json" },
+  { "name": "Allied Health Disciplines Occupational Health", "file": "Allied_Health_Disciplines-Occupational_Health.json" },
+  { "name": "Allied Health Disciplines Esi Act Factory Act Nrega Act And Disaster Management", "file": "Allied_Health_Disciplines-Esi_Act_Factory_Act_Nrega_Act_And_Disaster_Management.json" },
+  { "name": "Allied Health Disciplines Previous Year Questions", "file": "Allied_Health_Disciplines-Previous_Year_Questions.json" },
+  { "name": "Biostatistics Biostatistics And Measures Of Central Tendency", "file": "Biostatistics-Biostatistics_And_Measures_Of_Central_Tendency.json" },
+  { "name": "Biostatistics Types Of Dispersion Distribution And Errors", "file": "Biostatistics-Types_Of_Dispersion_Distribution_And_Errors.json" },
+  { "name": "Biostatistics Previous Year Questions", "file": "Biostatistics-Previous_Year_Questions.json" },
+  { "name": "Biomedical Waste Management Biomedical Waste Management And Genetics And Health", "file": "Biomedical_Waste_Management-Biomedical_Waste_Management_And_Genetics_And_Health.json" },
+  { "name": "Biomedical Waste Management Previous Year Questions", "file": "Biomedical_Waste_Management-Previous_Year_Questions.json" },
+  { "name": "All Recent Updates 2021 Previous Year Questions", "file": "All_Recent_Updates_2021-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" }
+],
+ "psychiatry": [
+  { "name": "Basics Of Psychiatry-Basics Of Psychiatry", "file": "Basics_Of_Psychiatry-Basics_Of_Psychiatry.json" },
+  { "name": "Basics Of Psychiatry-Previous Year Questions", "file": "Basics_Of_Psychiatry-Previous_Year_Questions.json" },
+  { "name": "Schizophrenia Spectrum And Other Psychotic Disorders-Schizophrenia And Other Psychotic Disorders", "file": "Schizophrenia_Spectrum_And_Other_Psychotic_Disorders-Schizophrenia_And_Other_Psychotic_Disorders.json" },
+  { "name": "Schizophrenia Spectrum And Other Psychotic Disorders-Previous Year Questions", "file": "Schizophrenia_Spectrum_And_Other_Psychotic_Disorders-Previous_Year_Questions.json" },
+  { "name": "Mood Disorders-Mood Disorders", "file": "Mood_Disorders-Mood_Disorders.json" },
+  { "name": "Mood Disorders-Previous Year Questions", "file": "Mood_Disorders-Previous_Year_Questions.json" },
+  { "name": "Neurotic Stress Related Obsessive Compulsive Related Disorders-Neurotic Stress Related Obsessive Compulsive And Related Disorders", "file": "Neurotic_Stress_Related_Obsessive_Compulsive_Related_Disorders-Neurotic_Stress_Related_Obsessive_Compulsive_And_Related_Disorders.json" },
+  { "name": "Neurotic Stress Related Obsessive Compulsive Related Disorders-Previous Year Questions", "file": "Neurotic_Stress_Related_Obsessive_Compulsive_Related_Disorders-Previous_Year_Questions.json" },
+  { "name": "Substance-Related And Addictive Disorders-Substance Use And Addictive Disorders", "file": "Substance-Related_And_Addictive_Disorders-Substance_Use_And_Addictive_Disorders.json" },
+  { "name": "Substance-Related And Addictive Disorders-Previous Year Questions", "file": "Substance-Related_And_Addictive_Disorders-Previous_Year_Questions.json" },
+  { "name": "Child Psychiatry-Child Psychiatry", "file": "Child_Psychiatry-Child_Psychiatry.json" },
+  { "name": "Child Psychiatry-Previous Year Questions", "file": "Child_Psychiatry-Previous_Year_Questions.json" },
+  { "name": "Neurocognitive Disorders-Neurocognitive Disorders", "file": "Neurocognitive_Disorders-Neurocognitive_Disorders.json" },
+  { "name": "Neurocognitive Disorders-Previous Year Questions", "file": "Neurocognitive_Disorders-Previous_Year_Questions.json" },
+  { "name": "Sleep Disorders-Sleep Disorders", "file": "Sleep_Disorders-Sleep_Disorders.json" },
+  { "name": "Sleep Disorders-Previous Year Questions", "file": "Sleep_Disorders-Previous_Year_Questions.json" },
+  { "name": "Sexual Disorders-Sexual Disorders", "file": "Sexual_Disorders-Sexual_Disorders.json" },
+  { "name": "Sexual Disorders-Previous Year Questions", "file": "Sexual_Disorders-Previous_Year_Questions.json" },
+  { "name": "Eating Disorders-Eating Disorders", "file": "Eating_Disorders-Eating_Disorders.json" },
+  { "name": "Eating Disorders-Previous Year Questions", "file": "Eating_Disorders-Previous_Year_Questions.json" },
+  { "name": "Personality Disorders-Personality Disorders", "file": "Personality_Disorders-Personality_Disorders.json" },
+  { "name": "Personality Disorders-Previous Year Questions", "file": "Personality_Disorders-Previous_Year_Questions.json" },
+  { "name": "Forensic Psychiatry-Forensic Psychiatry Electroconvulsive Therapy Ect And Bereavement", "file": "Forensic_Psychiatry-Forensic_Psychiatry_Electroconvulsive_Therapy_Ect_And_Bereavement.json" },
+  { "name": "Forensic Psychiatry-Previous Year Questions", "file": "Forensic_Psychiatry-Previous_Year_Questions.json" },
+  { "name": "Psychology-Psychology", "file": "Psychology-Psychology.json" },
+  { "name": "Psychology-Previous Year Questions", "file": "Psychology-Previous_Year_Questions.json" },
+  { "name": "Somatic Symptom And Related Disorders-Somatic Symptom And Related Disorders", "file": "Somatic_Symptom_And_Related_Disorders-Somatic_Symptom_And_Related_Disorders.json" },
+  { "name": "Somatic Symptom And Related Disorders-Previous Year Questions", "file": "Somatic_Symptom_And_Related_Disorders-Previous_Year_Questions.json" }
+],
+ "radiology": [
+  { "name": "Basics Of Radiology-Basics Of Radiology", "file": "Basics_Of_Radiology-Basics_Of_Radiology.json" },
+  { "name": "Basics Of Radiology-Basics Of Mri And Interventional Radiology", "file": "Basics_Of_Radiology-Basics_Of_Mri_And_Interventional_Radiology.json" },
+  { "name": "Basics Of Radiology-Radiation Exposure Hazards Protection Guidelines And Contrast Media", "file": "Basics_Of_Radiology-Radiation_Exposure_Hazards_Protection_Guidelines_And_Contrast_Media.json" },
+  { "name": "Basics Of Radiology-Previous Year Questions", "file": "Basics_Of_Radiology-Previous_Year_Questions.json" },
+  { "name": "Thoracic Radiology-Respiratory Radiology", "file": "Thoracic_Radiology-Respiratory_Radiology.json" },
+  { "name": "Thoracic Radiology-Previous Year Questions", "file": "Thoracic_Radiology-Previous_Year_Questions.json" },
+  { "name": "Head Neck Imaging-Head And Neck Radiology", "file": "Head_Neck_Imaging-Head_And_Neck_Radiology.json" },
+  { "name": "Head Neck Imaging-Previous Year Questions", "file": "Head_Neck_Imaging-Previous_Year_Questions.json" },
+  { "name": "Gastrointestinal Radiology-Git Radiology", "file": "Gastrointestinal_Radiology-Git_Radiology.json" },
+  { "name": "Gastrointestinal Radiology-Previous Year Questions", "file": "Gastrointestinal_Radiology-Previous_Year_Questions.json" },
+  { "name": "Hepatobiliary Radiology-Hepatobiliary And Pancreatic Radiology", "file": "Hepatobiliary_Radiology-Hepatobiliary_And_Pancreatic_Radiology.json" },
+  { "name": "Hepatobiliary Radiology-Previous Year Questions", "file": "Hepatobiliary_Radiology-Previous_Year_Questions.json" },
+  { "name": "Genitourinary Radiology-Genitourinary Radiology", "file": "Genitourinary_Radiology-Genitourinary_Radiology.json" },
+  { "name": "Genitourinary Radiology-Previous Year Questions", "file": "Genitourinary_Radiology-Previous_Year_Questions.json" },
+  { "name": "Obgy Imaging-Obstetrics Gynaecology And Breast Imaging", "file": "Obgy_Imaging-Obstetrics_Gynaecology_And_Breast_Imaging.json" },
+  { "name": "Obgy Imaging-Previous Year Questions", "file": "Obgy_Imaging-Previous_Year_Questions.json" },
+  { "name": "Reproductive Radiology-Previous Year Questions", "file": "Reproductive_Radiology-Previous_Year_Questions.json" },
+  { "name": "Musculoskeletal Radiology-Musculoskeletal Radiology", "file": "Musculoskeletal_Radiology-Musculoskeletal_Radiology.json" },
+  { "name": "Musculoskeletal Radiology-Previous Year Questions", "file": "Musculoskeletal_Radiology-Previous_Year_Questions.json" },
+  { "name": "Nuclear Medicine-Nuclear Medicine And Radiotherapy", "file": "Nuclear_Medicine-Nuclear_Medicine_And_Radiotherapy.json" },
+  { "name": "Nuclear Medicine-Previous Year Questions", "file": "Nuclear_Medicine-Previous_Year_Questions.json" },
+  { "name": "Radiotherapy-Previous Year Questions", "file": "Radiotherapy-Previous_Year_Questions.json" },
+  { "name": "Ct Scan-Previous Year Questions", "file": "Ct_Scan-Previous_Year_Questions.json" },
+  { "name": "Magnetic Resonance Imaging-Previous Year Questions", "file": "Magnetic_Resonance_Imaging-Previous_Year_Questions.json" },
+  { "name": "Cardiovascular Radiology-Cvs Radiology", "file": "Cardiovascular_Radiology-Cvs_Radiology.json" },
+  { "name": "Cardiovascular Radiology-Previous Year Questions", "file": "Cardiovascular_Radiology-Previous_Year_Questions.json" },
+  { "name": "Neuro Radiology-Neuroradiology-I", "file": "Neuro_Radiology-Neuroradiology-I.json" },
+  { "name": "Neuro Radiology-Neuroradiology-Ii", "file": "Neuro_Radiology-Neuroradiology-Ii.json" },
+  { "name": "Neuro Radiology-Previous Year Questions", "file": "Neuro_Radiology-Previous_Year_Questions.json" }
+],
+"surgery": [
+  { "name": "Endocrine Surgery-Breast-I", "file": "Endocrine_Surgery-Breast-I.json" },
+  { "name": "Endocrine Surgery-Breast-Ii", "file": "Endocrine_Surgery-Breast-Ii.json" },
+  { "name": "Endocrine Surgery-Thyroid-I", "file": "Endocrine_Surgery-Thyroid-I.json" },
+  { "name": "Endocrine Surgery-Thyroid-Ii", "file": "Endocrine_Surgery-Thyroid-Ii.json" },
+  { "name": "Endocrine Surgery-Previous Year Questions", "file": "Endocrine_Surgery-Previous_Year_Questions.json" },
+  { "name": "Endocrine Surgery-Parathyroid And Adrenal Glands", "file": "Endocrine_Surgery-Parathyroid_And_Adrenal_Glands.json" },
+  { "name": "Hepatobiliary Pancreatic Surgery-Liver Tumors", "file": "Hepatobiliary_Pancreatic_Surgery-Liver_Tumors.json" },
+  { "name": "Hepatobiliary Pancreatic Surgery-Portal Hypertension", "file": "Hepatobiliary_Pancreatic_Surgery-Portal_Hypertension.json" },
+  { "name": "Hepatobiliary Pancreatic Surgery-Gall Bladder", "file": "Hepatobiliary_Pancreatic_Surgery-Gall_Bladder.json" },
+  { "name": "Hepatobiliary Pancreatic Surgery-Bile Duct", "file": "Hepatobiliary_Pancreatic_Surgery-Bile_Duct.json" },
+  { "name": "Hepatobiliary Pancreatic Surgery-Pancreatic Tumors", "file": "Hepatobiliary_Pancreatic_Surgery-Pancreatic_Tumors.json" },
+  { "name": "Hepatobiliary Pancreatic Surgery-Previous Year Questions", "file": "Hepatobiliary_Pancreatic_Surgery-Previous_Year_Questions.json" },
+  { "name": "Gastrointestinal Surgery-Esophagus", "file": "Gastrointestinal_Surgery-Esophagus.json" },
+  { "name": "Gastrointestinal Surgery-Stomach-I", "file": "Gastrointestinal_Surgery-Stomach-I.json" },
+  { "name": "Gastrointestinal Surgery-Small Intestine", "file": "Gastrointestinal_Surgery-Small_Intestine.json" },
+  { "name": "Gastrointestinal Surgery-Intestinal Obstruction", "file": "Gastrointestinal_Surgery-Intestinal_Obstruction.json" },
+  { "name": "Gastrointestinal Surgery-Large Intestine-I", "file": "Gastrointestinal_Surgery-Large_Intestine-I.json" },
+  { "name": "Gastrointestinal Surgery-Large Intestine-Ii", "file": "Gastrointestinal_Surgery-Large_Intestine-Ii.json" },
+  { "name": "Gastrointestinal Surgery-Ileostomy Colostomy And Ibd", "file": "Gastrointestinal_Surgery-Ileostomy_Colostomy_And_Ibd.json" },
+  { "name": "Gastrointestinal Surgery-Appendix", "file": "Gastrointestinal_Surgery-Appendix.json" },
+  { "name": "Gastrointestinal Surgery-Rectum And Anal Canal", "file": "Gastrointestinal_Surgery-Rectum_And_Anal_Canal.json" },
+  { "name": "Gastrointestinal Surgery-Hernia", "file": "Gastrointestinal_Surgery-Hernia.json" },
+  { "name": "Gastrointestinal Surgery-Spleen", "file": "Gastrointestinal_Surgery-Spleen.json" },
+  { "name": "Gastrointestinal Surgery-Previous Year Questions", "file": "Gastrointestinal_Surgery-Previous_Year_Questions.json" },
+  { "name": "Gastrointestinal Surgery-Previous Year Questions 1", "file": "Gastrointestinal_Surgery-Previous_Year_Questions_1.json" },
+  { "name": "Urology-Renal Stones Infections Disorders Of Kidney Hydronephrosis And Genitourinary Tuberculosis", "file": "Urology-Renal_Stones_Infections_Disorders_Of_Kidney_Hydronephrosis_And_Genitourinary_Tuberculosis.json" },
+  { "name": "Urology- Renal Tumors And Renal Congenital Abnormalities", "file": "Urology-Renal_Tumors_And_Renal_Congenital_Abnormalities.json" },
+  { "name": "Urology-Urinary Bladder", "file": "Urology-Urinary_Bladder.json" },
+  { "name": "Urology-Prostate And Seminal Vesicles", "file": "Urology-Prostate_And_Seminal_Vesicles.json" },
+  { "name": "Urology-Urethra And Penis", "file": "Urology-Urethra_And_Penis.json" },
+  { "name": "Urology-Testis And Scrotum", "file": "Urology-Testis_And_Scrotum.json" },
+  { "name": "Urology-Previous Year Questions", "file": "Urology-Previous_Year_Questions.json" },
+  { "name": "Cardiothoracic Vascular Surgery-Arterial Disorders", "file": "Cardiothoracic_Vascular_Surgery-Arterial_Disorders.json" },
+  { "name": "Cardiothoracic Vascular Surgery-Venous Disorders", "file": "Cardiothoracic_Vascular_Surgery-Venous_Disorders.json" },
+  { "name": "Cardiothoracic Vascular Surgery-Lymphatic System", "file": "Cardiothoracic_Vascular_Surgery-Lymphatic_System.json" },
+  { "name": "Cardiothoracic Vascular Surgery-Thorax And Mediastinum", "file": "Cardiothoracic_Vascular_Surgery-Thorax_And_Mediastinum.json" },
+  { "name": "Cardiothoracic Vascular Surgery-Previous Year Questions", "file": "Cardiothoracic_Vascular_Surgery-Previous_Year_Questions.json" },
+  { "name": "Plastic Surgery-Burns", "file": "Plastic_Surgery-Burns.json" },
+  { "name": "Plastic Surgery- Plastic Surgery And Skin Lesions", "file": "Plastic_Surgery-Plastic_Surgery_And_Skin_Lesions.json" },
+  { "name": "Plastic Surgery-Wound Healing", "file": "Plastic_Surgery-Wound_Healing.json" },
+  { "name": "Plastic Surgery-Previous Year Questions", "file": "Plastic_Surgery-Previous_Year_Questions.json" },
+  { "name": "Neurosurgery-Cerebrovascular Diseases", "file": "Neurosurgery-Cerebrovascular_Diseases.json" },
+  { "name": "Neurosurgery-Cns Tumors", "file": "Neurosurgery-Cns_Tumors.json" },
+  { "name": "Neurosurgery-Previous Year Questions", "file": "Neurosurgery-Previous_Year_Questions.json" },
+  { "name": "Head And Neck-Oral Cavity", "file": "Head_And_Neck-Oral_Cavity.json" },
+  { "name": "Head And Neck-Salivary Glands", "file": "Head_And_Neck-Salivary_Glands.json" },
+  { "name": "Head And Neck-Neck Facial Injuries Abnormalities", "file": "Head_And_Neck-Neck_Facial_Injuries_Abnormalities.json" },
+  { "name": "Head And Neck-Previous Year Questions", "file": "Head_And_Neck-Previous_Year_Questions.json" },
+  { "name": "Oncology-Oncology", "file": "Oncology-Oncology.json" },
+  { "name": "Oncology-Previous Year Questions", "file": "Oncology-Previous_Year_Questions.json" },
+  { "name": "Others-Previous Year Questions", "file": "Others-Previous_Year_Questions.json" },
+  { "name": "Clinical Essentials-Previous Year Questions", "file": "Clinical_Essentials-Previous_Year_Questions.json" },
+  { "name": "General Surgery-Previous Year Questions", "file": "General_Surgery-Previous_Year_Questions.json" },
+  { "name": "General-Previous Year Questions", "file": "General-Previous_Year_Questions.json" },
+  { "name": "High Yield Topics-Previous Year Questions", "file": "High_Yield_Topics-Previous_Year_Questions.json" },
+  { "name": "Image Based Questions-Previous Year Questions", "file": "Image_Based_Questions-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous-Trauma Atls Protocol", "file": "Miscellaneous-Trauma_Atls_Protocol.json" },
+  { "name": "Miscellaneous-General Surgery Robotic Laparoscopic And Bariatric Surgeries", "file": "Miscellaneous-General_Surgery_Robotic_Laparoscopic_And_Bariatric_Surgeries.json" },
+  { "name": "Miscellaneous-Injuries To The Head Neck And Thorax", "file": "Miscellaneous-Injuries_To_The_Head_Neck_And_Thorax.json" },
+  { "name": "Miscellaneous-Abdominal Trauma", "file": "Miscellaneous-Abdominal_Trauma.json" },
+  { "name": "Miscellaneous-Transplantation", "file": "Miscellaneous-Transplantation.json" },
+  { "name": "Miscellaneous-Nutrition Sutures And Anastomosis", "file": "Miscellaneous-Nutrition_Sutures_And_Anastomosis.json" },
+  { "name": "Miscellaneous- Shock", "file": "Miscellaneous-Shock.json" },
+  { "name": "Miscellaneous- Tubes Catheters And Drains", "file": "Miscellaneous-Tubes_Catheters_And_Drains.json" },
+  { "name": "Miscellaneous-Instruments", "file": "Miscellaneous-Instruments.json" },
+  { "name": "Miscellaneous- Pediatric Surgery", "file": "Miscellaneous-Pediatric_Surgery.json" },
+  { "name": "Miscellaneous-Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "Instruments-Previous Year Questions", "file": "Instruments-Previous_Year_Questions.json" }
+]
 }
