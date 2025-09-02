@@ -49,7 +49,7 @@ export async function generateQuestion(subject, difficulty, topic = '', askedQue
 function getDifficultyContext(difficulty) {
     switch (difficulty) {
         case 'Easy':
-            return 'Base the question on standard textbooks like BD Chaurasia, Guyton, Harper, etc.';
+            return 'Diverse non-clinical NEET PG questions ranging from simple recall, definitions, and surface-level facts to slightly deeper concepts, ensuring variety (non-repetitive) while testing broad coverage of fundamentals';
         case 'Medium':
             return 'Make it a NEET PG level question covering both clinical and non-clinical topics.';
         case 'Hard':
