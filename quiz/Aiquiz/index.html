@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <!-- Add Font Awesome for the arrow icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- Back Button -->
     <button onclick="history.back()" 
             style="position: fixed; top: 20px; left: 20px; background: transparent; color: black; border: none; 
                    padding: 10px; cursor: pointer; z-index: 1001; font-size: 20px;">
         <i class="fas fa-arrow-left"></i>
     </button>
+
+    <!-- Setup Container -->
     <div id="setup-container" class="setup-container">
         <h1>MBBS Quiz Setup</h1>
         <div id="api-key-container" class="api-key-container">
@@ -23,8 +27,14 @@
                     <input type="text" id="groq-api-key" placeholder="Enter your Groq API key" />
                 </div>
                 <button id="save-api-keys" class="save-api-keys-btn">Save API Key</button>
+                <p style="margin-top: 10px; font-size: 14px;">
+                    Don’t have an API key? 
+                    <a href="groq.html" style="color: #2c5281; text-decoration: underline;">Click here to learn how</a>.
+                </p>
             </div>
         </div>
+
+        <!-- Setup Form -->
         <div class="setup-form">
             <div class="form-group">
                 <label for="subject-select">Select Subject:</label>
@@ -76,11 +86,14 @@
         </div>
     </div>
 
+    <!-- Quiz Container -->
     <div id="quiz-container" class="quiz-container hidden">
         <h1>MBBS Quiz</h1>
         <div class="quiz-stats">
             <div id="timer" class="timer"></div>
-            <div id="progress" class="progress">Question: <span id="current-question">1</span>/<span id="total-questions">∞</span></div>
+            <div id="progress" class="progress">
+                Question: <span id="current-question">1</span>/<span id="total-questions">∞</span>
+            </div>
         </div>
         <div id="loader" class="hidden">Loading...</div>
         <div id="quiz-content">
@@ -89,6 +102,8 @@
             </div>
             <div id="options-container"></div>
         </div>
+
+        <!-- Score Container -->
         <div id="score-container" class="hidden">
             <h2>Quiz Complete!</h2>
             <div class="results-grid">
@@ -112,6 +127,8 @@
             <button id="restart-btn">New Quiz</button>
         </div>
     </div>
+
+    <!-- Next Button -->
     <div id="next-button-container" class="next-button-container hidden">
         <button id="next-btn">Next Question</button>
     </div>
