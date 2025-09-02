@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="../../access-control.js"></script>
   <script src="../../error-handler/link-checker.js"></script>
+  <script src="../js/chapter-loader.js"></script>
 </head>
 <body>  
   <header>
@@ -69,6 +70,9 @@
       window.location.href = `../subjects.html?platform=${platform}`;
     }
 
+    // Initialize chapter loader
+    const chapterLoader = new ChapterLoader();
+
     async function loadChapters() {
       const urlParams = new URLSearchParams(window.location.search);
       const platform = urlParams.get('platform');
@@ -99,29 +103,9 @@
         }
 
         const chapters = manifest[subject];
-        const availableChapters = [];
         
-        // Process each chapter
-        for (const chapter of chapters) {
-          try {
-            const fileResponse = await fetch(`./${subject}/${chapter.file}`);
-            if (fileResponse.ok) {
-              const data = await fileResponse.json();
-              if (data.questions && data.questions.length > 0) {
-                availableChapters.push({
-                  name: chapter.name,
-                  filename: chapter.file,
-                  questionCount: data.questions.length
-                });
-              }
-            }
-          } catch (error) {
-            console.error(`Error loading ${chapter.file}:`, error);
-          }
-        }
-
-        // Sort chapters alphabetically
-        availableChapters.sort((a, b) => a.name.localeCompare(b.name));
+        // Use the enhanced chapter loader
+        const availableChapters = await chapterLoader.loadChapters('.', subject, chapters);
         
         displayChapters(availableChapters);
       } catch (error) {
