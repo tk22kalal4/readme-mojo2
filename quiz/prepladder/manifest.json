@@ -174,139 +174,40 @@
   { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" }
 ],
   "ent": [
-    {
-      "name": "Abscess Related To Pharynx",
-      "file": "Abscess_Related_To_Pharynx.json"
-    },
-    {
-      "name": "Associated Diseases",
-      "file": "Associated_Diseases.json"
-    },
-    {
-      "name": "Carcinoma",
-      "file": "Carcinoma.json"
-    },
-    {
-      "name": "Congenital Anomalies And Nasal Polyps",
-      "file": "Congenital_Anomalies_And_Nasal_Polyps.json"
-    },
-    {
-      "name": "Ear Anatomy Of External Middle And Internal Ear",
-      "file": "Ear-Anatomy_Of_External_Middle_And_Internal_Ear.json"
-    },
-    {
-      "name": "Ear Asom And Csom Complications",
-      "file": "Ear-Asom_And_Csom_Complications.json"
-    },
-    {
-      "name": "Ear Cholesteatoma And Csom",
-      "file": "Ear-Cholesteatoma_And_Csom.json"
-    },
-    {
-      "name": "Ear Disorders Of External Ear And Eustachian Tube",
-      "file": "Ear-Disorders_Of_External_Ear_And_Eustachian_Tube.json"
-    },
-    {
-      "name": "Ear Facial Nerve And Acoustic Neuroma",
-      "file": "Ear-Facial_Nerve_And_Acoustic_Neuroma.json"
-    },
-    {
-      "name": "Ear Hearing Rehabilitation Otalgia And Tinnitus",
-      "file": "Ear-Hearing_Rehabilitation_Otalgia_And_Tinnitus.json"
-    },
-    {
-      "name": "Ear Meniere S Disease And Glomus Tumor",
-      "file": "Ear-Meniere_S_Disease_And_Glomus_Tumor.json"
-    },
-    {
-      "name": "Ear Middle Ear Diseases Asom Som",
-      "file": "Ear-Middle_Ear_Diseases_Asom_Som.json"
-    },
-    {
-      "name": "Ear Otosclerosis",
-      "file": "Ear-Otosclerosis.json"
-    },
-    {
-      "name": "Ear Physiology And Assessment Of Hearing",
-      "file": "Ear-Physiology_And_Assessment_Of_Hearing.json"
-    },
-    {
-      "name": "Ear Previous Year Questions",
-      "file": "Ear-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Ent Surgeries Previous Year Questions",
-      "file": "Ent_Surgeries-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Instruments Previous Year Questions",
-      "file": "Instruments-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Larynx Larynx Anatomy And Pathology",
-      "file": "Larynx-Larynx_Anatomy_And_Pathology.json"
-    },
-    {
-      "name": "Larynx Previous Year Questions",
-      "file": "Larynx-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Larynx",
-      "file": "Larynx.json"
-    },
-    {
-      "name": "Miscellaneous Previous Year Questions",
-      "file": "Miscellaneous-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Miscellaneous Topics Miscellaneous",
-      "file": "Miscellaneous_Topics-Miscellaneous.json"
-    },
-    {
-      "name": "Miscellaneous Topics Previous Year Questions",
-      "file": "Miscellaneous_Topics-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nose And Paranasal Sinuses Previous Year Questions",
-      "file": "Nose_And_Paranasal_Sinuses-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Nose And Septum",
-      "file": "Nose_And_Septum.json"
-    },
-    {
-      "name": "Paranasal Sinuses",
-      "file": "Paranasal_Sinuses.json"
-    },
-    {
-      "name": "Pharynx Adenoid And Palatine Tonsils",
-      "file": "Pharynx-Adenoid_And_Palatine_Tonsils.json"
-    },
-    {
-      "name": "Pharynx Jna And Nasopharyngeal Carcinoma",
-      "file": "Pharynx-Jna_And_Nasopharyngeal_Carcinoma.json"
-    },
-    {
-      "name": "Pharynx Previous Year Questions",
-      "file": "Pharynx-Previous_Year_Questions.json"
-    },
-    {
-      "name": "Rhinorrhea",
-      "file": "Rhinorrhea.json"
-    },
-    {
-      "name": "Sinuses",
-      "file": "Sinuses.json"
-    },
-    {
-      "name": "Spaces",
-      "file": "Spaces.json"
-    },
-    {
-      "name": "Trauma",
-      "file": "Trauma.json"
-    }
-  ],
+  { "name": "Ear Anatomy Of External Middle And Internal Ear", "file": "Ear-Anatomy_Of_External_Middle_And_Internal_Ear.json" },
+  { "name": "Ear Physiology And Assessment Of Hearing", "file": "Ear-Physiology_And_Assessment_Of_Hearing.json" },
+  { "name": "Ear Vestibular System Physiology Assessment And Associated Diseases", "file": "Ear-Vestibular_System_Physiology_Assessment_And_Associated_Diseases.json" },
+  { "name": "Ear Disorders Of External Ear And Eustachian Tube", "file": "Ear-Disorders_Of_External_Ear_And_Eustachian_Tube.json" },
+  { "name": "Ear Middle Ear Diseases Asom Som", "file": "Ear-Middle_Ear_Diseases_Asom_Som.json" },
+  { "name": "Ear Cholesteatoma And Csom", "file": "Ear-Cholesteatoma_And_Csom.json" },
+  { "name": "Ear Asom And Csom Complications", "file": "Ear-Asom_And_Csom_Complications.json" },
+  { "name": "Ear Otosclerosis", "file": "Ear-Otosclerosis.json" },
+  { "name": "Ear Facial Nerve And Acoustic Neuroma", "file": "Ear-Facial_Nerve_And_Acoustic_Neuroma.json" },
+  { "name": "Ear Hearing Rehabilitation Otalgia And Tinnitus", "file": "Ear-Hearing_Rehabilitation_Otalgia_And_Tinnitus.json" },
+  { "name": "Ear Meniere S Disease And Glomus Tumor", "file": "Ear-Meniere_S_Disease_And_Glomus_Tumor.json" },
+  { "name": "Ear Previous Year Questions", "file": "Ear-Previous_Year_Questions.json" },
+  { "name": "Nose And Paranasal Sinuses Anatomy Of Nose And Paranasal Sinuses", "file": "Nose_And_Paranasal_Sinuses-Anatomy_Of_Nose_And_Paranasal_Sinuses.json" },
+  { "name": "Nose And Paranasal Sinuses Diseases Of The External Nose And Septum", "file": "Nose_And_Paranasal_Sinuses-Diseases_Of_The_External_Nose_And_Septum.json" },
+  { "name": "Nose And Paranasal Sinuses Granulomatous Lesions Congenital Anomalies And Nasal Polyps", "file": "Nose_And_Paranasal_Sinuses-Granulomatous_Lesions_Congenital_Anomalies_And_Nasal_Polyps.json" },
+  { "name": "Nose And Paranasal Sinuses Rhinitis And Csf Rhinorrhea", "file": "Nose_And_Paranasal_Sinuses-Rhinitis_And_Csf_Rhinorrhea.json" },
+  { "name": "Nose And Paranasal Sinuses Epistaxis And Facial Trauma", "file": "Nose_And_Paranasal_Sinuses-Epistaxis_And_Facial_Trauma.json" },
+  { "name": "Nose And Paranasal Sinuses Disorders Of Paranasal Sinuses", "file": "Nose_And_Paranasal_Sinuses-Disorders_Of_Paranasal_Sinuses.json" },
+  { "name": "Nose And Paranasal Sinuses Previous Year Questions", "file": "Nose_And_Paranasal_Sinuses-Previous_Year_Questions.json" },
+  { "name": "Pharynx Anatomy Of Pharynx And Pharyngeal Spaces", "file": "Pharynx-Anatomy_Of_Pharynx_And_Pharyngeal_Spaces.json" },
+  { "name": "Pharynx Adenoid And Palatine Tonsils", "file": "Pharynx-Adenoid_And_Palatine_Tonsils.json" },
+  { "name": "Pharynx Jna And Nasopharyngeal Carcinoma", "file": "Pharynx-Jna_And_Nasopharyngeal_Carcinoma.json" },
+  { "name": "Pharynx Ludwig S Angina Pharyngeal Pouch And Abscess Related To Pharynx", "file": "Pharynx-Ludwig_S_Angina_Pharyngeal_Pouch_And_Abscess_Related_To_Pharynx.json" },
+  { "name": "Pharynx Previous Year Questions", "file": "Pharynx-Previous_Year_Questions.json" },
+  { "name": "Larynx Larynx Anatomy And Pathology", "file": "Larynx-Larynx_Anatomy_And_Pathology.json" },
+  { "name": "Larynx Voice Pathologies And Congenital Lesions Of Larynx", "file": "Larynx-Voice_Pathologies_And_Congenital_Lesions_Of_Larynx.json" },
+  { "name": "Larynx Laryngeal Paralysis And Laryngeal Carcinoma", "file": "Larynx-Laryngeal_Paralysis_And_Laryngeal_Carcinoma.json" },
+  { "name": "Larynx Previous Year Questions", "file": "Larynx-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Topics Miscellaneous", "file": "Miscellaneous_Topics-Miscellaneous.json" },
+  { "name": "Miscellaneous Topics Previous Year Questions", "file": "Miscellaneous_Topics-Previous_Year_Questions.json" },
+  { "name": "Miscellaneous Previous Year Questions", "file": "Miscellaneous-Previous_Year_Questions.json" },
+  { "name": "Instruments Previous Year Questions", "file": "Instruments-Previous_Year_Questions.json" },
+  { "name": "Ent Surgeries Previous Year Questions", "file": "Ent_Surgeries-Previous_Year_Questions.json" }
+],
   "fmt": [
     {
       "name": "Asphyxial Deaths Asphyxial Death",
