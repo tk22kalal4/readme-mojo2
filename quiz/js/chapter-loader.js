@@ -5,6 +5,37 @@
 class ChapterLoader {
   constructor() {
     this.cache = new Map();
+    this.localStorageKey = 'quiz_chapters_cache';
+    this.cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  }
+
+  // Load cached data from localStorage
+  loadFromCache(platform, subject) {
+    try {
+      const cacheData = localStorage.getItem(`${this.localStorageKey}_${platform}_${subject}`);
+      if (cacheData) {
+        const parsed = JSON.parse(cacheData);
+        if (Date.now() - parsed.timestamp < this.cacheExpiry) {
+          return parsed.data;
+        }
+      }
+    } catch (error) {
+      console.warn('Failed to load from cache:', error);
+    }
+    return null;
+  }
+
+  // Save data to localStorage
+  saveToCache(platform, subject, data) {
+    try {
+      const cacheData = {
+        data: data,
+        timestamp: Date.now()
+      };
+      localStorage.setItem(`${this.localStorageKey}_${platform}_${subject}`, JSON.stringify(cacheData));
+    } catch (error) {
+      console.warn('Failed to save to cache:', error);
+    }
   }
 
   /**
@@ -106,6 +137,20 @@ class ChapterLoader {
    * Load chapters efficiently in manifest order
    */
   async loadChapters(platform, subject, manifestChapters) {
+    const cacheKey = `${platform}_${subject}`;
+    
+    // Check localStorage cache first
+    const cachedData = this.loadFromCache(platform, subject);
+    if (cachedData) {
+      console.log('Loading chapters from cache');
+      return cachedData;
+    }
+    
+    // Check if we have cached results in memory
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+    
     const availableChapters = [];
     
     // Try to get directory listing for smarter matching
@@ -165,9 +210,15 @@ class ChapterLoader {
     const results = await Promise.all(chapterPromises);
     
     // Filter out failed loads and sort by original manifest order
-    return results
+    const finalChapters = results
       .filter(chapter => chapter !== null)
       .sort((a, b) => a.originalIndex - b.originalIndex);
+    
+    // Cache the results in memory and localStorage
+    this.cache.set(cacheKey, finalChapters);
+    this.saveToCache(platform, subject, finalChapters);
+    
+    return finalChapters;
   }
 
   /**

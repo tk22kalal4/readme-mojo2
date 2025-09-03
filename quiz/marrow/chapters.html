@@ -22,6 +22,19 @@
       40% { content: '..'; }
       60%, 100% { content: '...'; }
     }
+    .chapter-stats {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .stats-badge {
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 500;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
   </style>
 </head>
 <body>  
@@ -43,6 +56,9 @@
       <div class="welcome-section">
         <h2 id="chapterTitle">Available Chapters</h2>
         <p>Select a chapter to start your quiz</p>
+        <div class="chapter-stats" id="chapterStats" style="display: none;">
+          <span class="stats-badge">Total: <span id="totalChapters">0</span> chapters</span>
+        </div>
       </div>
 
       <div id="loading" class="loading-container">
@@ -116,7 +132,7 @@
         const chapters = manifest[subject];
         
         // Use the enhanced chapter loader
-        const availableChapters = await chapterLoader.loadChapters('.', subject, chapters);
+        const availableChapters = await chapterLoader.loadChapters('.', subject, chapters, platform);
         
         displayChapters(availableChapters);
       } catch (error) {
@@ -139,6 +155,12 @@
       
       noChapters.style.display = 'none';
       chaptersGrid.style.display = 'grid';
+      
+      // Show chapter statistics
+      const chapterStats = document.getElementById('chapterStats');
+      const totalChapters = document.getElementById('totalChapters');
+      totalChapters.textContent = chapters.length;
+      chapterStats.style.display = 'block';
       
       chaptersGrid.innerHTML = chapters.map(chapter => `
         <div class="subject-card" onclick="selectChapter('${chapter.filename}', '${chapter.name}')">
