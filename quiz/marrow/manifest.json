@@ -1,5 +1,4 @@
 {
- {
   "psm": [
     { "name": "History of Medicine", "file": "History_of_Medicine.json" },
     { "name": "Health Determinants and Indicators", "file": "Health_Determinants_and_Indicators.json" },
