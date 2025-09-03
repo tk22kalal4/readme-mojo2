@@ -117,7 +117,7 @@ class App {
     const backBtn = document.getElementById('backBtn');
     
     if (this.currentView === 'home') {
-      pageTitle.textContent = 'CADAVERUM';
+      pageTitle.textContent = 'NEXTPULSE';
       backBtn.style.display = 'none';
       main.appendChild(await this.homePage.render());
     } else if (this.currentView === 'search') {

@@ -1,7 +1,7 @@
 
 {
-  "name": "CADAVERUM",
-  "short_name": "CADAVERUM",
+  "name": "NEXTPULSE",
+  "short_name": "NEXTPULSE",
   "description": "A complete Progressive Web App wit install prompt",
   "start_url": "./app.html",
   "scope": "./",
