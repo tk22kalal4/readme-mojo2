@@ -5,7 +5,7 @@
 class ChapterLoader {
   constructor() {
     this.cache = new Map();
-    this.localStorageKey = 'quiz_chapters_cache';
+    this.localStorageKey = 'quiz_chapters_cachee';
     this.cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
   }
 
