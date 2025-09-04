@@ -203,6 +203,9 @@
       });
     }
 
+    // Clear cache before loading to ensure fresh data
+    chapterLoader.clearCache();
+    localStorage.clear();
     window.addEventListener('load', loadChapters);
   </script>
 </body>
