@@ -1,6 +1,8 @@
-[
-  {
-    "q_no": 1,
+{
+  "chapter": "Analytical Epidemiology",
+  "questions": [
+    {
+      "q_no": 1,
     "question": "Question 1: You are conducting a cohort study in a group of headload workers to identify the risk factors \nfor developing low back pain in future. This type of study falls under which of the following?",
     "options": {
       "a": "Experimental analytical studies",
@@ -495,3 +497,4 @@
     "chapter_heading": "Analytical Epidemiology"
   }
 ]
+}
