@@ -37,7 +37,13 @@
     }
   </style>
 </head>
-<body>  
+<body>
+<script>
+      // Initialize access control for protected page
+      if (!accessControl.initProtectedPage()) {
+        throw new Error('Access denied - redirecting to index.html');
+      }
+    </script>  
   <header>
     <div class="header-content">
       <button onclick="history.back()" class="back-button" style="display: block;"> <i class="fas fa-arrow-left"></i> </button>

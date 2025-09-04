@@ -108,8 +108,19 @@
       transform: scale(1.1);
     }
   </style>
+<script src="../access-control.js"></script>
+  <script src="../block.js"></script>
+  <script src="../error-handler/link-checker.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5920367457745298"
+     crossorigin="anonymous"></script>
 </head>
 <body>
+<script>
+      // Initialize access control for protected page
+      if (!accessControl.initProtectedPage()) {
+        throw new Error('Access denied - redirecting to index.html');
+      }
+    </script>
   <header>
     <div class="header-content">
       <button onclick="history.back()" class="back-button">

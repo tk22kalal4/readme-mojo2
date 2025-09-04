@@ -29,8 +29,19 @@
       window.scrollTo(0, 0);
     }
   </script>
+<script src="../access-control.js"></script>
+  <script src="../block.js"></script>
+  <script src="../error-handler/link-checker.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5920367457745298"
+     crossorigin="anonymous"></script>
 </head>
 <body>
+<script>
+      // Initialize access control for protected page
+      if (!accessControl.initProtectedPage()) {
+        throw new Error('Access denied - redirecting to index.html');
+      }
+    </script>
   <h1>Prep Rr Qb Anaesthesia - Combined Tests</h1>
   <div class="nav-buttons"><button onclick="showTest('test1')">Anaesthesia_Machine</button>
 <button onclick="showTest('test2')">Cardiopulmonary_Cerebral_Resuscitation</button>

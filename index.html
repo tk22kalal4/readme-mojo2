@@ -484,6 +484,12 @@
     </style>
 </head>
 <body>
+<script>
+      // Initialize access control for protected page
+      if (!accessControl.initProtectedPage()) {
+        throw new Error('Access denied - redirecting to index.html');
+      }
+    </script>
     <!-- Header Section -->
     <header>
         <div class="logo">
