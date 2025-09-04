@@ -1,5 +1,5 @@
 {
-  "psm": [
+ "communitymedicine": [
   { "name": "History of Medicine", "file": "History_of_Medicine.json" },
   { "name": "Health Determinants and Indicators", "file": "Health_Determinants_and_Indicators.json" },
   { "name": "Concepts of Disease and Prevention", "file": "Concepts_of_Disease_and_Prevention.json" },
@@ -264,7 +264,7 @@
   { "name": "Skin Malignancies", "file": "Skin_Malignancies.json" },
   { "name": "Systemic Diseases and Skin", "file": "Systemic_Diseases_and_Skin.json" }
 ],
-"orthopaedics": [
+"orthopedics": [
   { "name": "Basics of fracture and its management", "file": "Basics_of_fracture_and_its_management.json" },
   { "name": "Complications of fracture", "file": "Complications_of_fracture.json" },
   { "name": "Regional conditions of neck", "file": "Regional_conditions_of_neck.json" },
