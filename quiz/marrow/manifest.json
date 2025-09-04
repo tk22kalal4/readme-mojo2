@@ -1,5 +1,5 @@
 {
-  "anatomy": [
+  "psm": [
   { "name": "History of Medicine", "file": "History_of_Medicine.json" },
   { "name": "Health Determinants and Indicators", "file": "Health_Determinants_and_Indicators.json" },
   { "name": "Concepts of Disease and Prevention", "file": "Concepts_of_Disease_and_Prevention.json" },
@@ -65,7 +65,7 @@
   { "name": "Mental Health", "file": "Mental_Health.json" },
   { "name": "Genetics and Health", "file": "Genetics_and_Health.json" }
 ],
- "psm": [
+ "anatomy": [
   { "name": "Gametogenesis", "file": "Gametogenesis.json" },
   { "name": "Pre-Embryonic Phase of Development", "file": "Pre-Embryonic_Phase_of_Development.json" },
   { "name": "Embryonic Phase of Development", "file": "Embryonic_Phase_of_Development.json" },
