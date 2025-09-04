@@ -1,3 +1,6 @@
+{
+  "chapter": "Environmental_Meteorology",
+  "questions": 
 [
   {
     "q_no": 1,
@@ -359,4 +362,4 @@
     "explanation_image": "https://raw.githubusercontent.com/tk22kalal/mcqimage/main/marrow/psm/Environmental_Meteorology_Q24_exp.jpg",
     "chapter_heading": "Environmental Meteorology"
   }
-]
+]}

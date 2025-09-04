@@ -1,3 +1,6 @@
+{
+  "chapter": "Disaster_Management",
+  "questions": 
 [
   {
     "q_no": 1,
@@ -299,4 +302,4 @@
     "explanation_image": "https://raw.githubusercontent.com/tk22kalal/mcqimage/main/marrow/psm/Disaster_Management_Q20_exp.jpg",
     "chapter_heading": "Disaster Management"
   }
-]
+]}

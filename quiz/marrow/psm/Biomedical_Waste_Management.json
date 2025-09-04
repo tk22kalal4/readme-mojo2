@@ -1,3 +1,6 @@
+{
+  "chapter": "Biomedical_Waste_Management",
+  "questions": 
 [
   {
     "q_no": 1,
@@ -344,4 +347,4 @@
     "explanation_image": null,
     "chapter_heading": "Biomedical Waste Management"
   }
-]
+]}
