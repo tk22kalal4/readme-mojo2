@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="access-control.js"></script>
+    <script type="module" crossorigin src="/assets/page2-D6xd1hJu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/styles-PXXbuJxh.css">
+  </head>
+  <body>
+    <script>
+      // Initialize access control for protected page
+      if (!accessControl.initProtectedPage()) {
+        // Page will redirect, so we can stop execution here
+        throw new Error('Access denied - redirecting to index.html');
+      }
+    </script>
+
+    <nav>
+      <a href="app.html">Home</a>
+      <a href="page2.html" aria-current="page">Other page</a>
+    </nav>
+    <main>
+      <h1>My other page</h1>
+    </main>
+  </body>
+</html>
