@@ -15,7 +15,12 @@
   
 </head>
 <body>
-  
+  <script>
+      // Initialize access control for protected page
+      if (!accessControl.initProtectedPage()) {
+        throw new Error('Access denied - redirecting to index.html');
+      }
+  </script>
   <header>
     <div class="header-content">
       <button onclick="window.location.href='./app.html'" class="back-button">
