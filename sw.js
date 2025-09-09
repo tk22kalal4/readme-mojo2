@@ -4,7 +4,7 @@ const urlsToCache = [
   './index.html',
   './splash.html',
   './app.html',
-  './platforms.html',
+  './00x1234.html',
   './search.html',
   './styles.css',
   './script.js',
@@ -18,7 +18,7 @@ const urlsToCache = [
   './platforms/prepladder/prepladder-subjects.html',
   './quiz/index.html',
   './quiz/app.html',
-  './quiz/platforms.html',
+  './quiz/00x1234.html',
   './quiz/bookmarks.html',
   './quiz/qbank-main.css'
 ];

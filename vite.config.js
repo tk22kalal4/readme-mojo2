@@ -9,7 +9,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         app: 'app.html',
-        platforms: 'platforms.html',
+        platforms: '00x1234.html',
         search: 'search.html',
         splash: 'splash.html',
         page2: 'page2.html'
