@@ -1,0 +1,310 @@
+{
+    "subjectName": "p6xpathology",
+    "lectures": [
+        {
+            "title": "01. Cell Injury.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/qmT0j-jgpforcqsF3KaQbw"
+        },
+        {
+            "title": "02. Apoptosis & Newer Cell Deaths.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/nVYzAy7ZGa2C-PI5sVcyJA"
+        },
+        {
+            "title": "03. Cellular Adaptations.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/TdVqz-MfaB5vLtKH3s9ZDA"
+        },
+        {
+            "title": "04. Intracellular Accumulations.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/6VV1FVopiWmSNJUOFnq3NQ"
+        },
+        {
+            "title": "05. Autophagy and Free Radical Injury.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/KocbJiaPLXc1SRoczxF40g"
+        },
+        {
+            "title": "6. Introduction to Inflammation and Acute Inflammation.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/J1oAXfV41R6dQYGGpoAoCw"
+        },
+        {
+            "title": "07. Inflammatory Mediators.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/7BfqZSgvfuev51F3X1sDXg"
+        },
+        {
+            "title": "08. Chronic Inflammation, Granuloma and Wound Healing.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/1mj2rfy-k_M-XDI4N_79yg"
+        },
+        {
+            "title": "09. Introduction to Genetics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/UIXJ_Mat-uWfRNcvY5WTdQ"
+        },
+        {
+            "title": "10. Mendelian Disorders.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/QtYdHt4LL3RQ6-8wa7FSQQ"
+        },
+        {
+            "title": "11. Non Mendelian Disorders.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/IH9KvJn1RrQhCXTV4S-JpQ"
+        },
+        {
+            "title": "12. Chromosomal Disorders.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ex6hfafFLwO9tnTW2xFpFw"
+        },
+        {
+            "title": "13. Diagnosis of Genetic Disorders.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/syOqAWzJAkr65Zvl0zhabQ"
+        },
+        {
+            "title": "14. Miscellaneous Concepts in Genetics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/tngkXqYOR3qgfkP0cK1tEA"
+        },
+        {
+            "title": "15. Classification of Neoplasia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/GUYyFTmdwYxcsW9pS2LG5g"
+        },
+        {
+            "title": "16. Features of Neoplasia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/LgGuiSpMBiNzp6aHoq5zIg"
+        },
+        {
+            "title": "17. Fundamentals of Neoplasia Part 1.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/UMZrxxniBlmMC6T_nrc5Ww"
+        },
+        {
+            "title": "18. Fundamentals of Neoplasia Part 2.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/stBePw_jx0EK1k7L1ScOQg"
+        },
+        {
+            "title": "19. Etiology of Neoplasia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/fb-ffkvkBPabg18folv70w"
+        },
+        {
+            "title": "20. Diagnosis of Tumors and Paraneoplastic Syndrome.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/EDpr1VXQD46v1SUsKsjf4Q"
+        },
+        {
+            "title": "21. Types of Immunity.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_YWwLK6ts3Qf3zkLlnWKxQ"
+        },
+        {
+            "title": "22. Types of Hypersensitivity Reactions.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/4L7Ln7aEG2dGMkHsf-5qEA"
+        },
+        {
+            "title": "23. Tolerance and Autoimmune disorders.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kXHiu3FRL7rI3zyzDvQ2Xw"
+        },
+        {
+            "title": "24. Immunodeficiency Disorders.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/9TWZjGlE6RALdVVvy0iodw"
+        },
+        {
+            "title": "25. Transplant Immunology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Fv3P9uelHmhQoie8lc4p6A"
+        },
+        {
+            "title": "26. Amyloidosis.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/TjURqO3O03pD5cjDObOF6w"
+        },
+        {
+            "title": "27. Vasculitis.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Q2tZaYp1HKNTHAAGX3IsJw"
+        },
+        {
+            "title": "28. Sclerosis and Vascular Tumors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/qgneY1sAQ7Gh3U_UTGN_5A"
+        },
+        {
+            "title": "29. Carditis.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/29v9TDvkNEQw5Iv-FnKRXQ"
+        },
+        {
+            "title": "30. Ischemic Heart Diseases And Myocardial Infarction.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/i4VP1BlzDnpuIx4DrrBm-Q"
+        },
+        {
+            "title": "31. Cardiomyopathy and Cardiac Tumors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/rjEbceD3tn-XjbqGKErFRg"
+        },
+        {
+            "title": "32. Obstructive Lung Disease.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/wYFAzcOWHzCqrwOv7jPRlA"
+        },
+        {
+            "title": "33. Restrictive Lung Disease.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/fvL_4ZZ8P30dw7ac0OCkng"
+        },
+        {
+            "title": "34. Pulmonary Infections-Pulmonary Hypertension and ARDS.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/BQnvNIVJmt4N6XjRMvv-eA"
+        },
+        {
+            "title": "35. Pulmonary Tumors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/a97_Qh3uAO7CoG0teLWglA"
+        },
+        {
+            "title": "36. Salivary Gland Pathology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/uvRDhtFxXbXbW4EZ-AWjFg"
+        },
+        {
+            "title": "37. Esophagus.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/zcP9yAPBFWcQI8aTaNdylw"
+        },
+        {
+            "title": "38. Stomach.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/IBHy9ZFV-431IVzDsD4JFg"
+        },
+        {
+            "title": "39. Malabsorption Syndrome-Ulcers of Intestine and Inflammatory Bowel Disease.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2DVKLIk97mTi_iPqEOM0yA"
+        },
+        {
+            "title": "40. Polyps and Intestinal Carcinoma.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5fqafAoh-rKPD9Zf61t_1A"
+        },
+        {
+            "title": "41. Hepatobiliary Pathology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/C7WpOpNAO84_2HuxAEMCFw"
+        },
+        {
+            "title": "42. Liver Cirrhosis , Tumors and Miscellaneous Topics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/1ubMXcj7ablbfHKMHCKxEw"
+        },
+        {
+            "title": "43. Introduction and Cystic Diseases of Kidney.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/gq7VidsxKyt6SIiEL4WrTQ"
+        },
+        {
+            "title": "44. Nephritic Syndrome.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Q52qWRC2CwYJLYyIhXR0bw"
+        },
+        {
+            "title": "45. Nephrotic Syndrome.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Ob5R8vi9oma-pir_tMVA2w"
+        },
+        {
+            "title": "46. Renal Tumors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/wNLvMeN5p1EsJbja4Fk8Mg"
+        },
+        {
+            "title": "47. Vulva, Vagina and Cervix Pathology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5Xd93L1VTVucxdMfb6qOBw"
+        },
+        {
+            "title": "48. Endometrium, Gestational Trophoblastic Tumors & Ovarian Pathologies.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/9ou-7JKRjiIsUaPi0NDHuw"
+        },
+        {
+            "title": "49. Pathology of Male Genital Tract.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ENb40f14B2QjWqpSmZlzdQ"
+        },
+        {
+            "title": "50. Breast Pathology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_1xiKO4-BLJJVudTct_6pw"
+        },
+        {
+            "title": "51. Breast Tumors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/wx3FSySCRdKfdmmqYoo-yw"
+        },
+        {
+            "title": "52. Basics of Central Nervous System.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/q7PQgit42gG_HapftodJLA"
+        },
+        {
+            "title": "53. Brain Tumors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_Pm-c0iAbpfxbKIRfnUlrQ"
+        },
+        {
+            "title": "54. Thyroid Gland and Tumor Pathology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/28t9LyiOoYn2XHDXNp2thw"
+        },
+        {
+            "title": "55. Parathyroid, Adrenal & Pituitary Gland.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/-Mn2ALiEBKcBWrYHt_s3Nw"
+        },
+        {
+            "title": "56. Bone and Soft Tissue Pathology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/HhNriRRZwvwvxoDCl-oGhA"
+        },
+        {
+            "title": "57. Skin Pathology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/VgarvgL7Y4O1omrDX7HEVg"
+        },
+        {
+            "title": "58. Introduction to Hematology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/hGissBYkH4nXEDd3a4Ppaw"
+        },
+        {
+            "title": "59. Microcytic Hypochromic Anaemia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Y2-ZjYEFsKfcFCdbKu2HFQ"
+        },
+        {
+            "title": "60. Macrocytic Hypochromic Anemia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/q7NgiOp-zbdw92IPlgPSxA"
+        },
+        {
+            "title": "61. Hemolytic Anemias.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5Y4_S5_8cALun_l6u6Gizw"
+        },
+        {
+            "title": "62. Hemoglobinopathies.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/d4_S64EtRlQMtVmqiPgT8w"
+        },
+        {
+            "title": "63. Auto Immune Hemolytic Anemia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/nvKw5LoYiKqqOsj1eHP13Q"
+        },
+        {
+            "title": "64. RBC Shapes and Inclusions.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5GcOkiFvj2hNIdrMm_Rabw"
+        },
+        {
+            "title": "65. Basics of WBC.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Qwp2Npen-u754Oz4ClVq-Q"
+        },
+        {
+            "title": "66. Acute Lymphoblastic Leukemia (ALL) & Acute Myeloid Leukemia (AML).mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/QV4APzUas5aSdCJlw_G-9w"
+        },
+        {
+            "title": "67. Chronic Lymphocytic Leukemia (CLL) & Chronic Myeloid Leukemia (CML).mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/hnMmvARqLJmGF1x8UayobA"
+        },
+        {
+            "title": "68. Hodgkin's & Non- Hodgkin's Lymphoma.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/rqBiMT-1EsH6zStd-9JqEA"
+        },
+        {
+            "title": "69. Chronic Myeloproliferative Disorder and Myelodysplastic Syndromes.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/dmMELcNuvLSIVh4PAhmTyg"
+        },
+        {
+            "title": "70. Plasma Cell Dyscrasia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/sttyJ_CSCMIwM3WBK9ExEA"
+        },
+        {
+            "title": "71. Coagulation and Bleeding Disorders.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/vp2CG5D5_jqYkjZxlsATEg"
+        },
+        {
+            "title": "72. Special Tests for Platelets Function.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ZJ04MwRiMyUfX6LOx0uMXg"
+        },
+        {
+            "title": "73. Blood Banking and Transfusion Medicine.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/dBpheqk5O_IMzXkSHMM-Jw"
+        },
+        {
+            "title": "74. Vacutainers and Pipettes.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/T1OTWFJNx7zdQAYq9VxceA"
+        },
+        {
+            "title": "75. Tissue Processing.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/jLUgwpKxe8Y0YKJGaHeGzg"
+        },
+        {
+            "title": "76. Flow Cytometry.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/tm3NGvVQNYa-TX4fxtotZw"
+        }
+    ],
+    "skipped": []
+}
