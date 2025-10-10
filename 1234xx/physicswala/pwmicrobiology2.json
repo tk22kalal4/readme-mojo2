@@ -1,0 +1,502 @@
+{
+    "subjectName": "pwmicrobiology2",
+    "lectures": [
+        {
+            "title": "<b>TITLE</b>: Introduction_&amp;_History.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/KrnAC3wM_hMitkKdc2mruA"
+        },
+        {
+            "title": "<b>TITLE</b>: Microscopy.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/MGcwTHsHMCvxmU5mTWLgNA"
+        },
+        {
+            "title": "<b>TITLE</b>: Pathogenesis_&amp;_Epidemiology_of_Infectious_Diseases.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ZSpholudbB6rK0wyKMAZtA"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Cell_Appendages_&amp;_Physiology_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/JXEL3wJRBetzTrh6U5BmMw"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Cell_Appendages_&amp;_Physiology_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/fN943fak0nbChbhAZtlnCw"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Taxonomy_&amp;_Morphology_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/nkd9sNT2GESwFvN02WLp7w"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Taxonomy_&amp;_Morphology_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/LX_ZWUyE4Hh0HehNrir-GQ"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Lab_Diagnosis_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/xZuor-nsr_hsjGb6n65lpw"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Lab_Diagnosis_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DyufceWYt2VUbsZidhcyHw"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Lab_Diagnosis_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/mXUF2AEsbuwzpvbnNi-pGg"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Lab_Diagnosis_Part-IV.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/78aHG5wRO7lCs48aMV4Law"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Lab_Diagnosis_Part-V.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/RV8-2zbVEEJV1Mfid9lALA"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Bacterial_Genetics_&amp;_Antimicrobial_Resistance_(Mechanism_&amp;_Testing_Methods).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/S8kSjzRAsG634XaaMW7ePA"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Virology_&amp;_Lab_Diagnosis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Psp2T1ciF96Wg9_n0f-TNA"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Parasitology_&amp;_Lab_Diagnosis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/FqUIn9w-7lHH68K9liXX5Q"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Mycology_&amp;_Lab_Diagnosis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/YM6Tovl5obiUV6qCN_CwLQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Sterilisation_&amp;_Disinfection_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/S2ZsdeMH6J6IdAr8OZeCYw"
+        },
+        {
+            "title": "<b>TITLE</b>: Sterilisation_&amp;_Disinfection_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/MOnSWGQy-EbNvTHwrY4gZQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Hospital_Infection_Control__Environmental_Microbiology_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DTwWWzPgFEh1F50baZN6Xg"
+        },
+        {
+            "title": "<b>TITLE</b>: Hospital_Infection_Control__Environmental_Microbiology_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/D9CPM0JHD6PgXl9fMfmqGQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Types_of_Immunity__Immune_Responses_&amp;_Components__Complement.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/mW5Ns2eleDh1u8VPB21Tfw"
+        },
+        {
+            "title": "<b>TITLE</b>: Antigen-Antibody__Antigen-_Antibody_Reaction,_Immunodiagnostic_Tests_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/s6v1qpZCs_HSm6Cdu5RD5g"
+        },
+        {
+            "title": "<b>TITLE</b>: Antigen-Antibody__Antigen-_Antibody_Reaction,_Immunodiagnostic_Tests_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/YpEpL6P-gEGWM8u_h-37_g"
+        },
+        {
+            "title": "<b>TITLE</b>: lmmunodiagnostic_Tests_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ZDCV7OzjKB_S6MQdY2svUA"
+        },
+        {
+            "title": "<b>TITLE</b>: lmmunodiagnostic_Tests_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/v0dOyu7Z0HJDSAzy-ZYJaw"
+        },
+        {
+            "title": "<b>TITLE</b>: Hypersensitivity,_Opportunistic_Infections,_Immunoprophylaxis_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/BfmTapyLPESYMrattLg8-w"
+        },
+        {
+            "title": "<b>TITLE</b>: Hypersensitivity,_Opportunistic_Infections,_Immunoprophylaxis_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/reGOIVChF5jAxPWNcTWvaQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Autoimmunity__Immunodeficiency-_Transplant_Immunity.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/MHDru0a-0sMUyG7a_V63Qg"
+        },
+        {
+            "title": "<b>TITLE</b>: Cardiovascular_Infections.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/e7YeJZ0maiGFSa8an-1iEw"
+        },
+        {
+            "title": "<b>TITLE</b>: Blood_Stream_Infections_&amp;_Fever_of_Unknown_Origin.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/g2EnwdoLR6uGuAcUFWOnfQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections__Enteric_Fever.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/uBPpbkdZG21oMSwXVbEF8Q"
+        },
+        {
+            "title": "<b>TITLE</b>: Leptospirosis,_Brucellosis,_Rickettsial_Diseases_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/uA-hl_JacHOgFTJ7QdDZqg"
+        },
+        {
+            "title": "<b>TITLE</b>: Leptospirosis,_Brucellosis,_Rickettsial_Diseases_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ivqfHaOXdl0OOyoSGuCiJQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Diseases_HIV-AIDS.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/zKekq-7ilg0wVZhjxZFdCA"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Diseases__Viral_Haemorrhagic_Fevers.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kwq1Eb4nmBsVk3vqlxajzg"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Infections__Malaria_&amp;_Babesiosis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/-FZZcj6HeAErF4Dk0HI4vw"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Infections__Haemoflagelletes.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/LdC-h1oztCCXr95tyWfC3Q"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Infections__Filariasis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DRNh9elFXXpCPQqNii5J6g"
+        },
+        {
+            "title": "<b>TITLE</b>: Fungal_Diseases_Systemic_Mycosis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/GDZkyWuFIDIr2VbyhmuIpw"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Food_Poisoning.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/psdP50VORQ57PYZkAQ43tA"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections__Enterobacteriaceae.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/G-EnZ12GwQO9wM5GjN3KDw"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections__Cholera_(Vibrio_&amp;_Aeromonas).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/uBY2Fm_aMkw-othaCfeuqw"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections__Others_(Campylobacter,_H.pylori,_C.difficile).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/LHVZObl3gDTQiEgb4gWDLQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Infections__Rotavirus_&amp;_Others.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/X8QNCwAyR9YqXHu02uOxdw"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Diseases__Protozoan_Infections_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kOA-Hmts4Gis-d-coEzjLg"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Diseases__Protozoan_Infections_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_X2iIO3rzcwDhpK4HnkpZQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Diseases__Helminthic_Infections_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/YO6rrt9sn9m1fVx6awNe2A"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Diseases__Helminthic_Infections_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/f-fPj2VMLVOiU9SQcxUa4Q"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Infections__Hepatitis-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/IbktIa4GVLG6Ns96VpF7hA"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Infections__Hepatitis-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/pHJWpFwjJXYZ5LD6mjNbNw"
+        },
+        {
+            "title": "<b>TITLE</b>: Hepatobiliary_System__Parasitic Diseases.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/MYPG9l8uYvzpuJ-74ZVFsA"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Infections__Trematodes.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/sUqMh4EeyusENrvo5ikHJw"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections_(Staphylococcus_Infection).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/syMloWzK90TDKdkukqhsKg"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections_(Streptococcal_Infections).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/txpUUUwUMc4e3HxQ3co5kw"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections_(Anaerobic_Infections).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/1-rnfxFj2zWr50AYHUcy8w"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections_(Leprosy).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/6oxryi7I5rzH1rWD1hqLOQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections__Anthrax.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2HQzMZM12e9p8cibk8lpBQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections__Actinomycetes_&amp;_Others.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/oUt7-lynoAWukXBKIAuWvg"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral Exanthems_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/f_Xlm7QQ5TSN-wHnKeXR2A"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral Exanthems Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/1GXBKgZ01N_sXIptOxXMkQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Exanthems_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/4bfMGCKgfUGZ4CB5hffwMQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Fungal_Infections__Subcutaneous_Mycosis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/LaX5evvMPhTwMKcO5M7YEw"
+        },
+        {
+            "title": "<b>TITLE</b>: Urinary_Tract_Infections_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/D7itq73Ip6_2R7fyMbZw3g"
+        },
+        {
+            "title": "<b>TITLE</b>: Urinary_Tract_Infections_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2-yOTHrdmaNSCB0ETS71IA"
+        },
+        {
+            "title": "<b>TITLE</b>: Genito-Ulcerative_Diseases__Syphilis_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/7JEiTNGap5w-BT_6qL5fCA"
+        },
+        {
+            "title": "<b>TITLE</b>: Genito-Ulcerative_Diseases__Syphilis_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/0dg9fskoBm3enZBaqqmFUw"
+        },
+        {
+            "title": "<b>TITLE</b>: Genito-Ulcerative_Diseases__Others.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/QdQRkRxNpFDtXfeNVg_1Eg"
+        },
+        {
+            "title": "<b>TITLE</b>: Urethritis_Gonococcal_&amp;_NGU.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ALwe7vj086TPR4p9UUk43g"
+        },
+        {
+            "title": "<b>TITLE</b>: Other_Genital_Tract_Diseases.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/UVNaAzsRpLkwV7nnr1kuCQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Infectious_Syndromes_of_Respiratory_Tract.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DwMtumj89XX4-PrmHqApIQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Pharyngitis__Strep_Throat_&amp;_Diphtheria_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/-sSWpishO1UQrZ6Q5b8MDA"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Pharyngitis__Strep_Throat_&amp;_Diphtheria_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/eBhZJEd84vLCNlSDG_DCzQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Infections__Lobar_Pneumonia.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/NCS3vqE96WSQGTJR1VWKHQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Interstitial_Pneumonia_(Atypical_Pneumonia).mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2gavQKn-7cAWkwuh-k1csw"
+        },
+        {
+            "title": "<b>TITLE</b>: Tuberculosis_&amp;_NTMs_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/V5YvwfH4WQaJCg6NSTfg3w"
+        },
+        {
+            "title": "<b>TITLE</b>: Tuberculosis_&amp;_NTMs_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/JwTwjf6NM4eKId1reH0BMw"
+        },
+        {
+            "title": "<b>TITLE</b>: Perstussis_&amp;_NLF_GNB_Infections.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/OBK11cza6501P8bRE5edqg"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Infections__Myxoviruses-Influenza.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Ob2RPzhZwOz58ughWpU7lQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Infections__Myxoviruses-Paramyxoviruses.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/uCTjb2t4HRA7oLEffEMzJQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Infections_-_Corona_Viruses.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/sTbbBlsMFIsCgWROzHcREw"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Infections__Misc-_AdenoV, EBV, RhinoV.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/O3rrm1m8kkVvSPMAFftCHg"
+        },
+        {
+            "title": "<b>TITLE</b>: Parasitic_Infections__Paragonimus.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/gZeFiLhfSpxB7I1chiWgpg"
+        },
+        {
+            "title": "<b>TITLE</b>: Fungal_Infections__Zygomycetes,_Aspergillus,_Pneumocystis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/XR7aHXbcRBn0b6w-NOS-uQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Infective_Syndromes_of_CNS.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/GRVWCT3ppz2gekUOUQMOwg"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Meningitis_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/z9zWK0i4FBsMycSVh-wt6Q"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Meningitis_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/4InJFKbnoOlJF25g9GlYGw"
+        },
+        {
+            "title": "<b>TITLE</b>: Bacterial_Meningitis_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/bgvzLzyLexj19dlhmLFZDA"
+        },
+        {
+            "title": "<b>TITLE</b>: Tetanus.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/OvvswMct4IkW7lXJEYj-IA"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Meningitis_&amp;_Myelitis.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ZlnGT9OV4JXaHwrAWfVrfw"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Encephalitis_&amp;_Encephalopathy_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DdN19tzhWe9O4uO4nexGCQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Viral_Encephalitis_&amp;_Encephalopathy_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/WaJYf96nrKboTM2koyJTig"
+        },
+        {
+            "title": "<b>TITLE</b>: Central_Nervous_system__Parasitic_Diseases.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/tq6Vsku_I7BSITsx1Vnw5w"
+        },
+        {
+            "title": "<b>TITLE</b>: Fungal_CNS_Infections_-_Cryptococcosis,_Others.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5WcVrG19RxX2B-oa59NRng"
+        },
+        {
+            "title": "<b>TITLE</b>: Congenital_Infections.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/At-LSKl0um8DG-eV6r_R2g"
+        },
+        {
+            "title": "<b>TITLE</b>: Oncogenic_Infections.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/QX4Bfn03qpAvoRs-k6ZtJA"
+        },
+        {
+            "title": "<b>TITLE</b>: Zoonotic_Infections.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/KZY0PBJmCwYrr1yjp-T-iA"
+        },
+        {
+            "title": "<b>TITLE</b>: General_&amp;_Applied_Microbiology_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/-8HxphSoim86K5pWt7P00A"
+        },
+        {
+            "title": "<b>TITLE</b>: General_&amp;_Applied_Microbiology_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/GQIGY-6u91tKETWu_mrpTA"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Virology,_Mycology,_Parasitology.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/oeLIxB-WQclORQiVa9x13A"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/0vwnTqteud82C1el5d3NVg"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_erGsKGU6lxZ2H6Q9zKGwA"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Hss2FlO5di5LFvuHjwd3TA"
+        },
+        {
+            "title": "<b>TITLE</b>: General_Bacteriology_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/D4vYnsFZ9oQT6XjUIGYSlw"
+        },
+        {
+            "title": "<b>TITLE</b>: Immunology_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/exC6F86Cq7lEkhwXx3PStw"
+        },
+        {
+            "title": "<b>TITLE</b>: Immunology_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/nFB1ICwMDwuhr0OdCN0hig"
+        },
+        {
+            "title": "<b>TITLE</b>: Immunology_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/LDXyjjNNyra_B_o3m5Fvuw"
+        },
+        {
+            "title": "<b>TITLE</b>: Blood_Stream_Infections_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/RnVMmBGclXzHsoJagRAd5w"
+        },
+        {
+            "title": "<b>TITLE</b>: Blood_Stream_Infections_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/WloHrg3tjPD7HjsecD7k9Q"
+        },
+        {
+            "title": "<b>TITLE</b>: Blood_Stream_Infections_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kR_vAWFLaRb3QP8eY_aT-Q"
+        },
+        {
+            "title": "<b>TITLE</b>: Skin_&amp;_Soft_Tissue_Infection_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/q3taezpZXkfGbMJ774i3cw"
+        },
+        {
+            "title": "<b>TITLE</b>: Skin_&amp;_Soft_Tissue_Infection_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/EjC3gNKSup680WvdK_l2QA"
+        },
+        {
+            "title": "<b>TITLE</b>: Skin_&amp;_Soft_Tissue_Infection_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/D51Ft3sdTD8YG3p2kSn3Xg"
+        },
+        {
+            "title": "<b>TITLE</b>: Skin_&amp;_Soft_Tissue_Infection_Part-IV.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/niOD_TWrfTut3l-hFwuNFQ"
+        },
+        {
+            "title": "<b>TITLE</b>: Respiratory_Track_Infections_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5kOhxuM2-IZOuKftsrjeWg"
+        },
+        {
+            "title": "<b>TITLE</b>: Respiratory_Track_Infections_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/J66mY0pwPmeLRoSGWugW6Q"
+        },
+        {
+            "title": "<b>TITLE</b>: Respiratory_Track_Infections_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/NeCADKSzuN4886LJSGphgg"
+        },
+        {
+            "title": "<b>TITLE</b>: GIT Infection_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/IoUxERXZpbMQtkCYpAnWJw"
+        },
+        {
+            "title": "<b>TITLE</b>: GIT Infection_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5IrQFbsIj1vHmDzM8pa-8w"
+        },
+        {
+            "title": "<b>TITLE</b>: Uro-Genitary_Tract_Infection.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/4SuB6tzFCRHZqRafGCfebA"
+        },
+        {
+            "title": "<b>TITLE</b>: Hepatobiliary_System_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/OBWAywmXlxZbcszwLyLd7g"
+        },
+        {
+            "title": "<b>TITLE</b>: Hepatobiliary_System_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/BR_OHkr1i2DWZ6ykpCJZqA"
+        },
+        {
+            "title": "<b>TITLE</b>: CNS_Infection_Part-I.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/67j6rdex5UbVQMyMFqxzLA"
+        },
+        {
+            "title": "<b>TITLE</b>: CNS_Infection_Part-II.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/9HU5uVT_t5FcMsJxcIbIPA"
+        },
+        {
+            "title": "<b>TITLE</b>: CNS_Infection_Part-III.mp4 <b>BATCH:</b> Microbiology(Dr. Anusha Rathi)",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/1ogRjeMRETMgtvP2b1rq0A"
+        }
+    ],
+    "skipped": []
+}
