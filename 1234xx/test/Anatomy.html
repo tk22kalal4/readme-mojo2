@@ -6,9 +6,149 @@
   <title>Marrow Anatomy Lectures - NEXTPULSE | NEET PG Preparation</title>
   <meta name="description" content="Access comprehensive Anatomy video lectures from Marrow. Expert faculty teaching human anatomy for NEET PG preparation.">
   <meta name="keywords" content="Marrow anatomy, human anatomy lectures, NEET PG anatomy, medical anatomy videos">
-  <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: #333;
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      padding: 10px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .search-bar i {
+      margin-right: 10px;
+      color: #fdbb2d;
+    }
+
+    .search-bar input {
+      background: transparent;
+      border: none;
+      color: white;
+      width: 100%;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .search-bar input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .lecture-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .lecture-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .lecture-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .lecture-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #1a2a6c;
+      line-height: 1.4;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .stream-button, .download-button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s;
+    }
+
+    .stream-button {
+      background: linear-gradient(to right, #1a2a6c, #b21f1f);
+      color: white;
+    }
+
+    .download-button {
+      background: linear-gradient(to right, #fdbb2d, #feb47b);
+      color: #333;
+    }
+
+    .stream-button:hover {
+      background: linear-gradient(to right, #0d1a4d, #8a1919);
+    }
+
+    .download-button:hover {
+      background: linear-gradient(to right, #f7a91e, #fdaa5c);
+    }
+
     .completion-toggle {
       position: absolute;
       top: 1rem;
@@ -51,28 +191,122 @@
       opacity: 1;
     }
 
-    .lecture-card {
+    .video-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .video-popup-content {
+      background: white;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 900px;
+      max-height: 90vh;
+      overflow: hidden;
       position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-title {
+      padding: 20px;
+      background: #1a2a6c;
+      color: white;
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(26, 42, 108, 0.95);
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      z-index: 100;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: color 0.3s;
+    }
+
+    .bottom-nav a.active, .bottom-nav a:hover {
+      color: #fdbb2d;
+    }
+
+    .bottom-nav i {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .lecture-list {
+        grid-template-columns: 1fr;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
-<script src="../../access-controll.js"></script>
-  <script src="../../block.js"></script>
-  <script src="../../error-handler/link-checker.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5920367457745298"
-     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<script>
-      // Initialize access control for protected page
-      if (!accessControl.initProtectedPage()) {
-        throw new Error('Access denied - redirecting to index.html');
-      }
-    </script>
   <header>
     <div class="header-content">
-      <button onclick="history.back()" style="position: fixed; top: 20px; left: 20px; background: transparent; color: white; border: none; padding: 10px; cursor: pointer; z-index: 1001; font-size: 20px;">
-  <i class="fas fa-arrow-left"></i>
-</button>
+      <button onclick="history.back()" style="position: absolute; top: 20px; left: 20px; background: transparent; color: white; border: none; padding: 10px; cursor: pointer; z-index: 1001; font-size: 20px;">
+        <i class="fas fa-arrow-left"></i>
+      </button>
       <h1>Anatomy Lectures</h1>
       <p class="header-subtitle">Marrow - Expert Faculty</p>
       <div class="search-bar">
@@ -81,18 +315,19 @@
       </div>
     </div>
   </header>
+  
   <main>
     <div class="lecture-list" id="lectureList">
-      <p>Loading lectures...</p>
+      <!-- Lectures will be loaded here -->
     </div>
   </main>
   
-<nav class="bottom-nav">
-  <a href="../../app.html" class="active"><i class="fas fa-lightbulb"></i><span>Home</span></a>
-  <a href="../../00x1234.html"><i class="fas fa-play-circle"></i><span>Videos</span></a>
-  <a href="../../search.html"><i class="fas fa-search"></i><span>Search</span></a>
-  <a href="../../quiz/index.html"><i class="fas fa-question-circle"></i><span>Q Bank</span></a>
-</nav>
+  <nav class="bottom-nav">
+    <a href="#" class="active"><i class="fas fa-lightbulb"></i><span>Home</span></a>
+    <a href="#"><i class="fas fa-play-circle"></i><span>Videos</span></a>
+    <a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+    <a href="#"><i class="fas fa-question-circle"></i><span>Q Bank</span></a>
+  </nav>
 
   <script>
     let lecturesData = [];
@@ -171,63 +406,45 @@
     async function loadLectures() {
       console.log('Starting to load lectures...');
       try {
-        console.log('Fetching from cbanatomy.json...');
-        const response = await fetch('Anatomy.json');
-        console.log('Fetch response status:', response.status, response.statusText);
+        // Simulate loading from JSON
+        lecturesData = [
+          {
+            title: "Introduction to Human Anatomy",
+            streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            downloadUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          },
+          {
+            title: "Basic Anatomical Terminology", 
+            streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            downloadUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          },
+          {
+            title: "Cell Structure and Function",
+            streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            downloadUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          },
+          {
+            title: "Tissue Types and Classification",
+            streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            downloadUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          },
+          {
+            title: "Skeletal System Overview",
+            streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            downloadUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          },
+          {
+            title: "Muscular System Anatomy",
+            streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            downloadUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          }
+        ];
         
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        console.log('JSON data received:', data);
-        
-        lecturesData = data.lectures || [];
-        console.log('Loaded lectures from JSON:', lecturesData.length, 'lectures');
-        
-        if (lecturesData.length > 0) {
-          renderLectures(lecturesData);
-        } else {
-          console.log('No lectures found in JSON, using fallback');
-          useFallbackLectures();
-        }
+        console.log('Loaded lectures:', lecturesData.length, 'lectures');
+        renderLectures(lecturesData);
       } catch (error) {
         console.error('Error loading lectures:', error);
-        console.log('Using fallback lectures due to error');
-        useFallbackLectures();
       }
-    }
-
-    function useFallbackLectures() {
-      lecturesData = [
-        {
-          title: "Introduction to Human Anatomy",
-          streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          downloadUrl: "https://example.com/download/anatomy-intro.mp4"
-        },
-        {
-          title: "Basic Anatomical Terminology", 
-          streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          downloadUrl: "https://example.com/download/anatomy-terminology.mp4"
-        },
-        {
-          title: "Cell Structure and Function",
-          streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          downloadUrl: "https://example.com/download/cell-structure.mp4"
-        },
-        {
-          title: "Tissue Types and Classification",
-          streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          downloadUrl: "https://example.com/download/tissue-types.mp4"
-        },
-        {
-          title: "Skeletal System Overview",
-          streamingUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          downloadUrl: "https://example.com/download/skeletal-system.mp4"
-        }
-      ];
-      console.log('Using fallback lectures:', lecturesData.length, 'lectures');
-      renderLectures(lecturesData);
     }
 
     // Function to render lectures
@@ -260,10 +477,10 @@
         lectureCard.innerHTML = `
           <h3>${lecture.title}</h3>
           <div class="button-container">
-            <button class="stream-button" onclick="openVideo('${escapedTitle}', '${escapedStreamingUrl}')">
+            <button class="stream-button" onclick="openVideo('${escapedTitle}', '${escapedStreamingUrl}', 'stream')">
               <i class="fas fa-play"></i> Stream
             </button>
-            <button class="download-button" onclick="downloadVideo('${escapedDownloadUrl}')">
+            <button class="download-button" onclick="openVideo('${escapedTitle}', '${escapedDownloadUrl}', 'download')">
               <i class="fas fa-download"></i> Download
             </button>
           </div>
@@ -279,13 +496,16 @@
       console.log('Finished rendering all lectures');
     }
 
-    function openVideo(title, url) {
+    function openVideo(title, url, type) {
       const popup = document.createElement('div');
       popup.className = 'video-popup';
+      
+      const typeText = type === 'stream' ? 'Streaming' : 'Download';
+      
       popup.innerHTML = `
         <div class="video-popup-content">
           <button class="close-popup" onclick="closeVideo(this)">&times;</button>
-          <h2 class="video-title">${title}</h2>
+          <h2 class="video-title">${title} - ${typeText}</h2>
           <div class="iframe-container">
             <iframe src="${url}" allowfullscreen></iframe>
           </div>
@@ -304,11 +524,6 @@
     function closeVideo(button) {
       const popup = button.closest('.video-popup');
       document.body.removeChild(popup);
-    }
-
-    function downloadVideo(downloadUrl) {
-      // Directly use the download URL from JSON
-      window.open(downloadUrl, '_blank');
     }
 
     // Search functionality
