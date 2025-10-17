@@ -250,8 +250,11 @@
         lectureCard.innerHTML = `
           <h3>${lecture.title}</h3>
           <div class="button-container">
-            <button class="stream-button" onclick="openVideo('${lecture.title}', '${lecture.streamingUrl}')">
+            <button class="stream-button" onclick="openVideo('${lecture.title}', '${lecture.streamingUrl}', 'stream')">
               <i class="fas fa-play"></i> Stream
+            </button>
+            <button class="download-button" onclick="openVideo('${lecture.title}', '${lecture.downloadUrl}', 'download')">
+              <i class="fas fa-download"></i> Download
             </button>
           </div>
         `;
@@ -266,17 +269,21 @@
       console.log('Finished rendering all lectures');
     }
 
-    function openVideo(title, url) {
+    function openVideo(title, url, type) {
       const popup = document.createElement('div');
       popup.className = 'video-popup';
+      
+      const modeText = type === 'stream' ? 'Streaming' : 'Download';
+      
       popup.innerHTML = `
         <div class="video-popup-content">
-          <button class="close-popup" onclick="closeVideo(this)">&times;</button>
-          <h2 class="video-title">${title}</h2>
-          <div class="iframe-container">
-            <iframe src="${url}" allowfullscreen></iframe>
-          </div>
-        </div>
+  <button class="refresh-popup" onclick="refreshVideo(this)"><i class="fas fa-redo"></i></button>
+  <button class="close-popup" onclick="closeVideo(this)">&times;</button>
+  <h2 class="video-title">${title} (${modeText})</h2>
+  <div class="iframe-container">
+    <iframe src="${url}" allowfullscreen></iframe>
+  </div>
+</div>
       `;
       
       popup.onclick = function(e) {
@@ -293,10 +300,9 @@
       document.body.removeChild(popup);
     }
 
-    function downloadVideo(streamUrl) {
-      // Convert streaming URL to download URL
-      const downloadUrl = streamUrl.replace('/watch/', '/dl/');
-      window.open(downloadUrl, '_blank');
+    function refreshVideo(button) {
+      const iframe = button.closest('.video-popup-content').querySelector('iframe');
+      iframe.src = iframe.src;
     }
 
     // Search functionality
