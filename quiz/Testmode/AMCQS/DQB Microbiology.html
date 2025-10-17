@@ -1118,7 +1118,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -1153,19 +1153,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -1220,7 +1236,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -1335,43 +1350,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -1383,28 +1408,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -1412,8 +1442,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -2640,7 +2668,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -2675,19 +2703,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -2742,7 +2786,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -2857,43 +2900,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -2905,28 +2958,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -2934,8 +2992,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -4162,7 +4218,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -4197,19 +4253,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -4264,7 +4336,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -4379,43 +4450,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -4427,28 +4508,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -4456,8 +4542,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -5684,7 +5768,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -5719,19 +5803,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -5786,7 +5886,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -5901,43 +6000,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -5949,28 +6058,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -5978,8 +6092,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -7206,7 +7318,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -7241,19 +7353,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -7308,7 +7436,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -7423,43 +7550,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -7471,28 +7608,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -7500,8 +7642,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -8728,7 +8868,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -8763,19 +8903,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -8830,7 +8986,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -8945,43 +9100,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -8993,28 +9158,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -9022,8 +9192,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -10250,7 +10418,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -10285,19 +10453,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -10352,7 +10536,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -10467,43 +10650,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -10515,28 +10708,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -10544,8 +10742,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -11772,7 +11968,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -11807,19 +12003,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -11874,7 +12086,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -11989,43 +12200,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -12037,28 +12258,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -12066,8 +12292,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -13294,7 +13518,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -13329,19 +13553,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -13396,7 +13636,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -13511,43 +13750,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -13559,28 +13808,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -13588,8 +13842,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -14816,7 +15068,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -14851,19 +15103,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -14918,7 +15186,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -15033,43 +15300,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -15081,28 +15358,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -15110,8 +15392,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
@@ -16338,7 +16618,7 @@
         } 
 
         // Initialize quiz
-        function initQuiz() {
+        function initQuiz() {function initQuiz() {
             try {
                 debugLog(&quot;Initializing quiz&quot;);
                 loadProgress();
@@ -16373,19 +16653,35 @@
                 document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
                 document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                
+                // Normal Mode event listeners
+                document.getElementById(&#x27;start-normal-mode&#x27;).addEventListener(&#x27;click&#x27;, startNormalMode);
+                document.getElementById(&#x27;normal-previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousNormalQuestion);
+                document.getElementById(&#x27;normal-next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextNormalQuestion);
+                document.getElementById('normal-nav-toggle').addEventListener('click', function() {
+                  toggleNavPanel('normal');
+                });
+                document.getElementById('normal-results-nav-toggle').addEventListener('click', function() {
+                  toggleResultsNavPanel('normal');
+                });                
                 debugLog(&quot;Quiz initialized successfully&quot;);
             } catch (e) {
                 console.error(&quot;Failed to initialize quiz:&quot;, e);
                 debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
                 document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
-                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
-                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+                document.getElementById(&#x27;normal-nav-toggle&#x27;).onclick = function() {
+                  toggleNavPanel(&#x27;normal&#x27;);
+                };
+                document.getElementById(&#x27;normal-results-nav-toggle&#x27;).onclick = function() {
+                  toggleResultsNavPanel(&#x27;normal&#x27;);
+                };            
             }
         }
 
         // Start quiz
         function startQuiz() {
             try {
+                currentMode = 'quiz'; // Set mode to quiz
                 debugLog(&quot;Starting quiz&quot;);
                 document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
                 document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
@@ -16440,7 +16736,6 @@
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
         }
-
 
         // Select option
         function selectOption(index, label) {
@@ -16555,43 +16850,53 @@
         }
 
         // Update quiz navigation panel
-        function updateNavPanel() {
+        // Update navigation panel (quiz or normal mode)
+        function updateNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating quiz navigation panel&quot;);
+                debugLog(&quot;Updating quiz/navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+        
+                // Use correct arrays for normal mode
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                        &lt;button class=&quot;question-nav-btn ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalQuestion(${i})` : `handleQuestionNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
                     `;
                 }).join(&#x27;&#x27;);
-                debugLog(&quot;Quiz navigation panel updated&quot;);
+                debugLog(&quot;Quiz/navigation panel updated&quot;);
             } catch (e) {
                 console.error(&quot;Error updating quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Update results navigation panel
-        function updateResultsNavPanel() {
+        
+        // Update results navigation panel (quiz or normal mode)
+        function updateResultsNavPanel(mode = 'quiz') {
             try {
-                debugLog(&quot;Updating results navigation panel&quot;);
+                debugLog(&quot;Updating results navigation panel, mode: &quot; + mode);
                 const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
                 const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+        
+                let statusArray = (mode === 'normal') ? normalModeAnswers : answers;
+                let markedArray = (mode === 'normal') ? [] : markedForReview; // update if you have markedForReview for normal mode
+        
                 navGrid.innerHTML = questions.map((_, i) =&gt; {
-                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
-                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; statusArray[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedArray[i]) return &#x27;&#x27;;
                     return `
-                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;handleResultNavClick(${i})&quot;
+                        &lt;button class=&quot;result-nav-btn-grid ${statusArray[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedArray[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;${mode === 'normal' ? `showNormalResult(${i})` : `handleResultNavClick(${i})`}&quot;
                                 aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
                             ${i + 1}
                         &lt;/button&gt;
@@ -16603,28 +16908,33 @@
                 debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle quiz navigation panel
-        function toggleNavPanel() {
+        
+        // Toggle quiz navigation panel (quiz or normal mode)
+        function toggleNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling quiz navigation panel, mode: &quot; + activeMode);
                 const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
                 navPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!navPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateNavPanel(activeMode);
+                }
                 debugLog(&quot;Quiz navigation panel toggled&quot;);
             } catch (e) {
                 console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
                 debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
             }
         }
-
-        // Toggle results navigation panel
-        function toggleResultsNavPanel() {
+        
+        // Toggle results navigation panel (quiz or normal mode)
+        function toggleResultsNavPanel(mode) {
             try {
-                debugLog(&quot;Toggling results navigation panel&quot;);
+                const activeMode = mode || currentMode; // Use currentMode if mode not specified
+                debugLog(&quot;Toggling results navigation panel, mode: &quot; + activeMode);
                 const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
                 resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
                 if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
-                    updateResultsNavPanel();
+                    updateResultsNavPanel(activeMode);
                 }
                 debugLog(&quot;Results navigation panel toggled&quot;);
             } catch (e) {
@@ -16632,8 +16942,6 @@
                 debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
             }
         }
-
-        // Handle result navigation click
         function handleResultNavClick(index) {
             try {
                 debugLog(`Navigating to result for question ${index + 1} via nav panel`);
