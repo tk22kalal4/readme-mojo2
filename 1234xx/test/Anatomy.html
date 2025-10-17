@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,6 +90,18 @@
       font-size: 24px;
       cursor: pointer;
       color: #333;
+    }
+
+    .refresh-popup {
+      position: absolute;
+      top: 10px;
+      right: 50px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+      padding: 5px;
     }
     
     .video-title {
@@ -490,6 +503,7 @@
       popup.innerHTML = `
         <div class="video-popup-content">
           <button class="close-popup" onclick="closeVideo(this)">&times;</button>
+          <button class="refresh-popup" onclick="refreshVideo(this)"><i class="fas fa-redo"></i></button>
           <h2 class="video-title">${title} (${modeText})</h2>
           <div class="iframe-container">
             <iframe src="${url}" allowfullscreen></iframe>
@@ -511,6 +525,11 @@
       document.body.removeChild(popup);
     }
 
+    function refreshVideo(button) {
+      const iframe = button.closest('.video-popup-content').querySelector('iframe');
+      iframe.src = iframe.src;
+    }
+
     // Search functionality
     document.getElementById('searchInput').addEventListener('input', function(e) {
       const query = e.target.value.toLowerCase();
@@ -528,3 +547,4 @@
   </script>
 </body>
 </html>
+```
