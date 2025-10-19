@@ -432,7 +432,7 @@
   <button class="close-popup" onclick="closeVideo(this)">&times;</button>
   <h2 class="video-title">${title} (${modeText})</h2>
   <div class="iframe-container">
-    <iframe src="${url}" allowfullscreen></iframe>
+    <iframe src="${url}" allowfullscreen webkitallowfullscreen mozallowfullscreen playsinline allow="autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" sandbox="allow-scripts allow-same-origin allow-presentation" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
       `;
