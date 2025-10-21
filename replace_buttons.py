@@ -1,4 +1,4 @@
-import os
+nano replace_buttons.pyimport os
 
 def replace_button_code():
     folder_path = "quiz/Testmode/AMCQS"
