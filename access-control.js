@@ -1,4 +1,3 @@
-
 // Centralized access control for browser vs PWA detection
 // OPTIMIZED FOR GOOGLE AUTO ADS IN PWA MODE
 class AccessControl {
