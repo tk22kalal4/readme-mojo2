@@ -378,151 +378,151 @@
 
     // Function to render lectures
     // Function to safely encode strings for HTML attributes
-function encodeForHTML(str) {
-  return str
-    .replace(/'/g, "\\'")
-    .replace(/"/g, '\\"')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
-
-// Function to render lectures
-function renderLectures(lectures) {
-  console.log('Rendering lectures:', lectures.length);
-  const lectureList = document.getElementById('lectureList');
-  
-  if (!lectureList) {
-    console.error('lectureList element not found!');
-    return;
-  }
-  
-  lectureList.innerHTML = '';
-
-  if (lectures.length === 0) {
-    lectureList.innerHTML = '<p>No lectures available.</p>';
-    return;
-  }
-
-  lectures.forEach((lecture, index) => {
-    console.log(`Rendering lecture ${index + 1}:`, lecture.title);
-    
-    // Encode the data for safe use in HTML
-    const encodedTitle = encodeForHTML(lecture.title);
-    const encodedStreamUrl = encodeForHTML(lecture.streamingUrl || '');
-    const encodedDownloadUrl = encodeForHTML(lecture.downloadUrl || '');
-    
-    const lectureCard = document.createElement('div');
-    lectureCard.className = 'lecture-card';
-    
-    lectureCard.innerHTML = `
-      <h3>${lecture.title}</h3>
-      <div class="button-container">
-        <button class="stream-button" data-title="${encodedTitle}" data-url="${encodedStreamUrl}" data-type="stream">
-          <i class="fas fa-play"></i> Stream
-        </button>
-        <button class="download-button" data-title="${encodedTitle}" data-url="${encodedDownloadUrl}" data-type="download">
-          <i class="fas fa-download"></i> Download
-        </button>
-      </div>
-    `;
-    
-    // Add completion toggle
-    const completionToggle = completionTracker.createCompletionToggle('marrow', 'anatomy', lecture.title);
-    lectureCard.appendChild(completionToggle);
-    
-    lectureList.appendChild(lectureCard);
-  });
-  
-  // Add event listeners using event delegation
-  lectureList.addEventListener('click', function(e) {
-    if (e.target.closest('.stream-button')) {
-      const button = e.target.closest('.stream-button');
-      const title = button.getAttribute('data-title');
-      const url = button.getAttribute('data-url');
-      openVideo(title, url, 'stream');
-    } else if (e.target.closest('.download-button')) {
-      const button = e.target.closest('.download-button');
-      const title = button.getAttribute('data-title');
-      const url = button.getAttribute('data-url');
-      openVideo(title, url, 'download');
+    function encodeForHTML(str) {
+      return str
+        .replace(/'/g, "\\'")
+        .replace(/"/g, '\\"')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
     }
-  });
-  
-  console.log('Finished rendering all lectures');
-}
-
-function openVideo(title, url, type) {
-  console.log(`Opening video: ${title}, URL: ${url}, Type: ${type}`);
-  
-  // Validate URL
-  if (!url || url === 'undefined' || !url.startsWith('http')) {
-    alert(`Invalid URL for ${title}. Please check the video link.`);
-    return;
-  }
-  
-  const popup = document.createElement('div');
-  popup.className = 'video-popup';
-  
-  const modeText = type === 'stream' ? 'Streaming' : 'Download';
-  
-  popup.innerHTML = `
-    <div class="video-popup-content">
-      <button class="refresh-popup" onclick="refreshVideo(this)"><i class="fas fa-redo"></i></button>
-      <button class="close-popup" onclick="closeVideo(this)">&times;</button>
-      <h2 class="video-title">${title} (${modeText})</h2>
-      <div class="iframe-container">
-        <iframe src="${url}" allowfullscreen></iframe>
-      </div>
-      <p style="margin-top: 10px; font-size: 12px; color: #666;">If video doesn't load, <a href="${url}" target="_blank">click here to open in new tab</a></p>
-    </div>
-  `;
-  
-  popup.onclick = function(e) {
-    if (e.target === popup) {
-      closeVideo(popup.querySelector('.close-popup'));
+    
+    // Function to render lectures
+    function renderLectures(lectures) {
+      console.log('Rendering lectures:', lectures.length);
+      const lectureList = document.getElementById('lectureList');
+      
+      if (!lectureList) {
+        console.error('lectureList element not found!');
+        return;
+      }
+      
+      lectureList.innerHTML = '';
+    
+      if (lectures.length === 0) {
+        lectureList.innerHTML = '<p>No lectures available.</p>';
+        return;
+      }
+    
+      lectures.forEach((lecture, index) => {
+        console.log(`Rendering lecture ${index + 1}:`, lecture.title);
+        
+        // Encode the data for safe use in HTML
+        const encodedTitle = encodeForHTML(lecture.title);
+        const encodedStreamUrl = encodeForHTML(lecture.streamingUrl || '');
+        const encodedDownloadUrl = encodeForHTML(lecture.downloadUrl || '');
+        
+        const lectureCard = document.createElement('div');
+        lectureCard.className = 'lecture-card';
+        
+        lectureCard.innerHTML = `
+          <h3>${lecture.title}</h3>
+          <div class="button-container">
+            <button class="stream-button" data-title="${encodedTitle}" data-url="${encodedStreamUrl}" data-type="stream">
+              <i class="fas fa-play"></i> Stream
+            </button>
+            <button class="download-button" data-title="${encodedTitle}" data-url="${encodedDownloadUrl}" data-type="download">
+              <i class="fas fa-download"></i> Download
+            </button>
+          </div>
+        `;
+        
+        // Add completion toggle
+        const completionToggle = completionTracker.createCompletionToggle('marrow', 'anatomy', lecture.title);
+        lectureCard.appendChild(completionToggle);
+        
+        lectureList.appendChild(lectureCard);
+      });
+      
+      // Add event listeners using event delegation
+      lectureList.addEventListener('click', function(e) {
+        if (e.target.closest('.stream-button')) {
+          const button = e.target.closest('.stream-button');
+          const title = button.getAttribute('data-title');
+          const url = button.getAttribute('data-url');
+          openVideo(title, url, 'stream');
+        } else if (e.target.closest('.download-button')) {
+          const button = e.target.closest('.download-button');
+          const title = button.getAttribute('data-title');
+          const url = button.getAttribute('data-url');
+          openVideo(title, url, 'download');
+        }
+      });
+      
+      console.log('Finished rendering all lectures');
     }
-  };
-  
-  document.body.appendChild(popup);
-  
-  // Add error handling for iframe
-  const iframe = popup.querySelector('iframe');
-  iframe.onload = function() {
-    console.log('Iframe loaded successfully');
-  };
-  
-  iframe.onerror = function() {
-    console.error('Failed to load iframe content');
-    const container = iframe.parentElement;
-    container.innerHTML = `
-      <div style="text-align: center; padding: 20px;">
-        <p style="color: #e74c3c;">Failed to load video content</p>
-        <p><a href="${url}" target="_blank" style="color: #3498db;">Click here to try opening in a new tab</a></p>
-        <button onclick="refreshVideo(this.parentElement)" style="margin-top: 10px; padding: 8px 16px; background: #3498db; color: white; border: none; border-radius: 4px;">Retry</button>
-      </div>
-    `;
-  };
-}
-
-function closeVideo(button) {
-  const popup = button.closest('.video-popup');
-  if (popup) {
-    document.body.removeChild(popup);
-  }
-}
-
-function refreshVideo(button) {
-  const popupContent = button.closest('.video-popup-content');
-  const iframe = popupContent.querySelector('iframe');
-  if (iframe) {
-    const currentSrc = iframe.src;
-    iframe.src = '';
-    setTimeout(() => {
-      iframe.src = currentSrc;
-    }, 100);
-  }
-}
+    
+    function openVideo(title, url, type) {
+      console.log(`Opening video: ${title}, URL: ${url}, Type: ${type}`);
+      
+      // Validate URL
+      if (!url || url === 'undefined' || !url.startsWith('http')) {
+        alert(`Invalid URL for ${title}. Please check the video link.`);
+        return;
+      }
+      
+      const popup = document.createElement('div');
+      popup.className = 'video-popup';
+      
+      const modeText = type === 'stream' ? 'Streaming' : 'Download';
+      
+      popup.innerHTML = `
+        <div class="video-popup-content">
+          <button class="refresh-popup" onclick="refreshVideo(this)"><i class="fas fa-redo"></i></button>
+          <button class="close-popup" onclick="closeVideo(this)">&times;</button>
+          <h2 class="video-title">${title} (${modeText})</h2>
+          <div class="iframe-container">
+            <iframe src="${url}" allowfullscreen></iframe>
+          </div>
+          <p style="margin-top: 10px; font-size: 12px; color: #666;">If video doesn't load, <a href="${url}" target="_blank">click here to open in new tab</a></p>
+        </div>
+      `;
+      
+      popup.onclick = function(e) {
+        if (e.target === popup) {
+          closeVideo(popup.querySelector('.close-popup'));
+        }
+      };
+      
+      document.body.appendChild(popup);
+      
+      // Add error handling for iframe
+      const iframe = popup.querySelector('iframe');
+      iframe.onload = function() {
+        console.log('Iframe loaded successfully');
+      };
+      
+      iframe.onerror = function() {
+        console.error('Failed to load iframe content');
+        const container = iframe.parentElement;
+        container.innerHTML = `
+          <div style="text-align: center; padding: 20px;">
+            <p style="color: #e74c3c;">Failed to load video content</p>
+            <p><a href="${url}" target="_blank" style="color: #3498db;">Click here to try opening in a new tab</a></p>
+            <button onclick="refreshVideo(this.parentElement)" style="margin-top: 10px; padding: 8px 16px; background: #3498db; color: white; border: none; border-radius: 4px;">Retry</button>
+          </div>
+        `;
+      };
+    }
+    
+    function closeVideo(button) {
+      const popup = button.closest('.video-popup');
+      if (popup) {
+        document.body.removeChild(popup);
+      }
+    }
+    
+    function refreshVideo(button) {
+      const popupContent = button.closest('.video-popup-content');
+      const iframe = popupContent.querySelector('iframe');
+      if (iframe) {
+        const currentSrc = iframe.src;
+        iframe.src = '';
+        setTimeout(() => {
+          iframe.src = currentSrc;
+        }, 100);
+      }
+    }
     // Search functionality
     document.getElementById('searchInput').addEventListener('input', function(e) {
       const query = e.target.value.toLowerCase();
