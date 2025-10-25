@@ -378,6 +378,7 @@
 
     // Function to render lectures
     // Function to safely encode strings for HTML attributes
+// Function to safely encode strings for HTML attributes
 function encodeForHTML(str) {
   return str
     .replace(/'/g, "\\'")
@@ -474,6 +475,14 @@ function openVideo(title, url, type) {
       <div class="iframe-container">
         <iframe src="${url}" allowfullscreen></iframe>
       </div>
+      <div class="server-fallback" style="text-align: center; margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 4px;">
+        <p style="margin: 0; color: #666; font-size: 14px;">If video not working, try 
+          <button onclick="switchToServer2(this, '${encodeForHTML(url)}', '${type}')" 
+                  style="background: none; border: none; color: #3498db; cursor: pointer; text-decoration: underline; font-size: 14px;">
+            Server 2
+          </button>
+        </p>
+      </div>
     </div>
   `;
   
@@ -501,6 +510,34 @@ function openVideo(title, url, type) {
       </div>
     `;
   };
+}
+
+function switchToServer2(button, currentUrl, type) {
+  // Replace 'web.' with 'webx.' in the URL
+  const newUrl = currentUrl.replace('web.', 'webx.');
+  console.log(`Switching to Server 2: ${newUrl}`);
+  
+  const popupContent = button.closest('.video-popup-content');
+  const title = popupContent.querySelector('.video-title').textContent.replace(/ \(Streaming|Download\)$/, '');
+  const modeText = type === 'stream' ? 'Streaming' : 'Download';
+  
+  // Update the iframe source
+  const iframe = popupContent.querySelector('iframe');
+  iframe.src = newUrl;
+  
+  // Update the title to show we're using Server 2
+  popupContent.querySelector('.video-title').textContent = `${title} (${modeText}) - Server 2`;
+  
+  // Change Server 2 button to show it's active
+  const serverButton = popupContent.querySelector('.server-fallback button');
+  serverButton.textContent = 'Server 2 (Active)';
+  serverButton.style.color = '#27ae60';
+  serverButton.style.fontWeight = 'bold';
+  serverButton.onclick = null; // Remove the click handler
+  
+  // Add a note that we're using Server 2
+  const serverNote = popupContent.querySelector('.server-fallback p');
+  serverNote.innerHTML = `<span style="color: #27ae60; font-weight: bold;">✓ Currently using Server 2</span>`;
 }
 
 function closeVideo(button) {
