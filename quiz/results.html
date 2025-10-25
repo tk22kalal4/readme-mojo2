@@ -175,6 +175,14 @@
       const scoreParam = urlParams.get('score');
       const totalParam = urlParams.get('total');
       
+      // Load quiz results data from localStorage
+      const savedResults = localStorage.getItem('quizResultsData');
+      if (savedResults) {
+        quizData = JSON.parse(savedResults);
+        userAnswers = quizData.userAnswers || [];
+        score = quizData.score || 0;
+      }
+      
       if (scoreParam && totalParam) {
         score = parseInt(scoreParam);
         const total = parseInt(totalParam);
@@ -211,14 +219,34 @@
       const questionGrid = document.getElementById('questionGrid');
       questionGrid.innerHTML = '';
       
-      // Create question number buttons
+      // Create question number buttons with actual answer status
       for (let i = 0; i < total; i++) {
         const questionBtn = document.createElement('button');
         questionBtn.className = 'question-number-btn';
         questionBtn.textContent = i + 1;
         
-        // For now, we'll just show all as answered (you can enhance this with actual answer data)
-        questionBtn.classList.add(Math.random() > 0.5 ? 'correct' : 'incorrect');
+        // Check if we have quiz data to determine answer status
+        if (quizData && quizData.questions && quizData.questions[i]) {
+          const question = quizData.questions[i];
+          const userAnswer = userAnswers[i];
+          const correctAnswer = question.correct_answer;
+          
+          if (userAnswer === null || userAnswer === undefined) {
+            // Unanswered - no color class, keep default background
+            questionBtn.style.background = '#e5e7eb';
+            questionBtn.style.color = '#374151';
+          } else if (userAnswer === correctAnswer) {
+            // Correct - green
+            questionBtn.classList.add('correct');
+          } else {
+            // Incorrect - red
+            questionBtn.classList.add('incorrect');
+          }
+        } else {
+          // No data available - default styling
+          questionBtn.style.background = '#e5e7eb';
+          questionBtn.style.color = '#374151';
+        }
         
         questionBtn.onclick = () => reviewSpecificQuestion(i);
         questionGrid.appendChild(questionBtn);
@@ -231,8 +259,11 @@
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
-      // Navigate back to quiz in review mode - add 1 because quiz expects 1-based indexing
-      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&review=${questionIndex + 1}`;
+      // Store the current question index for review
+      localStorage.setItem('reviewQuestionIndex', questionIndex.toString());
+      
+      // Navigate back to quiz.html and let it handle the review (0-based index)
+      window.location.href = `quiz.html?platform=${platform}&subject=${subject}&chapter=${chapter}&reviewMode=true&reviewIndex=${questionIndex}`;
     }
 
     function restartQuiz() {
