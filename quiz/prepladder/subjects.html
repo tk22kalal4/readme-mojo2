@@ -7,21 +7,20 @@
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="../qbank-main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script src="../../error-handler/link-checker.js"></script>
 <script src="../../access-control.js"></script>
   <script src="../../block.js"></script>
   <script src="../../error-handler/link-checker.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5920367457745298"
      crossorigin="anonymous"></script>
 </head>
+  
 <body>
 <script>
       // Initialize access control for protected page
       if (!accessControl.initProtectedPage()) {
         throw new Error('Access denied - redirecting to index.html');
       }
-    </script>
-  
+    </script>  
   <header>
     <div class="header-content">
       <button onclick="history.back()" class="back-button">
@@ -82,12 +81,12 @@
         { name: 'Dermatology', icon: 'fas fa-hand', available: true },
         { name: 'ENT', icon: 'fas fa-ear', available: true },
         { name: 'FMT', icon: 'fas fa-balance-scale', available: true },
+        { name: 'PSM', icon: 'fas fa-users', available: true },
         { name: 'Medicine', icon: 'fas fa-stethoscope', available: true },
         { name: 'OBGY', icon: 'fas fa-baby', available: true },
         { name: 'Ophthalmology', icon: 'fas fa-eye', available: true },
         { name: 'Orthopedics', icon: 'fas fa-bone', available: true },
         { name: 'Pediatrics', icon: 'fas fa-child', available: true },
-        { name: 'PSM', icon: 'fas fa-users', available: true },
         { name: 'Psychiatry', icon: 'fas fa-brain', available: true },
         { name: 'Radiology', icon: 'fas fa-x-ray', available: true },
         { name: 'Surgery', icon: 'fas fa-cut', available: true }
@@ -112,8 +111,7 @@
       const platform = new URLSearchParams(window.location.search).get('platform') || localStorage.getItem('selectedPlatform');
       localStorage.setItem('selectedSubject', subject);
       
-      // Fixed: Navigate to marrow/chapters.html instead of just chapters.html
-      window.location.href = `${platform}/chapters.html?platform=${platform}&subject=${subject}`;
+      window.location.href = `chapters.html?platform=${platform}&subject=${subject}`;
     }
 
     window.addEventListener('load', loadSubjects);
