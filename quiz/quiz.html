@@ -309,6 +309,18 @@
       const subject = urlParams.get('subject');
       const chapter = urlParams.get('chapter');
       
+      // Store quiz data in localStorage for results page
+      const quizResultsData = {
+        questions: currentQuiz,
+        userAnswers: userAnswers,
+        score: score,
+        total: currentQuiz.length,
+        platform: platform,
+        subject: subject,
+        chapter: chapter
+      };
+      localStorage.setItem('quizResultsData', JSON.stringify(quizResultsData));
+      
       // Navigate to results page with data
       window.location.href = `results.html?platform=${platform}&subject=${subject}&chapter=${chapter}&score=${score}&total=${currentQuiz.length}`;
     }
@@ -489,11 +501,21 @@
       }
     }
 
-    window.addEventListener('load', () => {
-      if (!checkBookmarkMode()) {
-        loadQuiz();
-      }
-    });
-  </script>
-</body>
-</html>
+    // Check if this is a review mode (coming from results page)
+    function checkReviewMode() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const reviewMode = urlParams.get('reviewMode');
+      const reviewIndex = urlParams.get('reviewIndex');
+      
+      if (reviewMode === 'true' && reviewIndex !== null) {
+        // Load quiz data from localStorage
+        const savedResults = localStorage.getItem('quizResultsData');
+        if (savedResults) {
+          const quizData = JSON.parse(savedResults);
+          currentQuiz = quizData.questions;
+          userAnswers = quizData.userAnswers;
+          score = quizData.score;
+          currentQuestionIndex = parseInt(reviewIndex);
+          
+          // Update page title
+          document.getElementById('pageTitle').textContent 
