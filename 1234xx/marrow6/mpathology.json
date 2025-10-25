@@ -1,0 +1,401 @@
+{
+    "subjectName": "mpathology",
+    "lectures": [
+        {
+            "title": "01: How to approach Pathology",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2mHyIe25tCut1PMpCLwEgQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/2mHyIe25tCut1PMpCLwEgQ?type=download"
+        },
+        {
+            "title": "02: Cell Adaptations",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/rM8-cqzcaswxw49UuvGZpw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/rM8-cqzcaswxw49UuvGZpw?type=download"
+        },
+        {
+            "title": "03: Cell Injury",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/zcpCRz7MFfrbx2Up8JDdxg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/zcpCRz7MFfrbx2Up8JDdxg?type=download"
+        },
+        {
+            "title": "04: Cell Death",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/dABwkVkmld_XLOGCqtGJ4A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/dABwkVkmld_XLOGCqtGJ4A?type=download"
+        },
+        {
+            "title": "05: Intracellular Accumulations",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/IZ-0M1TMn3TBHxC7i2kKdg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/IZ-0M1TMn3TBHxC7i2kKdg?type=download"
+        },
+        {
+            "title": "07: Chronic Inflammation",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/seJ6_78GG0yaagsnAEiQ_w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/seJ6_78GG0yaagsnAEiQ_w?type=download"
+        },
+        {
+            "title": "08: Mediators of Inflammation",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/rM6BZeuS_JzZCUoZjXoV4A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/rM6BZeuS_JzZCUoZjXoV4A?type=download"
+        },
+        {
+            "title": "09: Wound Healing & Tissue Repair",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/t-4a1Y_N7Oga6cJFoPvd8w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/t-4a1Y_N7Oga6cJFoPvd8w?type=download"
+        },
+        {
+            "title": "11: Neoplasia Basics",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/dEiB0lMHS2Pq-9qX0T0Rvw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/dEiB0lMHS2Pq-9qX0T0Rvw?type=download"
+        },
+        {
+            "title": "12: Types of Carcinogenesis",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ZVhSjyqTJVBD609DFnvL4A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/ZVhSjyqTJVBD609DFnvL4A?type=download"
+        },
+        {
+            "title": "13: Hallmarks of Neoplasia",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_y_wXU88qEnYKFbI2-TqyQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/_y_wXU88qEnYKFbI2-TqyQ?type=download"
+        },
+        {
+            "title": "14: Lab Diagnosis of Cancer",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/hR8YRLE_QsbEIKGbt8huSg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/hR8YRLE_QsbEIKGbt8huSg?type=download"
+        },
+        {
+            "title": "15: Tricks to Diagnose Tumors",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Uhi0MeaDfhmiHc3BBjKPrA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Uhi0MeaDfhmiHc3BBjKPrA?type=download"
+        },
+        {
+            "title": "16: Genetics - Basic Concepts & Diagnosis",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/n0CY_tVYYKFYG4Xr0vIh7A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/n0CY_tVYYKFYG4Xr0vIh7A?type=download"
+        },
+        {
+            "title": "17: Genetics - Mendelian Modes",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5L6U0iGm81lAHHehOSBC0w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/5L6U0iGm81lAHHehOSBC0w?type=download"
+        },
+        {
+            "title": "18: Genetics - Non Mendelian Modes & Pedigree",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/RsfhO-0L7-DRVnd4qjZWkw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/RsfhO-0L7-DRVnd4qjZWkw?type=download"
+        },
+        {
+            "title": "19: Genetics - Chromosomal Disorders",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/0EcantyEn0O81VG8iBqaeA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/0EcantyEn0O81VG8iBqaeA?type=download"
+        },
+        {
+            "title": "20: Immunity - Types of Immune Cells",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/gd6uqR4dEpW17l5nv6f4kg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/gd6uqR4dEpW17l5nv6f4kg?type=download"
+        },
+        {
+            "title": "21: Hypersensitivity Reactions",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/CfvPN1PYgg96KZsXwGdy1w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/CfvPN1PYgg96KZsXwGdy1w?type=download"
+        },
+        {
+            "title": "22: HLA & Graft Rejection",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/AGOUHtcCLliZ6Tt0RUEYkg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/AGOUHtcCLliZ6Tt0RUEYkg?type=download"
+        },
+        {
+            "title": "23: Immunodeficiency Disorders",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ezOxbHSJKdUnBDuvuAaVtw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/ezOxbHSJKdUnBDuvuAaVtw?type=download"
+        },
+        {
+            "title": "24. Amyloidosis",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/L1Gj64Rk0DZztyBYmRRFkg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/L1Gj64Rk0DZztyBYmRRFkg?type=download"
+        },
+        {
+            "title": "25: General Pathology Images",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/o2srcs5Ey7Jy1LV26T4XJw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/o2srcs5Ey7Jy1LV26T4XJw?type=download"
+        },
+        {
+            "title": "26: RBC - Introduction & Hypoproliferative Anemias",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/HPgXN3CbWaLHefR8YOMQ6A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/HPgXN3CbWaLHefR8YOMQ6A?type=download"
+        },
+        {
+            "title": "27: Peripheral Smear Examination",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/XEhbvRFk5rPemSUojyxtqw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/XEhbvRFk5rPemSUojyxtqw?type=download"
+        },
+        {
+            "title": "28: Microcytic Hypochromic Anemias",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/qTY5uSKV0Q9pcAY__lc4IA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/qTY5uSKV0Q9pcAY__lc4IA?type=download"
+        },
+        {
+            "title": "29: Megaloblastic Anemia",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/TKTPDLYHXzvdE7szX-2oWg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/TKTPDLYHXzvdE7szX-2oWg?type=download"
+        },
+        {
+            "title": "30: Hemolytic Anemia - Part 1",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/BEs56L1cfuzRjqWnfw1KjQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/BEs56L1cfuzRjqWnfw1KjQ?type=download"
+        },
+        {
+            "title": "31: Hemolytic Anemia - Part 2",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Y8MCCQSP72-PjT0cYUmYfQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Y8MCCQSP72-PjT0cYUmYfQ?type=download"
+        },
+        {
+            "title": "32: WBC Introduction",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kQbEpYk8NU7jwg7KqTHXTA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/kQbEpYk8NU7jwg7KqTHXTA?type=download"
+        },
+        {
+            "title": "33: Acute Lymphoblastic Leukemia",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/fzfuQ3hsq-d_opCe7vZtoQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/fzfuQ3hsq-d_opCe7vZtoQ?type=download"
+        },
+        {
+            "title": "34: Acute Myeloid Leukemia",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DrXM_lVOO3QNfjJoOGUdoA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/DrXM_lVOO3QNfjJoOGUdoA?type=download"
+        },
+        {
+            "title": "35: Myeloid Disorders",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/b9FrnmK6VUUFsn6ZKLHIYA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/b9FrnmK6VUUFsn6ZKLHIYA?type=download"
+        },
+        {
+            "title": "36: Hodgkin’s Lymphoma",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/h_iY_M5CIrqzrbepaKl1xg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/h_iY_M5CIrqzrbepaKl1xg?type=download"
+        },
+        {
+            "title": "37: Non Hodgkin’s Lymphoma",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/H7cHYP2Y82cS8hOGcl65ow?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/H7cHYP2Y82cS8hOGcl65ow?type=download"
+        },
+        {
+            "title": "38: Plasma Cell Disorders",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2LCTdnC0zwiCQgya-m8ohA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/2LCTdnC0zwiCQgya-m8ohA?type=download"
+        },
+        {
+            "title": "39: Haemostatis - Part 1",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/n9D_Kg8jjzxcE-p5kDaGOQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/n9D_Kg8jjzxcE-p5kDaGOQ?type=download"
+        },
+        {
+            "title": "40: Haemostatis - Part 2",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Ozpm0mACCaKgNIwFqPgNJw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Ozpm0mACCaKgNIwFqPgNJw?type=download"
+        },
+        {
+            "title": "41: Blood Banking & Transfusion Medicine",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/RH6WwNE-VJdh6IKOFec2tQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/RH6WwNE-VJdh6IKOFec2tQ?type=download"
+        },
+        {
+            "title": "42: Practical Hematology",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ekNX-yq1h80hpJQHmu--Pw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/ekNX-yq1h80hpJQHmu--Pw?type=download"
+        },
+        {
+            "title": "43: Hematology Clinical Case Discussions",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/zI9UkC9ZWm1_srfycvlaDA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/zI9UkC9ZWm1_srfycvlaDA?type=download"
+        },
+        {
+            "title": "44: Hematology Images",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/30LO__mXpIjB2SyKAJ0dKQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/30LO__mXpIjB2SyKAJ0dKQ?type=download"
+        },
+        {
+            "title": "45: Blood Vessels - Sclerosis",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/V0jvoR7fgC8hpklcy5QsHQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/V0jvoR7fgC8hpklcy5QsHQ?type=download"
+        },
+        {
+            "title": "46: Blood Vessels - Vasculitis",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/USIotCIoIFp_ACXTeNyHOg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/USIotCIoIFp_ACXTeNyHOg?type=download"
+        },
+        {
+            "title": "47: Vascular Tumors",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/dy4g09HekWLdsA-jWdCeMQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/dy4g09HekWLdsA-jWdCeMQ?type=download"
+        },
+        {
+            "title": "48: Cardiovascular System - Part 1",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2vbjN6QeXSPsN7I1_1KVaw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/2vbjN6QeXSPsN7I1_1KVaw?type=download"
+        },
+        {
+            "title": "49: Cardiovascular System - Part 2",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/i0Ix71yvrnDU-trZ94hd8A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/i0Ix71yvrnDU-trZ94hd8A?type=download"
+        },
+        {
+            "title": "50: Obstructive Lung Diseases",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/j-FWTkT2UktGYvFiDlzlFw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/j-FWTkT2UktGYvFiDlzlFw?type=download"
+        },
+        {
+            "title": "51: Restrictive Lung Diseases",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/8R5O2l6FuEwBbdN8KmJDeQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/8R5O2l6FuEwBbdN8KmJDeQ?type=download"
+        },
+        {
+            "title": "52: Granulomas & Infections of the Lung",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/cFlRx_zRs6SJvNAQbUOnhg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/cFlRx_zRs6SJvNAQbUOnhg?type=download"
+        },
+        {
+            "title": "53: Lung Tumors",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/6NSQ_Ko4vgah0xaHEZhG8A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/6NSQ_Ko4vgah0xaHEZhG8A?type=download"
+        },
+        {
+            "title": "54: Esophagus",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/tamwJwS1I6kH3S-Z2e3LnA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/tamwJwS1I6kH3S-Z2e3LnA?type=download"
+        },
+        {
+            "title": "55: Stomach",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/KjHAfHcQWd4ezcP4Ho-jIA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/KjHAfHcQWd4ezcP4Ho-jIA?type=download"
+        },
+        {
+            "title": "56: Intestinal Disorders",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DbFOMRQOLVysVoVZ0Th4tQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/DbFOMRQOLVysVoVZ0Th4tQ?type=download"
+        },
+        {
+            "title": "57: Inflammatory Bowel Disease",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/KqpD1SalfzBNEz78vLErMw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/KqpD1SalfzBNEz78vLErMw?type=download"
+        },
+        {
+            "title": "58: Polyps & Colon Cancer",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/4kVZLqSnJbz-qRMuXnNC3w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/4kVZLqSnJbz-qRMuXnNC3w?type=download"
+        },
+        {
+            "title": "59: Liver Pathology - Part 1",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/3WHVFDdfnut4fMQrvErtIA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/3WHVFDdfnut4fMQrvErtIA?type=download"
+        },
+        {
+            "title": "60: Liver Pathology - Part 2",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/JpdcPu-M8g6l8bXBg3UyDA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/JpdcPu-M8g6l8bXBg3UyDA?type=download"
+        },
+        {
+            "title": "61: Kidney - Basics",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/t71P8GVac0tcNhMdtzf5hw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/t71P8GVac0tcNhMdtzf5hw?type=download"
+        },
+        {
+            "title": "62: Nephritic Syndromes",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/KNMKljLf5xHAF7MHabDjDw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/KNMKljLf5xHAF7MHabDjDw?type=download"
+        },
+        {
+            "title": "63: Nephrotic Syndromes",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/i7BbuGZMliHurlqaJZ3KOQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/i7BbuGZMliHurlqaJZ3KOQ?type=download"
+        },
+        {
+            "title": "64: Renal Involvement in Systemic Diseases",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/s3hUzTlLVPF-ORdR70p9Mw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/s3hUzTlLVPF-ORdR70p9Mw?type=download"
+        },
+        {
+            "title": "65: Kidney Tumors",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/hxE7xq522eY7B6FQ2ywW0g?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/hxE7xq522eY7B6FQ2ywW0g?type=download"
+        },
+        {
+            "title": "66: Male Genital - Penis & Prostate",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/27fR45vqVNha9JDOjqgRcw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/27fR45vqVNha9JDOjqgRcw?type=download"
+        },
+        {
+            "title": "67: Testis",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/nx4DpbZpm4sJJbyLViEolQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/nx4DpbZpm4sJJbyLViEolQ?type=download"
+        },
+        {
+            "title": "68: Female Genital Tract - Part 1",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/rXXG4NcVfSdh_x3XbfQytg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/rXXG4NcVfSdh_x3XbfQytg?type=download"
+        },
+        {
+            "title": "69: Uterus & Endometrium",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/3dqTJYRDie5TYVmLNZ9d0g?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/3dqTJYRDie5TYVmLNZ9d0g?type=download"
+        },
+        {
+            "title": "70: Ovarian Tumors",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/YapLpdyebtgBEIK2MOvRsA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/YapLpdyebtgBEIK2MOvRsA?type=download"
+        },
+        {
+            "title": "71: Breast Pathology",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/wYKXjbCNKz-tsKrEnTB7iw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/wYKXjbCNKz-tsKrEnTB7iw?type=download"
+        },
+        {
+            "title": "72: Non Neoplastic Lesions - Thyroid",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/L1_Jrf2vHelso6Pb1YZ8OA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/L1_Jrf2vHelso6Pb1YZ8OA?type=download"
+        },
+        {
+            "title": "73: Thyroid Tumors",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/VoNlKU52DdKpUkdcxpKZ7w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/VoNlKU52DdKpUkdcxpKZ7w?type=download"
+        },
+        {
+            "title": "74: Adrenal Medulla",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/mqpCcgXQSGlrx7EquzMWCg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/mqpCcgXQSGlrx7EquzMWCg?type=download"
+        },
+        {
+            "title": "75: Pituitary & Parathyroid Gland",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/cr8Rmqj7qt-dYUNsamQSIw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/cr8Rmqj7qt-dYUNsamQSIw?type=download"
+        },
+        {
+            "title": "76: Dermatopathology",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/g3ecirrnu8DrdPZFcNGeyA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/g3ecirrnu8DrdPZFcNGeyA?type=download"
+        },
+        {
+            "title": "77: Bone & Soft Tissue Lesions",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/h8cX1gvfbX8X6tyuktkR5w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/h8cX1gvfbX8X6tyuktkR5w?type=download"
+        },
+        {
+            "title": "78: CNS- Non Neoplastic Lesions",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/7sap3v3Jj7ARN-nxFR_NBQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/7sap3v3Jj7ARN-nxFR_NBQ?type=download"
+        },
+        {
+            "title": "79: CNS Tumors",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/bYBMsuRUgK6BzcsPwWBfHg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/bYBMsuRUgK6BzcsPwWBfHg?type=download"
+        },
+        {
+            "title": "80: Systemic Pathology Images - Part 1",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/bdnzfyVUD1wXq9dv0bITrQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/bdnzfyVUD1wXq9dv0bITrQ?type=download"
+        },
+        {
+            "title": "81: Systemic Pathology Images - Part 2",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/RLk7goGvNrcCuGZblI5EJw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/RLk7goGvNrcCuGZblI5EJw?type=download"
+        }
+    ],
+    "skipped": []
+}

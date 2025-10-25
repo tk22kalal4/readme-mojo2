@@ -291,5 +291,21 @@ export const SUBJECTS = {
         'Skin Tumors',
         'Systemic Diseases and Skin',
         'Miscellaneous Disorder'
+      ],
+      'OBGY': [
+        'Dermatology',
+        'Antipartum Hemorrhage',
+        'Cutaneous Infection',
+        'Mycobacterial Infections',
+        'Immunobullous Disorder',
+        'Papulosquamous Disorder',
+        'Skin Appendages and Their Disorders',
+        'Sexually Transmitted Infections',
+        'Eczema',
+        'Pigmentary Disorder',
+        'Connective Tissue Disorders',
+        'Skin Tumors',
+        'Systemic Diseases and Skin',
+        'Miscellaneous Disorder' 
     ]    
 };

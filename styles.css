@@ -285,6 +285,7 @@ main {
   right: 0;
   background: white;
   display: grid;
+  z-index: 900;
   grid-template-columns: repeat(4, 1fr);
   padding: 0.75rem 0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);

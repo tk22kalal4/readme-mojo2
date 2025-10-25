@@ -1,9 +1,15 @@
-
 // Centralized access control for browser vs PWA detection
+// OPTIMIZED FOR GOOGLE AUTO ADS IN PWA MODE
 class AccessControl {
   constructor() {
     this.botUserAgents = [
       'Googlebot',
+      'Googlebot-Image',
+      'Mediapartners-Google',  // IMPORTANT: Google AdSense bot
+      'AdsBot-Google',         // IMPORTANT: Google Ads bot
+      'Google-Ads-Overview',
+      'Google-Adwords',
+      'Google-Site-Verification',
       'Bingbot',
       'Slurp',
       'DuckDuckBot',
@@ -38,10 +44,7 @@ class AccessControl {
       'Bitrix link preview',
       'XING-contenttabreceiver',
       'Chrome-Lighthouse',
-      'TelegramBot',
-      'Google-Ads-Overview',
-      'Google-Adwords',
-      'Google-Site-Verification'
+      'TelegramBot'
     ];
   }
 
@@ -61,9 +64,31 @@ class AccessControl {
     );
   }
 
+  // Check if current page is index.html (public page)
+  isIndexPage() {
+    const path = window.location.pathname;
+    return path === '/' || path === '/index.html' || path.endsWith('/');
+  }
+
   // Check if access is allowed to protected pages
   isAccessAllowed() {
-    return this.isPWA() || this.isBot();
+    // Allow bots (for SEO and Google Ads crawling)
+    if (this.isBot()) {
+      return true;
+    }
+    
+    // Allow PWA users (where Google Ads will work)
+    if (this.isPWA()) {
+      return true;
+    }
+    
+    // Allow browser access ONLY to index.html
+    if (this.isIndexPage()) {
+      return true;
+    }
+    
+    // Block browser users from all other pages
+    return false;
   }
 
   // Redirect to index.html with PWA install prompt
@@ -85,14 +110,20 @@ class AccessControl {
 
   // Initialize access control for protected pages
   initProtectedPage() {
-    // Allow bots and PWA users
+    // Check if access is allowed
     if (this.isAccessAllowed()) {
       return true;
     }
 
-    // Redirect browser users to index.html
+    // If not allowed, redirect browser users to index.html
     this.redirectToIndex();
     return false;
+  }
+
+  // Initialize for index page - show PWA prompt if needed
+  initIndexPage() {
+    this.showPWAPrompt();
+    return true;
   }
 
   // Show PWA install prompt on index page if redirected
@@ -129,9 +160,9 @@ class AccessControl {
     
     promptDiv.innerHTML = `
       <div style="max-width: 600px; margin: 0 auto;">
-        <h3 style="margin: 0 0 8px 0; font-size: 18px;">Install Silent Scalpel App</h3>
+        <h3 style="margin: 0 0 8px 0; font-size: 18px;">📱 Install NEXTPULSE App</h3>
         <p style="margin: 0 0 12px 0; font-size: 14px;">
-          To access ${attemptedPage ? attemptedPage.replace('/', '') : 'all features'}, please install our PWA app.
+          To access ${attemptedPage ? attemptedPage.replace('/', '').replace('.html', '') : 'video lectures and quizzes'}, please install our App.
         </p>
         <button onclick="accessControl.installPWA()" style="
           background: white;
@@ -164,13 +195,12 @@ class AccessControl {
       window.deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the PWA install prompt');
-          // PWA will now launch directly to app.html via manifest
         }
         window.deferredPrompt = null;
       });
     } else {
       // Show manual install instructions
-      alert('To install:\n\nChrome/Edge: Menu > Install Silent Scalpel\nSafari: Share > Add to Home Screen\nFirefox: Menu > Install');
+      alert('To install:\n\nChrome/Edge: Menu > Install NEXTPULSE\nSafari: Share > Add to Home Screen\nFirefox: Menu > Install');
     }
     this.dismissPrompt();
   }
@@ -193,7 +223,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   window.deferredPrompt = e;
 });
 
-// Listen for app installed event - no redirect needed since manifest handles start_url
+// Listen for app installed event
 window.addEventListener('appinstalled', (evt) => {
   console.log('PWA was installed');
 });

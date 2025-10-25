@@ -1,0 +1,421 @@
+{
+    "subjectName": "p6xpharmacology",
+    "lectures": [
+        {
+            "title": "1. Introduction to General Pharmacology.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kEf-iapHTE-BaKsZ70uwXw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/kEf-iapHTE-BaKsZ70uwXw?type=download"
+        },
+        {
+            "title": "2. Pharmacokinetics_ Absorption Part 1.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/iZphAA5YgboruBGaLfHTCw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/iZphAA5YgboruBGaLfHTCw?type=download"
+        },
+        {
+            "title": "3. Pharmacokinetics_ Absorption Part 2.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/gD_AoU2RClIXdHpRseWytg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/gD_AoU2RClIXdHpRseWytg?type=download"
+        },
+        {
+            "title": "4. Pharmacokinetics_ Distribution.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/iPmGB4JHzWHpenNpBhDI7w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/iPmGB4JHzWHpenNpBhDI7w?type=download"
+        },
+        {
+            "title": "5. Pharmacokinetics_ Metabolism.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/OYszpRLrefVnNTHJSb3Z2g?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/OYszpRLrefVnNTHJSb3Z2g?type=download"
+        },
+        {
+            "title": "6. Pharmacokinetics_ Elimination.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/cz3eTNE1LICiebbxhgr-Qg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/cz3eTNE1LICiebbxhgr-Qg?type=download"
+        },
+        {
+            "title": "7. Pharmacokinetics _ Half Life, Loading Dose & Maintenance Dose.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/yZSW86wE0EcF2KQdsZMVmw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/yZSW86wE0EcF2KQdsZMVmw?type=download"
+        },
+        {
+            "title": "8. Pharmacodynamics_ Agonist and Antagonist.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Lpb6dr68qJZ_Y2VDrW21ng?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Lpb6dr68qJZ_Y2VDrW21ng?type=download"
+        },
+        {
+            "title": "9. Pharmacodynamics_ Dose Response Curve.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/FSdIELBALs05sQfSzcwp9w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/FSdIELBALs05sQfSzcwp9w?type=download"
+        },
+        {
+            "title": "10. Pharmacodynamics_ Drug Receptors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kPUaz7FfEuMroXRum2_EBg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/kPUaz7FfEuMroXRum2_EBg?type=download"
+        },
+        {
+            "title": "11. Drug development and Clinical Trials.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_zR5jG8M5uKzkmCliXZX7w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/_zR5jG8M5uKzkmCliXZX7w?type=download"
+        },
+        {
+            "title": "12. Types of Drugs, Adverse Drug Reaction and Pharmacogenetics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/hYIELTIXZD6qdDE5lvIIUQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/hYIELTIXZD6qdDE5lvIIUQ?type=download"
+        },
+        {
+            "title": "13. Introduction and Acetyl Choline.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ge1r1zBmmgrcuor5oXpyww?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/ge1r1zBmmgrcuor5oXpyww?type=download"
+        },
+        {
+            "title": "14. Cholinergic Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/7mnPtz33XqaQjyqmEJ4zMw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/7mnPtz33XqaQjyqmEJ4zMw?type=download"
+        },
+        {
+            "title": "15. Anti-Cholinergic Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Mz6y4ZrwWqt0S4juyjzHzg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Mz6y4ZrwWqt0S4juyjzHzg?type=download"
+        },
+        {
+            "title": "16. Adrenergic Drugs Part-1.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/FzbmfRuGYdPPoYhllubNVw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/FzbmfRuGYdPPoYhllubNVw?type=download"
+        },
+        {
+            "title": "17. Adrenergic Drugs Part 2.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/RY0HNZYAihORQFCUGWGMUg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/RY0HNZYAihORQFCUGWGMUg?type=download"
+        },
+        {
+            "title": "18. Anti-Adrenergic Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/xF1jAYtOaCHSLR5A6awicg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/xF1jAYtOaCHSLR5A6awicg?type=download"
+        },
+        {
+            "title": "19. Glaucoma.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/8nxGCe-Trf9URnKUCv5g5w?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/8nxGCe-Trf9URnKUCv5g5w?type=download"
+        },
+        {
+            "title": "20. Serotonin.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/hnJ2k-dLkd8JeJafvNqEXA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/hnJ2k-dLkd8JeJafvNqEXA?type=download"
+        },
+        {
+            "title": "21. Histamine.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Pl8kH6GZK0kxcuE9VbDv1g?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Pl8kH6GZK0kxcuE9VbDv1g?type=download"
+        },
+        {
+            "title": "22. Prostaglandins.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/MsHJXctdhyKBQy7YbEFwOw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/MsHJXctdhyKBQy7YbEFwOw?type=download"
+        },
+        {
+            "title": "23. NSAIDs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/JyAxfSrN232SrYBG-MD31Q?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/JyAxfSrN232SrYBG-MD31Q?type=download"
+        },
+        {
+            "title": "24. Gout.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/sazG_CrPOdZZAYeblAOGkg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/sazG_CrPOdZZAYeblAOGkg?type=download"
+        },
+        {
+            "title": "25. Rheumatoid Arthritis.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Ds8Ri6o1Bamv0cYTw6deqA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Ds8Ri6o1Bamv0cYTw6deqA?type=download"
+        },
+        {
+            "title": "26. Renal Diuretics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/M8e6pplSONgnAkLZWAMjLg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/M8e6pplSONgnAkLZWAMjLg?type=download"
+        },
+        {
+            "title": "27. Renal ADH.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/4Lrz0yc8f3jjXtDzclY83g?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/4Lrz0yc8f3jjXtDzclY83g?type=download"
+        },
+        {
+            "title": "28. RAAS Inhibitors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Wb_QoogydC7Tjl5ENr-2CQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Wb_QoogydC7Tjl5ENr-2CQ?type=download"
+        },
+        {
+            "title": "29. Calcium Channel Blockers.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/nal6j8RKs7fGdpdbnSgCQQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/nal6j8RKs7fGdpdbnSgCQQ?type=download"
+        },
+        {
+            "title": "30. Vasodilators.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/48RuxFTLG9tI4X_kbpfStA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/48RuxFTLG9tI4X_kbpfStA?type=download"
+        },
+        {
+            "title": "31. Anti Anginal Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/RmRMbE7tq3Xbw_VSsq05LA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/RmRMbE7tq3Xbw_VSsq05LA?type=download"
+        },
+        {
+            "title": "32. Hypolipidemic Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Uek3n5U1ufDj4DQajGG-kQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Uek3n5U1ufDj4DQajGG-kQ?type=download"
+        },
+        {
+            "title": "33. Hypertension.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/TwWVntJDcCjubOPa04fyRQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/TwWVntJDcCjubOPa04fyRQ?type=download"
+        },
+        {
+            "title": "34. Drugs for Chronic Heart Failure.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/qhoxmxSj2LoYcAxwNfFxgw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/qhoxmxSj2LoYcAxwNfFxgw?type=download"
+        },
+        {
+            "title": "35. Arrhythmia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/HI8YiX3GGRFaCD1qIJw_lA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/HI8YiX3GGRFaCD1qIJw_lA?type=download"
+        },
+        {
+            "title": "36. Myocardial Infarction.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/21GWlcJZDJ-_-b7N1Dl7yA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/21GWlcJZDJ-_-b7N1Dl7yA?type=download"
+        },
+        {
+            "title": "37. Inotropic Drugs and Digoxin.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/lgxN-NluW0pTS3czKLeOGA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/lgxN-NluW0pTS3czKLeOGA?type=download"
+        },
+        {
+            "title": "38. Sedative Hypnotic Drugs For Insomnia.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Hyoy_-SPldPG_Tvq_azcpg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Hyoy_-SPldPG_Tvq_azcpg?type=download"
+        },
+        {
+            "title": "39. Alcohols.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/WBBFzYgBrN7KXxukFDR1ng?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/WBBFzYgBrN7KXxukFDR1ng?type=download"
+        },
+        {
+            "title": "40. Opioids.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/rmJZPN_skGmu_CyCLqR-KQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/rmJZPN_skGmu_CyCLqR-KQ?type=download"
+        },
+        {
+            "title": "41. Anti Epileptic Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/sizNXscpeggeEXPRQUfBqQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/sizNXscpeggeEXPRQUfBqQ?type=download"
+        },
+        {
+            "title": "42. Parkinson Disease and Other Motor Neuron Disease.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/kU3X7z0-kDOFD4KdBj1GzA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/kU3X7z0-kDOFD4KdBj1GzA?type=download"
+        },
+        {
+            "title": "43. Anti Psychotic Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/2WuAA8bSpNroDR7GbRXbJA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/2WuAA8bSpNroDR7GbRXbJA?type=download"
+        },
+        {
+            "title": "44. Mood Stabilizers.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/DBMpPUGrErm_-BFC551ksQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/DBMpPUGrErm_-BFC551ksQ?type=download"
+        },
+        {
+            "title": "45. Anti Depressant Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/UyDQKwMxlyqbuKV39bkBXA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/UyDQKwMxlyqbuKV39bkBXA?type=download"
+        },
+        {
+            "title": "46. Diabetes Mellitus_ Insulin.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/B3TURr_vDlQWYg4-NldKpg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/B3TURr_vDlQWYg4-NldKpg?type=download"
+        },
+        {
+            "title": "47. Diabetes Mellitus_ Oral Hypoglycemic Agents.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Fjl5gvmiUKvH4j8aGAVS-A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Fjl5gvmiUKvH4j8aGAVS-A?type=download"
+        },
+        {
+            "title": "48. Thyroid and Anti-Thyroid Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/QDXz3hH1Kty3CpMJbSt_Hg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/QDXz3hH1Kty3CpMJbSt_Hg?type=download"
+        },
+        {
+            "title": "49. Drugs Acting on Bone and Osteoporosis.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/D3u9QZTdYB_CfUJ6AOAbsg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/D3u9QZTdYB_CfUJ6AOAbsg?type=download"
+        },
+        {
+            "title": "50. Gonadal Hormones.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/4lEVYVimLGdWqHHiXn8lrw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/4lEVYVimLGdWqHHiXn8lrw?type=download"
+        },
+        {
+            "title": "51. Hypothalamic Pituitary Axis Hormones.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/oVFjaijwNwKNugqJMUaaTw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/oVFjaijwNwKNugqJMUaaTw?type=download"
+        },
+        {
+            "title": "52. Contraceptives.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/lyx_vij4jrALtjiVKrfNDg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/lyx_vij4jrALtjiVKrfNDg?type=download"
+        },
+        {
+            "title": "53. Corticosteroids.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/-3op_SYAe0ukG-l7-ai4Hw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/-3op_SYAe0ukG-l7-ai4Hw?type=download"
+        },
+        {
+            "title": "54. Cell Wall and Cell Membrane Inhibitors Part 1.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/3U-OxChzFvYE0CBx_Z7hiA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/3U-OxChzFvYE0CBx_Z7hiA?type=download"
+        },
+        {
+            "title": "55. Cell Wall and Cell Membrane Inhibitors Part 2.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/IxchfPWZjdO2Atk90VShsA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/IxchfPWZjdO2Atk90VShsA?type=download"
+        },
+        {
+            "title": "56. DNA-Nucleic Acid Inhibitors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/t8JLWzZaDw6Q_cX7-tKZ3g?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/t8JLWzZaDw6Q_cX7-tKZ3g?type=download"
+        },
+        {
+            "title": "57. Protein Synthesis Inhibitors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/CQrS_6l8aY7K6RqcJGsxMA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/CQrS_6l8aY7K6RqcJGsxMA?type=download"
+        },
+        {
+            "title": "58. Anti-Helmenthics and Scabies.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/V72UBUWDvVFmcM_9BZ7Ytw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/V72UBUWDvVFmcM_9BZ7Ytw?type=download"
+        },
+        {
+            "title": "59. Mycobacterial Infection_ Leprosy and MAC.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/NfrzjikQgmPuBorGHPhBlw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/NfrzjikQgmPuBorGHPhBlw?type=download"
+        },
+        {
+            "title": "60. Mycobacterial Infection_ Tuberculosis.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/ZRaO47S_B8yG12v9bPB4ZA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/ZRaO47S_B8yG12v9bPB4ZA?type=download"
+        },
+        {
+            "title": "61. Anti Protozoans.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/xDPRvr9vtv7vD_QyekEtOw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/xDPRvr9vtv7vD_QyekEtOw?type=download"
+        },
+        {
+            "title": "62. Anti Viral Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/Ih8xDvApy88X6iBXxK7DbQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/Ih8xDvApy88X6iBXxK7DbQ?type=download"
+        },
+        {
+            "title": "63. Folic Acid Inhibitors.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/gqMD_TdYU7JvVQgxQE7xLw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/gqMD_TdYU7JvVQgxQE7xLw?type=download"
+        },
+        {
+            "title": "64. Antimicrobials_ Choice, Properties and Resistance.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/OshtHjqvTH6VbYEjzSZr5Q?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/OshtHjqvTH6VbYEjzSZr5Q?type=download"
+        },
+        {
+            "title": "65. Anti Fungals.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/-JwSkTV_dekIJVVV1ipczQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/-JwSkTV_dekIJVVV1ipczQ?type=download"
+        },
+        {
+            "title": "66. Respiratory system Drugs for Cough, Cystic fibrosis, Pulmonary artery hypertension.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/WNUJjBXpZx4Z1seXDaeP4Q?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/WNUJjBXpZx4Z1seXDaeP4Q?type=download"
+        },
+        {
+            "title": "67. Asthma and It's Management.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/MpxkBG_gBku4rxxPw7o1WA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/MpxkBG_gBku4rxxPw7o1WA?type=download"
+        },
+        {
+            "title": "68. GIT Part 1.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/78-wPXcdOPY-jpoKr5c0OA?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/78-wPXcdOPY-jpoKr5c0OA?type=download"
+        },
+        {
+            "title": "69. GIT Part 2.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/6WcUy0KrJLSZQs-QZxluCw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/6WcUy0KrJLSZQs-QZxluCw?type=download"
+        },
+        {
+            "title": "70. Anti-Platelets and Pro-Platelet Drugs.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/1BEqznU9Vbe0y7SPTecdiQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/1BEqznU9Vbe0y7SPTecdiQ?type=download"
+        },
+        {
+            "title": "71. Oral Anticoagulants.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/n-GlhzTWKSVQLwbW7AsVUw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/n-GlhzTWKSVQLwbW7AsVUw?type=download"
+        },
+        {
+            "title": "72. Parenteral Anticoagulants.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/5h5KKLbouRHSMJ5rkKQ0-Q?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/5h5KKLbouRHSMJ5rkKQ0-Q?type=download"
+        },
+        {
+            "title": "73. Thrombolytics and Anti Thrombolytics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/NrMKyxrlfyvn6RUZccTM-A?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/NrMKyxrlfyvn6RUZccTM-A?type=download"
+        },
+        {
+            "title": "74. Hematinic, Iron and Chelators.MUX.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/W8d7D6WsBXqGnEvspqV7Gg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/W8d7D6WsBXqGnEvspqV7Gg?type=download"
+        },
+        {
+            "title": "74. Hematinic, Iron and Chelators.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/C-KjPu22Hrg48oYSiBrRNw?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/C-KjPu22Hrg48oYSiBrRNw?type=download"
+        },
+        {
+            "title": "75. Anticancer Drugs Part 1.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_ihbLJ2fJdZZPfu318--4Q?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/_ihbLJ2fJdZZPfu318--4Q?type=download"
+        },
+        {
+            "title": "76. Anticancer Drugs Part 2.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/9G_wEPz3AjIUMCSMGBK5Og?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/9G_wEPz3AjIUMCSMGBK5Og?type=download"
+        },
+        {
+            "title": "77. Targeted Therapy.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/W73f6M5zk48MASnt9Gw5Cg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/W73f6M5zk48MASnt9Gw5Cg?type=download"
+        },
+        {
+            "title": "78. Monoclonal Antibodies.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/SSM40sulxvUoNrev2RUxXQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/SSM40sulxvUoNrev2RUxXQ?type=download"
+        },
+        {
+            "title": "79. Immunomodulators.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/s0-r8Ks9D2ND1JWZMk0vqQ?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/s0-r8Ks9D2ND1JWZMk0vqQ?type=download"
+        },
+        {
+            "title": "80. General Anaesthetics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/BdO-VS0_qAxm9K_B9yVFvg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/BdO-VS0_qAxm9K_B9yVFvg?type=download"
+        },
+        {
+            "title": "81. Local Anaesthetics.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/MBFXpagH4ltnLbo23YvI3g?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/MBFXpagH4ltnLbo23YvI3g?type=download"
+        },
+        {
+            "title": "82. Skeletal Muscle Relaxants.mp4",
+            "streamingUrl": "https://web.afrahtafreeh.site/prepare/_iniWehBaCwfYSn9XyHnJg?type=stream",
+            "downloadUrl": "https://web.afrahtafreeh.site/prepare/_iniWehBaCwfYSn9XyHnJg?type=download"
+        }
+    ],
+    "skipped": []
+}
