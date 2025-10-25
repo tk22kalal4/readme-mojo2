@@ -15,6 +15,18 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5920367457745298"
      crossorigin="anonymous"></script>
   <style>
+    .loading-dots {
+      display: inline-block;
+    }
+    .loading-dots::after {
+      content: '';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+    @keyframes dots {
+      0%, 20% { content: '.'; }
+      40% { content: '..'; }
+      60%, 100% { content: '...'; }
+    }
     .chapter-stats {
       margin: 10px 0;
       text-align: center;
@@ -63,7 +75,7 @@
       <div id="loading" class="loading-container">
         <div class="loading-spinner">
           <i class="fas fa-spinner fa-spin"></i>
-          <p>Loading chapters...</p>
+          <p>Loading chapters<span class="loading-dots"></span></p>
         </div>
       </div>
 
@@ -82,14 +94,12 @@
     </div>
   </main>
 
-  
-<nav class="bottom-nav">
-  <a href="../../app.html" class="active"><i class="fas fa-lightbulb"></i><span>Home</span></a>
-  <a href="../../00x1234.html"><i class="fas fa-play-circle"></i><span>Videos</span></a>
-  <a href="../../search.html"><i class="fas fa-search"></i><span>Search</span></a>
-  <a href="../index.html"><i class="fas fa-question-circle"></i><span>Q Bank</span></a>
-</nav>
-
+  <nav class="bottom-nav">
+    <a href="../../app.html" class="active"><i class="fas fa-lightbulb"></i><span>Home</span></a>
+    <a href="../../00x1234.html"><i class="fas fa-play-circle"></i><span>Videos</span></a>
+    <a href="../../search.html"><i class="fas fa-search"></i><span>Search</span></a>
+    <a href="../index.html"><i class="fas fa-question-circle"></i><span>Q Bank</span></a>
+  </nav>
 
   <script>
     function goBack() {
@@ -133,7 +143,7 @@
         const chapters = manifest[subject];
         
         // Use the enhanced chapter loader
-        const availableChapters = await chapterLoader.loadChapters('.', subject, chapters, platform);
+        const availableChapters = await chapterLoader.loadChapters('prepladder', subject, chapters);
         
         displayChapters(availableChapters);
       } catch (error) {
@@ -155,7 +165,7 @@
       }
       
       noChapters.style.display = 'none';
-      chaptersGrid.style.display = 'block';
+      chaptersGrid.style.display = 'grid';
       
       // Show chapter statistics
       const chapterStats = document.getElementById('chapterStats');
