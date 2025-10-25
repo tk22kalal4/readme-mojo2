@@ -143,7 +143,7 @@
 
     async function loadQuestionsFromJSON(platform, subject, chapter) {
       try {
-        const response = await fetch(`${platform}/${subject}/${chapter}`);
+        const response = await fetch(`/quiz/${platform}/${subject}/${chapter}`);
         
         if (!response.ok) {
           throw new Error(`Failed to load questions: ${response.status}`);
@@ -518,4 +518,22 @@
           currentQuestionIndex = parseInt(reviewIndex);
           
           // Update page title
-          document.getElementById('pageTitle').textContent 
+          document.getElementById('pageTitle').textContent = 'Review Question';
+          document.getElementById('quizInfo').textContent = 'Question Review Mode';
+          
+          // Load the specific question
+          loadQuestion();
+          return true;
+        }
+      }
+      return false;
+    }
+
+    window.addEventListener('load', () => {
+      if (!checkReviewMode() && !checkBookmarkMode()) {
+        loadQuiz();
+      }
+    });
+  </script>
+</body>
+</html>
