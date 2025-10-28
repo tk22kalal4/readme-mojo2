@@ -1,8 +1,4 @@
-/**
- * Stream Player Utilities
- * Replaces Stream/Download buttons with a single "Open" button
- * that redirects to the new stream-player.html with reCAPTCHA verification
- */
+
 
 // Function to open the stream player with reCAPTCHA verification
 function openStreamPlayer(streamUrl, downloadUrl, title) {
