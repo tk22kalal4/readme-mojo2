@@ -99,7 +99,7 @@ function addOpenButtonStyles() {
     style.id = 'open-button-styles';
     style.textContent = `
         .open-button {
-            background: linear-gradient(135deg, #2C8252, #1a365d);
+            background: #2c5282;
             color: white;
             border: none;
             padding: 10px 24px;
