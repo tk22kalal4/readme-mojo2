@@ -276,6 +276,32 @@
                 padding: 1rem;
             }
         }
+            /* Adjust button layout on smaller screens */
+            @media (max-width: 600px) {
+                .main-video-section {
+                    text-align: center;
+                }
+            
+                /* Make Watch S2 full-width (90%) */
+                #watch-s2-btn {
+                    width: 90%;
+                    margin-bottom: 1rem;
+                }
+            
+                /* Container for download buttons */
+                .download-buttons {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                }
+            
+                /* Make download buttons half width each */
+                .download-buttons .download-btn {
+                    flex: 1 1 45%;
+                    padding: 0.8rem;
+                }
+            }
 
         @media (max-width: 480px) {
             .verification-card {
@@ -302,6 +328,7 @@
             color: var(--medium-gray);
             padding: 2rem;
         }
+        
     </style>
 </head>
 <body>
@@ -354,15 +381,18 @@
                         WATCH - S2
                     </button>
                     
-                    <button class="download-btn" id="download-s1-btn" onclick="handleDownload()" style="background: #2ecc71;>
-                        <i class="fas fa-download"></i>
-                        DOWNLOAD - S1
-                    </button>
+                    <div class="download-buttons">
+                        <button class="download-btn" id="download-s1-btn" onclick="handleDownload()" style="background: #2ecc71;">
+                            <i class="fas fa-download"></i>
+                            DOWNLOAD - S1
+                        </button>
                     
-                    <button class="download-btn" id="download-s2-btn" onclick="handleDownloadS2()" style="background: #2ecc71;">
-                        <i class="fas fa-download"></i>
-                        DOWNLOAD - S2
-                    </button>
+                        <button class="download-btn" id="download-s2-btn" onclick="handleDownloadS2()" style="background: #2ecc71;">
+                            <i class="fas fa-download"></i>
+                            DOWNLOAD - S2
+                        </button>
+                    </div>
+
                 </div>
 
                 <!-- YouTube Videos Sidebar -->
