@@ -473,7 +473,7 @@
                 return;
             }
 
-            // Replace iframe with download URL
+            // Replace iframe with download URL - this opens the download page in the same iframe
             const iframeContainer = document.getElementById('main-iframe-container');
             iframeContainer.innerHTML = `
                 <iframe src="${downloadUrl}" 
@@ -482,15 +482,6 @@
                         allowfullscreen>
                 </iframe>
             `;
-
-            // Also trigger direct download if possible
-            const link = document.createElement('a');
-            link.href = downloadUrl;
-            link.download = '';
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
         }
 
         // Handle responsive YouTube videos
