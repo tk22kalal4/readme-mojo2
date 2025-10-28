@@ -209,6 +209,7 @@
 <script src="../../../access-control.js"></script>
   <script src="../../../block.js"></script>
   <script src="../../../error-handler/link-checker.js"></script>
+  <script src="../../../stream-player-utils.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5920367457745298"
      crossorigin="anonymous"></script>
 </head>
@@ -323,7 +324,7 @@
       console.log('Starting to load lectures...');
       try {
         console.log('Fetching from marrow-anatomy.json...');
-        const response = await fetch('marrow-anatomy.json');
+        const response = await fetch('deanatomysandeep.json');
         console.log('Fetch response status:', response.status, response.statusText);
         
         if (!response.ok) {
@@ -401,11 +402,8 @@
         lectureCard.innerHTML = `
           <h3>${lecture.title}</h3>
           <div class="button-container">
-            <button class="stream-button" onclick="openVideo('${lecture.title}', '${lecture.streamingUrl}')">
-              <i class="fas fa-play"></i> Stream
-            </button>
-            <button class="download-button" onclick="downloadVideo('${lecture.streamingUrl}')">
-              <i class="fas fa-download"></i> Download
+            <button class="open-button" onclick="openStreamPlayer('${lecture.streamingUrl}', '${lecture.downloadUrl || lecture.streamingUrl}', '${lecture.title}')">
+              <i class="fas fa-play-circle"></i> Open
             </button>
           </div>
         `;
