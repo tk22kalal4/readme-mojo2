@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c5282">
+    <title>Watch Lecture - NEXTPULSE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-blue: #2C8252;
+            --dark-blue: #1a365d;
+            --dark-gray: #2d3748;
+            --medium-gray: #4a5568;
+            --light-gray: #718096;
+            --bg-light: #f0f4f8;
+            --border-light: #e2e8f0;
+            --card-white: #fff;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            color: #4fd1c7;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* reCAPTCHA Verification Screen */
+        #verification-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 80px);
+            padding: 2rem;
+        }
+
+        .verification-card {
+            background: var(--card-white);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .verification-card h2 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .verification-card p {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+        }
+
+        .recaptcha-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .verify-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .verify-btn:hover:not(:disabled) {
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .verify-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Player Screen */
+        #player-screen {
+            display: none;
+            padding: 2rem;
+        }
+
+        .player-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .player-layout {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        /* Main Video Section */
+        .main-video-section {
+            background: var(--card-white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .video-iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .video-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-title {
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .download-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        /* YouTube Videos Sidebar */
+        .youtube-sidebar {
+            background: var(--card-white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .youtube-sidebar h3 {
+            color: var(--dark-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .youtube-video {
+            margin-bottom: 1.5rem;
+        }
+
+        .youtube-video:last-child {
+            margin-bottom: 0;
+        }
+
+        .youtube-iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .youtube-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+            .player-layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .youtube-sidebar h3 {
+                font-size: 1.2rem;
+            }
+
+            header {
+                padding: 1rem;
+            }
+
+            .logo h1 {
+                font-size: 1.2rem;
+            }
+
+            #player-screen {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .verification-card {
+                padding: 2rem 1rem;
+            }
+
+            .verification-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .video-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        .error-message {
+            color: #e53e3e;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--medium-gray);
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <h1>NEXTPULSE</h1>
+        </div>
+        <a href="javascript:history.back()" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </a>
+    </header>
+
+    <!-- reCAPTCHA Verification Screen -->
+    <div id="verification-screen">
+        <div class="verification-card">
+            <h2>Verify You're Human</h2>
+            <p>Please complete the verification below to watch the lecture</p>
+            
+            <div class="recaptcha-container">
+                <div class="g-recaptcha" 
+                     data-sitekey="6LdCK_crAAAAAD702QCUelFDiZPr5wqL-3qbgk2u"
+                     data-callback="onRecaptchaSuccess"
+                     data-expired-callback="onRecaptchaExpired"></div>
+            </div>
+            
+            <button class="verify-btn" id="verify-btn" onclick="verifyAndProceed()" disabled>
+                Verify & Continue
+            </button>
+            
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Player Screen (shown after verification) -->
+    <div id="player-screen">
+        <div class="player-container">
+            <div class="player-layout">
+                <!-- Main Video Section -->
+                <div class="main-video-section">
+                    <div class="video-iframe-container" id="main-iframe-container">
+                        <div class="loading">Loading video...</div>
+                    </div>
+                    
+                    <h2 class="video-title" id="video-title">Loading...</h2>
+                    
+                    <button class="download-btn" id="download-btn" onclick="handleDownload()">
+                        <i class="fas fa-download"></i>
+                        Download Lecture
+                    </button>
+                </div>
+
+                <!-- YouTube Videos Sidebar -->
+                <div class="youtube-sidebar">
+                    <h3>Related Videos</h3>
+                    
+                    <div class="youtube-video">
+                        <div class="youtube-iframe-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="YouTube video 1" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="youtube-video">
+                        <div class="youtube-iframe-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="YouTube video 2" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="youtube-video">
+                        <div class="youtube-iframe-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="YouTube video 3" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="youtube-video" id="youtube-video-4" style="display: none;">
+                        <div class="youtube-iframe-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="YouTube video 4" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const streamUrl = urlParams.get('stream');
+        const downloadUrl = urlParams.get('download');
+        const videoTitle = urlParams.get('title') || 'Lecture Video';
+
+        // reCAPTCHA callback - enable button when completed
+        function onRecaptchaSuccess() {
+            document.getElementById('verify-btn').disabled = false;
+            document.getElementById('error-message').textContent = '';
+        }
+
+        // reCAPTCHA expired callback - disable button again
+        function onRecaptchaExpired() {
+            document.getElementById('verify-btn').disabled = true;
+            document.getElementById('error-message').textContent = 'reCAPTCHA expired. Please verify again.';
+        }
+
+        // Verify and proceed to player
+        function verifyAndProceed() {
+            const response = grecaptcha.getResponse();
+            
+            if (!response) {
+                document.getElementById('error-message').textContent = 'Please complete the reCAPTCHA verification';
+                return;
+            }
+
+            // Client-side only - no server validation for GitHub Pages
+            // Note: This can be bypassed, but works for GitHub Pages deployment
+            showPlayer();
+        }
+
+        // Show player screen
+        function showPlayer() {
+            if (!streamUrl) {
+                document.getElementById('error-message').textContent = 'Missing stream URL';
+                return;
+            }
+
+            // Hide verification, show player
+            document.getElementById('verification-screen').style.display = 'none';
+            document.getElementById('player-screen').style.display = 'block';
+
+            // Set video title
+            document.getElementById('video-title').textContent = decodeURIComponent(videoTitle);
+
+            // Load streaming video
+            const iframeContainer = document.getElementById('main-iframe-container');
+            iframeContainer.innerHTML = `
+                <iframe src="${streamUrl}" 
+                        title="${decodeURIComponent(videoTitle)}"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            `;
+
+            // Show 4th YouTube video on desktop
+            if (window.innerWidth >= 992) {
+                document.getElementById('youtube-video-4').style.display = 'block';
+            }
+        }
+
+        // Handle download button
+        function handleDownload() {
+            if (!downloadUrl) {
+                alert('Download URL not available');
+                return;
+            }
+
+            // Replace iframe with download URL
+            const iframeContainer = document.getElementById('main-iframe-container');
+            iframeContainer.innerHTML = `
+                <iframe src="${downloadUrl}" 
+                        title="Download ${decodeURIComponent(videoTitle)}"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            `;
+
+            // Also trigger direct download if possible
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = '';
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Handle responsive YouTube videos
+        window.addEventListener('resize', () => {
+            const video4 = document.getElementById('youtube-video-4');
+            if (window.innerWidth >= 992) {
+                video4.style.display = 'block';
+            } else {
+                video4.style.display = 'none';
+            }
+        });
+
+        // No additional initialization needed - callbacks are set via data attributes
+    </script>
+</body>
+</html>
