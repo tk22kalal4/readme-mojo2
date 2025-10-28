@@ -23,7 +23,11 @@ function openStreamPlayer(streamUrl, downloadUrl, title) {
     }
 
     // Open in the same window/tab
-    window.location.href = `/stream-player.html?${params.toString()}`;
+    // Get the base path relative to current location
+    const currentPath = window.location.pathname;
+    const depth = currentPath.split('/').filter(p => p && p !== 'index.html').length - 1;
+    const basePath = '../'.repeat(depth > 0 ? depth : 0);
+    window.location.href = `${basePath}stream-player.html?${params.toString()}`;
 }
 
 // Function to replace Stream/Download buttons with Open button
