@@ -23,24 +23,28 @@ function openStreamPlayer(streamUrl, downloadUrl, title) {
     }
 
     // Open in the same window/tab
-    // Get the base path relative to current location
+    // Smart path detection that works for both GitHub Pages (with repo name) and custom domains
     const currentPath = window.location.pathname;
+    const pathParts = currentPath.split('/').filter(p => p && !p.includes('.html'));
     
-    // Split path and remove empty strings and the current filename
-    const pathParts = currentPath.split('/').filter(p => p);
+    // Detect if we're on GitHub Pages without custom domain
+    // GitHub Pages URLs: username.github.io/repo-name/...
+    // Custom domain URLs: customdomain.com/...
+    const isGitHubPages = window.location.hostname.includes('github.io');
     
-    // Remove the filename (last part) to get directory depth
-    const directoryParts = pathParts.slice(0, -1);
+    let streamPlayerUrl;
+    if (isGitHubPages && pathParts.length > 0) {
+        // GitHub Pages without custom domain - include repo name
+        // e.g., /repo-name/stream-player.html
+        const repoName = pathParts[0];
+        streamPlayerUrl = `/${repoName}/stream-player.html?${params.toString()}`;
+    } else {
+        // Custom domain or root level - use absolute path from root
+        // e.g., /stream-player.html
+        streamPlayerUrl = `/stream-player.html?${params.toString()}`;
+    }
     
-    // Calculate how many levels deep we are from the root
-    // For GitHub Pages, we need to account for the repo name
-    // Example: /readme-mojo2/1234xx/dams/damsb2benglish/anatomy.html
-    // Parts: ['readme-mojo2', '1234xx', 'dams', 'damsb2benglish']
-    // We need to go up to readme-mojo2 level, so 3 levels up
-    const depth = directoryParts.length - 1; // -1 because we don't count the root repo folder
-    
-    const basePath = '../'.repeat(depth > 0 ? depth : 0);
-    window.location.href = `${basePath}stream-player.html?${params.toString()}`;
+    window.location.href = streamPlayerUrl;
 }
 
 // Function to replace Stream/Download buttons with Open button
