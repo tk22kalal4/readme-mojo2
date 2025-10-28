@@ -349,9 +349,19 @@
                     
                     <h2 class="video-title" id="video-title">Loading...</h2>
                     
-                    <button class="download-btn" id="download-btn" onclick="handleDownload()">
+                    <button class="download-btn" id="watch-s2-btn" onclick="handleWatchS2()" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-play-circle"></i>
+                        WATCH - S2
+                    </button>
+                    
+                    <button class="download-btn" id="download-s1-btn" onclick="handleDownload()">
                         <i class="fas fa-download"></i>
-                        Download Lecture
+                        DOWNLOAD - S1
+                    </button>
+                    
+                    <button class="download-btn" id="download-s2-btn" onclick="handleDownloadS2()" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-download"></i>
+                        DOWNLOAD - S2
                     </button>
                 </div>
 
@@ -466,7 +476,7 @@
             }
         }
 
-        // Handle download button
+        // Handle download button (Server-1)
         function handleDownload() {
             if (!downloadUrl) {
                 alert('Download URL not available');
@@ -478,6 +488,48 @@
             iframeContainer.innerHTML = `
                 <iframe src="${downloadUrl}" 
                         title="Download ${decodeURIComponent(videoTitle)}"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            `;
+        }
+
+        // Handle Watch - S2 button (Server-2 streaming)
+        function handleWatchS2() {
+            if (!streamUrl) {
+                alert('Stream URL not available');
+                return;
+            }
+
+            // Replace "web" with "webx" for Server-2
+            const s2StreamUrl = streamUrl.replace('web.afrahtafreeh.site', 'webx.afrahtafreeh.site');
+            
+            // Replace iframe with Server-2 streaming URL
+            const iframeContainer = document.getElementById('main-iframe-container');
+            iframeContainer.innerHTML = `
+                <iframe src="${s2StreamUrl}" 
+                        title="${decodeURIComponent(videoTitle)} - Server 2"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            `;
+        }
+
+        // Handle Download - S2 button (Server-2 download)
+        function handleDownloadS2() {
+            if (!downloadUrl) {
+                alert('Download URL not available');
+                return;
+            }
+
+            // Replace "web" with "webx" for Server-2
+            const s2DownloadUrl = downloadUrl.replace('web.afrahtafreeh.site', 'webx.afrahtafreeh.site');
+            
+            // Replace iframe with Server-2 download URL
+            const iframeContainer = document.getElementById('main-iframe-container');
+            iframeContainer.innerHTML = `
+                <iframe src="${s2DownloadUrl}" 
+                        title="Download ${decodeURIComponent(videoTitle)} - Server 2"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
                 </iframe>
