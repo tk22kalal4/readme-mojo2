@@ -1,4 +1,8 @@
-
+/**
+ * Stream Player Utilities
+ * Replaces Stream/Download buttons with a single "Open" button
+ * that redirects to the new stream-player.html with reCAPTCHA verification
+ */
 
 // Function to open the stream player with reCAPTCHA verification
 function openStreamPlayer(streamUrl, downloadUrl, title) {
@@ -21,7 +25,20 @@ function openStreamPlayer(streamUrl, downloadUrl, title) {
     // Open in the same window/tab
     // Get the base path relative to current location
     const currentPath = window.location.pathname;
-    const depth = currentPath.split('/').filter(p => p && p !== 'index.html').length - 1;
+    
+    // Split path and remove empty strings and the current filename
+    const pathParts = currentPath.split('/').filter(p => p);
+    
+    // Remove the filename (last part) to get directory depth
+    const directoryParts = pathParts.slice(0, -1);
+    
+    // Calculate how many levels deep we are from the root
+    // For GitHub Pages, we need to account for the repo name
+    // Example: /readme-mojo2/1234xx/dams/damsb2benglish/anatomy.html
+    // Parts: ['readme-mojo2', '1234xx', 'dams', 'damsb2benglish']
+    // We need to go up to readme-mojo2 level, so 3 levels up
+    const depth = directoryParts.length - 1; // -1 because we don't count the root repo folder
+    
     const basePath = '../'.repeat(depth > 0 ? depth : 0);
     window.location.href = `${basePath}stream-player.html?${params.toString()}`;
 }
