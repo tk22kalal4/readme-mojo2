@@ -1,4 +1,8 @@
-
+/**
+ * Stream Player Utilities
+ * Replaces Stream/Download buttons with a single "Open" button
+ * that redirects to the new stream-player.html with reCAPTCHA verification
+ */
 
 // Function to open the stream player with reCAPTCHA verification
 function openStreamPlayer(streamUrl, downloadUrl, title) {
@@ -7,10 +11,14 @@ function openStreamPlayer(streamUrl, downloadUrl, title) {
         return;
     }
 
-    // Build the URL with parameters
+    // Sanitize and encode the title properly to handle special characters
+    // Remove any potentially problematic characters and ensure proper encoding
+    const sanitizedTitle = (title || 'Lecture Video').trim();
+    
+    // Build the URL with parameters - URLSearchParams automatically encodes special characters
     const params = new URLSearchParams({
         stream: streamUrl,
-        title: title || 'Lecture Video'
+        title: sanitizedTitle
     });
 
     // Add download URL if available
@@ -60,9 +68,15 @@ function replaceStreamDownloadButtons(container) {
         if (!streamBtn) return;
 
         // Get URLs from onclick attributes
-        const streamUrl = extractUrlFromOnclick(streamBtn.getAttribute('onclick'), 'openPopup');
+        const streamUrl = extractUrlFromOnclick(streamBtn.getAttribute('onclick'), 'openVideo');
         const downloadUrl = downloadBtn ? 
-            extractUrlFromOnclick(downloadBtn.getAttribute('onclick'), 'openPopup') : null;
+            extractUrlFromOnclick(downloadBtn.getAttribute('onclick'), 'openVideo') : null;
+
+        // Skip if we couldn't extract the stream URL
+        if (!streamUrl) {
+            console.warn('Could not extract stream URL from button:', streamBtn);
+            return;
+        }
 
         // Get title from card
         const titleElement = card.querySelector('h3');
@@ -72,7 +86,12 @@ function replaceStreamDownloadButtons(container) {
         const openBtn = document.createElement('button');
         openBtn.className = 'open-button';
         openBtn.innerHTML = '<i class="fas fa-play-circle"></i> Open';
-        openBtn.onclick = () => openStreamPlayer(streamUrl, downloadUrl, title);
+        
+        // Use arrow function to ensure proper context and handle special characters in title
+        openBtn.onclick = (e) => {
+            e.preventDefault();
+            openStreamPlayer(streamUrl, downloadUrl, title);
+        };
 
         // Replace button container content
         buttonContainer.innerHTML = '';
@@ -84,11 +103,29 @@ function replaceStreamDownloadButtons(container) {
 function extractUrlFromOnclick(onclickStr, functionName) {
     if (!onclickStr) return null;
     
-    // Match pattern: openPopup('url', 'title')
-    const regex = new RegExp(`${functionName}\\s*\\(\\s*['"]([^'"]+)['"]`);
-    const match = onclickStr.match(regex);
+    // Try multiple function names since different pages use different function names
+    const functionNames = [functionName, 'openVideo', 'openPopup', 'openStreamPlayer'];
     
-    return match ? match[1] : null;
+    for (const fname of functionNames) {
+        // Match pattern: functionName('url', ...) or functionName("url", ...)
+        // Use a more flexible regex that handles escaped quotes and special characters
+        // The pattern captures everything between the first set of quotes
+        const patterns = [
+            // Try single quotes first: functionName('url', 'title')
+            new RegExp(`${fname}\\s*\\(\\s*'([^']*)'`),
+            // Try double quotes: functionName("url", "title")
+            new RegExp(`${fname}\\s*\\(\\s*"([^"]*)"`),
+        ];
+        
+        for (const regex of patterns) {
+            const match = onclickStr.match(regex);
+            if (match && match[1]) {
+                return match[1];
+            }
+        }
+    }
+    
+    return null;
 }
 
 // Add CSS for Open button (matching existing theme)
