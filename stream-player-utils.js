@@ -108,19 +108,24 @@ function extractUrlFromOnclick(onclickStr, functionName) {
     
     for (const fname of functionNames) {
         // Match pattern: functionName('url', ...) or functionName("url", ...)
-        // Use a more flexible regex that handles escaped quotes and special characters
-        // The pattern captures everything between the first set of quotes
+        // Enhanced regex that handles escaped quotes, backslashes, and special characters
+        // Pattern explanation:
+        // - (?:[^'\\]|\\.)* means: match any character except quote or backslash, OR backslash followed by any character
+        // This properly handles escaped quotes like \' or \" and other escaped characters
         const patterns = [
-            // Try single quotes first: functionName('url', 'title')
-            new RegExp(`${fname}\\s*\\(\\s*'([^']*)'`),
-            // Try double quotes: functionName("url", "title")
-            new RegExp(`${fname}\\s*\\(\\s*"([^"]*)"`),
+            // Single quotes with escaped character support: functionName('url with \'quotes\'', ...)
+            new RegExp(`${fname}\\s*\\(\\s*'((?:[^'\\\\]|\\\\.)*)'`),
+            // Double quotes with escaped character support: functionName("url with \"quotes\"", ...)
+            new RegExp(`${fname}\\s*\\(\\s*"((?:[^"\\\\]|\\\\.)*)"`),
         ];
         
         for (const regex of patterns) {
             const match = onclickStr.match(regex);
             if (match && match[1]) {
-                return match[1];
+                // Unescape the captured string (remove backslashes before quotes)
+                // This converts \' to ' and \" to "
+                const unescaped = match[1].replace(/\\'/g, "'").replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+                return unescaped;
             }
         }
     }
