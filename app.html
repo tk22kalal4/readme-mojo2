@@ -26,6 +26,85 @@
         color: #4fd1c7;
         vertical-align: middle;
     }
+
+    /* Share button styles */
+    .share-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 1.5rem auto;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .share-btn:active {
+      transform: translateY(0);
+    }
+
+    .share-btn i {
+      font-size: 1.1rem;
+    }
+
+    /* Share tooltip */
+    .share-tooltip {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      z-index: 1000;
+      text-align: center;
+      max-width: 90%;
+      width: 400px;
+    }
+
+    .share-tooltip h3 {
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
+
+    .share-tooltip p {
+      margin: 0.5rem 0;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+
+    .share-tooltip .close-btn {
+      margin-top: 1.5rem;
+      padding: 8px 20px;
+      background: #4fd1c7;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
@@ -50,62 +129,69 @@
     </header>
     <main>
       <div class="home-page">
-  <div class="welcome-section" style="text-align: center;">
-    <!-- Small Jai Shri Ram Image -->
-    <img src="new/Addalittlebitofbodytext_95.png" 
-         alt="Jai Shri Ram" 
-         style="width:100px; height:auto; margin-bottom:8px;">
-  </div>
+        <div class="welcome-section" style="text-align: center;">
+          <!-- Small Jai Shri Ram Image -->
+          <img src="new/Addalittlebitofbodytext_95.png" 
+               alt="Jai Shri Ram" 
+               style="width:100px; height:auto; margin-bottom:8px;">
+        </div>
 
-  <p class="styled-quote" style="
-    font-style: italic;
-    font-size: 1.4em;
-    margin: 1.5rem 0;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    background: #f8fafc;
-    color: #2d3748;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    line-height: 1.6;
-    text-align: center;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border-left: 4px solid #2c5281;
-    position: relative;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  ">
-    <strong style="
-      display: block;
-      position: relative;
-      padding: 0 1.8rem;
-      color: #2c5281;
-    ">
-      <span style="
-        position: absolute;
-        left: 0;
-        top: -0.5rem;
-        font-size: 2.5em;
-        color: #2c5281;
-        line-height: 1;
-        opacity: 0.3;
-        font-family: 'Times New Roman', serif;
-      ">“</span>
-      
-      If he's a God, then I'm a Bloody Doctor
-      
-      <span style="
-        position: absolute;
-        right: 0;
-        bottom: -1.2rem;
-        font-size: 2.5em;
-        color: #2c5281;
-        line-height: 1;
-        opacity: 0.3;
-        font-family: 'Times New Roman', serif;
-      ">„</span>
-    </strong>
-  </p>
+        <p class="styled-quote" style="
+          font-style: italic;
+          font-size: 1.4em;
+          margin: 1.5rem 0;
+          padding: 1.5rem 2rem;
+          border-radius: 8px;
+          background: #f8fafc;
+          color: #2d3748;
+          font-family: 'Georgia', 'Times New Roman', serif;
+          line-height: 1.6;
+          text-align: center;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+          border-left: 4px solid #2c5281;
+          position: relative;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        ">
+          <strong style="
+            display: block;
+            position: relative;
+            padding: 0 1.8rem;
+            color: #2c5281;
+          ">
+            <span style="
+              position: absolute;
+              left: 0;
+              top: -0.5rem;
+              font-size: 2.5em;
+              color: #2c5281;
+              line-height: 1;
+              opacity: 0.3;
+              font-family: 'Times New Roman', serif;
+            ">"</span>
+            
+            If he's a God, then I'm a Bloody Doctor
+            
+            <span style="
+              position: absolute;
+              right: 0;
+              bottom: -1.2rem;
+              font-size: 2.5em;
+              color: #2c5281;
+              line-height: 1;
+              opacity: 0.3;
+              font-family: 'Times New Roman', serif;
+            ">„</span>
+          </strong>
+        </p>
+
+        <!-- Share Button -->
+        <button class="share-btn" onclick="showShareTooltip()">
+          <i class="fas fa-share-alt"></i>
+          Share App
+        </button>
+
         <div class="stats-grid">
           <div class="stat-card">
             <i class="fas fa-play-circle"></i>
@@ -159,14 +245,25 @@
       </div>
     </main>
     
-<nav class="bottom-nav">
-  <a href="app.html" class="active"><i class="fas fa-lightbulb"></i><span>Home</span></a>
-  <a href="00x1234.html"><i class="fas fa-play-circle"></i><span>Videos</span></a>
-  <a href="search.html"><i class="fas fa-search"></i><span>Search</span></a>
-  <a href="quiz/index.html"><i class="fas fa-question-circle"></i><span>Q Bank</span></a>
-</nav>
-
+    <nav class="bottom-nav">
+      <a href="app.html" class="active"><i class="fas fa-lightbulb"></i><span>Home</span></a>
+      <a href="00x1234.html"><i class="fas fa-play-circle"></i><span>Videos</span></a>
+      <a href="search.html"><i class="fas fa-search"></i><span>Search</span></a>
+      <a href="quiz/index.html"><i class="fas fa-question-circle"></i><span>Q Bank</span></a>
+    </nav>
   </div>
+
+  <!-- Share Tooltip -->
+  <div id="shareTooltip" class="share-tooltip" style="display: none;">
+    <h3>Share LASTPULSE</h3>
+    <p><strong>SITE URL:</strong> https://afrahtafreeh.site</p>
+    <p><strong>ANDROID/PC:</strong> Google Chrome - Direct Download</p>
+    <p><strong>IPHONE/IOS:</strong> Add to Homescreen</p>
+    <button class="close-btn" onclick="hideShareTooltip()">Close</button>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" style="display: none;"></div>
 
   <script>
     // Register service worker
@@ -181,6 +278,53 @@
           });
       });
     }
+
+    // Share functionality
+    function showShareTooltip() {
+      const shareTooltip = document.getElementById('shareTooltip');
+      const overlay = document.getElementById('overlay');
+      
+      shareTooltip.style.display = 'block';
+      overlay.style.display = 'block';
+
+      // Use Web Share API if available
+      if (navigator.share) {
+        navigator.share({
+          title: 'LASTPULSE - NEET PG Preparation Platform',
+          text: 'Check out LASTPULSE - NEET PG Preparation Platform. SITE URL: https://afrahtafreeh.site | ANDROID/PC: Google Chrome - Direct Download | IPHONE/IOS: Add to Homescreen',
+          url: 'https://afrahtafreeh.site'
+        })
+        .then(() => console.log('Successful share'))
+        .catch((error) => console.log('Error sharing:', error));
+      } else {
+        // Fallback: Copy to clipboard
+        const shareText = `LASTPULSE - NEET PG Preparation Platform\nSITE URL: https://afrahtafreeh.site\nANDROID/PC: Google Chrome - Direct Download\nIPHONE/IOS: Add to Homescreen`;
+        
+        navigator.clipboard.writeText(shareText)
+          .then(() => {
+            // Optional: Show a brief confirmation
+            const originalText = shareTooltip.querySelector('h3').textContent;
+            shareTooltip.querySelector('h3').textContent = 'Copied to clipboard!';
+            setTimeout(() => {
+              shareTooltip.querySelector('h3').textContent = originalText;
+            }, 2000);
+          })
+          .catch(err => {
+            console.error('Failed to copy: ', err);
+          });
+      }
+    }
+
+    function hideShareTooltip() {
+      const shareTooltip = document.getElementById('shareTooltip');
+      const overlay = document.getElementById('overlay');
+      
+      shareTooltip.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+
+    // Close tooltip when clicking overlay
+    document.getElementById('overlay').addEventListener('click', hideShareTooltip);
   </script>
 </body>
 </html>
