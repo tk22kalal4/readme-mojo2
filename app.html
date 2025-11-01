@@ -69,7 +69,7 @@
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       z-index: 1000;
-      text-align: center;
+      text-align: left;
       max-width: 90%;
       width: 400px;
     }
@@ -77,12 +77,26 @@
     .share-tooltip h3 {
       margin-bottom: 1rem;
       color: #2d3748;
+      text-align: center;
     }
 
-    .share-tooltip p {
-      margin: 0.5rem 0;
-      color: #4a5568;
+    .share-tooltip .share-content {
+      background: #f8fafc;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #4fd1c7;
+      margin: 1rem 0;
+    }
+
+    .share-tooltip .share-content p {
+      margin: 0.8rem 0;
+      color: #2d3748;
       line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .share-tooltip .share-content strong {
+      color: #2c5281;
     }
 
     .share-tooltip .close-btn {
@@ -94,6 +108,9 @@
       border-radius: 20px;
       cursor: pointer;
       font-weight: 600;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .overlay {
@@ -104,6 +121,11 @@
       bottom: 0;
       background: rgba(0,0,0,0.5);
       z-index: 999;
+    }
+
+    .checkmark {
+      color: #10b981;
+      margin-right: 5px;
     }
   </style>
 </head>
@@ -256,9 +278,11 @@
   <!-- Share Tooltip -->
   <div id="shareTooltip" class="share-tooltip" style="display: none;">
     <h3>Share LASTPULSE</h3>
-    <p><strong>SITE URL:</strong> https://afrahtafreeh.site</p>
-    <p><strong>ANDROID/PC:</strong> Google Chrome - Direct Download</p>
-    <p><strong>IPHONE/IOS:</strong> Add to Homescreen</p>
+    <div class="share-content">
+      <p><strong>SITE URL:</strong> https://afrahtafreeh.site</p>
+      <p><span class="checkmark">✅</span><strong>ANDROID/PC:</strong> Google Chrome - Direct Download</p>
+      <p><span class="checkmark">✅</span><strong>IPHONE/IOS:</strong> Add to Homescreen</p>
+    </div>
     <button class="close-btn" onclick="hideShareTooltip()">Close</button>
   </div>
 
@@ -287,30 +311,47 @@
       shareTooltip.style.display = 'block';
       overlay.style.display = 'block';
 
+      // Create the share text with your preferred format
+      const shareText = `LASTPULSE - NEET PG Preparation Platform\n\n<b>SITE URL:</b> https://afrahtafreeh.site | \n\n✅<b>ANDROID/PC:</b> Google Chrome - Direct Download \n✅<b>IPHONE/IOS:</b> Add to Homescreen`;
+
       // Use Web Share API if available
       if (navigator.share) {
         navigator.share({
           title: 'LASTPULSE - NEET PG Preparation Platform',
-          text: 'Check out LASTPULSE - NEET PG Preparation Platform. SITE URL: https://afrahtafreeh.site | ANDROID/PC: Google Chrome - Direct Download | IPHONE/IOS: Add to Homescreen',
+          text: 'LASTPULSE - NEET PG Preparation Platform\n\nSITE URL: https://afrahtafreeh.site\n\n✅ANDROID/PC: Google Chrome - Direct Download\n✅IPHONE/IOS: Add to Homescreen',
           url: 'https://afrahtafreeh.site'
         })
         .then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing:', error));
       } else {
         // Fallback: Copy to clipboard
-        const shareText = `LASTPULSE - NEET PG Preparation Platform\nSITE URL: https://afrahtafreeh.site\nANDROID/PC: Google Chrome - Direct Download\nIPHONE/IOS: Add to Homescreen`;
+        const plainText = `LASTPULSE - NEET PG Preparation Platform\n\nSITE URL: https://afrahtafreeh.site\n\n✅ ANDROID/PC: Google Chrome - Direct Download\n✅ IPHONE/IOS: Add to Homescreen`;
         
-        navigator.clipboard.writeText(shareText)
+        navigator.clipboard.writeText(plainText)
           .then(() => {
-            // Optional: Show a brief confirmation
+            // Show confirmation
             const originalText = shareTooltip.querySelector('h3').textContent;
-            shareTooltip.querySelector('h3').textContent = 'Copied to clipboard!';
+            shareTooltip.querySelector('h3').textContent = 'Copied to clipboard! ✓';
             setTimeout(() => {
               shareTooltip.querySelector('h3').textContent = originalText;
             }, 2000);
           })
           .catch(err => {
             console.error('Failed to copy: ', err);
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = plainText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            // Show confirmation
+            const originalText = shareTooltip.querySelector('h3').textContent;
+            shareTooltip.querySelector('h3').textContent = 'Copied to clipboard! ✓';
+            setTimeout(() => {
+              shareTooltip.querySelector('h3').textContent = originalText;
+            }, 2000);
           });
       }
     }
