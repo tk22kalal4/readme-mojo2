@@ -378,7 +378,19 @@
 
     // Function to render lectures
     // Function to safely encode strings for HTML attributes
-function renderLectures(lectures) {
+function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;',
+        '\\': '&#92;'
+      };
+      return text.replace(/[&<>"'\\]/g, m => map[m]);
+    }
+
+    function renderLectures(lectures) {
       console.log('Rendering lectures:', lectures.length);
       const lectureList = document.getElementById('lectureList');
       
@@ -399,14 +411,29 @@ function renderLectures(lectures) {
         const lectureCard = document.createElement('div');
         lectureCard.className = 'lecture-card';
         
-        lectureCard.innerHTML = `
-          <h3>${lecture.title}</h3>
-          <div class="button-container">
-            <button class="open-button" onclick="openStreamPlayer('${lecture.streamingUrl}', '${lecture.downloadUrl || lecture.streamingUrl}', '${lecture.title}')">
-              <i class="fas fa-play-circle"></i> Open
-            </button>
-          </div>
-        `;
+        // Create button using DOM methods to avoid escaping issues
+        const titleElement = document.createElement('h3');
+        titleElement.textContent = lecture.title;
+        
+        const buttonContainer = document.createElement('div');
+        buttonContainer.className = 'button-container';
+        
+        const openButton = document.createElement('button');
+        openButton.className = 'open-button';
+        openButton.innerHTML = '<i class="fas fa-play-circle"></i> Open';
+        
+        // Use addEventListener instead of onclick attribute to avoid escaping issues
+        openButton.addEventListener('click', function() {
+          openStreamPlayer(
+            lecture.streamingUrl, 
+            lecture.downloadUrl || lecture.streamingUrl, 
+            lecture.title
+          );
+        });
+        
+        buttonContainer.appendChild(openButton);
+        lectureCard.appendChild(titleElement);
+        lectureCard.appendChild(buttonContainer);
         
         // Add completion toggle
         const completionToggle = completionTracker.createCompletionToggle('marrow', 'anatomy', lecture.title);
@@ -449,6 +476,47 @@ function renderLectures(lectures) {
       // Convert streaming URL to download URL
       const downloadUrl = streamUrl.replace('/watch/', '/dl/');
       window.open(downloadUrl, '_blank');
+    }
+
+    // Function to open the stream player with reCAPTCHA verification
+    function openStreamPlayer(streamUrl, downloadUrl, title) {
+      if (!streamUrl) {
+        alert('Stream URL not available');
+        return;
+      }
+
+      // Sanitize and encode the title properly to handle special characters
+      const sanitizedTitle = (title || 'Lecture Video').trim();
+      
+      // Build the URL with parameters - URLSearchParams automatically encodes special characters
+      const params = new URLSearchParams({
+        stream: streamUrl,
+        title: sanitizedTitle
+      });
+
+      // Add download URL if available
+      if (downloadUrl) {
+        params.append('download', downloadUrl);
+      }
+
+      // Smart path detection that works for both GitHub Pages (with repo name) and custom domains
+      const currentPath = window.location.pathname;
+      const pathParts = currentPath.split('/').filter(p => p && !p.includes('.html'));
+      
+      // Detect if we're on GitHub Pages without custom domain
+      const isGitHubPages = window.location.hostname.includes('github.io');
+      
+      let streamPlayerUrl;
+      if (isGitHubPages && pathParts.length > 0) {
+        // GitHub Pages without custom domain - include repo name
+        const repoName = pathParts[0];
+        streamPlayerUrl = `/${repoName}/stream-player.html?${params.toString()}`;
+      } else {
+        // Custom domain or root level - use absolute path from root
+        streamPlayerUrl = `/stream-player.html?${params.toString()}`;
+      }
+      
+      window.location.href = streamPlayerUrl;
     }
 
     // Search functionality
