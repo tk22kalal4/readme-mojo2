@@ -143,7 +143,7 @@
         const chapters = manifest[subject];
         
         // Use the enhanced chapter loader
-        const availableChapters = await chapterLoader.loadChapters('.', subject, chapters, platform);
+        const availableChapters = await chapterLoader.loadChapters('prepladder', subject, chapters);
         
         displayChapters(availableChapters);
       } catch (error) {

@@ -379,16 +379,18 @@
 
     // Function to render lectures
     // Function to safely encode strings for HTML attributes
-function encodeForHTML(str) {
-      return str
-        .replace(/'/g, "\\'")
-        .replace(/"/g, '\\"')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
+function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;',
+        '\\': '&#92;'
+      };
+      return text.replace(/[&<>"'\\]/g, m => map[m]);
     }
-    
-    // Function to render lectures
+
     function renderLectures(lectures) {
       console.log('Rendering lectures:', lectures.length);
       const lectureList = document.getElementById('lectureList');
@@ -399,34 +401,40 @@ function encodeForHTML(str) {
       }
       
       lectureList.innerHTML = '';
-    
+
       if (lectures.length === 0) {
         lectureList.innerHTML = '<p>No lectures available.</p>';
         return;
       }
-    
+
       lectures.forEach((lecture, index) => {
         console.log(`Rendering lecture ${index + 1}:`, lecture.title);
-        
-        // Encode the data for safe use in HTML
-        const encodedTitle = encodeForHTML(lecture.title);
-        const encodedStreamUrl = encodeForHTML(lecture.streamingUrl || '');
-        const encodedDownloadUrl = encodeForHTML(lecture.downloadUrl || '');
-        
         const lectureCard = document.createElement('div');
         lectureCard.className = 'lecture-card';
         
-        lectureCard.innerHTML = `
-          <h3>${lecture.title}</h3>
-          <div class="button-container">
-            <button class="stream-button" data-title="${encodedTitle}" data-url="${encodedStreamUrl}" data-type="stream">
-              <i class="fas fa-play"></i> Stream
-            </button>
-            <button class="download-button" data-title="${encodedTitle}" data-url="${encodedDownloadUrl}" data-type="download">
-              <i class="fas fa-download"></i> Download
-            </button>
-          </div>
-        `;
+        // Create button using DOM methods to avoid escaping issues
+        const titleElement = document.createElement('h3');
+        titleElement.textContent = lecture.title;
+        
+        const buttonContainer = document.createElement('div');
+        buttonContainer.className = 'button-container';
+        
+        const openButton = document.createElement('button');
+        openButton.className = 'open-button';
+        openButton.innerHTML = '<i class="fas fa-play-circle"></i> Open';
+        
+        // Use addEventListener instead of onclick attribute to avoid escaping issues
+        openButton.addEventListener('click', function() {
+          openStreamPlayer(
+            lecture.streamingUrl, 
+            lecture.downloadUrl || lecture.streamingUrl, 
+            lecture.title
+          );
+        });
+        
+        buttonContainer.appendChild(openButton);
+        lectureCard.appendChild(titleElement);
+        lectureCard.appendChild(buttonContainer);
         
         // Add completion toggle
         const completionToggle = completionTracker.createCompletionToggle('marrow', 'anatomy', lecture.title);
@@ -435,53 +443,18 @@ function encodeForHTML(str) {
         lectureList.appendChild(lectureCard);
       });
       
-      // Add event listeners using event delegation
-      lectureList.addEventListener('click', function(e) {
-        if (e.target.closest('.stream-button')) {
-          const button = e.target.closest('.stream-button');
-          const title = button.getAttribute('data-title');
-          const url = button.getAttribute('data-url');
-          openVideo(title, url, 'stream');
-        } else if (e.target.closest('.download-button')) {
-          const button = e.target.closest('.download-button');
-          const title = button.getAttribute('data-title');
-          const url = button.getAttribute('data-url');
-          openVideo(title, url, 'download');
-        }
-      });
-      
       console.log('Finished rendering all lectures');
     }
-    
-    function openVideo(title, url, type) {
-      console.log(`Opening video: ${title}, URL: ${url}, Type: ${type}`);
-      
-      // Validate URL
-      if (!url || url === 'undefined' || !url.startsWith('http')) {
-        alert(`Invalid URL for ${title}. Please check the video link.`);
-        return;
-      }
-      
+
+    function openVideo(title, url) {
       const popup = document.createElement('div');
       popup.className = 'video-popup';
-      
-      const modeText = type === 'stream' ? 'Streaming' : 'Download';
-      
       popup.innerHTML = `
         <div class="video-popup-content">
-          <button class="refresh-popup" onclick="refreshVideo(this)"><i class="fas fa-redo"></i></button>
           <button class="close-popup" onclick="closeVideo(this)">&times;</button>
-          <h2 class="video-title">${title} (${modeText})</h2>
+          <h2 class="video-title">${title}</h2>
           <div class="iframe-container">
             <iframe src="${url}" allowfullscreen></iframe>
-          </div>
-          <div class="server-fallback" style="text-align: center; margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 4px;">
-            <p style="margin: 0; color: #666; font-size: 14px;">If video not working, try 
-              <button onclick="switchToServer2(this, '${encodeForHTML(url)}', '${type}')" 
-                      style="background: none; border: none; color: #3498db; cursor: pointer; text-decoration: underline; font-size: 14px;">
-                Server 2
-              </button>
-            </p>
           </div>
         </div>
       `;
@@ -493,71 +466,60 @@ function encodeForHTML(str) {
       };
       
       document.body.appendChild(popup);
-      
-      // Add error handling for iframe
-      const iframe = popup.querySelector('iframe');
-      iframe.onload = function() {
-        console.log('Iframe loaded successfully');
-      };
-      
-      iframe.onerror = function() {
-        console.error('Failed to load iframe content');
-        const container = iframe.parentElement;
-        container.innerHTML = `
-          <div style="text-align: center; padding: 20px;">
-            <p style="color: #e74c3c;">Failed to load video content</p>
-            <button onclick="refreshVideo(this.parentElement)" style="margin-top: 10px; padding: 8px 16px; background: #3498db; color: white; border: none; border-radius: 4px;">Retry</button>
-          </div>
-        `;
-      };
     }
-    
-    function switchToServer2(button, currentUrl, type) {
-      // Replace 'web.' with 'webx.' in the URL
-      const newUrl = currentUrl.replace('web.', 'webx.');
-      console.log(`Switching to Server 2: ${newUrl}`);
-      
-      const popupContent = button.closest('.video-popup-content');
-      const title = popupContent.querySelector('.video-title').textContent.replace(/ \(Streaming|Download\)$/, '');
-      const modeText = type === 'stream' ? 'Streaming' : 'Download';
-      
-      // Update the iframe source
-      const iframe = popupContent.querySelector('iframe');
-      iframe.src = newUrl;
-      
-      // Update the title to show we're using Server 2
-      popupContent.querySelector('.video-title').textContent = `${title} (${modeText}) - Server 2`;
-      
-      // Change Server 2 button to show it's active
-      const serverButton = popupContent.querySelector('.server-fallback button');
-      serverButton.textContent = 'Server 2 (Active)';
-      serverButton.style.color = '#27ae60';
-      serverButton.style.fontWeight = 'bold';
-      serverButton.onclick = null; // Remove the click handler
-      
-      // Add a note that we're using Server 2
-      const serverNote = popupContent.querySelector('.server-fallback p');
-      serverNote.innerHTML = `<span style="color: #27ae60; font-weight: bold;">✓ Currently using Server 2</span>`;
-    }
-    
+
     function closeVideo(button) {
       const popup = button.closest('.video-popup');
-      if (popup) {
-        document.body.removeChild(popup);
-      }
+      document.body.removeChild(popup);
     }
-    
-    function refreshVideo(button) {
-      const popupContent = button.closest('.video-popup-content');
-      const iframe = popupContent.querySelector('iframe');
-      if (iframe) {
-        const currentSrc = iframe.src;
-        iframe.src = '';
-        setTimeout(() => {
-          iframe.src = currentSrc;
-        }, 100);
-      }
+
+    function downloadVideo(streamUrl) {
+      // Convert streaming URL to download URL
+      const downloadUrl = streamUrl.replace('/watch/', '/dl/');
+      window.open(downloadUrl, '_blank');
     }
+
+    // Function to open the stream player with reCAPTCHA verification
+    function openStreamPlayer(streamUrl, downloadUrl, title) {
+      if (!streamUrl) {
+        alert('Stream URL not available');
+        return;
+      }
+
+      // Sanitize and encode the title properly to handle special characters
+      const sanitizedTitle = (title || 'Lecture Video').trim();
+      
+      // Build the URL with parameters - URLSearchParams automatically encodes special characters
+      const params = new URLSearchParams({
+        stream: streamUrl,
+        title: sanitizedTitle
+      });
+
+      // Add download URL if available
+      if (downloadUrl) {
+        params.append('download', downloadUrl);
+      }
+
+      // Smart path detection that works for both GitHub Pages (with repo name) and custom domains
+      const currentPath = window.location.pathname;
+      const pathParts = currentPath.split('/').filter(p => p && !p.includes('.html'));
+      
+      // Detect if we're on GitHub Pages without custom domain
+      const isGitHubPages = window.location.hostname.includes('github.io');
+      
+      let streamPlayerUrl;
+      if (isGitHubPages && pathParts.length > 0) {
+        // GitHub Pages without custom domain - include repo name
+        const repoName = pathParts[0];
+        streamPlayerUrl = `/${repoName}/stream-player.html?${params.toString()}`;
+      } else {
+        // Custom domain or root level - use absolute path from root
+        streamPlayerUrl = `/stream-player.html?${params.toString()}`;
+      }
+      
+      window.location.href = streamPlayerUrl;
+    }
+
     // Search functionality
     document.getElementById('searchInput').addEventListener('input', function(e) {
       const query = e.target.value.toLowerCase();
@@ -573,5 +535,6 @@ function encodeForHTML(str) {
       loadLectures();
     });
   </script>
+<script src="../../stream-player-utils.js"></script>
 </body>
 </html>

@@ -78,7 +78,7 @@ class ChapterLoader {
     const results = new Map();
     const promises = filenames.map(async (filename) => {
       try {
-        const response = await fetch(`${platform}/${subject}/${filename}`, { method: 'HEAD' });
+        const response = await fetch(`/quiz/${platform}/${subject}/${filename}`, { method: 'HEAD' });
         return { filename, exists: response.ok };
       } catch {
         return { filename, exists: false };
@@ -156,7 +156,7 @@ class ChapterLoader {
     // Try to get directory listing for smarter matching
     let availableFiles = [];
     try {
-      const dirResponse = await fetch(`${platform}/${subject}/`);
+      const dirResponse = await fetch(`/quiz/${platform}/${subject}/`);
       if (dirResponse.ok) {
         const text = await dirResponse.text();
         const parser = new DOMParser();
@@ -185,7 +185,7 @@ class ChapterLoader {
           return null;
         }
 
-        const response = await fetch(`${platform}/${subject}/${matchedFile}`);
+        const response = await fetch(`/quiz/${platform}/${subject}/${matchedFile}`);
         if (!response.ok) {
           return null;
         }
